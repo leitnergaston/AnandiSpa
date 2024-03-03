@@ -72,7 +72,6 @@ section {
 
 /*========== NAVBAR ==========*/
 header {
-    position: fixed;
     width: 100%;
     z-index: 1000;
 }
@@ -88,7 +87,10 @@ header {
 .logo {
     width: 150px;
     height: 150px;
-    margin: 4rem 20rem 0 20rem;
+    margin: 4rem 8rem 0 8rem;
+    background-color: #f5ece5;
+    border: 1px solid #eee1d7;
+    border-radius: 50%;
 }
 
 .navList {
@@ -117,13 +119,19 @@ header {
     filter: drop-shadow(0 0 6px #737373);
 }
 
-.navbarSocialsContainer {
-    display: inline-flex;
+.socialsContainer {
+    background: #c07c61;
+    width: 15%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     column-gap: 1rem;
+    transition: .3s ease;
 }
 
+
 .socialLink {
-    font-size: 2rem;
+    font-size: 3rem;
     color: var(--color-text);
     transition: .3s;
 }
@@ -131,10 +139,6 @@ header {
 .socialLink:hover {
     transform: rotate(10deg);
     color: var(--color-hover);
-}
-
-.main {
-    /* padding-top: 100px; */
 }
 
 .sectionTitulo {
@@ -151,7 +155,11 @@ header {
 
 .sectionInicio {
     height: 100vh;
-    background-color: #737373;
+    background-color: #ecddd2de
+}
+
+.sectionInicio article {
+    padding-top: 1rem;
     display: flex;
     flex-direction: column;
     align-items: center;
