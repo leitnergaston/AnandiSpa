@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Proximamente</title>
 
     <link rel="stylesheet" href="styles.css">
 
@@ -19,7 +19,7 @@
 
 <body>
 
-    <header>
+    <!-- <header>
         <nav class="navbar">
             <ul class="navList">
                 <li class="itemList"><a href="#inicio" class="itemLink active-link">Inicio</a></li>
@@ -31,10 +31,51 @@
                 <li class="itemList"><a href="#" class="itemLink">Contacto</a></li>
             </ul>
         </nav>
-    </header>
+    </header> -->
 
     <main class="main container">
-        <section class="sectionInicio" id="inicio">
+
+        <style>
+            .main {
+                height: 100vh;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+
+            .main article {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+            }
+
+            .main article h1 {
+                font-size: 5rem;
+                font-weight: 600;
+                color: var(--color-text);
+            }
+
+            .main article h3 {
+                margin: 2rem 0;
+                font-size: 1.5em;
+                color: var(--color-text);
+            }
+            .main article i {
+                font-size: 4rem;
+                color: var(--color-text);
+            }
+        </style>
+
+        <article>
+            <h1>Proximamente Anandi Spa</h1>
+
+            <h3>Mientras tanto puedes visitar nuestro Instagram</h3>
+            <i class="uil uil-angle-down"></i>
+            <button class="btn"><a href="https://instagram.com/anandi.spa">Haz click aquí</a></button>
+        </article>
+
+        <!-- <section class="sectionInicio" id="inicio">
             <div class="socialsContainer">
                 <a href="#" class="socialLink">
                     <i class="uil uil-whatsapp"></i>
@@ -145,7 +186,7 @@
 
         <section class="sectionContacto" id="contacto">
 
-        </section>
+        </section> -->
     </main>
 
     <footer>
