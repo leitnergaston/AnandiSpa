@@ -4,81 +4,70 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Proximamente</title>
+    <title>Spa testeo cami</title>
 
-    <link rel="stylesheet" href="styles.css">
+    <!-- ESTILOS -->
+    <link rel="stylesheet" href="styles/reset.css">
+    <link rel="stylesheet" href="styles/global.css">
+    <link rel="stylesheet" href="styles/navbar-inicio.css">
+    <link rel="stylesheet" href="styles/promos-especiales.css">
+    <link rel="stylesheet" href="styles/servicios.css">
+    <link rel="stylesheet" href="styles/nuestro-servicio.css">
+    <link rel="stylesheet" href="styles/panelFotos.css">
+    <link rel="stylesheet" href="styles/gallery.css">
 
-    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
-
+    <!-- ICONO -->
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+    <!-- <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css"> -->
+    <script src="https://kit.fontawesome.com/5541d79d90.js" crossorigin="anonymous"></script>
+    
     <meta name="description" content="Pagina web Anandi Spa....">
-
     <meta name="robots" content="index, follow">
 
+    <!-- LOGO WEB -->
     <link rel="icon" type="image/jpg" href="">
 </head>
 
 <body>
 
-    <!-- <header>
+    <header>
         <nav class="navbar">
             <ul class="navList">
-                <li class="itemList"><a href="#inicio" class="itemLink active-link">Inicio</a></li>
-                <li class="itemList"><a href="#promociones" class="itemLink">Promociones</a></li>
-                <li class="itemList"><a href="#servicios" class="itemLink">Servicios</a></li>
-                <img src="img/logo/anandiLogoSinBordePng.png" alt="anandi spa logo" class="logo">
-                <li class="itemList"><a href="#" class="itemLink">Galeria</a></li>
-                <li class="itemList"><a href="#" class="itemLink">Nosotros</a></li>
-                <li class="itemList"><a href="#" class="itemLink">Contacto</a></li>
+                <li class="itemList">
+                    <a href="#inicio" class="itemLink active-link">Inicio</a>
+                </li>
+
+                <li class="itemList">
+                    <a href="#promociones" class="itemLink">Promociones</a>
+                </li>
+
+                <li class="itemList">
+                    <a href="#servicios" class="itemLink">Servicios</a>
+                </li>
+
+                <img src="img/anandiSpaLogoConColor.png" alt="anandi spa logo" class="logo">
+                
+                <li class="itemList">
+                    <a href="#galeria-img" class="itemLink">Galeria</a>
+                </li>
+
+                <li class="itemList">
+                    <a href="#" class="itemLink">Nosotros</a>
+                </li>
+
+                <li class="itemList">
+                    <a href="#" class="itemLink">Contacto</a>
+                </li>
             </ul>
         </nav>
-    </header> -->
+    </header>
 
     <main class="main container">
 
-        <style>
-            .main {
-                height: 100vh;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-            }
-
-            .main article {
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                justify-content: center;
-            }
-
-            .main article h1 {
-                font-size: 5rem;
-                font-weight: 600;
-                color: var(--color-text);
-            }
-
-            .main article h3 {
-                margin: 2rem 0;
-                font-size: 1.5em;
-                color: var(--color-text);
-            }
-            .main article i {
-                font-size: 4rem;
-                color: var(--color-text);
-            }
-        </style>
-
-        <article>
-            <h1>Proximamente Anandi Spa</h1>
-
-            <h3>Mientras tanto puedes visitar nuestro Instagram</h3>
-            <i class="uil uil-angle-down"></i>
-            <button class="btn"><a href="https://instagram.com/anandi.spa">Haz click aquí</a></button>
-        </article>
-
-        <!-- <section class="sectionInicio" id="inicio">
-            <div class="socialsContainer">
+        <div class="containerInicio">
+            <!-- <div class="navbarSocialsContainer">
                 <a href="#" class="socialLink">
-                    <i class="uil uil-whatsapp"></i>
+                    <i class='bx bxl-whatsapp' style='color:#ff0000'  ></i>
                 </a>
                 <a href="#" class="socialLink">
                     <i class="uil uil-instagram"></i>
@@ -86,114 +75,188 @@
                 <a href="#" class="socialLink">
                     <i class="uil uil-facebook"></i>
                 </a>
-            </div>
-            <article>
+            </div> -->
+    
+            <section class="sectionInicio" id="inicio">
                 <h1 class="inicioTitulo">Anandi Spa</h1>
                 <h3 class="inicioSubtitulo">Circuitos de Relajación</h3>
                 <button class="btn"><a href="#">Agendar Cita</a></button>
-                <h2>rama Gaston creada</h2>
-                <p>creando un edit en mi ramita</p>
-                <p>otro parrafito desde mi ramita</p>
-            </article>
-        </section>
+            </section>
+        </div>
 
         <section class="sectionPromociones" id="promociones">
-            <h2 class="sectionTitulo">Promociones</h2>
-            <article class="promocionContainer">
-                <div class="promocionCard">
-                    <div class="promocionCardImg">
-                        <img src="" alt="">
+            <div class="containerSectionGlobal">
+                <h2 class="sectionTitulo">Promociones Especiales</h2>
+                <article class="promocionContainer">
+                    <!-- CARD #1 -->
+                    <div class="promocionCard">
+                        <div class="promocionCardImg">
+                            <img src="img/pro1.jpg" alt="Promo Especial #1">
+                        </div>
+                    
+                        <!-- BOTON "PEDIR PROMO" -->
+                        <div class="promocionCardContenido">
+                            <h3 class="tituloCard">PROMO #1</h3>
+                            <p class="descripcion">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Omnis, quae.</p>
+                            <button class="btn">
+                                <a href="#">Pedir Promo</a>
+                            </button>
+                        </div>
                     </div>
-                    <div class="promocionCardContenido">
-                        <h3 class="tituloCard"></h3>
-                        <p class="descripcion"></p>
-                        <button class="btn"><a href="#">Pedir Promo</a></button>
+
+                    <!-- CARD #2 -->
+                    <div class="promocionCard">
+                        <div class="promocionCardImg">
+                            <img src="img/pro2.jpg" alt="Promo Especial #2">
+                        </div>
+                    
+                        <!-- BOTON "PEDIR PROMO" -->
+                        <div class="promocionCardContenido">
+                            <h3 class="tituloCard">PROMO #2</h3>
+                            <p class="descripcion">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum, ad.</p>
+                            <button class="btn">
+                                <a href="#">Pedir Promo</a>
+                            </button>
+                        </div>
                     </div>
-                </div>
-            </article>
+
+                    <!-- CARD #3 -->
+                    <div class="promocionCard">
+                        <div class="promocionCardImg">
+                            <img src="img/pro3.jpg" alt="Promo Especial #3">
+                        </div>
+                    
+                        <!-- BOTON "PEDIR PROMO" -->
+                        <div class="promocionCardContenido">
+                            <h3 class="tituloCard">PROMO #3</h3>
+                            <p class="descripcion">Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam, a?</p>
+                            <button class="btn">
+                                <a href="#">Pedir Promo</a>
+                            </button>
+                        </div>
+                    </div>
+                </article>
+            </div>
         </section>
 
         <section class="sectionServicios" id="servicios">
-            <h2 class="sectionTitulo">Nuestros Servicios</h2>
-            <article class="serviciosContainer">
-                <div class="serviciosCardCarrusel">
-
-                    <div class="servicioCard">
-                        <div class="servicioCardContenido">
-                            <div class="servicioCardContenidoImagenes">
-                                <img src="https://bracketweb.com/soloxwp/wp-content/uploads/2023/09/service-2-6.jpg"
-                                    alt="">
-                                <div class="servicioCardContenidoImg2">
-                                    <img src="img/servicios/icon1.png" alt="">
+            <div class="containerSectionGlobal">
+                <h2 class="sectionTitulo">Nuestros Servicios</h2>
+                <article class="serviciosContainer">
+                    <div class="serviciosCardCarrusel">
+    
+                        <div class="servicioCard">
+                            <div class="servicioCardContenido">
+                                <div class="servicioCardContenidoImagenes">
+                                    <img src="https://bracketweb.com/soloxwp/wp-content/uploads/2023/09/service-2-6.jpg"
+                                        alt="">
+                                    <div class="servicioCardContenidoImg2">
+                                        <img src="img/servicios/icon1.png" alt="">
+                                    </div>
+                                </div>
+                                <div class="servicioCardContenido2">
+                                    <h3 class="servicioCardTitulo">Titulo</h3>
+                                    <p class="servicioCardDescripcion">Descripcion</p>
+                                    <button class="btn servicioCardBtn"><a href="#">Agendar Cita</a></button>
                                 </div>
                             </div>
-                            <div class="servicioCardContenido2">
-                                <h3 class="servicioCardTitulo">Titulo</h3>
-                                <p class="servicioCardDescripcion">Descripcion</p>
-                                <button class="servicioCardBtn"><a href="#">Agendar Cita</a></button>
+                        </div>
+                        
+                        <div class="servicioCard">
+                            <div class="servicioCardContenido">
+                                <div class="servicioCardContenidoImagenes">
+                                    <img src="https://bracketweb.com/soloxwp/wp-content/uploads/2023/09/service-2-1.jpg"
+                                        alt="">
+                                    <div class="servicioCardContenidoImg2">
+                                        <img src="img/servicios/icon1.png" alt="">
+                                    </div>
+                                </div>
+                                <div class="servicioCardContenido2">
+                                    <h3 class="servicioCardTitulo">Titulo</h3>
+                                    <p class="servicioCardDescripcion">Descripcion</p>
+                                    <button class="btn servicioCardBtn"><a href="#">Agendar Cita</a></button>
+                                </div>
+                            </div>
+                        </div>
+    
+                        <div class="servicioCard">
+                            <div class="servicioCardContenido">
+                                <div class="servicioCardContenidoImagenes">
+                                    <img src="https://bracketweb.com/soloxwp/wp-content/uploads/2023/09/service-2-2.jpg"
+                                        alt="">
+                                    <div class="servicioCardContenidoImg2">
+                                        <img src="img/servicios/icon1.png" alt="">
+                                    </div>
+                                </div>
+                                <div class="servicioCardContenido2">
+                                    <h3 class="servicioCardTitulo">Titulo</h3>
+                                    <p class="servicioCardDescripcion">Descripcion</p>
+                                    <button class="btn servicioCardBtn"><a href="#">Agendar Cita</a></button>
+                                </div>
                             </div>
                         </div>
                     </div>
-                    
-                    <div class="servicioCard">
-                        <div class="servicioCardContenido">
-                            <div class="servicioCardContenidoImagenes">
-                                <img src="https://bracketweb.com/soloxwp/wp-content/uploads/2023/09/service-2-1.jpg"
-                                    alt="">
-                                <div class="servicioCardContenidoImg2">
-                                    <img src="img/servicios/icon1.png" alt="">
-                                </div>
-                            </div>
-                            <div class="servicioCardContenido2">
-                                <h3 class="servicioCardTitulo">Titulo</h3>
-                                <p class="servicioCardDescripcion">Descripcion</p>
-                                <button class="servicioCardBtn"><a href="#">Agendar Cita</a></button>
-                            </div>
-                        </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- OPCIÓN GALERIA RARA DE FOTOS -->
+        <section class="galeria-img" id="galeria-img">
+            <div class="containerGaleria-img">
+                <h2 class="sectionTitulo">Galeria de imagenes Spa</h2>
+                <div class="gallery-container">
+                    <div class="gallery__item">
+                        <img src="img/galeria/1.jpg" alt="Anandi Spa" class="gallery__img">
+                        <h2 class="gallery__title">Img 1</h2>
                     </div>
-
-                    <div class="servicioCard">
-                        <div class="servicioCardContenido">
-                            <div class="servicioCardContenidoImagenes">
-                                <img src="https://bracketweb.com/soloxwp/wp-content/uploads/2023/09/service-2-2.jpg"
-                                    alt="">
-                                <div class="servicioCardContenidoImg2">
-                                    <img src="img/servicios/icon1.png" alt="">
-                                </div>
-                            </div>
-                            <div class="servicioCardContenido2">
-                                <h3 class="servicioCardTitulo">Titulo</h3>
-                                <p class="servicioCardDescripcion">Descripcion</p>
-                                <button class="servicioCardBtn"><a href="#">Agendar Cita</a></button>
-                            </div>
-                        </div>
+                    <div class="gallery__item">
+                        <img src="img/galeria/2.jpg" alt="Anandi Spa" class="gallery__img">
+                        <h2 class="gallery__title">Img 2</h2>
                     </div>
-
-
-
-
+                    <div class="gallery__item">
+                        <img src="img/galeria/3.jpg" alt="Anandi Spa" class="gallery__img">
+                        <h2 class="gallery__title">Img 3</h2>
+                    </div>
+                    <div class="gallery__item">
+                        <img src="img/galeria/4.jpg" alt="Anandi Spa" class="gallery__img">
+                        <h2 class="gallery__title">Img 4</h2>
+                    </div>
+                    <div class="gallery__item">
+                        <img src="img/galeria/5.jpg" alt="Anandi Spa" class="gallery__img">
+                        <h2 class="gallery__title">Img 5</h2>
+                    </div>
+                    <div class="gallery__item">
+                        <img src="img/galeria/6.jpg" alt="Anandi Spa" class="gallery__img">
+                        <h2 class="gallery__title">Img 6</h2>
+                    </div>
+                    <div class="gallery__item">
+                        <img src="img/galeria/7.jpg" alt="Anandi Spa" class="gallery__img">
+                        <h2 class="gallery__title">Img 7</h2>
+                    </div>
+                    <div class="gallery__item">
+                        <img src="img/galeria/8.jpg" alt="Anandi Spa" class="gallery__img">
+                        <h2 class="gallery__title">Img 8</h2>
+                    </div>
+                    <div class="gallery__item">
+                        <img src="img/galeria/9.jpg" alt="Anandi Spa" class="gallery__img">
+                        <h2 class="gallery__title">Img 9</h2>
+                    </div>
                 </div>
-            </article>
+            </div>
         </section>
 
-        <section class="sectionGaleria" id="galeria">
-
+        <!-- galeria fotos movimiento -->
+        <section class="section-box" style="display: grid; place-content: center;">
+            <a href="galeryMove.html" style="color: white;">Galería con movimiento</a>
+            <br>
+            <a href="testingGal2.html" style="color: white;">Testing Gal Do</a>
+            <br>
+            <a href="testingGal3.html" style="color: white;">Testing Gal Tre</a>
         </section>
-
-        <section class="sectionNosotros" id="nosotros">
-
-        </section>
-
-        <section class="sectionContacto" id="contacto">
-
-        </section> -->
     </main>
 
-    <footer>
 
-    </footer>
-
-    <script src="main.js"></script>
+    <script src="js/main.js"></script>
 </body>
 
 </html>
