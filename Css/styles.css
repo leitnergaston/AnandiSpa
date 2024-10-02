@@ -1,0 +1,164 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
+
+
+:root {
+    --h1-font-size: 2.25rem;
+    --h3-font-size: 1.25rem;
+    --descripcion-font-size: 1rem;
+    --small-font-size: .875rem;
+    --smaller-font-size: .813rem;
+
+    --color-bg: #f7eae5;
+    --color-text: #6b3e0a;
+    --color-hover: #c9802e;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Quicksand", sans-serif;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* .btn {
+    display: inline-block;
+    max-width: 12em;
+    height: 2.6em;
+    line-height: 2.5em;
+    overflow: hidden;
+    cursor: pointer;
+    margin: 20px;
+    padding: 0 10px;
+    font-size: 17px;
+    z-index: 1;
+    background-color: #f0d1c4;
+    border: 2px solid var(--color-text);
+    border-radius: 6px;
+    position: relative;
+    transition: .3s ease;
+} */
+
+/* .btn a {
+    color: #462807;
+    letter-spacing: 1px;
+    font-weight: 500;
+} */
+
+/* .btn:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 6px #3b3b3b;
+    cursor: pointer;
+} */
+
+.hr {
+    margin: 0;
+    opacity: .4;
+}
+
+.navbar,
+#promos,
+#servicios,
+#nosotros,
+#testimonios,
+#galeria,
+#contacto,
+#footer {
+    background-color: var(--color-bg) !important;
+}
+
+.img-logo {
+    width: 120px;
+}
+
+.navbar-nav {
+    gap: 5px;
+}
+
+.nav-link {
+    color: #363636;
+    font-weight: 500;
+}
+
+.nav-link:hover {
+    text-decoration: underline;
+}
+
+.hero-section {
+    background-image: url('/img/imagenesDeFondo/imagenFondo4.jpg');
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    color: var(--color-text);
+    padding: 100px 0;
+}
+
+.lead {
+    font-weight: 500;
+    padding: 0 3rem;
+}
+
+.card-img-top {
+    width: 100%;
+    object-fit: cover;
+}
+
+.btn {
+    background-color: #c9812e7e;
+    color: var(--color-text);
+    font-weight: 500;
+    border: 1px solid var(--color-text);
+    transition: .4s ease;
+}
+
+.btn:hover {
+    background-color: var(--color-hover);
+    border: 1px solid var(--color-text);
+    letter-spacing: 1px;
+    cursor: pointer;
+}
+
+.service-icon {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+#footer {
+    border-top: 1px solid;
+}
+
+.footerLink {
+    color: #363636;
+    font-weight: 600;
+    transition: 1s;
+}
+
+.footerLink:hover {
+    text-decoration: underline;
+}
+
+.socialIcon {
+    font-size: 1.5rem;
+    transition: 2s ease;
+}
+
+.socialIcon i:hover {
+    color: var(--color-hover);
+}
+
+
+
