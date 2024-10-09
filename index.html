@@ -4,15 +4,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Anandi Spa | Rama Gaston</title>
+    <title>AS | Rama Gaston</title>
 
 
     <!-- ICONOS -->
     <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
-
-    <!-- Boostrap -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
 
     <!-- ESTILOS -->
     <link rel="stylesheet" href="Css/styles.css">
@@ -23,447 +19,335 @@
 
 
 <body>
-    <header class="navbar navbar-expand-lg navbar-light bg-light">
-        <div class="container">
-            <img src="img/logos/logoAnandiMarronSinFondoRecortado.png" alt="logo anandi spa" class="img-logo">
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" href="#promos">Promos</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#servicios">Servicios</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#nosotros">Sobre Nosotros</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Galeria</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#contacto">Contacto</a>
-                    </li>
-                </ul>
+    <header>
+        <nav class="container">
+            <a href="#" class="linkLogo">
+                <img src="img/logos/logoAnandiMarronSinFondoRecortado.png" alt="" class="imgLogo">
+            </a>
+            <ul class="nav-links">
+                <li class="nav-item">
+                    <a href="" class="nav-link">Promos</a>
+                </li>
+                <li class="nav-item">
+                    <a href="" class="nav-link">Servicios</a>
+                </li>
+                <li class="nav-item">
+                    <a href="" class="nav-link">Nosotros</a>
+                </li>
+                <li class="nav-item">
+                    <a href="" class="nav-link">Galeria</a>
+                </li>
+                <li class="nav-item">
+                    <a href="" class="nav-link">Contacto</a>
+                </li>
+            </ul>
+            <div class="hamburger">
+                <div></div>
+                <div></div>
+                <div></div>
             </div>
-        </div>
+        </nav>
     </header>
 
     <main>
-        <!-- inicio -->
-        <section class="hero-section text-center">
+        <section class="hero">
             <div class="container">
-                <h1 class="display-4 fw-bold mb-4">Bienvenidos a Anandi Spa</h1>
-                <p class="lead mb-4">Relájate y desconecta del mundo en nuestro spa. Disfruta de masajes descontracturantes, hidromasaje, sauna finlandés, tratamientos faciales y corporales. Además, te ofrecemos circuitos de spa completos y deliciosas meriendas. ¡Recervá ahora y descubre nuestras promociones especiales!</p>
-                <a href="#promos" class="btn">Ver Promos</a>
+                <h1>Bienvenidos a Anandi Spa</h1>
+                <p>Relájate y desconecta del mundo en nuestro spa. Disfruta de masajes descontracturantes, hidromasaje,
+                    sauna finlandés, tratamientos faciales y corporales. Además, te ofrecemos circuitos de spa completos
+                    y deliciosas meriendas. ¡Recervá ahora y descubre nuestras promociones especiales!</p>
+                <a href="#" class="btn">Ver Promos</a>
             </div>
         </section>
 
-        <hr class="hr">
-
-        <!-- ========== Promociones ========== -->
-        <section id="promos" class="py-5 bg-light">
+        <section id="promos" class="promotions">
             <div class="container">
-                <h2 class="text-center mb-5">Nuestras Promos</h2>
-                <div class="row">
-                    <div class="col-md-4 mb-4">
-                        <div class="card h-100">
-                            <img src="img/promos/Promo 1.jpg" class="card-img-top" alt="Summer Relaxation Package">
-                            <div class="card-body d-flex flex-column">
-                                <h3 class="card-title">Promo 1</h3>
-                                <p class="card-text flex-grow-1">Desconectá del estrés con nuestro masaje
-                                    descontracturante o sedativo. La lavanda y las pindas herbáticas te envolverán en
-                                    una sensación de calma profunda. Elige la duración que más se adapte a ti y completa
-                                    la experiencia con una refrescante limonada y frutos secos.</p>
-                                <a href="#" class="btn btn-primary mt-auto">Reserva ahora</a>
-                            </div>
+                <h2>Nuestras Promos</h2>
+                <div class="promo-grid">
+                    <div class="promo-card">
+                        <img src="/img/promos/Promo1.jpg" alt="Summer Relaxation Package">
+                        <div class="promo-content">
+                            <h3>Promo 1</h3>
+                            <p>Desconectá del estrés con nuestro masaje
+                                descontracturante o sedativo. La lavanda y las pindas herbáticas te envolverán en
+                                una sensación de calma profunda. Elige la duración que más se adapte a ti y completa
+                                la experiencia con una refrescante limonada y frutos secos.</p>
+                            <a href="#" class="btn">Reserva ahora</a>
                         </div>
                     </div>
-
-                    <div class="col-md-4 mb-4">
-                        <div class="card h-100">
-                            <img src="img/promos/Promo 2.jpg" class="card-img-top" alt="Summer Relaxation Package">
-                            <div class="card-body d-flex flex-column">
-                                <h3 class="card-title">Promo 2</h3>
-                                <p class="card-text flex-grow-1">Conectá con tu energía interior con nuestro masaje con
-                                    piedras calientes. Las piedras se colocan en los chakras, desbloqueando la energía y
-                                    promoviendo la armonía. Un viaje sensorial para cuerpo y alma.</p>
-                                <a href="#" class="btn btn-primary mt-auto">Reserva ahora</a>
-                            </div>
+                    <div class="promo-card">
+                        <img src="/img/promos/Promo2.jpg" alt="Couples Retreat">
+                        <div class="promo-content">
+                            <h3>Promo 2</h3>
+                            <p>Conectá con tu energía interior con nuestro masaje con
+                                piedras calientes. Las piedras se colocan en los chakras, desbloqueando la energía y
+                                promoviendo la armonía. Un viaje sensorial para cuerpo y alma.</p>
+                            <a href="#" class="btn">Reserva ahora</a>
                         </div>
                     </div>
-
-                    <div class="col-md-4 mb-4">
-                        <div class="card h-100">
-                            <img src="img/promos/Promo 3.jpg" class="card-img-top" alt="Summer Relaxation Package">
-                            <div class="card-body d-flex flex-column">
-                                <h3 class="card-title">Promo 3</h3>
-                                <p class="card-text flex-grow-1">Déjate envolver por los aromas de la lavanda y la
-                                    vainilla en nuestro masaje con pindas herbáticas. El calor de las pindas y los
-                                    aceites esenciales te proporcionarán una relajación profunda y duradera.</p>
-                                <a href="#" class="btn btn-primary mt-auto">Reserva ahora</a>
-                            </div>
+                    <div class="promo-card">
+                        <img src="/img/promos/Promo3.jpg" alt="Midweek Stress-Buster">
+                        <div class="promo-content">
+                            <h3>Promo 3</h3>
+                            <p>Déjate envolver por los aromas de la lavanda y la
+                                vainilla en nuestro masaje con pindas herbáticas. El calor de las pindas y los
+                                aceites esenciales te proporcionarán una relajación profunda y duradera.</p>
+                            <a href="#" class="btn">Reserva ahora</a>
                         </div>
                     </div>
-
-                    <div class="col-md-4 mb-4">
-                        <div class="card h-100">
-                            <img src="img/promos/Promo 4.jpg" class="card-img-top" alt="Summer Relaxation Package">
-                            <div class="card-body d-flex flex-column">
-                                <h3 class="card-title">Promo 4</h3>
-                                <p class="card-text flex-grow-1">Renueva tu piel con nuestra limpieza facial profunda.
-                                    La fangoterapia y los productos hidratantes dejarán tu rostro radiante y luminoso.
-                                </p>
-                                <a href="#" class="btn btn-primary mt-auto">Reserva ahora</a>
-                            </div>
+                    <div class="promo-card">
+                        <img src="img/promos/Promo4.jpg" alt="">
+                        <div class="promo-content">
+                            <h3>Promo 4</h3>
+                            <p>Renueva tu piel con nuestra limpieza facial profunda.
+                                La fangoterapia y los productos hidratantes dejarán tu rostro radiante y luminoso.</p>
+                            <a href="" class="btn">Reserva ahora</a>
                         </div>
                     </div>
-
-                    <div class="col-md-4 mb-4">
-                        <div class="card h-100">
-                            <img src="img/promos/Promo 5.jpg" class="card-img-top" alt="Summer Relaxation Package">
-                            <div class="card-body d-flex flex-column">
-                                <h3 class="card-title">Promo 5</h3>
-                                <p class="card-text flex-grow-1">Reconecta contigo mismo o disfruta de una experiencia
-                                    única junto a esa persona especial. Combina un masaje relajante o descontracturante
-                                    con una limpieza facial profunda y un tratamiento corporal que nutrirá tu piel. ¡La
-                                    combinación perfecta para desconectar y pasar un momento inolvidable!.</p>
-                                <a href="#" class="btn btn-primary mt-auto">Reserva ahora</a>
-                            </div>
+                    <div class="promo-card">
+                        <img src="img/promos/Promo5.jpg" alt="">
+                        <div class="promo-content">
+                            <h3>Promo 5</h3>
+                            <p>Reconecta contigo mismo o disfruta de una experiencia
+                                única junto a esa persona especial. Combina un masaje relajante o descontracturante
+                                con una limpieza facial profunda y un tratamiento corporal que nutrirá tu piel. ¡La
+                                combinación perfecta para desconectar y pasar un momento inolvidable!.</p>
+                            <a href="" class="btn">Reserva ahora</a>
                         </div>
                     </div>
-
-                    <div class="col-md-4 mb-4">
-                        <div class="card h-100">
-                            <img src="img/promos/Promo relax 1.jpg" class="card-img-top"
-                                alt="Summer Relaxation Package">
-                            <div class="card-body d-flex flex-column">
-                                <h3 class="card-title">Promo Relax 1</h3>
-                                <p class="card-text flex-grow-1">Relájate y desconecta del estrés ó comparte un momento
-                                    de bienestar con tu pareja. Nuestro circuito incluye masaje relajante con un baño en
-                                    nuestro hidromasaje con sales aromáticas y una deliciosa merienda. ¡El regalo
-                                    perfecto para celebrar cualquier ocasión!.</p>
-                                <a href="#" class="btn btn-primary mt-auto">Reserva ahora</a>
-                            </div>
+                    <div class="promo-card">
+                        <img src="img/promos/PromoRelax1.jpg" alt="">
+                        <div class="promo-content">
+                            <h3>Promo Relax 1</h3>
+                            <p>Relájate y desconecta del estrés ó comparte un momento
+                                de bienestar con tu pareja. Nuestro circuito incluye masaje relajante con un baño en
+                                nuestro hidromasaje con sales aromáticas y una deliciosa merienda. ¡El regalo
+                                perfecto para celebrar cualquier ocasión!.</p>
+                            <a href="" class="btn">Reserva ahora</a>
                         </div>
                     </div>
-
-                    <div class="col-md-4 mb-4">
-                        <div class="card h-100">
-                            <img src="img/promos/Promo relax 2.jpg" class="card-img-top"
-                                alt="Summer Relaxation Package">
-                            <div class="card-body d-flex flex-column">
-                                <h3 class="card-title">Promo Relax 2</h3>
-                                <p class="card-text flex-grow-1">Regálate a ti o disfruta de una experiencia de lujo con
-                                    tu pareja. Combina un masaje descontracturante con piedras calientes y pindas
-                                    herbáticas, un facial hidratante y una relajación profunda. ¡La escapada perfecta
-                                    para desconectar!.</p>
-                                <a href="#" class="btn btn-primary mt-auto">Reserva ahora</a>
-                            </div>
+                    <div class="promo-card">
+                        <img src="img/promos/PromoRelax2.jpg" alt="">
+                        <div class="promo-content">
+                            <h3>Promo Relax 2</h3>
+                            <p>Regálate a ti o disfruta de una experiencia de lujo con
+                                tu pareja. Combina un masaje descontracturante con piedras calientes y pindas
+                                herbáticas, un facial hidratante y una relajación profunda. ¡La escapada perfecta
+                                para desconectar!.</p>
+                            <a href="" class="btn">Reserva ahora</a>
                         </div>
                     </div>
-
-                    <div class="col-md-4 mb-4">
-                        <div class="card h-100">
-                            <img src="img/promos/promo Romance.jpg" class="card-img-top"
-                                alt="Summer Relaxation Package">
-                            <div class="card-body d-flex flex-column">
-                                <h3 class="card-title">Promo Romance</h3>
-                                <p class="card-text flex-grow-1">Enciende la llama de la pasión con nuestra promoción
-                                    romántica. Disfruta de un masaje relajante para dos, exfoliación corporal y sauna
-                                    finlandés. ¡Una velada inolvidable para celebrar el amor!.</p>
-                                <a href="#" class="btn btn-primary mt-auto">Reserva ahora</a>
-                            </div>
+                    <div class="promo-card">
+                        <img src="img/promos/PromoRomance.jpg" alt="">
+                        <div class="promo-content">
+                            <h3>Promo Romance</h3>
+                            <p>Enciende la llama de la pasión con nuestra promoción
+                                romántica. Disfruta de un masaje relajante para dos, exfoliación corporal y sauna
+                                finlandés. ¡Una velada inolvidable para celebrar el amor!.</p>
+                            <a href="" class="btn">Reserva ahora</a>
                         </div>
                     </div>
-
-                    <div class="col-md-4 mb-4">
-                        <div class="card h-100">
-                            <img src="img/promos/Tarde de amigas.jpg" class="card-img-top"
-                                alt="Summer Relaxation Package">
-                            <div class="card-body d-flex flex-column">
-                                <h3 class="card-title">Tardes para compartir</h3>
-                                <p class="card-text flex-grow-1">¡Reúne a tus amigas y disfruta de una tarde de relax y
-                                    diversión en nuestro spa!. Masajes, exfoliaciones, sauna y una deliciosa merienda te
-                                    esperan.</p>
-                                <a href="#" class="btn btn-primary mt-auto">Reserva ahora</a>
-                            </div>
+                    <div class="promo-card">
+                        <img src="img/promos/TardeDeAmigas.jpg" alt="">
+                        <div class="promo-content">
+                            <h3>Tarde de Amigas</h3>
+                            <p>¡Reúne a tus amigas y disfruta de una tarde de relax y
+                                diversión en nuestro spa!. Masajes, exfoliaciones, sauna y una deliciosa merienda te
+                                esperan.</p>
+                            <a href="" class="btn">Reserva ahora</a>
                         </div>
                     </div>
-
-                    <div class="col-md-4 mb-4">
-                        <div class="card h-100">
-                            <img src="img/promos/promo cumple.jpg" class="card-img-top" alt="Summer Relaxation Package">
-                            <div class="card-body d-flex flex-column">
-                                <h3 class="card-title">Festejá tu cumple</h3>
-                                <p class="card-text flex-grow-1">¡Celebra tu cumpleaños por todo lo alto! Nuestro
-                                    paquete especial incluye masaje, facial, aromaterapia y una deliosa merienda. ¡Te
-                                    haremos sentir especial en tu día!.</p>
-                                <a href="#" class="btn btn-primary mt-auto">Reserva ahora</a>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-        </section>
-
-        <hr class="hr">
-
-        <!-- ========== Servicios ========== -->
-        <section id="servicios" class="py-5">
-            <div class="container">
-                <h2 class="text-center mb-5">Nuestros Servicios</h2>
-                <div class="row">
-                    <div class="col-md-4 mb-4">
-                        <div class="card text-center h-100">
-                            <div class="card-body">
-                                <img src="/placeholder.svg?height=150&width=150" class="rounded-circle mb-3"
-                                    alt="Massage Therapy" width="100" height="100">
-                                <h3 class="card-title">Masajes Descontracturantes</h3>
-                                <p class="card-text">Disfrutá de un masaje profundo y relajante, diseñado para aliviar dolores musculares.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4 mb-4">
-                        <div class="card text-center h-100">
-                            <div class="card-body">
-                                <img src="/placeholder.svg?height=150&width=150" class="rounded-circle mb-3"
-                                    alt="Facial Treatments" width="100" height="100">
-                                <h3 class="card-title">Hidromasaje</h3>
-                                <p class="card-text">Sumérgete en nuestro hidromasaje y deja que el agua caliente y las burbujas alivien tus tensiones.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4 mb-4">
-                        <div class="card text-center h-100">
-                            <div class="card-body">
-                                <img src="/placeholder.svg?height=150&width=150" class="rounded-circle mb-3"
-                                    alt="Body Wraps" width="100" height="100">
-                                <h3 class="card-title">Sauna finlandés</h3>
-                                <p class="card-text">Experimenta los beneficios del sauna tradicional finlandés.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4 mb-4">
-                        <div class="card text-center h-100">
-                            <div class="card-body">
-                                <img src="/placeholder.svg?height=150&width=150" class="rounded-circle mb-3"
-                                    alt="Manicure & Pedicure" width="100" height="100">
-                                <h3 class="card-title">Limpieza de cutis</h3>
-                                <p class="card-text">Luce una piel radiante con nuestra limpieza facial y revitaliza tu cutis.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4 mb-4">
-                        <div class="card text-center h-100">
-                            <div class="card-body">
-                                <img src="/placeholder.svg?height=150&width=150" class="rounded-circle mb-3"
-                                    alt="Aromatherapy" width="100" height="100">
-                                <h3 class="card-title">Exfoliaciones</h3>
-                                <p class="card-text">Exfoliaciones corporales para una piel suave y tersa.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4 mb-4">
-                        <div class="card text-center h-100">
-                            <div class="card-body">
-                                <img src="/placeholder.svg?height=150&width=150" class="rounded-circle mb-3"
-                                    alt="Hot Stone Therapy" width="100" height="100">
-                                <h3 class="card-title">Piscina</h3>
-                                <p class="card-text">Disfruta de un baño refrescante en nuestra piscina al aire libre.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4 mb-4">
-                        <div class="card text-center h-100">
-                            <div class="card-body">
-                                <img src="/placeholder.svg?height=150&width=150" class="rounded-circle mb-3"
-                                    alt="Hot Stone Therapy" width="100" height="100">
-                                <h3 class="card-title">Meriendas</h3>
-                                <p class="card-text">Complementa tu experiencia con nuestras exquisitas meriendas.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4 mb-4">
-                        <div class="card text-center h-100">
-                            <div class="card-body">
-                                <img src="/placeholder.svg?height=150&width=150" class="rounded-circle mb-3"
-                                    alt="Hot Stone Therapy" width="100" height="100">
-                                <h3 class="card-title">Circuitos de spa</h3>
-                                <p class="card-text">Vive una experiencia única con nuestros circuitos de spa que te transportarán a un estado de relajación total.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4 mb-4">
-                        <div class="card text-center h-100">
-                            <div class="card-body">
-                                <img src="/placeholder.svg?height=150&width=150" class="rounded-circle mb-3"
-                                    alt="Hot Stone Therapy" width="100" height="100">
-                                <h3 class="card-title">Promociones</h3>
-                                <p class="card-text">No te pierdas nuestras promociones, descubre promos especiales y regálate un momento de bienestar.</p>
-                            </div>
+                    <div class="promo-card">
+                        <img src="img/promos/PromoCumple.jpg" alt="">
+                        <div class="promo-content">
+                            <h3>Promo Cumple</h3>
+                            <p>¡Celebra tu cumpleaños por todo lo alto! Nuestro
+                                paquete especial incluye masaje, facial, aromaterapia y una deliosa merienda. ¡Te
+                                haremos sentir especial en tu día!.</p>
+                            <a href="" class="btn">Reserva ahora</a>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <hr class="hr">
-
-        <section id="nosotros" class="py-5 bg-light">
+        <section id="servicios" class="services">
             <div class="container">
-                <div class="row align-items-center">
-                    <div class="col-lg-6 mb-4 mb-lg-0">
-                        <img src="/placeholder.svg" alt="Spa interior" class="img-fluid rounded">
+                <h2>Nuestros Servicios</h2>
+                <div class="service-grid">
+                    <div class="service-card">
+                        <img src="img/servicios/body-massage.png" alt="Massage Therapy">
+                        <h3>Masajes Descontracturantes</h3>
+                        <p>Disfrutá de un masaje profundo y relajante, diseñado para aliviar dolores musculares.</p>
                     </div>
-                    <div class="col-lg-6">
-                        <h2 class="mb-4">About Serenity Spa</h2>
-                        <p class="lead">At Serenity Spa, we believe in the power of relaxation and rejuvenation. Our
-                            expert therapists and state-of-the-art facilities ensure that every visit leaves you feeling
-                            refreshed and renewed.</p>
+                    <div class="service-card">
+                        <img src="img/servicios/hidromasaje.png" alt="Facial Treatments">
+                        <h3>Hidromasaje</h3>
+                        <p>Sumérgete en nuestro hidromasaje y deja que el agua caliente y las burbujas alivien tus
+                            tensiones.</p>
+                    </div>
+                    <div class="service-card">
+                        <img src="img/servicios/sauna (2).png" alt="Body Wraps">
+                        <h3>Sauna Finlandés</h3>
+                        <p>Experimenta los beneficios del sauna tradicional finlandés.</p>
+                    </div>
+                    <div class="service-card">
+                        <img src="img/servicios/face-roller.png" alt="Manicure & Pedicure">
+                        <h3>Limpieza de cutis</h3>
+                        <p>Luce una piel radiante con nuestra limpieza facial y revitaliza tu cutis.</p>
+                    </div>
+                    <div class="service-card">
+                        <img src="img/servicios/exfoliaciones.png">
+                        <h3>Exfoliaciones</h3>
+                        <p>Exfoliaciones corporales para una piel suave y tersa.</p>
+                    </div>
+                    <div class="service-card">
+                        <img src="img/servicios/piscina.png" alt="Hot Stone Therapy">
+                        <h3>Piscina</h3>
+                        <p>Disfruta de un baño refrescante en nuestra piscina al aire libre.</p>
+                    </div>
+                    <div class="service-card">
+                        <img src="img/servicios/meriendas.png" alt="Hot Stone Therapy">
+                        <h3>Meriendas</h3>
+                        <p>Complementa tu experiencia con nuestras exquisitas meriendas.</p>
+                    </div>
+                    <div class="service-card">
+                        <img src="img/servicios/spa.png" alt="Hot Stone Therapy">
+                        <h3>Circuitos de Spa</h3>
+                        <p>Vive una experiencia única con nuestros circuitos de spa que te transportarán a un estado de
+                            relajación total.</p>
+                    </div>
+                    <div class="service-card">
+                        <img src="img/servicios/promociones.png" alt="Hot Stone Therapy">
+                        <h3>Promociones</h3>
+                        <p>No te pierdas nuestras promociones, descubre promos especiales y regálate un momento de
+                            bienestar.</p>
                     </div>
                 </div>
             </div>
         </section>
 
-        <hr class="hr">
-
-        <section id="testimonios" class="py-5">
+        <section id="nosotros" class="about">
             <div class="container">
-                <h2 class="text-center mb-5">Lo que nuestros clientes dicen</h2>
-                <div class="row">
-                    <div class="col-md-4 mb-4">
-                        <div class="card h-100">
-                            <div class="card-body">
-                                <p class="card-text font-italic">"Te atienden bien, hay buena relación precio-calidad"</p>
-                                <p class="card-text font-weight-bold">- Laura M.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4 mb-4">
-                        <div class="card h-100">
-                            <div class="card-body">
-                                <p class="card-text font-italic">"Testimonio"</p>
-                                <p class="card-text font-weight-bold">- Michael R.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4 mb-4">
-                        <div class="card h-100">
-                            <div class="card-body">
-                                <p class="card-text font-italic">"Testimonio"</p>
-                                <p class="card-text font-weight-bold">- Emily T.</p>
-                            </div>
-                        </div>
+                <h2>Sobre Nuestro Spa</h2>
+                <div class="about-content">
+                    <img src="img/imagenesDeFondo/imagenFondo 3.jpg" alt="Spa interior" class="img-about">
+                    <div class="about-text">
+                        <p>Relájate y desconecta del mundo en nuestro spa. Disfruta de masajes descontracturantes, hidromasaje, sauna finlandés, tratamientos faciales y corporales. Además, te ofrecemos circuitos de spa completos y deliciosas meriendas. ¡Recervá ahora y descubre nuestras promociones especiales!</p>
                     </div>
                 </div>
             </div>
         </section>
 
-        <hr class="hr">
-
-        <section id="galeria" class="py-5 bg-light">
+        <section class="testimonials">
             <div class="container">
-                <h2 class="text-center mb-5">Nuestra Galeria</h2>
-                <div class="row">
-                    <div class="col-6 col-md-3 mb-4">
-                        <img src="/placeholder.svg?height=300&width=300&text=Spa+Image+1" alt="Spa Image 1"
-                            class="img-fluid rounded">
+                <h2>Lo que nuestros clientes dicen</h2>
+                <div class="testimonial-grid">
+                    <div class="testimonial-card">
+                        <p>"Te atienden bien, hay buena relación precio-calidad"</p>
+                        <p><strong>- Laura M.</strong></p>
                     </div>
-                    <div class="col-6 col-md-3 mb-4">
-                        <img src="/placeholder.svg?height=300&width=300&text=Spa+Image+2" alt="Spa Image 2"
-                            class="img-fluid rounded">
+                    <div class="testimonial-card">
+                        <p>"Te atienden bien, hay buena relación precio-calidad"</p>
+                        <p><strong>- Laura M.</strong></p>
                     </div>
-                    <div class="col-6 col-md-3 mb-4">
-                        <img src="/placeholder.svg?height=300&width=300&text=Spa+Image+3" alt="Spa Image 3"
-                            class="img-fluid rounded">
+                    <div class="testimonial-card">
+                        <p>"Te atienden bien, hay buena relación precio-calidad"</p>
+                        <p><strong>- Laura M.</strong></p>
                     </div>
-                    <div class="col-6 col-md-3 mb-4">
-                        <img src="/placeholder.svg?height=300&width=300&text=Spa+Image+4" alt="Spa Image 4"
-                            class="img-fluid rounded">
-                    </div>
-                    <div class="col-6 col-md-3 mb-4">
-                        <img src="/placeholder.svg?height=300&width=300&text=Spa+Image+5" alt="Spa Image 5"
-                            class="img-fluid rounded">
-                    </div>
-                    <div class="col-6 col-md-3 mb-4">
-                        <img src="/placeholder.svg?height=300&width=300&text=Spa+Image+6" alt="Spa Image 6"
-                            class="img-fluid rounded">
-                    </div>
-                    <div class="col-6 col-md-3 mb-4">
-                        <img src="/placeholder.svg?height=300&width=300&text=Spa+Image+7" alt="Spa Image 7"
-                            class="img-fluid rounded">
-                    </div>
-                    <div class="col-6 col-md-3 mb-4">
-                        <img src="/placeholder.svg?height=300&width=300&text=Spa+Image+8" alt="Spa Image 8"
-                            class="img-fluid rounded">
-                    </div>
-                </div>
-                <div class="text-center mt-4">
-                    <a href="#" class="btn btn-primary">Ver mas</a>
                 </div>
             </div>
         </section>
 
-        <hr class="hr">
 
-        <section id="contacto" class="py-5">
+
+        <section id="galeria" class="gallery">
             <div class="container">
-                <h2 class="text-center mb-5">Contáctanos</h2>
-                <div class="row">
-                    <div class="col-md-6 mb-4 mb-md-0">
-                        <ul class="list-unstyled">
-                            <li class="mb-3"><i class="fas fa-phone me-2"></i> +549 (261) 510 4019</li>
-                            <li class="mb-3"><i class="fas fa-envelope me-2"></i> estetica.anandi@gmail.com</li>
-                            <li class="mb-3"><i class="fas fa-map-marker-alt me-2"></i>Godoy Cruz, Mendoza, Argentina</li>
+                <h2>Nuestra Galeria</h2>
+                <div class="gallery-grid">
+                    <div class="gallery-item">
+                        <img src="img/galeria/1.jpg" alt="Spa Image 1">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="img/galeria/2.jpg" alt="Spa Image 2">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="img/galeria/3.jpg" alt="Spa Image 3">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="img/galeria/4.jpg" alt="Spa Image 4">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="img/galeria/5.jpg" alt="Spa Image 5">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="img/galeria/6.jpg" alt="Spa Image 6">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="img/galeria/7.jpg" alt="Spa Image 7">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="img/galeria/8.jpg" alt="Spa Image 8">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="img/galeria/9-2.jpg" alt="Spa Image 9">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="img/galeria/9.jpg" alt="Spa Image 10">
+                    </div>
+                </div>
+                <a href="#" class="btn">Ver mas</a>
+            </div>
+        </section>
+
+        <section id="contacto" class="contact">
+            <div class="container">
+                <h2>Contáctanos</h2>
+                <div class="contact-content">
+                    <div class="contact-info">
+                        <ul>
+                            <li>📞 +549 (261) 510-4019</li>
+                            <li>✉️ estetica.anandi@gmail.com</li>
+                            <li>📍 Godoy Cruz, Mendoza, Argentina</li>
                         </ul>
                     </div>
-                    <div class="col-md-6">
-                        <form>
-                            <div class="mb-3">
-                                <input type="text" class="form-control" placeholder="Tu nombre" required>
-                            </div>
-                            <div class="mb-3">
-                                <input type="email" class="form-control" placeholder="Tu mail" required>
-                            </div>
-                            <div class="mb-3">
-                                <textarea class="form-control" rows="4" placeholder="Tu mensaje" required></textarea>
-                            </div>
-                            <button type="submit" class="btn btn-primary">Enviar mensaje</button>
-                        </form>
-                    </div>
+                    <form class="contact-form">
+                        <input type="text" placeholder="Tu Nombre" required>
+                        <input type="email" placeholder="Tu Email" required>
+                        <textarea placeholder="Tu Mensaje" required></textarea>
+                        <button type="submit" class="btn">Enviar mensaje</button>
+                    </form>
                 </div>
             </div>
         </section>
     </main>
 
-    <footer id="footer" class="bg-light py-4">
+    <footer>
         <div class="container">
-            <div class="row align-items-center">
-                <div class="col-md-4 text-center text-md-start mb-3 mb-md-0">
-                    <p class="mb-0">Página desarrollada por 
-                        <a href="https://leitnergaston.netlify.app" class="footerLink text-muted" target="_blank">Leitner</a> y 
-                        <a href="https://gonzalescamila.netlify.app" class="footerLink text-muted" target="_blank">Gonzales</a></p>
+            <div class="footer-content">
+                <p>Página desarrollada por
+                    <a href="#" class="footer-copy" target="_blank">C&G Studio</a>
+                </p>
+                <div class="footer-links">
+                    <a href="#">Términos y Condiciones</a>
+                    <a href="#">Politica de Privacidad</a>
                 </div>
-                <div class="col-md-4 text-center mb-3 mb-md-0">
-                    <a href="#" class="text-decoration-none text-muted me-3">Términos de servicio</a>
-                    <a href="#" class="text-decoration-none text-muted">Política de privacidad</a>
-                </div>
-                <div class="col-md-4 text-center text-md-end">
-                    <a href="https://wa.me/+5492615104019" class="socialIcon text-decoration-none text-muted me-3" target="_blank"><i class="fab fa-whatsapp"></i></a>
-                    <a href="https://instagram.com/anandi.spa" class="socialIcon text-decoration-none text-muted me-3" target="_blank"><i class="fab fa-instagram"></i></a>
-                    <a href="https://www.facebook.com/spa.anandi" class="socialIcon text-decoration-none text-muted me-3" target="_blank"><i class="fab fa-facebook"></i></a>
+                <div class="social-links">
+                    <a href="#" aria-label="Instagram">Instagram</a>
+                    <a href="#" aria-label="Facebook">Facebook</a>
+                    <a href="#" aria-label="WhatsApp">WhatsApp</a>
+                    <a href="#" aria-label="Mas Info"></a>
                 </div>
             </div>
         </div>
     </footer>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+
+    </script>
 </body>
+
+
+
 
 </html>

@@ -1,21 +1,17 @@
-/*=============== SCROLL SECTIONS ACTIVE LINK ===============*/
-const sections = document.querySelectorAll("section[id]");
+// Mobile menu toggle
+const hamburger = document.querySelector('.hamburger');
+const navLinks = document.querySelector('.nav-links');
 
-window.addEventListener("scroll", navHighlighter);
+hamburger.addEventListener('click', () => {
+    navLinks.classList.toggle('active');
+});
 
-function navHighlighter() {
-    let scrollY = window.pageYOffset;
-
-    sections.forEach(current => {
-        const sectionHeight = current.offsetHeight;
-        const sectionTop = current.offsetTop - 50,
-            sectionId = current.getAttribute("id");
-
-        if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
-            document.querySelector('.itemList a[href*=' + sectionId + ']').classList.add("active-link")
-        }
-        else {
-            document.querySelector('.itemList a[href*=' + sectionId + ']').classList.remove("active-link")
-        }
-    })
-}
+// Smooth scrolling for anchor links
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+            behavior: 'smooth'
+        });
+    });
+});
