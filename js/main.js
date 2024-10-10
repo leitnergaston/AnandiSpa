@@ -1,4 +1,4 @@
-// Mobile menu toggle
+// ⭣⭣⭣⭣⭣ Mobile menu toggle ⭣⭣⭣⭣⭣ //
 const hamburger = document.querySelector('.hamburger');
 const navLinks = document.querySelector('.nav-links');
 
@@ -15,3 +15,22 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         });
     });
 });
+// ⭡⭡⭡⭡⭡ mobile menu toggle ⭡⭡⭡⭡⭡ //
+
+
+// ⭣⭣⭣⭣⭣ Boton volver arriba ⭣⭣⭣⭣⭣ //
+const backToTopButton = document.getElementById("backToTop");
+
+window.onscroll = function() {
+    if (document.body.scrollTop > 600 || document.documentElement.scrollTop > 600) {
+        backToTopButton.style.transform = "scale(1)";
+    } else {
+        backToTopButton.style.transform = "scale(0)";
+    }
+};
+
+backToTopButton.onclick = function() {
+    document.body.scrollTop = 0; // Para Safari
+    document.documentElement.scrollTop = 0; // Para Chrome, Firefox, IE y Opera
+};
+// ⭡⭡⭡⭡⭡ Boton volver arriba ⭡⭡⭡⭡⭡ //
