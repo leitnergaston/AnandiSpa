@@ -34,3 +34,29 @@ backToTopButton.onclick = function() {
     document.documentElement.scrollTop = 0; // Para Chrome, Firefox, IE y Opera
 };
 // ⭡⭡⭡⭡⭡ Boton volver arriba ⭡⭡⭡⭡⭡ //
+
+// Preloader de pagina inicio seccion galeria
+const observerOptions = {
+    root: null,
+    rootMargin: '0px',
+    threshold: 0.1
+};
+
+const observerCallback = (entries, observer) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            const img = entry.target;
+            img.src = img.dataset.src;
+            img.onload = () => {
+                img.classList.add('loaded');
+            };
+            observer.unobserve(img);
+        }
+    });
+};
+
+const observer = new IntersectionObserver(observerCallback, observerOptions);
+
+document.querySelectorAll('.gallery-item img').forEach(img => {
+    observer.observe(img);
+});

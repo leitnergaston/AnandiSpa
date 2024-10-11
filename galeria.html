@@ -1,11 +1,162 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Anandi Spa | Galeria</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            padding: 20px;
+        }
+        .gallery-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .bento-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-auto-rows: 200px;
+            gap: 20px;
+            padding-top: 20px;
+        }
+        .bento-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: 15px;
+            background-color: #ddd;
+            transition: transform 0.3s ease;
+        }
+        .bento-item:hover {
+            transform: scale(1.05);
+        }
+        .bento-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+        .bento-item img.loaded {
+            opacity: 1;
+        }
+        .bento-item:nth-child(1) {
+            grid-column: span 2;
+            grid-row: span 2;
+        }
+        .bento-item:nth-child(4) {
+            grid-column: span 2;
+        }
+        .bento-item:nth-child(5) {
+            grid-row: span 2;
+        }
+        .bento-item:nth-child(7) {
+            grid-column: span 2;
+        }
+        @media (max-width: 768px) {
+            .bento-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .bento-item:nth-child(1) {
+                grid-column: span 2;
+                grid-row: span 1;
+            }
+            .bento-item:nth-child(4), .bento-item:nth-child(7) {
+                grid-column: span 1;
+            }
+        }
+    </style>
 </head>
 <body>
-    
+    <div class="gallery-container">
+        <div class="bento-grid">
+            <div class="bento-item"><img data-src="https://picsum.photos/800/600?random=1" alt="Imagen 1"></div>
+            <div class="bento-item"><img data-src="https://picsum.photos/400/400?random=2" alt="Imagen 2"></div>
+            <div class="bento-item"><img data-src="https://picsum.photos/400/400?random=3" alt="Imagen 3"></div>
+            <div class="bento-item"><img data-src="https://picsum.photos/800/400?random=4" alt="Imagen 4"></div>
+            <div class="bento-item"><img data-src="https://picsum.photos/400/800?random=5" alt="Imagen 5"></div>
+            <div class="bento-item"><img data-src="https://picsum.photos/400/400?random=6" alt="Imagen 6"></div>
+            <div class="bento-item"><img data-src="https://picsum.photos/800/400?random=7" alt="Imagen 7"></div>
+            <div class="bento-item"><img data-src="https://picsum.photos/400/400?random=8" alt="Imagen 8"></div>
+            <div class="bento-item"><img data-src="https://picsum.photos/400/400?random=9" alt="Imagen 9"></div>
+            <div class="bento-item"><img data-src="https://picsum.photos/400/400?random=10" alt="Imagen 10"></div>
+        </div>
+        <div class="bento-grid">
+            <div class="bento-item"><img data-src="https://picsum.photos/800/600?random=1" alt="Imagen 1"></div>
+            <div class="bento-item"><img data-src="https://picsum.photos/400/400?random=2" alt="Imagen 2"></div>
+            <div class="bento-item"><img data-src="https://picsum.photos/400/400?random=3" alt="Imagen 3"></div>
+            <div class="bento-item"><img data-src="https://picsum.photos/800/400?random=4" alt="Imagen 4"></div>
+            <div class="bento-item"><img data-src="https://picsum.photos/400/800?random=5" alt="Imagen 5"></div>
+            <div class="bento-item"><img data-src="https://picsum.photos/400/400?random=6" alt="Imagen 6"></div>
+            <div class="bento-item"><img data-src="https://picsum.photos/800/400?random=7" alt="Imagen 7"></div>
+            <div class="bento-item"><img data-src="https://picsum.photos/400/400?random=8" alt="Imagen 8"></div>
+            <div class="bento-item"><img data-src="https://picsum.photos/400/400?random=9" alt="Imagen 9"></div>
+            <div class="bento-item"><img data-src="https://picsum.photos/400/400?random=10" alt="Imagen 10"></div>
+        </div>
+    </div>
+
+    <script>
+        const loadedImages = new Set();
+
+        const observerOptions = {
+            root: null,
+            rootMargin: '100px', // Carga imágenes un poco antes de que entren en el viewport
+            threshold: 0.1
+        };
+
+        const observerCallback = (entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const img = entry.target;
+                    if (!loadedImages.has(img.dataset.src)) {
+                        img.src = img.dataset.src;
+                        img.onload = () => {
+                            img.classList.add('loaded');
+                            loadedImages.add(img.dataset.src);
+                        };
+                    } else {
+                        img.classList.add('loaded');
+                    }
+                    observer.unobserve(img);
+                }
+            });
+        };
+
+        const observer = new IntersectionObserver(observerCallback, observerOptions);
+
+        document.querySelectorAll('.bento-item img').forEach(img => {
+            if (loadedImages.has(img.dataset.src)) {
+                img.src = img.dataset.src;
+                img.classList.add('loaded');
+            } else {
+                observer.observe(img);
+            }
+        });
+
+        // Opcional: Guardar el estado de las imágenes cargadas
+        window.addEventListener('beforeunload', () => {
+            sessionStorage.setItem('loadedImages', JSON.stringify([...loadedImages]));
+        });
+
+        // Opcional: Recuperar el estado de las imágenes cargadas
+        window.addEventListener('load', () => {
+            const storedImages = JSON.parse(sessionStorage.getItem('loadedImages'));
+            if (storedImages) {
+                storedImages.forEach(src => loadedImages.add(src));
+                document.querySelectorAll('.bento-item img').forEach(img => {
+                    if (loadedImages.has(img.dataset.src)) {
+                        img.src = img.dataset.src;
+                        img.classList.add('loaded');
+                    }
+                });
+            }
+        });
+    </script>
 </body>
 </html>
