@@ -35,7 +35,8 @@ backToTopButton.onclick = function() {
 };
 // ⭡⭡⭡⭡⭡ Boton volver arriba ⭡⭡⭡⭡⭡ //
 
-// Preloader de pagina inicio seccion galeria
+
+// ⭣⭣⭣⭣⭣ Preloader de pagina inicio seccion galeria ⭣⭣⭣⭣⭣ //
 const observerOptions = {
     root: null,
     rootMargin: '0px',

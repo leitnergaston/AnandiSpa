@@ -83,6 +83,8 @@
     --color-bg-promo-card: #eeeeee;
 
     --color-bg-service-card: #f9f9f9;
+
+    
 }
 
 /* Reset and base styles */
@@ -513,14 +515,17 @@ footer {
     align-items: center;
 }
 
-.footer-copy {
+.footer-copy a {
     color: #fff;
     text-decoration: underline;
 }
 
+.footer-links {
+}
+
 .footer-links a {
     color: #fff;
-    text-decoration: none;
+    text-decoration: underline;
     margin-left: 1rem;
 }
 
@@ -540,7 +545,8 @@ footer {
     transform: translateY(-5px);
 }
 
-/* Responsive styles */
+
+
 @media screen and (max-width: 768px) {
     .nav-links {
         display: none;
@@ -612,3 +618,6 @@ footer {
 
 
 /* ========== PAGINA GALERIA ========== */
+
+
+
