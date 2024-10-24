@@ -69,9 +69,15 @@ document.querySelectorAll('.gallery-item img').forEach(img => {
 const sr = ScrollReveal({
     origin: 'top',
     distance: '80px',
-    duration: 2500,
+    duration: 2000,
     reset: false
 });
 
 sr.reveal('.hero',{delay:300});
-sr.reveal('.promotions',{delay:300});
+sr.reveal('.container h2',{});
+sr.reveal('.promo-card',{delay:300});
+sr.reveal('.services',{delay:300});
+sr.reveal('.img-about-inicio',{delay:300});
+sr.reveal('.about-text',{delay:350});
+sr.reveal('.gallery-grid',{delay:300});
+sr.reveal('.gallery .btn',{delay:400});

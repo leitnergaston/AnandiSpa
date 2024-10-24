@@ -8,7 +8,7 @@
     --small-font-size: .875rem;
     --smaller-font-size: .813rem;
 
-    --color-bg: #f7eae5;
+    --color-bg: #f0d8cf;
     --color-text: #5e3609;
     --color-hover: #c9802e;
 
@@ -340,10 +340,7 @@ nav {
 }
 
 .service-card:hover {
-    /* transform: scale(1.02); */
     border-radius: 15% 0 15% 0;
-
-    transform: rotate(1deg);
 }
 
 .service-card img {
