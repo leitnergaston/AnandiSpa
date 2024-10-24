@@ -1,69 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
 
 
-
-
-
-
-
-
-/* .img-logo {
-    width: 120px;
-} */
-
-/* .navbar-nav {
-    gap: 5px;
-} */
-
-/* .nav-link {
-    color: #363636;
-    font-weight: 500;
-} */
-
-/* .nav-link:hover {
-    text-decoration: underline;
-} */
-
-/* .hero-section {
-    background-image: url('/img/imagenesDeFondo/imagenFondo4.jpg');
-    height: 100vh;
-    background-size: cover;
-    background-position: center;
-    color: var(--color-text);
-    padding: 100px 0;
-} */
-
-
-/* .service-icon {
-    font-size: 2rem;
-    margin-bottom: 1rem;
-} */
-
-/* #footer {
-    border-top: 1px solid;
-} */
-
-/* .footerLink {
-    color: #363636;
-    font-weight: 600;
-    transition: 1s;
-} */
-
-/* .footerLink:hover {
-    text-decoration: underline;
-} */
-
-/* .socialIcon {
-    font-size: 1.5rem;
-    transition: 2s ease;
-} */
-
-/* .socialIcon i:hover {
-    color: var(--color-hover);
-} */
-
-
-
 :root {
     --h1-font-size: 2.25rem;
     --h3-font-size: 1.25rem;
@@ -168,10 +105,35 @@ body::-webkit-scrollbar-thumb {
 }
 
 #backToTop:hover {
-    transform: scale(1);
+    transform: scale(1.1);
     cursor: pointer;
 }
 /* ========== Button to top ========== */
+
+/* ========== Boton de whatsapp flotante ========== */
+.whatsapp-btn {
+    position: fixed;
+    bottom: 80px;
+    right: 20px;
+    background-color: #25D366;
+    color: white;
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    box-shadow: 2px 2px 6px rgba(0,0,0,0.4);
+    transition: transform 0.3s;
+    z-index: 1000;
+}
+
+.whatsapp-btn i {
+    font-size: 35px;
+}
+
+
 
 .container {
     width: 90%;
@@ -236,13 +198,15 @@ nav {
     margin-left: 1.4rem;
 }
 
-.nav-item:hover {
-    text-decoration: underline;
-}
-
 .nav-link {
     text-transform: uppercase;
     font-weight: bold;
+    color: #363636;
+    transition: .3s;
+}
+
+.nav-link:hover {
+    filter: drop-shadow(2px 2px 10px var(--color-hover));
     color: var(--color-text);
 }
 
@@ -329,6 +293,11 @@ nav {
 .promo-card img {
     width: 100%;
     object-fit: cover;
+    transition: scale 400ms;
+}
+
+.promo-card img:hover {
+    scale: 105%;
 }
 
 .promo-content {
@@ -366,11 +335,15 @@ nav {
     padding: 2rem;
     background-color: var(--color-bg-service-card);
     border-radius: 5px;
-    transition: .4s ease;
+    border: .5px solid var(--color-border-btn);
+    transition: .3s;
 }
 
 .service-card:hover {
-    transform: scale(1.04);
+    /* transform: scale(1.02); */
+    border-radius: 15% 0 15% 0;
+
+    transform: rotate(1deg);
 }
 
 .service-card img {
@@ -383,7 +356,6 @@ nav {
 /* About section styles */
 .about {
     padding: 4rem 0;
-    /* background-color: #f9f9f9; */
 }
 
 .about-content {
@@ -452,7 +424,15 @@ nav {
     object-fit: cover;
     border-radius: 5px;
     opacity: 0;
-    transition: opacity 0.3s ease-in-out;
+    transition: opacity .3s ease-in-out;
+}
+
+.gallery-item {
+    transition: .3s ease-in-out;
+}
+
+.gallery-grid:hover > :not(:hover) {
+    opacity: .8;
 }
 
 .img-gallery-inicio.loaded {
@@ -548,6 +528,13 @@ footer {
 
 
 @media screen and (max-width: 768px) {
+    .whatsapp-btn {
+        width: 50px;
+        height: 50px;
+        bottom: 15px;
+        left: 15px;
+    }
+
     .nav-links {
         display: none;
         flex-direction: column;

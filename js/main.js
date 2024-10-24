@@ -24,8 +24,10 @@ const backToTopButton = document.getElementById("backToTop");
 window.onscroll = function() {
     if (document.body.scrollTop > 600 || document.documentElement.scrollTop > 600) {
         backToTopButton.style.transform = "scale(1)";
+        mostrarWapp.style.transform = "scale(1)";
     } else {
         backToTopButton.style.transform = "scale(0)";
+        mostrarWapp.style.transform = "scale(0)";
     }
 };
 
@@ -34,6 +36,7 @@ backToTopButton.onclick = function() {
     document.documentElement.scrollTop = 0; // Para Chrome, Firefox, IE y Opera
 };
 // ⭡⭡⭡⭡⭡ Boton volver arriba ⭡⭡⭡⭡⭡ //
+
 
 
 // ⭣⭣⭣⭣⭣ Preloader de pagina inicio seccion galeria ⭣⭣⭣⭣⭣ //
@@ -61,3 +64,14 @@ const observer = new IntersectionObserver(observerCallback, observerOptions);
 document.querySelectorAll('.gallery-item img').forEach(img => {
     observer.observe(img);
 });
+
+// Scroll Reveal
+const sr = ScrollReveal({
+    origin: 'top',
+    distance: '80px',
+    duration: 2500,
+    reset: false
+});
+
+sr.reveal('.hero',{delay:300});
+sr.reveal('.promotions',{delay:300});
