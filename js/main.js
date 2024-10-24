@@ -65,6 +65,7 @@ document.querySelectorAll('.gallery-item img').forEach(img => {
     observer.observe(img);
 });
 
+
 // Scroll Reveal
 const sr = ScrollReveal({
     origin: 'top',
