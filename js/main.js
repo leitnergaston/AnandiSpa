@@ -66,19 +66,18 @@ document.querySelectorAll('.gallery-item img').forEach(img => {
 });
 
 
-// Scroll Reveal
-const sr = ScrollReveal({
-    origin: 'top',
-    distance: '80px',
+// ========== Scroll Reveal ========== //
+ScrollReveal ({
+    reset: false,
+    distance: '60px',
     duration: 2000,
-    reset: false
 });
 
-sr.reveal('.hero',{delay:300});
-sr.reveal('.container h2',{});
-sr.reveal('.promo-card',{delay:300});
-sr.reveal('.services',{delay:300});
-sr.reveal('.img-about-inicio',{delay:300});
-sr.reveal('.about-text',{delay:350});
-sr.reveal('.gallery-grid',{delay:300});
-sr.reveal('.gallery .btn',{delay:400});
+ScrollReveal().reveal('.hero', { delay: 300 });
+ScrollReveal().reveal('h1, h2', { delay: 500, origin: 'left' });
+ScrollReveal().reveal('.promo-card, .services', { delay: 600, origin: 'bottom' });
+ScrollReveal().reveal('.img-about-inicio', { delay: 300 });
+ScrollReveal().reveal('.about-text', { delay: 350 });
+ScrollReveal().reveal('.gallery-grid', { delay: 300 });
+
+
