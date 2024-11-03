@@ -21,46 +21,55 @@
 
 
 <body>
+    <!-- HEADER -->
     <header>
-        <nav class="container">
-            <a href="https://anandispa.netlify.app" class="linkLogo">
-                <img src="img/logos/logoAnandiMarronSinFondoRecortado.png" alt="logo anandi spa" class="img-logo">
-            </a>
-            <ul class="nav-links">
-                <li class="nav-item">
-                    <a href="#promos" class="nav-link">Promos</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#servicios" class="nav-link">Servicios</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#nosotros" class="nav-link">Nosotros</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#galeria" class="nav-link">Galeria</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#contacto" class="nav-link">Contacto</a>
-                </li>
-            </ul>
+        <nav>
+            <a href="" class="logo">Anandi Spa</a>
             <div class="hamburger">
-                <div></div>
-                <div></div>
-                <div></div>
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <div class="nav-links">
+                <a href="#home">Inicio</a>
+                <a href="#promos">Promos</a>
+                <a href="#servicios">Servicios</a>
+                <a href="#nosotros">Nosotros</a>
+                <a href="#galeria">Galeria</a>
+                <a href="#contacto">Contacto</a>
             </div>
         </nav>
     </header>
 
     <main>
 
-        <!-- ===== HERO ===== -->
-        <section class="hero">
-            <div class="container inicio">
-                <h1 class="hero-title">Bienvenidos a Anandi Spa</h1>
-                <p class="hero-description">Relájate y desconecta del mundo en nuestro spa. Disfruta de masajes descontracturantes, hidromasaje,
+        <!-- HERO -->
+        <section class="hero" id="home">
+            <div class="carousel">
+                <div class="carousel-slide active"><img src="img/imagenesDeFondo/imagenCarrusel (1).jpg" alt="">
+                </div>
+                <div class="carousel-slide"><img src="img/imagenesDeFondo/imagenCarrusel (2).jpg" alt=""></div>
+                <div class="carousel-slide"><img src="img/imagenesDeFondo/imagenCarrusel (3).jpg" alt=""></div>
+                <div class="carousel-slide"><img src="img/imagenesDeFondo/imagenCarrusel (4).jpg" alt=""></div>
+            </div>
+            <div class="hero-content">
+                <h1>Bienvenidos a Anandi Spa</h1>
+                <p>Relájate y desconecta del mundo en nuestro spa. Disfruta de masajes descontracturantes, hidromasaje,
                     sauna finlandés, tratamientos faciales y corporales. Además, te ofrecemos circuitos de spa completos
                     y deliciosas meriendas. ¡Recervá ahora y descubre nuestras promociones especiales!</p>
-                <a href="#promos" class="btn">Ver Promos</a>
+            </div>
+            <!-- Promos Especiales del mes -->
+            <div class="hero-promo-cards">
+                <!-- <div class="hero-promo-card">
+                    <button class="plus-btn">▼</button>
+                    <h3>¡Promo Especial!</h3>
+                    <p>Promo Mamá 1</p>
+                </div>
+                <div class="hero-promo-card">
+                    <button class="plus-btn">▼</button>
+                    <h3>¡Promo Especial!</h3>
+                    <p>Promo Mamá 2</p>
+                </div> -->
             </div>
         </section>
 
@@ -244,10 +253,17 @@
                 <div class="about-content">
                     <img src="/img/imagenesDeFondo/imagenSobreNosotros.jpg" alt="Spa interior" class="img-about-inicio">
                     <div class="about-text">
-                        <p>Relájate y desconecta del mundo en nuestro spa. Disfruta de masajes descontracturantes,
-                            hidromasaje, sauna finlandés, tratamientos faciales y corporales. Además, te ofrecemos
-                            circuitos de spa completos y deliciosas meriendas. ¡Recervá ahora y descubre nuestras
-                            promociones especiales!</p>
+                        <p>En nuestro spa, nos dedicamos a proporcionar una experiencia de relajación y bienestar
+                            incomparable. Ofrecemos una amplia variedad de circuitos diseñados para revitalizar su
+                            cuerpo y mente, incluyendo: </p>
+                        <ul>
+                            <li>Masajes descontracturantes, relajantes, sedativos</li>
+                            <li>Piedras calientes, pindas herbáticas, almohadillas térmicas</li>
+                            <li>Tratamientos faciales</li>
+                            <li>Exfoliaciones</li>
+                            <li>Hidromasaje, Sauna finlandés</li>
+                            <li>Piscina y Meriendas</li>
+                        </ul>
                     </div>
                 </div>
             </div>
@@ -327,8 +343,8 @@
                 <div class="contact-content">
                     <div class="contact-info">
                         <ul>
-                            <li>📞 +549 (261) 510-4019</li>
-                            <li>✉️ estetica.anandi@gmail.com</li>
+                            <li class="info-list">📞<a href="https://tinyurl.com/ymltfc99" class="info-link" target="_blank">+549 (261) 510-4019</a></li>
+                            <li class="info-list">✉️<a href="mailto:anandisparelax@gmail.com" class="info-link" target="_blank">anandisparelax@gmail.com</a></li>
                             <li>📍 Godoy Cruz, Mendoza, Argentina</li>
                         </ul>
                     </div>
@@ -343,9 +359,9 @@
         </section>
 
         <!-- boton de whastapp -->
-         <a href="https://tinyurl.com/ymltfc99" id="mostrarWapp" class="whatsapp-btn" target="_blank">
+        <a href="https://tinyurl.com/ymltfc99" id="mostrarWapp" class="whatsapp-btn" target="_blank">
             <i class="fa-brands fa-whatsapp"></i>
-         </a>
+        </a>
     </main>
 
     <footer>
@@ -358,8 +374,10 @@
                 </div>
                 <div class="footer-links">
                     <a href="https://anandi.vercel.app">Anandi Spa &bull; 2024</a>
-                    <a href="/TerminosYCondiciones/terminos-y-condiciones.html" target="_blank">Términos y Condiciones</a>
-                    <a href="/PoliticaDePrivacidad/politica-de-privacidad.html" target="_blank">Politica de Privacidad</a>
+                    <a href="/TerminosYCondiciones/terminos-y-condiciones.html" target="_blank">Términos y
+                        Condiciones</a>
+                    <a href="/PoliticaDePrivacidad/politica-de-privacidad.html" target="_blank">Politica de
+                        Privacidad</a>
                 </div>
                 <div class="social-links">
                     <a class="social-link" href="https://www.instagram.com/anandi.spa" target="_blank"
@@ -380,9 +398,9 @@
     <script src="Js/main.js"></script>
 
 
-    
 
-    
+
+
 
 </body>
 

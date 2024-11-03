@@ -1,27 +1,47 @@
-// ⭣⭣⭣⭣⭣ Mobile menu toggle ⭣⭣⭣⭣⭣ //
-const hamburger = document.querySelector('.hamburger');
-const navLinks = document.querySelector('.nav-links');
+document.addEventListener('DOMContentLoaded', function () {
+    // Carrusel de imagenes
+    const slides = document.querySelectorAll('.carousel-slide');
+    let currentSlide = 0;
 
-hamburger.addEventListener('click', () => {
-    navLinks.classList.toggle('active');
-});
+    function nextSlide() {
+        slides[currentSlide].classList.remove('active');
+        currentSlide = (currentSlide + 1) % slides.length;
+        slides[currentSlide].classList.add('active');
+    }
 
-// Smooth scrolling for anchor links
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-        e.preventDefault();
-        document.querySelector(this.getAttribute('href')).scrollIntoView({
-            behavior: 'smooth'
+    setInterval(nextSlide, 5000);
+
+    // Hamburger menu functionality
+    const hamburger = document.querySelector('.hamburger');
+    const navLinks = document.querySelector('.nav-links');
+
+    hamburger.addEventListener('click', function () {
+        hamburger.classList.toggle('active');
+        navLinks.classList.toggle('active');
+    });
+
+    // Close menu when clicking a link
+    document.querySelectorAll('.nav-links a').forEach(link => {
+        link.addEventListener('click', () => {
+            hamburger.classList.remove('active');
+            navLinks.classList.remove('active');
         });
     });
+
+    // Close menu when clicking outside
+    document.addEventListener('click', (e) => {
+        if (!hamburger.contains(e.target) && !navLinks.contains(e.target)) {
+            hamburger.classList.remove('active');
+            navLinks.classList.remove('active');
+        }
+    });
 });
-// ⭡⭡⭡⭡⭡ mobile menu toggle ⭡⭡⭡⭡⭡ //
 
 
 // ⭣⭣⭣⭣⭣ Boton volver arriba ⭣⭣⭣⭣⭣ //
 const backToTopButton = document.getElementById("backToTop");
 
-window.onscroll = function() {
+window.onscroll = function () {
     if (document.body.scrollTop > 600 || document.documentElement.scrollTop > 600) {
         backToTopButton.style.transform = "scale(1)";
         mostrarWapp.style.transform = "scale(1)";
@@ -31,7 +51,7 @@ window.onscroll = function() {
     }
 };
 
-backToTopButton.onclick = function() {
+backToTopButton.onclick = function () {
     document.body.scrollTop = 0; // Para Safari
     document.documentElement.scrollTop = 0; // Para Chrome, Firefox, IE y Opera
 };
@@ -67,7 +87,7 @@ document.querySelectorAll('.gallery-item img').forEach(img => {
 
 
 // ========== Scroll Reveal ========== //
-ScrollReveal ({
+ScrollReveal({
     reset: false,
     distance: '60px',
     duration: 2000,
