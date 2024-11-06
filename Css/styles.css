@@ -796,17 +796,6 @@ footer {
 
 
 /* ========== Responsive ========== */
-@media (max-width: 480px) {
-    .hero-promo-card {
-        min-width: 140px;
-        padding: 0.6rem;
-    }
-
-    .hero-promo-card h3 {
-        font-size: .9rem;
-    }
-}
-
 @media screen and (max-width: 768px) {
     .hamburger {
         display: flex;
@@ -841,18 +830,24 @@ footer {
         transform: rotate(-45deg) translate(5px, -8px);
     }
 
+    .hero-content {
+        top: clamp(40%, 60%, 100%);
+    }
+
     .hero-content h1 {
-        font-size: 2rem;
+        font-size: clamp(1rem, 2rem, 4rem);
     }
 
     .hero-content p {
-        font-size: 1.2rem;
+        visibility: hidden;
     }
 
+    /* ===== mini promo cards hero ===== */
     .mini-promo-cards {
-        flex-direction: column;
+        flex-direction: row;
         align-items: center;
-        bottom: 1rem;
+        /* bottom: 20%; */
+        bottom: clamp(10%, 10%, 100%);
     }
 
     .mini-promo-card {
@@ -860,6 +855,7 @@ footer {
         max-width: 300px;
     }
 
+    /* ===== Testimonios ===== */
     .testimonial-card {
         padding: 1rem;
     }
@@ -868,7 +864,7 @@ footer {
         width: 50px;
         height: 50px;
         bottom: 15px;
-        left: 15px;
+        right: 15px;
     }
 
     .promo-content {
@@ -885,13 +881,9 @@ footer {
 
     /* ===== contacto ===== */
     .contact-cards {
+        width: 45%;
         margin-bottom: 1rem;
     }
-
-
-    /* .contact-content {
-        flex-direction: column;
-    } */
 
     .footer-content {
         flex-direction: column;
