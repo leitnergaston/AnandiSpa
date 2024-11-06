@@ -7,7 +7,8 @@
     <title>Anandi Spa</title>
 
     <!-- scroll reveal -->
-    <script src="https://unpkg.com/scrollreveal@4.0.0/dist/scrollreveal.min.js"></script>
+    <!-- <script src="https://unpkg.com/scrollreveal@4.0.0/dist/scrollreveal.min.js"></script> -->
+
 
     <!-- ICONOS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -24,33 +25,33 @@
     <!-- HEADER -->
     <header>
         <nav>
-            <a href="" class="logo">Anandi Spa</a>
+            <a href="#" class="logo">Anandi Spa</a>
             <div class="hamburger">
                 <span></span>
                 <span></span>
                 <span></span>
             </div>
-            <div class="nav-links">
-                <a href="#home">Inicio</a>
-                <a href="#promos">Promos</a>
-                <a href="#servicios">Servicios</a>
-                <a href="#nosotros">Nosotros</a>
-                <a href="#galeria">Galeria</a>
-                <a href="#contacto">Contacto</a>
-            </div>
+            <ul class="nav-links">
+                <li class="nav-item"><a href="#inicio" class="nav-link active">Inicio</a></li>
+                <li class="nav-item"><a href="#promos" class="nav-link">Promos</a></li>
+                <li class="nav-item"><a href="#servicios" class="nav-link">Servicios</a></li>
+                <li class="nav-item"><a href="#nosotros" class="nav-link">Nosotros</a></li>
+                <li class="nav-item"><a href="#galeria" class="nav-link">Galeria</a></li>
+                <li class="nav-item"><a href="#contacto" class="nav-link">Contacto</a></li>
+            </ul>
         </nav>
     </header>
 
     <main>
 
-        <!-- HERO -->
-        <section class="hero" id="home">
+        <!-- ===== HERO ===== -->
+        <section class="hero" id="inicio">
             <div class="carousel">
-                <div class="carousel-slide active"><img src="img/imagenesDeFondo/imagenCarrusel (1).jpg" alt="">
+                <div class="carousel-slide active"><img src="img/imagenesDeFondo/imagenCarrusel1.jpg" alt="">
                 </div>
-                <div class="carousel-slide"><img src="img/imagenesDeFondo/imagenCarrusel (2).jpg" alt=""></div>
-                <div class="carousel-slide"><img src="img/imagenesDeFondo/imagenCarrusel (3).jpg" alt=""></div>
-                <div class="carousel-slide"><img src="img/imagenesDeFondo/imagenCarrusel (4).jpg" alt=""></div>
+                <div class="carousel-slide"><img src="img/imagenesDeFondo/imagenCarrusel2.jpg" alt=""></div>
+                <div class="carousel-slide"><img src="img/imagenesDeFondo/imagenCarrusel3.jpg" alt=""></div>
+                <div class="carousel-slide"><img src="img/imagenesDeFondo/imagenCarrusel4.jpg" alt=""></div>
             </div>
             <div class="hero-content">
                 <h1>Bienvenidos a Anandi Spa</h1>
@@ -59,17 +60,18 @@
                     y deliciosas meriendas. ¡Recervá ahora y descubre nuestras promociones especiales!</p>
             </div>
             <!-- Promos Especiales del mes -->
-            <div class="hero-promo-cards">
-                <!-- <div class="hero-promo-card">
-                    <button class="plus-btn">▼</button>
-                    <h3>¡Promo Especial!</h3>
-                    <p>Promo Mamá 1</p>
+            <div class="mini-promo-cards">
+                <div class="mini-promo-card" onclick="window.open('https://tinyurl.com/25ztvn7r')">
+                    <h3>¡10% dcto todos los miercoles!</h3>
+                    <p>En la Promo "Tardes para compartir"</p>
+                    <p>Durante todo noviembre y diciembre</p>
+                    <span class="tooltip">Pedir Promo</span>
                 </div>
-                <div class="hero-promo-card">
-                    <button class="plus-btn">▼</button>
-                    <h3>¡Promo Especial!</h3>
-                    <p>Promo Mamá 2</p>
-                </div> -->
+                <div class="mini-promo-card" onclick="window.open('https://tinyurl.com/2y4qyhp2')">
+                    <h3>¡Super Promo!</h3>
+                    <p>3 masajes de 60' a $50.000</p>
+                    <span class="tooltip">Pedir Promo</span>
+                </div>
             </div>
         </section>
 
@@ -86,7 +88,7 @@
                                 descontracturante o sedativo. La lavanda y las pindas herbáticas te envolverán en
                                 una sensación de calma profunda. Elige la duración que más se adapte a ti y completa
                                 la experiencia con una refrescante limonada y frutos secos.</p>
-                            <a href="https://tinyurl.com/254wwle8" class="btn" target="_blank">Reserva ahora</a>
+                            <a href="https://tinyurl.com/25b5etzq" class="btn" target="_blank">Reserva ahora</a>
                         </div>
                     </div>
                     <div class="promo-card">
@@ -96,7 +98,7 @@
                             <p>Conectá con tu energía interior con nuestro masaje con
                                 piedras calientes. Las piedras se colocan en los chakras, desbloqueando la energía y
                                 promoviendo la armonía. Un viaje sensorial para cuerpo y alma.</p>
-                            <a href="https://tinyurl.com/2ch7l3db" class="btn" target="_blank">Reserva ahora</a>
+                            <a href="https://tinyurl.com/2ad6yy76" class="btn" target="_blank">Reserva ahora</a>
                         </div>
                     </div>
                     <div class="promo-card">
@@ -106,7 +108,7 @@
                             <p>Déjate envolver por los aromas de la lavanda y la
                                 vainilla en nuestro masaje con pindas herbáticas. El calor de las pindas y los
                                 aceites esenciales te proporcionarán una relajación profunda y duradera.</p>
-                            <a href="https://tinyurl.com/25a4a8tz" class="btn" target="_blank">Reserva ahora</a>
+                            <a href="https://tinyurl.com/24alpjgd" class="btn" target="_blank">Reserva ahora</a>
                         </div>
                     </div>
                     <div class="promo-card">
@@ -115,7 +117,7 @@
                             <h3>Promo 4</h3>
                             <p>Renueva tu piel con nuestra limpieza facial profunda.
                                 La fangoterapia y los productos hidratantes dejarán tu rostro radiante y luminoso.</p>
-                            <a href="https://tinyurl.com/2cu4ccwe" class="btn" target="_blank">Reserva ahora</a>
+                            <a href="https://tinyurl.com/23gsjdq3" class="btn" target="_blank">Reserva ahora</a>
                         </div>
                     </div>
                     <div class="promo-card">
@@ -126,7 +128,7 @@
                                 única junto a esa persona especial. Combina un masaje relajante o descontracturante
                                 con una limpieza facial profunda y un tratamiento corporal que nutrirá tu piel. ¡La
                                 combinación perfecta para desconectar y pasar un momento inolvidable!.</p>
-                            <a href="https://tinyurl.com/2447fzzz" class="btn" target="_blank">Reserva ahora</a>
+                            <a href="https://tinyurl.com/24m5w6pe" class="btn" target="_blank">Reserva ahora</a>
                         </div>
                     </div>
                     <div class="promo-card">
@@ -137,7 +139,7 @@
                                 de bienestar con tu pareja. Nuestro circuito incluye masaje relajante con un baño en
                                 nuestro hidromasaje con sales aromáticas y una deliciosa merienda. ¡El regalo
                                 perfecto para celebrar cualquier ocasión!.</p>
-                            <a href="https://wa.me/+5492615104019" class="btn" target="_blank">Reserva ahora</a>
+                            <a href="https://tinyurl.com/28ge8ov7" class="btn" target="_blank">Reserva ahora</a>
                         </div>
                     </div>
                     <div class="promo-card">
@@ -148,7 +150,7 @@
                                 tu pareja. Combina un masaje descontracturante con piedras calientes y pindas
                                 herbáticas, un facial hidratante y una relajación profunda. ¡La escapada perfecta
                                 para desconectar!.</p>
-                            <a href="https://wa.me/+5492615104019" class="btn" target="_blank">Reserva ahora</a>
+                            <a href="https://tinyurl.com/29rynr3z" class="btn" target="_blank">Reserva ahora</a>
                         </div>
                     </div>
                     <div class="promo-card">
@@ -158,17 +160,17 @@
                             <p>Enciende la llama de la pasión con nuestra promoción
                                 romántica. Disfruta de un masaje relajante para dos, exfoliación corporal y sauna
                                 finlandés. ¡Una velada inolvidable para celebrar el amor!.</p>
-                            <a href="https://wa.me/+5492615104019" class="btn" target="_blank">Reserva ahora</a>
+                            <a href="https://tinyurl.com/2dpjfty6" class="btn" target="_blank">Reserva ahora</a>
                         </div>
                     </div>
                     <div class="promo-card">
-                        <img src="img/promos/TardeDeAmigas.jpg" alt="">
+                        <img src="img/promos/TardesParaCompartir.jpg" alt="">
                         <div class="promo-content">
-                            <h3>Tarde de Amigas</h3>
+                            <h3>Tardes para Compartir</h3>
                             <p>¡Reúne a tus amigas y disfruta de una tarde de relax y
                                 diversión en nuestro spa!. Masajes, exfoliaciones, sauna y una deliciosa merienda te
                                 esperan.</p>
-                            <a href="https://wa.me/+5492615104019" class="btn" target="_blank">Reserva ahora</a>
+                            <a href="https://tinyurl.com/2bzmk2bo" class="btn" target="_blank">Reserva ahora</a>
                         </div>
                     </div>
                     <div class="promo-card">
@@ -178,7 +180,7 @@
                             <p>¡Celebra tu cumpleaños por todo lo alto! Nuestro
                                 paquete especial incluye masaje, facial, aromaterapia y una deliosa merienda. ¡Te
                                 haremos sentir especial en tu día!.</p>
-                            <a href="https://wa.me/+5492615104019" class="btn" target="_blank">Reserva ahora</a>
+                            <a href="https://tinyurl.com/27jr7sso" class="btn" target="_blank">Reserva ahora</a>
                         </div>
                     </div>
                 </div>
@@ -273,23 +275,35 @@
 
         <!-- ===== TESTIMONIOS ===== -->
         <section class="testimonials">
-            <div class="container">
-                <h2>Lo que nuestros clientes dicen</h2>
-                <div class="testimonial-grid">
+            <h2>Lo que dicen nuestros clientes</h2>
+            <div class="testimonial-slider">
+                <div class="testimonial-container">
                     <div class="testimonial-card">
-                        <p>"Te atienden bien, hay buena relación precio-calidad"</p>
-                        <p><strong>- Laura M.</strong></p>
+                        <div class="stars">★★★★☆</div>
+                        <p class="testimonial-text">"Te atienden bien, hay buena relación precio-calidad"</p>
+                        <p class="testimonial-author">- Laura M.</p>
                     </div>
-                    <!-- <div class="testimonial-card">
-                        <p>"Te atienden bien, hay buena relación precio-calidad"</p>
-                        <p><strong>- Laura M.</strong></p>
-                    </div> -->
-                    <!-- <div class="testimonial-card">
-                        <p>"Te atienden bien, hay buena relación precio-calidad"</p>
-                        <p><strong>- Laura M.</strong></p>
-                    </div> -->
+                    <div class="testimonial-card">
+                        <div class="stars">★★★★★</div>
+                        <p class="testimonial-text"></p>
+                        <p class="testimonial-author">- Florencia F.</p>
+                    </div>
                 </div>
             </div>
+            <button class="share-experience" onclick="window.open('https://bit.ly/tuExperiencia')">
+                <div>
+                    <span>
+                        <p>Comparte tu experiencia</p>
+                        <p>📍</p>
+                    </span>
+                </div>
+                <div>
+                    <span>
+                        <p class="p2">Gracias!</p>
+                        <p>😄</p>
+                    </span>
+                </div>
+            </button>
         </section>
 
         <hr>
@@ -343,8 +357,10 @@
                 <div class="contact-content">
                     <div class="contact-info">
                         <ul>
-                            <li class="info-list">📞<a href="https://tinyurl.com/ymltfc99" class="info-link" target="_blank">+549 (261) 510-4019</a></li>
-                            <li class="info-list">✉️<a href="mailto:anandisparelax@gmail.com" class="info-link" target="_blank">anandisparelax@gmail.com</a></li>
+                            <li class="info-list">📞<a href="https://tinyurl.com/ymltfc99" class="info-link"
+                                    target="_blank">+549 (261) 510-4019</a></li>
+                            <li class="info-list">✉️<a href="mailto:anandisparelax@gmail.com" class="info-link"
+                                    target="_blank">anandisparelax@gmail.com</a></li>
                             <li>📍 Godoy Cruz, Mendoza, Argentina</li>
                         </ul>
                     </div>
@@ -392,13 +408,8 @@
         </div>
     </footer>
 
-    <button id="backToTop" title="Volver arriba"><i class="fa-solid fa-caret-up"></i></button>
-
     <!-- ========== Main Js ========== -->
     <script src="Js/main.js"></script>
-
-
-
 
 
 
