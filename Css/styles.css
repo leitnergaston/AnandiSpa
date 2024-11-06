@@ -669,6 +669,7 @@ nav {
     gap: 2rem;
     width: 100%;
     max-width: 800px;
+
 }
 
 .contact-card {
@@ -694,18 +695,7 @@ nav {
 
 .contact-icon i {
     font-size: 3rem;
-    animation: jump 2s infinite;
 }
-
-@keyframes jump {
-    0%, 100% {
-        top: 0;
-    }
-    30% {
-        top: 25px;
-    }
-}
-
 
 .contact-title {
     font-size: 1.5rem;
