@@ -8,7 +8,7 @@
     --small-font-size: .875rem;
     --smaller-font-size: .813rem;
 
-    --color-bg: #f0d8cf;
+    --color-bg: #fadac4;
     --color-text: #5e3609;
     --color-hover: #c9802e;
 
@@ -94,7 +94,7 @@ body::-webkit-scrollbar-thumb {
 /* ========== Scroll Bar ========== */
 
 
-/* ========== Boton de whatsapp flotante ========== */
+/* ===== Boton de whatsapp flotante ===== */
 .whatsapp-btn {
     position: fixed;
     bottom: 20px;
@@ -111,8 +111,6 @@ body::-webkit-scrollbar-thumb {
     box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.4);
     transition: transform 0.3s;
     z-index: 1000;
-
-
 }
 
 .whatsapp-btn i {
@@ -171,8 +169,9 @@ nav {
 /* Logo texto header */
 .logo {
     font-size: 1.8rem;
+    font-weight: bold;
     color: #7a5d5d;
-    text-decoration: none;
+    text-shadow: 0 1px 0 #ccc, 0 2px 0 #c9c9c9, 0 3px 0 #bbb, 0 4px 0 #b9b9b9, 0 5px 0 #aaa, 0 6px 1px rgba(0, 0, 0, .1), 0 0 5px rgba(0, 0, 0, .1), 0 1px 3px rgba(0, 0, 0, .3), 0 3px 5px rgba(0, 0, 0, .2), 0 5px 10px rgba(0, 0, 0, .25), 0 10px 10px rgba(0, 0, 0, .2), 0 20px 20px rgba(0, 0, 0, .15);
 }
 
 .hamburger {
@@ -214,6 +213,7 @@ nav {
 
 .nav-link.active {
     text-decoration: underline;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 /* ========== Hero section styles ========== */
@@ -347,7 +347,7 @@ nav {
 
 
 
-/* ========== Promotions section styles ========== */
+/* ========== PROMOTIONS SECTION STYLES ========== */
 .promotions {
     padding: 4rem 0;
 }
@@ -361,6 +361,7 @@ nav {
     text-align: center;
     font-size: 2.5rem;
     margin-bottom: 2rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 .promo-grid {
@@ -405,6 +406,74 @@ nav {
     margin-bottom: 1.5rem;
 }
 
+/* Promo Popup */
+.promo-popup {
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity .3s ease, visibility .3s ease;
+}
+
+.promo.popup.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.promo-popup-content {
+    max-width: 400px;
+    max-height: 400px;
+    margin-left: auto;
+    margin-right: auto;
+    overflow: hidden;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.promo-popup-content p a {
+    text-decoration: underline;
+}
+
+/* Boton aceptar de la promo popup */
+.promo-popup-accept-btn {
+    padding: 12px 20px;
+    border-radius: 6px;
+    background-color: var(--color-hover);
+    border: 0;
+    font-weight: 600;
+    cursor: pointer;
+    transition: .15s ease;
+}
+
+.promo-popup-accept-btn:hover {
+    color: #fff;
+    background-color: var(--color-border-btn);
+}
+
+/* Boton cancelar de la promo popup */
+.promo-popup-cancel-btn {
+    padding: 12px 20px;
+    border-radius: 6px;
+    background-color: transparent;
+    border: 0;
+    font-weight: 600;
+    cursor: pointer;
+    transition: .15s ease;
+}
+
+.promo-popup-cancel-btn:hover {
+    background-color: #dfdad7;
+}
+
 /* ========== Services section styles ========== */
 .services {
     padding: 4rem 0;
@@ -427,6 +496,7 @@ nav {
 
 .service-card:hover {
     border-radius: 15% 5px 15% 5px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }
 
 .service-card img {
@@ -958,12 +1028,14 @@ footer {
     }
 
     .hero-content h1 {
-        font-size: 1.6rem;
+        font-size: 2rem;
     }
 
     .hero-content p {
         font-size: .6rem;
         margin-bottom: 0;
+        visibility: hidden;
+        opacity: 0;
     }
 
     .mini-promo-cards {
@@ -1090,6 +1162,7 @@ footer {
 
     .hero-content p {
         visibility: hidden;
+        opacity: 0;
     }
 
     /* ===== mini promo cards hero ===== */

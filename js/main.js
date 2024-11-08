@@ -142,6 +142,33 @@ promoCards.forEach(card => {
 });
 
 
+// ========== Promo Popup de terminos y condiciones ========== //
+let redirectUrl = '';
+
+function mostrarPromoPopup(url) {
+    // Guardamos la URL personalizada de whatsapp que esta en el boton de cada card en la variable redirectUrl
+    redirectUrl = url;
+    // Mostramos el popup
+    document.getElementById("terminos-promo-popup").style.opacity = (1);
+    document.getElementById("terminos-promo-popup").style.visibility = "visible";
+}
+
+function aceptarPromoPopup() {
+    // Redirigimos al link personalizado de whatsapp y lo abrimos en otra pestaña
+    window.open(redirectUrl, "_blank");
+    // Cerramos el popup despues de redirigir
+    cerrarPromoPopup();
+}
+
+function cerrarPromoPopup() {
+    // Ocultamos el popup
+    document.getElementById("terminos-promo-popup").style.opacity = (0);
+    document.getElementById("terminos-promo-popup").style.visibility = "hidden";
+    // Reseteamos el link
+    redirectUrl = ''; 
+}
+
+
 // ========== Testimonial Slider ========== //
 const testimonialContainer = document.querySelector('.testimonial-container');
 const testimonialCards = document.querySelectorAll('.testimonial-card');
@@ -167,7 +194,7 @@ function prevTestimonial() {
 // prevBtn.addEventListener('click', prevTestimonial);
 
 // Auto-slide for testimonials
-setInterval(nextTestimonial, 3000); // Cambia de testimonio cada 7 segundos
+setInterval(nextTestimonial, 4000); // Cambia de testimonio cada 7 segundos
 
 
 // ========== Popup Servicios ========== //
@@ -250,3 +277,5 @@ popupOverlay.addEventListener('click', (e) => {
         popupOverlay.classList.remove('active');
     }
 });
+
+
