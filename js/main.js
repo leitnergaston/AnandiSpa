@@ -168,3 +168,85 @@ function prevTestimonial() {
 
 // Auto-slide for testimonials
 setInterval(nextTestimonial, 3000); // Cambia de testimonio cada 7 segundos
+
+
+// ========== Popup Servicios ========== //
+const serviceButtons = document.querySelectorAll('.service-btn');
+const popupOverlay = document.querySelector('.popup-servicios');
+const popupContent = document.querySelector('.popup-servicios-content');
+const popupImage = document.querySelector('.popup-servicios-img');
+const popupTitle = document.querySelector('.popup-servicios-title');
+const popupDescription = document.querySelector('.popup-servicios-description');
+const popupClose = document.querySelector('.popup-servicios-close');
+
+const serviceDetails = {
+    'masajes': {
+        title: 'Masajes Descontracturantes',
+        description: 'Descripcion de masajes',
+        image: '/img/servicios/img/servicios-masajes.webp'
+    },
+    'hidromasaje': {
+        title: 'Hidromasaje',
+        description: 'Descripcion de hidromasaje',
+        image: '/img/servicios/img/servicios-hidromasaje.webp'
+    },
+    'Sauna': {
+        title: 'Sauna Finlandés',
+        description: 'Descripcion de masajes',
+        image: ''
+    },
+    'cutis': {
+        title: 'Masajes Descontracturantes',
+        description: 'Descripcion de masajes',
+        image: ''
+    },
+    'exfoliaciones': {
+        title: 'Masajes Descontracturantes',
+        description: 'Descripcion de masajes',
+        image: ''
+    },
+    'piscina': {
+        title: 'Masajes Descontracturantes',
+        description: 'Descripcion de masajes',
+        image: ''
+    },
+    'meriendas': {
+        title: 'Masajes Descontracturantes',
+        description: 'Descripcion de masajes',
+        image: ''
+    },
+    'circuitos': {
+        title: 'Masajes Descontracturantes',
+        description: 'Descripcion de masajes',
+        image: ''
+    },
+    'promociones': {
+        title: 'Masajes Descontracturantes',
+        description: 'Descripcion de masajes',
+        image: ''
+    }
+};
+
+serviceButtons.forEach(button => {
+    button.addEventListener('click', () => {
+        const service = button.getAttribute('data-service');
+        const details = serviceDetails[service];
+
+        popupImage.src = details.image;
+        popupImage.alt = details.title;
+        popupTitle.textContent = details.title;
+        popupDescription.textContent = details.description;
+
+        popupOverlay.classList.add('active');
+    });
+});
+
+popupClose.addEventListener('click', () => {
+    popupOverlay.classList.remove('active');
+});
+
+popupOverlay.addEventListener('click', (e) => {
+    if (e.target === popupOverlay) {
+        popupOverlay.classList.remove('active');
+    }
+});

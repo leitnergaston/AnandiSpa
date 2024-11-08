@@ -47,11 +47,15 @@
         <!-- ===== HERO ===== -->
         <section class="hero" id="inicio">
             <div class="carousel">
-                <div class="carousel-slide active"><img src="img/imagenesDeFondo/imagenCarrusel1.webp" alt="Masajes relajantes">
+                <div class="carousel-slide active"><img src="img/imagenesDeFondo/imagenCarrusel1.webp"
+                        alt="Masajes relajantes">
                 </div>
-                <div class="carousel-slide"><img src="img/imagenesDeFondo/imagenCarrusel2.webp" alt="Masajes descontracturantes"></div>
-                <div class="carousel-slide"><img src="img/imagenesDeFondo/imagenCarrusel3.webp" alt="Exfoliaciones"></div>
-                <div class="carousel-slide"><img src="img/imagenesDeFondo/imagenCarrusel4.webp" alt="Masajes sedativos"></div>
+                <div class="carousel-slide"><img src="img/imagenesDeFondo/imagenCarrusel2.webp"
+                        alt="Masajes descontracturantes"></div>
+                <div class="carousel-slide"><img src="img/imagenesDeFondo/imagenCarrusel3.webp" alt="Exfoliaciones">
+                </div>
+                <div class="carousel-slide"><img src="img/imagenesDeFondo/imagenCarrusel4.webp" alt="Masajes sedativos">
+                </div>
             </div>
             <div class="hero-content">
                 <h1>Bienvenidos a Anandi Spa</h1>
@@ -64,12 +68,15 @@
                 <div class="mini-promo-card" onclick="window.open('https://tinyurl.com/25ztvn7r')">
                     <h3>¡10% dcto todos los miercoles!</h3>
                     <p>En la Promo "Tardes para compartir"</p>
-                    <p>Durante todo noviembre y diciembre</p>
+                    <p>Durante todo Noviembre y Diciembre</p>
+                    <button>Pedir Promo</button>
                     <span class="tooltip">Pedir Promo</span>
                 </div>
                 <div class="mini-promo-card" onclick="window.open('https://tinyurl.com/2y4qyhp2')">
                     <h3>¡Super Promo!</h3>
                     <p>3 masajes de 60' a $50.000</p>
+                    <p>Durante todo Noviembre</p>
+                    <button>Pedir Promo</button>
                     <span class="tooltip">Pedir Promo</span>
                 </div>
             </div>
@@ -195,53 +202,72 @@
                 <h2>Nuestros Servicios</h2>
                 <div class="service-grid">
                     <div class="service-card">
-                        <img src="img/servicios/body-massage.png" alt="masajes">
+                        <img src="img/servicios/iconos/body-massage.png" alt="masajes">
                         <h3>Masajes Descontracturantes</h3>
                         <p>Disfrutá de un masaje profundo y relajante, diseñado para aliviar dolores musculares.</p>
+                        <button class="service-btn" data-service="masajes">Mas Info</button>
                     </div>
                     <div class="service-card">
-                        <img src="img/servicios/hidromasaje.png" alt="hidromasaje">
+                        <img src="img/servicios/iconos/hidromasaje.png" alt="hidromasaje">
                         <h3>Hidromasaje</h3>
                         <p>Sumérgete en nuestro hidromasaje y deja que el agua caliente y las burbujas alivien tus
                             tensiones.</p>
+                            <button class="service-btn" data-service="hidromasaje">Mas Info</button>
                     </div>
                     <div class="service-card">
-                        <img src="img/servicios/sauna (2).png" alt="sauna finlandes">
+                        <img src="img/servicios/iconos/sauna (2).png" alt="sauna finlandes">
                         <h3>Sauna Finlandés</h3>
                         <p>Experimenta los beneficios del sauna tradicional finlandés.</p>
+                        <button class="service-btn" data-service="sauna">Mas Info</button>
                     </div>
                     <div class="service-card">
-                        <img src="img/servicios/face-roller.png" alt="limpieza de cutis">
+                        <img src="img/servicios/iconos/face-roller.png" alt="limpieza de cutis">
                         <h3>Limpieza de cutis</h3>
                         <p>Luce una piel radiante con nuestra limpieza facial y revitaliza tu cutis.</p>
+                        <button class="service-btn" data-service="cutis">Mas Info</button>
                     </div>
                     <div class="service-card">
-                        <img src="img/servicios/exfoliaciones.png" alt="exfoliaciones">
+                        <img src="img/servicios/iconos/exfoliaciones.png" alt="exfoliaciones">
                         <h3>Exfoliaciones</h3>
                         <p>Exfoliaciones corporales para una piel suave y tersa.</p>
+                        <button class="service-btn" data-service="exfoliaciones">Mas Info</button>
                     </div>
                     <div class="service-card">
-                        <img src="img/servicios/piscina.png" alt="piscina">
+                        <img src="img/servicios/iconos/piscina.png" alt="piscina">
                         <h3>Piscina</h3>
                         <p>Disfruta de un baño refrescante en nuestra piscina al aire libre.</p>
+                        <button class="service-btn" data-service="piscina">Mas Info</button>
                     </div>
                     <div class="service-card">
-                        <img src="img/servicios/meriendas.png" alt="meriendas">
+                        <img src="img/servicios/iconos/meriendas.png" alt="meriendas">
                         <h3>Meriendas</h3>
                         <p>Complementa tu experiencia con nuestras exquisitas meriendas.</p>
+                        <button class="service-btn" data-service="meriendas">Mas Info</button>
                     </div>
                     <div class="service-card">
-                        <img src="img/servicios/spa.png" alt="circuitos de spa">
+                        <img src="img/servicios/iconos/spa.png" alt="circuitos de spa">
                         <h3>Circuitos de Spa</h3>
                         <p>Vive una experiencia única con nuestros circuitos de spa que te transportarán a un estado de
                             relajación total.</p>
+                            <button class="service-btn" data-service="circuitos">Mas Info</button>
                     </div>
                     <div class="service-card">
-                        <img src="img/servicios/promociones.png" alt="promociones">
+                        <img src="img/servicios/iconos/promociones.png" alt="promociones">
                         <h3>Promociones</h3>
                         <p>No te pierdas nuestras promociones, descubre promos especiales y regálate un momento de
                             bienestar.</p>
+                        <button class="service-btn" data-service="promociones">Mas Info</button>
                     </div>
+                </div>
+            </div>
+            <div class="popup-servicios">
+                <div class="popup-servicios-content">
+                    <img src="" alt="" class="popup-servicios-img">
+                    <div class="popup-servicios-text">
+                        <h3 class="popup-servicios-title"></h3>
+                        <p class="popup-servicios-description"></p>
+                    </div>
+                    <button class="popup-servicios-close">&times;</button>
                 </div>
             </div>
         </section>
@@ -253,7 +279,8 @@
             <div class="container">
                 <h2>Sobre Nuestro Spa</h2>
                 <div class="about-content">
-                    <img src="/img/imagenesDeFondo/imagenSobreNosotros.webp" alt="Sobre nuestro spa" class="img-about-inicio">
+                    <img src="/img/imagenesDeFondo/imagenSobreNosotros.webp" alt="Sobre nuestro spa"
+                        class="img-about-inicio">
                     <div class="about-text">
                         <p>En nuestro spa, nos dedicamos a proporcionar una experiencia de relajación y bienestar
                             incomparable. Ofrecemos una amplia variedad de circuitos diseñados para revitalizar su
@@ -314,7 +341,8 @@
                 <h2>Nuestra Galeria</h2>
                 <div class="gallery-grid">
                     <div class="gallery-item">
-                        <img class="img-gallery-inicio" data-src="/img/galeria/galeria1.webp" alt="Masajes descontracturantes">
+                        <img class="img-gallery-inicio" data-src="/img/galeria/galeria1.webp"
+                            alt="Masajes descontracturantes">
                     </div>
                     <div class="gallery-item">
                         <img class="img-gallery-inicio" data-src="/img/galeria/galeria2.webp" alt="Masajes sedativos">
@@ -355,13 +383,13 @@
             <div class="contact-cards">
                 <div class="contact-card" onclick="window.open('https://tinyurl.com/ymltfc99')">
                     <!-- <div class="contact-icon"><i class="fa-brands fa-whatsapp" style="color: #31c462;"></i></div> -->
-                     <div class="contact-icon"><img src="img/logos/icon-whatsapp-animated.gif" alt="whatsapp icon"></div>
+                    <div class="contact-icon"><img src="img/logos/icon-whatsapp-animated.gif" alt="whatsapp icon"></div>
                     <h3 class="contact-title">WhatsApp</h3>
                     <p class="contact-info">+54 9 261 510 4019</p>
                 </div>
                 <div class="contact-card" onclick="window.open('mailto:anandisparelax@gmail.com')">
                     <!-- <div class="contact-icon"><i class="fa-regular fa-envelope" style="color: #e33b3b;"></i></div> -->
-                     <div class="contact-icon"><img src="img/logos/icon-mail-animated.gif" alt="email icon"></div>
+                    <div class="contact-icon"><img src="img/logos/icon-mail-animated.gif" alt="email icon"></div>
                     <h3 class="contact-title">Email</h3>
                     <p class="contact-info">anandisparelax@gmail.com</p>
                 </div>
