@@ -149,8 +149,7 @@ function mostrarPromoPopup(url) {
     // Guardamos la URL personalizada de whatsapp que esta en el boton de cada card en la variable redirectUrl
     redirectUrl = url;
     // Mostramos el popup
-    document.getElementById("terminos-promo-popup").style.opacity = (1);
-    document.getElementById("terminos-promo-popup").style.visibility = "visible";
+    document.getElementById("terminos-promo-popup").style.display = "flex";
 }
 
 function aceptarPromoPopup() {
@@ -162,8 +161,7 @@ function aceptarPromoPopup() {
 
 function cerrarPromoPopup() {
     // Ocultamos el popup
-    document.getElementById("terminos-promo-popup").style.opacity = (0);
-    document.getElementById("terminos-promo-popup").style.visibility = "hidden";
+    document.getElementById("terminos-promo-popup").style.display = "none";
     // Reseteamos el link
     redirectUrl = ''; 
 }

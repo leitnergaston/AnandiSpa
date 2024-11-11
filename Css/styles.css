@@ -51,8 +51,7 @@ a {
 }
 
 img {
-    max-width: 100%;
-    height: auto;
+    /* height: auto; */
 }
 
 hr {
@@ -219,16 +218,54 @@ nav {
 /* ========== Hero section styles ========== */
 .hero {
     height: 100vh;
+    width: 100%;
     position: relative;
     overflow: hidden;
 }
 
-.carousel {
+.hero-bento-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 10px;
     height: 100%;
-    position: relative;
+    padding: 10px;
 }
 
-.carousel-slide {
+.hero-bento-item {
+    overflow: hidden;
+    border-radius: 15px;
+}
+
+.hero-bento-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.hero-bento-item::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    width: 70%;
+    height: 50%;
+    border-radius: 15px;
+    background-color: rgba(250, 218, 196, 0.25);
+    z-index: 1;
+}
+
+/* .carousel {
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+} */
+
+/* .carousel-slide {
     position: absolute;
     width: 100%;
     height: 100%;
@@ -236,14 +273,17 @@ nav {
     transition: opacity 1s ease-in-out, transform 1.5s ease-in-out;
     background-size: cover;
     background-position: center;
-    object-fit: cover;
-}
+} */
 
-.carousel-slide.active {
+/* .carousel-slide img {
+    width: 100%;
+} */
+
+/* .carousel-slide.active {
     opacity: 1;
-}
+} */
 
-.carousel-slide::before {
+/* .carousel-slide::before {
     content: '';
     position: absolute;
     top: 0;
@@ -252,7 +292,7 @@ nav {
     height: 100%;
     background-color: rgba(0, 0, 0, 0.3);
     z-index: 1;
-}
+} */
 
 /* Contenedor de titulo y subtitulo */
 .hero-content {
@@ -271,10 +311,12 @@ nav {
     font-size: 4rem;
     color: var(--color-text);
     text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.5);
+    margin-bottom: 2rem;
 }
 
 /* subtitulo */
 .hero-content p {
+    color: #2b2b2b;
     font-size: 1.2rem;
     font-weight: 500;
     font-style: italic;
@@ -384,7 +426,7 @@ nav {
 }
 
 .promo-card img:hover {
-    scale: 105%;
+    /* scale: 105%; */
 }
 
 .promo-content {
@@ -406,9 +448,51 @@ nav {
     margin-bottom: 1.5rem;
 }
 
+.destacada:before {
+    content: "Mas Pedida";
+    display: block;
+    color: #333;
+    text-shadow: 0 1px 10px #fff;
+    font-weight: bold;
+    position: absolute;
+    transform: rotate(-45deg);
+    text-align: center;
+    width: 140px;
+    top: 22px;
+    left: -30px;
+    box-shadow: 0 1px 10px #666;
+    background: -moz-linear-gradient(top, #1e5799 0%, #e09013 1%, #e5b300 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #1e5799), color-stop(1%, #e09013), color-stop(100%, #e5b300));
+    background: -webkit-linear-gradient(top, #1e5799 0%, #e09013 1%, #e5b300 100%);
+    background: -o-linear-gradient(top, #1e5799 0%, #e09013 1%, #e5b300 100%);
+    background: -ms-linear-gradient(top, #1e5799 0%, #e09013 1%, #e5b300 100%);
+    background: linear-gradient(to bottom, #1e5799 0%, #e09013 1%, #e5b300 100%);
+}
+
+#tardesParaCompartir::before {
+    content: "10% dcto";
+    display: block;
+    color: #333;
+    text-shadow: 0 1px 10px #fff;
+    font-weight: bold;
+    position: absolute;
+    transform: rotate(-45deg);
+    text-align: center;
+    width: 140px;
+    top: 22px;
+    left: -30px;
+    box-shadow: 0 1px 10px #666;
+    background: -moz-linear-gradient(top, #1e5799 0%, #e09013 1%, #e5b300 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #1e5799), color-stop(1%, #e09013), color-stop(100%, #e5b300));
+    background: -webkit-linear-gradient(top, #1e5799 0%, #e09013 1%, #e5b300 100%);
+    background: -o-linear-gradient(top, #1e5799 0%, #e09013 1%, #e5b300 100%);
+    background: -ms-linear-gradient(top, #1e5799 0%, #e09013 1%, #e5b300 100%);
+    background: linear-gradient(to bottom, #1e5799 0%, #e09013 1%, #e5b300 100%);
+}
+
 /* Promo Popup */
 .promo-popup {
-    display: flex;
+    display: none;
     position: fixed;
     top: 0;
     left: 0;
@@ -417,8 +501,6 @@ nav {
     background-color: rgba(0, 0, 0, 0.7);
     justify-content: center;
     align-items: center;
-    opacity: 0;
-    visibility: hidden;
     transition: opacity .3s ease, visibility .3s ease;
 }
 
@@ -1020,6 +1102,16 @@ footer {
         transform: rotate(-45deg) translate(5px, -8px);
     }
 
+    .hero-beto-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .hero-bento-item::before {
+        top: -26rem;
+        width: 70%;
+        height: 18%;
+    }
+
     .hero-content {
         width: clamp(300px, 320px, 480px);
         display: flex;
@@ -1029,6 +1121,7 @@ footer {
 
     .hero-content h1 {
         font-size: 2rem;
+        margin-bottom: 0;
     }
 
     .hero-content p {
@@ -1150,6 +1243,10 @@ footer {
 
     .hero {
         width: 100%;
+    }
+
+    .hero-beto-grid {
+        grid-template-columns: 1fr 1fr;
     }
 
     .hero-content {
