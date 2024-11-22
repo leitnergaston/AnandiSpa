@@ -448,7 +448,7 @@ nav {
     margin-bottom: 1.5rem;
 }
 
-.destacada:before {
+.destacada::before {
     content: "Mas Pedida";
     display: block;
     color: #333;
@@ -469,7 +469,28 @@ nav {
     background: linear-gradient(to bottom, #1e5799 0%, #e09013 1%, #e5b300 100%);
 }
 
-#tardesParaCompartir::before {
+.destacada-2::before {
+    content: "Nueva Promo";
+    display: block;
+    color: #333;
+    text-shadow: 0 1px 10px #fff;
+    font-weight: bold;
+    position: absolute;
+    transform: rotate(-45deg);
+    text-align: center;
+    width: 140px;
+    top: 26px;
+    left: -26px;
+    box-shadow: 0 1px 10px #666;
+    background: -moz-linear-gradient(top, #1e5799 0%, #e09013 1%, #e5b300 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #1e5799), color-stop(1%, #e09013), color-stop(100%, #e5b300));
+    background: -webkit-linear-gradient(top, #1e5799 0%, #e09013 1%, #e5b300 100%);
+    background: -o-linear-gradient(top, #1e5799 0%, #e09013 1%, #e5b300 100%);
+    background: -ms-linear-gradient(top, #1e5799 0%, #e09013 1%, #e5b300 100%);
+    background: linear-gradient(to bottom, #1e5799 0%, #e09013 1%, #e5b300 100%);
+}
+
+.destacada-3::before {
     content: "10% dcto";
     display: block;
     color: #333;
