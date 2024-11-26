@@ -417,6 +417,11 @@ nav {
     border-radius: 5px;
     overflow: hidden;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: .3s;
+}
+
+.promo-card:hover {
+    filter: drop-shadow(0 4px 10px rgba(0,0,0,0.2));
 }
 
 .promo-card img {
@@ -603,10 +608,11 @@ nav {
 }
 
 .service-card img {
-    /* width: 100px; */
-    /* height: 100px; */
-    border-radius: 50%;
+    /* width: 64px; */
+    /* height: 64px; */
+    /* border-radius: 50%; */
     margin-bottom: 1rem;
+    /* clip-path: circle(50% at 50% 50%); */
 }
 
 /* Boton de service card */
@@ -704,6 +710,7 @@ nav {
 
 .popup-servicios-description {
     font-size: 1rem;
+    font-weight: 500;
     color: #666;
     line-height: 1.6;
 }
@@ -717,6 +724,12 @@ nav {
     cursor: pointer;
     background: none;
     border: none;
+    transition: .3s;
+}
+
+.popup-servicios-close:hover {
+    transform: rotate(90deg);
+    color: #a51f1f;
 }
 
 
@@ -734,6 +747,12 @@ nav {
 .img-about-inicio {
     width: 45%;
     border-radius: 10px;
+    filter: drop-shadow(0px 4px 10px rgba(0,0,0,1));
+    transition: .3s;
+}
+
+.img-about-inicio:hover {
+    transform: translateY(-5px);
 }
 
 .about-text {
@@ -927,7 +946,7 @@ nav {
 }
 
 .gallery-item img:hover {
-    transform: scale(1.05);
+    /* transform: scale(1.02); */
 }
 
 .img-gallery-inicio.loaded {
