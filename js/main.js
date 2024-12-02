@@ -38,22 +38,6 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 
-// ========== Boton wapp flotante ========== //
-const backToTopButton = document.getElementById("mostrarWapp");
-
-window.onscroll = function () {
-    if (document.body.scrollTop > 600 || document.documentElement.scrollTop > 600) {
-        backToTopButton.style.transform = "scale(1)";
-    } else {
-        backToTopButton.style.transform = "scale(0)";
-    }
-};
-
-backToTopButton.onclick = function () {
-    document.body.scrollTop = 0; // Para Safari
-    document.documentElement.scrollTop = 0; // Para Chrome, Firefox, IE y Opera
-};
-
 
 
 // ========== Preloader de pagina inicio seccion galeria ========== //
