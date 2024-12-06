@@ -148,7 +148,7 @@ function cerrarPromoPopup() {
     // Ocultamos el popup
     document.getElementById("terminos-promo-popup").style.display = "none";
     // Reseteamos el link
-    redirectUrl = ''; 
+    redirectUrl = '';
 }
 
 
@@ -277,3 +277,64 @@ popupOverlay.addEventListener('click', (e) => {
 });
 
 
+// ===== Imagen ampliada de promos ===== //
+function openImagePopup(imageUrl) {
+    document.getElementById('popupImageAmpliada').src = imageUrl;
+    document.getElementById('imagePopup').style.display = 'flex';
+}
+
+function closeImagePopup() {
+    document.getElementById('imagePopup').style.display = 'none';
+}
+
+// Agregar evento de clic a las imágenes de promoción
+document.querySelectorAll('.promo-card .image-container').forEach(function (container) {
+    container.addEventListener('click', function () {
+        const img = this.querySelector('img');
+        const largeImageUrl = img.src.replace('height=200&width=250', 'height=600&width=800');
+        openImagePopup(largeImageUrl);
+    });
+});
+
+// Cerrar el popup de imagen si se hace clic fuera de la imagen
+document.getElementById('imagePopup').addEventListener('click', function (event) {
+    if (event.target === this) {
+        closeImagePopup();
+    }
+});
+
+
+// ===== SWIPER JS promos destacadas ===== //
+var swiper = new Swiper('.swiper-container', {
+    navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev'
+    },
+    slidesPerView: 1,
+    spaceBetween: 10,
+    
+    pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+    },
+
+
+    breakpoints: {
+        620: {
+            slidesPerView: 1,
+            spaceBetween: 20,
+        },
+        680: {
+            slidesPerView: 2,
+            spaceBetween: 40,
+        },
+        920: {
+            slidesPerView: 3,
+            spaceBetween: 40,
+        },
+        1240: {
+            slidesPerView: 4,
+            spaceBetween: 50,
+        },
+    }
+});

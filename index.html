@@ -9,6 +9,8 @@
     <!-- scroll reveal -->
     <!-- <script src="https://unpkg.com/scrollreveal@4.0.0/dist/scrollreveal.min.js"></script> -->
 
+    <!-- SWIPER CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 
     <!-- ICONOS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -61,7 +63,7 @@
                     y deliciosas meriendas. ¡Reservá ahora y descubre nuestras promociones especiales!</p>
             </div>
             <!-- Promos Especiales del mes -->
-            <div class="mini-promo-cards">
+            <!-- <div class="mini-promo-cards">
                 <div class="mini-promo-card" onclick="window.open('https://tinyurl.com/25ztvn7r')">
                     <h3>¡10% dcto todos los miercoles!</h3>
                     <p>En la Promo "Tardes para compartir"</p>
@@ -76,6 +78,91 @@
                     <button>Pedir Promo</button>
                     <span class="tooltip">Pedir Promo</span>
                 </div>
+            </div> -->
+        </section>
+
+        <!-- ===== PROMOS DESTACADAS ===== -->
+        <section class="promos-destacadas">
+            <div class="container">
+                <h2>Promos Destacadas</h2>
+
+                <!-- Swiper -->
+                <div class="swiper-contenedor swiper">
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-container">
+                        <div class="swiper-wrapper">
+                            <div class="promo-card swiper-slide">
+                                <div class="image-container">
+                                    <img src="img/promos/TardesParaCompartir.jpg" alt="" class="swiper-img">
+                                </div>
+                                <div class="swiper-card-content">
+                                    <div class="swiper-card-title">
+                                        <h4>10% de descuento</h4>
+                                    </div>
+                                    <div class="swiper-card-description">
+                                        <p>En la promo "Tardes para compartir" todos los miercoles de Diciembre.
+                                        </p>
+                                    </div>
+                                    <div class="swiper-card-link">
+                                        <a onclick="mostrarPromoPopup('https://tinyurl.com/2bzmk2bo')">Pedir Promo</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="promo-card swiper-slide">
+                                <div class="image-container">
+                                    <img src="img/promos/promoBienestar.avif" alt="" class="swiper-img">
+                                </div>
+                                <div class="swiper-card-content">
+                                    <div class="swiper-card-title">
+                                        <h4>Promo Verano</h4>
+                                    </div>
+                                    <div class="swiper-card-description">
+                                        <p>Nueva promo de verano. Circuito de spa con pileta</p>
+                                    </div>
+                                    <div class="swiper-card-link">
+                                        <a onclick="mostrarPromoPopup('https://tinyurl.com/2audv3ky')">Pedir Promo</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="promo-card swiper-slide">
+                                <div class="image-container">
+                                    <img src="img/promos/promoNavidad.jpg" alt="" class="swiper-img">
+                                </div>
+                                <div class="swiper-card-content">
+                                    <div class="swiper-card-title">
+                                        <h4>Promo Navideña</h4>
+                                    </div>
+                                    <div class="swiper-card-description">
+                                        <p>Promo Navidad y Año Nuevo en Anandi Spa</p>
+                                    </div>
+                                    <div class="swiper-card-link">
+                                        <a onclick="mostrarPromoPopup('https://tinyurl.com/2cgg9gqd')">Pedir Promo</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="promo-card swiper-slide">
+                                <div class="image-container">
+                                    <img src="img/promos/superPromo.jpg" alt="" class="swiper-img">
+                                </div>
+                                <div class="swiper-card-content">
+                                    <div class="swiper-card-title">
+                                        <h4>Super Promo</h4>
+                                    </div>
+                                    <div class="swiper-card-description">
+                                        <p>3 masajes de 60' a $60.000 disponible durante todo Diciembre</p>
+                                    </div>
+                                    <div class="swiper-card-link">
+                                        <a onclick="mostrarPromoPopup('https://tinyurl.com/29g57qqj')">Pedir Promo</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-pagination"></div>
+                </div>
+
+            </div>
             </div>
         </section>
 
@@ -85,8 +172,13 @@
                 <h2>Nuestras Promos</h2>
                 <div class="promo-grid">
                     <!-- Promo 1 -->
-                    <div class="promo-card">
-                        <img src="/img/promos/Promo1.jpg" alt="Promo 1">
+                    <div class="promo-card" id="promo1">
+                        <div class="image-container">
+                            <img src="/img/promos/Promo1.jpg" alt="Promo 1">
+                            <div class="image-overlay">
+                                <i class="fas fa-eye"></i>
+                            </div>
+                        </div>
                         <div class="promo-content">
                             <h3>Promo 1</h3>
                             <p>Desconectá del estrés con nuestro masaje
@@ -99,7 +191,12 @@
                     </div>
                     <!-- Promo 2 -->
                     <div class="promo-card">
-                        <img src="/img/promos/Promo2.jpg" alt="Promo 2">
+                        <div class="image-container">
+                            <img src="/img/promos/Promo2.jpg" alt="Promo 2">
+                            <div class="image-overlay">
+                                <i class="fas fa-eye"></i>
+                            </div>
+                        </div>
                         <div class="promo-content">
                             <h3>Promo 2</h3>
                             <p>Conectá con tu energía interior con nuestro masaje con
@@ -111,7 +208,12 @@
                     </div>
                     <!-- Promo 3 -->
                     <div class="promo-card">
-                        <img src="/img/promos/Promo3.jpg" alt="Promo 3">
+                        <div class="image-container">
+                            <img src="/img/promos/Promo3.jpg" alt="Promo 3">
+                            <div class="image-overlay">
+                                <i class="fas fa-eye"></i>
+                            </div>
+                        </div>
                         <div class="promo-content">
                             <h3>Promo 3</h3>
                             <p>Déjate envolver por los aromas de la lavanda y la
@@ -123,7 +225,12 @@
                     </div>
                     <!-- Promo 4 -->
                     <div class="promo-card">
-                        <img src="img/promos/Promo4.jpg" alt="Promo 4">
+                        <div class="image-container">
+                            <img src="img/promos/Promo4.jpg" alt="Promo 4">
+                            <div class="image-overlay">
+                                <i class="fas fa-eye"></i>
+                            </div>
+                        </div>
                         <div class="promo-content">
                             <h3>Promo 4</h3>
                             <p>Renueva tu piel con nuestra limpieza facial profunda.
@@ -134,7 +241,12 @@
                     </div>
                     <!-- Promo 5 -->
                     <div class="promo-card">
-                        <img src="img/promos/Promo5.jpg" alt="Promo 5">
+                        <div class="image-container">
+                            <img src="img/promos/Promo5.jpg" alt="Promo 5">
+                            <div class="image-overlay">
+                                <i class="fas fa-eye"></i>
+                            </div>
+                        </div>
                         <div class="promo-content">
                             <h3>Promo 5</h3>
                             <p>Reconecta contigo mismo o disfruta de una experiencia
@@ -147,7 +259,12 @@
                     </div>
                     <!-- Promo relax 1 -->
                     <div class="promo-card">
-                        <img src="img/promos/PromoRelax1.jpg" alt="Promo relax 1">
+                        <div class="image-container">
+                            <img src="img/promos/PromoRelax1.jpg" alt="Promo relax 1">
+                            <div class="image-overlay">
+                                <i class="fas fa-eye"></i>
+                            </div>
+                        </div>
                         <div class="promo-content">
                             <h3>Promo Relax 1</h3>
                             <p>Relájate y desconecta del estrés ó comparte un momento
@@ -160,7 +277,12 @@
                     </div>
                     <!-- Promo relax 2 -->
                     <div class="promo-card destacada">
-                        <img src="img/promos/PromoRelax2.jpg" alt="Promo relax 2">
+                        <div class="image-container">
+                            <img src="img/promos/PromoRelax2.jpg" alt="Promo relax 2">
+                            <div class="image-overlay">
+                                <i class="fas fa-eye"></i>
+                            </div>
+                        </div>
                         <div class="promo-content">
                             <h3>Promo Relax 2</h3>
                             <p>Regálate a ti o disfruta de una experiencia de lujo con
@@ -173,7 +295,12 @@
                     </div>
                     <!-- Promo romance -->
                     <div class="promo-card destacada">
-                        <img src="img/promos/PromoRomance.jpg" alt="Promo romance">
+                        <div class="image-container">
+                            <img src="img/promos/PromoRomance.jpg" alt="Promo romance">
+                            <div class="image-overlay">
+                                <i class="fas fa-eye"></i>
+                            </div>
+                        </div>
                         <div class="promo-content">
                             <h3>Promo Romance</h3>
                             <p>Enciende la llama de la pasión con nuestra promoción
@@ -185,7 +312,12 @@
                     </div>
                     <!-- Promo tardes para compartir -->
                     <div class="promo-card destacada-3">
-                        <img src="img/promos/TardesParaCompartir.jpg" alt="Promo tardes para compartir">
+                        <div class="image-container">
+                            <img src="img/promos/TardesParaCompartir.jpg" alt="Promo tardes para compartir">
+                            <div class="image-overlay">
+                                <i class="fas fa-eye"></i>
+                            </div>
+                        </div>
                         <div class="promo-content">
                             <h3>Tardes para Compartir</h3>
                             <p>¡Reúne a tus amigas y disfruta de una tarde de relax y
@@ -197,7 +329,12 @@
                     </div>
                     <!-- Promo cumple -->
                     <div class="promo-card">
-                        <img src="img/promos/PromoCumple.jpg" alt="Promo cumple">
+                        <div class="image-container">
+                            <img src="img/promos/PromoCumple.jpg" alt="Promo cumple">
+                            <div class="image-overlay">
+                                <i class="fas fa-eye"></i>
+                            </div>
+                        </div>
                         <div class="promo-content">
                             <h3>Promo Cumple</h3>
                             <p>¡Celebra tu cumpleaños por todo lo alto! Nuestro
@@ -208,8 +345,13 @@
                         </div>
                     </div>
                     <!-- Promo bienestar -->
-                    <div class="promo-card destacada-2">
-                        <img src="img/promos/promoBienestar.avif" alt="Promo bienestar">
+                    <div class="promo-card destacada-4">
+                        <div class="image-container">
+                            <img src="img/promos/promoBienestar.avif" alt="Promo bienestar">
+                            <div class="image-overlay">
+                                <i class="fas fa-eye"></i>
+                            </div>
+                        </div>
                         <div class="promo-content">
                             <h3>Promo Bienestar</h3>
                             <p>Disfruta de un masaje descontracturante o sueco que liberará tensiones, seguido de una
@@ -222,7 +364,12 @@
                     </div>
                     <!-- Promo navidad -->
                     <div class="promo-card destacada-2">
-                        <img src="img/promos/promoNavidad.jpg" alt="Promo navidad">
+                        <div class="image-container">
+                            <img src="img/promos/promoNavidad.jpg" alt="Promo navidad">
+                            <div class="image-overlay">
+                                <i class="fas fa-eye"></i>
+                            </div>
+                        </div>
                         <div class="promo-content">
                             <h3>Promo Navideña</h3>
                             <p>Regala bienestar esta Navidad. Nuestra promoción incluye un masaje sueco para aliviar
@@ -236,7 +383,12 @@
                     </div>
                     <!-- Super Promo -->
                     <div class="promo-card">
-                        <img src="img/promos/superPromo.jpg" alt="super promo">
+                        <div class="image-container">
+                            <img src="img/promos/superPromo.jpg" alt="super promo">
+                            <div class="image-overlay">
+                                <i class="fas fa-eye"></i>
+                            </div>
+                        </div>
                         <div class="promo-content">
                             <h3>Super Promo</h3>
                             <p>Aprovechá 3 sesiones de masajes de 60 minutos a solo $60.000. Disponible durante todo el
@@ -250,13 +402,19 @@
             <!-- Popup de confirmacion TyC -->
             <div class="promo-popup" id="terminos-promo-popup">
                 <div class="promo-popup-content">
-                    <p>Antes de continuar, lea atentamente nuestros <a
+                    <p>Antes de continuar, te invitamos a leer nuestros <a
                             href="TerminosYCondiciones/terminos-y-condiciones.html" target="_blank">Términos y
                             Condiciones</a> <br> Al hacer clic en 'Aceptar',
                         confirmas que has leído y estás de acuerdo con ellos.</p>
                     <button onclick="cerrarPromoPopup()" class="promo-popup-cancel-btn">Cancelar</button>
                     <button onclick="aceptarPromoPopup()" class="promo-popup-accept-btn">Aceptar</button>
                 </div>
+            </div>
+
+            <!-- Imagen ampliada de promos -->
+            <div id="imagePopup" class="image-popup">
+                <span class="close-image-popup" onclick="closeImagePopup()">&times;</span>
+                <img id="popupImageAmpliada" src="" alt="Imagen ampliada">
             </div>
         </section>
 
@@ -367,8 +525,8 @@
                         <h3 class="popup-servicios-title"></h3>
                         <p class="popup-servicios-description"></p>
                     </div>
-                    <button class="popup-servicios-close">&times;</button>
                 </div>
+                <button class="popup-servicios-close">&times;</button>
             </div>
         </section>
 
@@ -562,6 +720,10 @@
             </div>
         </div>
     </footer>
+
+
+    <!-- SWIPER JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
     <!-- ========== Main Js ========== -->
     <script src="Js/main.js"></script>
