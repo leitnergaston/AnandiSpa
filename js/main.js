@@ -193,7 +193,7 @@ const serviceDetails = {
     'masajes-descontracturantes': {
         title: 'Masajes Descontracturantes',
         description: 'Alivia el dolor. Disuelve contracturas. Activa la circulación sanguínea y de la linfa eliminando toxinas. Relaja y ayuda a dormir bien. Alivia las migrañas y dolores de cabeza. Ayuda a evuacuar mejor. Mantiene la piel elástica eliminando células muertas y la nutre.',
-        image: '/img/servicios/img/servicios-masajes.webp'
+        image: '/img/servicios/img/servicios-masaje-descontracturante.jpg'
     },
     'masajes-relajantes': {
         title: 'Masajes Relajantes',
