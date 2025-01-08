@@ -457,6 +457,7 @@ nav {
 .swiper-contenedor .swiper-slide .swiper-card-title,
 .swiper-contenedor .swiper-slide .swiper-card-description {
     margin-bottom: .5rem;
+    text-align: center;
 }
 
 .swiper-contenedor .swiper-slide .swiper-card-link {
@@ -1126,10 +1127,8 @@ nav {
 
 .gallery-item {
     position: relative;
-    padding-bottom: 100%;
-    /* Aspecto cuadrado */
-    background-color: #f0f0f0;
-    /* Color de fondo mientras carga */
+    padding-bottom: 100%; /*aspecto cuadrado*/
+    background-color: #f0f0f0; /*color de fondo mientras carga*/
     overflow: hidden;
 }
 
@@ -1304,6 +1303,7 @@ footer {
     color: var(--color-hover);
     transform: translateY(-5px);
 }
+
 
 
 /* ========== Responsive ========== */
