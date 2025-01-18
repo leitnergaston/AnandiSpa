@@ -50,10 +50,6 @@ a {
     text-decoration: none;
 }
 
-img {
-    /* height: auto; */
-}
-
 hr {
     margin: 0;
     opacity: .5;
@@ -221,13 +217,78 @@ nav {
 
 /* ========== Hero section styles ========== */
 .hero {
-    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    min-height: 100vh;
+
+
+    /* height: 100vh;
     width: 100%;
     position: relative;
-    overflow: hidden;
+    overflow: hidden; */
 }
 
-.hero-bento-grid {
+.hero-container {
+    display: flex;
+    max-width: 1200px;
+    width: 100%;
+}
+
+.hero-img {
+    flex: 1;
+    max-width: 50%;
+}
+
+.hero-img img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.hero-content {
+    flex: 1;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-title {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+    line-height: normal;
+    color: var(--color-text);
+    text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.5);
+}
+
+.hero-description {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    color: #2b2b2b;
+    font-weight: 500;
+}
+
+.hero-text {
+    font-size: 1.2rem;
+    color: #333;
+    animation: jumpText 2s ease infinite;
+}
+
+@keyframes jumpText {
+    0%, 100% {
+        transform: translateY(0px);
+    }
+    60% {
+        transform: translateY(25px);
+    }
+}
+
+
+/* .hero-bento-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(2, 1fr);
@@ -260,7 +321,7 @@ nav {
     border-radius: 15px;
     background-color: rgba(250, 218, 196, 0.25);
     z-index: 1;
-}
+} */
 
 /* .carousel {
     position: relative;
@@ -299,7 +360,7 @@ nav {
 } */
 
 /* Contenedor de titulo y subtitulo */
-.hero-content {
+/* .hero-content {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -308,29 +369,29 @@ nav {
     color: white;
     z-index: 3;
     width: 60%;
-}
+} */
 
 /* Titulo principal */
-.hero-content h1 {
+/* .hero-content h1 {
     font-size: 4rem;
     color: var(--color-text);
     text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.5);
     margin-bottom: 2rem;
-}
+} */
 
 /* subtitulo */
-.hero-content p {
+/* .hero-content p {
     color: #2b2b2b;
     font-size: 1.2rem;
     font-weight: 500;
     font-style: italic;
     margin-bottom: 2rem;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-}
+} */
 
 /* Mini promo cards especiales en hero */
 /* contenedor de las mini cards */
-.mini-promo-cards {
+/* .mini-promo-cards {
     position: absolute;
     bottom: 2rem;
     left: 0;
@@ -340,10 +401,10 @@ nav {
     gap: 1rem;
     padding: 0 1rem;
     z-index: 1100;
-}
+} */
 
 /* mini card */
-.mini-promo-card {
+/* .mini-promo-card {
     background-color: rgba(255, 255, 255, 0.9);
     border-radius: 10px;
     padding: 1rem;
@@ -351,23 +412,23 @@ nav {
     text-align: center;
     position: relative;
     cursor: pointer;
-}
+} */
 
 /* titulo mini card */
-.mini-promo-card h3 {
+/* .mini-promo-card h3 {
     font-size: 1.1rem;
     margin-bottom: .5rem;
-}
+} */
 
 /* descripcion mini card */
-.mini-promo-card p {
+/* .mini-promo-card p {
     font-size: 15px;
     font-weight: 600;
     color: #666;
-}
+} */
 
 /* span de mini card en el efecto hove */
-.tooltip {
+/* .tooltip {
     position: absolute;
     background-color: #333;
     color: white;
@@ -377,9 +438,9 @@ nav {
     opacity: 0;
     transition: opacity 0.3s ease;
     pointer-events: none;
-}
+} */
 
-.mini-promo-card button {
+/* .mini-promo-card button {
     padding: .2rem;
     overflow: hidden;
     cursor: pointer;
@@ -389,7 +450,7 @@ nav {
     border: 1px solid var(--color-border-btn);
     visibility: hidden;
     opacity: 0;
-}
+} */
 
 
 /* ===== PROMOS DESTACADAS SECTION ===== */
@@ -1346,52 +1407,27 @@ footer {
         transform: rotate(-45deg) translate(5px, -8px);
     }
 
-    .hero-beto-grid {
-        grid-template-columns: 1fr 1fr;
+    .hero-container {
+        flex-direction: column;
     }
 
-    .hero-bento-item::before {
-        top: -26rem;
-        width: 70%;
-        height: 18%;
+    .hero-img {
+        margin-top: 4rem;
+        max-width: 100%;
+        margin-bottom: 1rem;
     }
 
     .hero-content {
-        width: clamp(300px, 320px, 480px);
-        display: flex;
-        top: 25%;
-        flex-direction: column;
+        padding: 1rem 0;
     }
 
-    .hero-content h1 {
-        font-size: 2rem;
-        margin-bottom: 0;
+    .hero-title {
+        font-size: 2.5rem;
+        text-align: center;
     }
 
-    .hero-content p {
-        font-size: .6rem;
-        margin-bottom: 0;
-        visibility: hidden;
-        opacity: 0;
-    }
-
-    .mini-promo-cards {
-        flex-direction: column;
-        align-items: center;
-        bottom: clamp(10%, 10%, 100%);
-    }
-
-    .mini-promo-card {
-        display: flex;
-        min-height: 10rem;
-        flex-direction: column;
-        align-items: center;
-        justify-content: space-between;
-    }
-
-    .mini-promo-card button {
-        visibility: visible;
-        opacity: 1;
+    .hero-description {
+        text-align: center;
     }
 
     .promo-content {
@@ -1468,7 +1504,30 @@ footer {
         transform: rotate(-45deg) translate(5px, -8px);
     }
 
-    .hero {
+    .hero-container {
+        flex-direction: column;
+    }
+
+    .hero-img {
+        margin-top: 4rem;
+        max-width: 100%;
+        margin-bottom: 1rem;
+    }
+
+    .hero-content {
+        padding: 1rem 0;
+    }
+
+    .hero-title {
+        font-size: 2.5rem;
+        text-align: center;
+    }
+
+    .hero-description {
+        text-align: center;
+    }
+
+    /* .hero {
         width: 100%;
     }
 
@@ -1487,27 +1546,7 @@ footer {
     .hero-content p {
         visibility: hidden;
         opacity: 0;
-    }
-
-    /* ===== mini promo cards hero ===== */
-    .mini-promo-cards {
-        flex-direction: row;
-        align-items: center;
-        /* bottom: 20%; */
-        bottom: clamp(10%, 10%, 100%);
-    }
-
-    .mini-promo-card {
-        display: flex;
-        min-height: 15rem;
-        flex-direction: column;
-        justify-content: space-between;
-    }
-
-    .mini-promo-card button {
-        visibility: visible;
-        opacity: 1;
-    }
+    } */
 
     /* ===== Testimonios ===== */
     .testimonial-card {
@@ -1530,7 +1569,7 @@ footer {
     }
 
     .img-about-inicio {
-        width: auto;
+        width: 100%;
     }
 
     /* ===== contacto ===== */
@@ -1567,7 +1606,7 @@ footer {
 .service-card,
 .about,
 .testimonials,
-.gallery {
+.gallery-item {
     animation: appear linear;
     animation-timeline: view();
     animation-range: entry 0% cover 30%;

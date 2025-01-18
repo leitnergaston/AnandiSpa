@@ -43,8 +43,8 @@
                 <li class="nav-item"><a href="#inicio" class="nav-link active">Inicio</a></li>
                 <li class="nav-item"><a href="#promos" class="nav-link">Promos</a></li>
                 <li class="nav-item"><a href="#servicios" class="nav-link">Servicios</a></li>
-                <li class="nav-item"><a href="#nosotros" class="nav-link">Nosotros</a></li>
                 <li class="nav-item"><a href="#galeria" class="nav-link">Galeria</a></li>
+                <li class="nav-item"><a href="Productos/productos.html" class="nav-link" target="_blank">Tienda</a></li>
                 <li class="nav-item"><a href="#contacto" class="nav-link">Contacto</a></li>
             </ul>
         </nav>
@@ -54,6 +54,25 @@
 
         <!-- ===== HERO ===== -->
         <section class="hero" id="inicio">
+            <div class="hero-container">
+                <div class="hero-img">
+                    <img src="img/Otros/imagenHero.png" alt="imagen-inicio">
+                </div>
+                <div class="hero-content">
+                    <h1 class="hero-title">Bienvenidos a Anandi Spa</h1>
+                    <p class="hero-description">Relájate y desconecta del mundo en nuestro spa. Disfruta de masajes
+                        descontracturantes, hidromasaje,
+                        sauna finlandés, tratamientos faciales y corporales. Además, te ofrecemos circuitos de spa
+                        completos
+                        y deliciosas meriendas. ¡Reservá ahora y descubre nuestras promociones especiales!</p>
+                    <p class="hero-text"> <i class="fa-solid fa-arrow-down"></i> Mira nuestras promos <i class="fa-solid fa-arrow-down"></i></p>
+                    <!-- <a href="#promos-destacadas" class="btn">Mira Nuestras Promos</a> -->
+                </div>
+            </div>
+        </section>
+
+        <!-- hero viejo -->
+        <!-- <section class="hero" id="inicio">
             <div class="hero-bento-grid">
                 <div class="hero-bento-item"><img src="img/carrusel/carrusel1.webp" alt=""></div>
                 <div class="hero-bento-item"><img src="img/carrusel/carrusel2.webp" alt=""></div>
@@ -68,24 +87,7 @@
                     sauna finlandés, tratamientos faciales y corporales. Además, te ofrecemos circuitos de spa completos
                     y deliciosas meriendas. ¡Reservá ahora y descubre nuestras promociones especiales!</p>
             </div>
-            <!-- Promos Especiales del mes -->
-            <!-- <div class="mini-promo-cards">
-                <div class="mini-promo-card" onclick="window.open('https://tinyurl.com/25ztvn7r')">
-                    <h3>¡10% dcto todos los miercoles!</h3>
-                    <p>En la Promo "Tardes para compartir"</p>
-                    <p>Durante todo Diciembre</p>
-                    <button>Pedir Promo</button>
-                    <span class="tooltip">Pedir Promo</span>
-                </div>
-                <div class="mini-promo-card" onclick="window.open('https://tinyurl.com/29g57qqj')">
-                    <h3>¡Super Promo!</h3>
-                    <p>3 masajes de 60' a $60.000</p>
-                    <p>Durante todo Diciembre</p>
-                    <button>Pedir Promo</button>
-                    <span class="tooltip">Pedir Promo</span>
-                </div>
-            </div> -->
-        </section>
+        </section> -->
 
         <!-- ===== PROMOS DESTACADAS ===== -->
         <section class="promos-destacadas">
@@ -141,7 +143,8 @@
                                         <h4>Promo Verano</h4>
                                     </div>
                                     <div class="swiper-card-description">
-                                        <p>Nueva promo de verano. Circuito de spa con pileta</p>
+                                        <p>Nueva promo de verano. Circuito de spa con pileta, 10% dcto todos los
+                                            miercoles.</p>
                                     </div>
                                     <div class="swiper-card-link">
                                         <a onclick="mostrarPromoPopup('https://tinyurl.com/2audv3ky')">Pedir Promo</a>
@@ -368,7 +371,7 @@
                         </div>
                     </div>
                     <!-- Promo bienestar -->
-                    <div class="promo-card destacada-4">
+                    <div class="promo-card destacada-3">
                         <div class="image-container">
                             <img src="img/promos/promoBienestar.avif" alt="Promo bienestar">
                             <div class="image-overlay">
@@ -377,10 +380,10 @@
                         </div>
                         <div class="promo-content">
                             <h3>Promo Bienestar</h3>
-                            <p>Disfruta de un masaje descontracturante o sueco que liberará tensiones, seguido de una
-                                relajante terapia con piedras calientes. Nuestra limpieza facial con exfoliante de
+                            <p>Disfruta de un masaje descontracturante o sueco, seguido de una
+                                relajación con piedras calientes. Nuestra limpieza facial con exfoliante de
                                 coco-vainilla dejará tu piel radiante. Refrescate en nuestra piscina al aire libre. Y
-                                para finalizar, una deliciosa pizza y una bebida refrescante. </p>
+                                para finalizar, una deliciosa pizza y una bebida refrescante. <br> 10% de dcto viniendo los miercoles!</p>
                             <button class="btn" onclick="mostrarPromoPopup('https://tinyurl.com/2audv3ky')">Reservar
                                 ahora</button>
                         </div>
@@ -556,11 +559,11 @@
         <hr>
 
         <!-- ===== NOSOTROS ===== -->
-        <section id="nosotros" class="about container">
+        <section class="about container">
             <div class="container">
                 <h2>Sobre Nuestro Spa</h2>
                 <div class="about-content">
-                    <img src="/img/carrusel/imagenSobreNosotros.webp" alt="Sobre nuestro spa" class="img-about-inicio">
+                    <img src="/img/Otros/imagenSobreNosotros.webp" alt="Sobre nuestro spa" class="img-about-inicio">
                     <div class="about-text">
                         <p>En nuestro spa, nos dedicamos a proporcionar una experiencia de relajación y bienestar
                             incomparable. Ofrecemos una amplia variedad de circuitos diseñados para revitalizar su
@@ -677,7 +680,7 @@
         <section id="contacto" class="contact container">
             <h2>Contáctanos</h2>
             <div class="contact-cards">
-                <div class="contact-card" onclick="window.open('https://tinyurl.com/ymltfc99')">
+                <div class="contact-card" onclick="window.open('https://wa.me/542615104019')">
                     <!-- <div class="contact-icon"><i class="fa-brands fa-whatsapp" style="color: #31c462;"></i></div> -->
                     <div class="contact-icon"><img src="img/logos/icon-whatsapp-animated.gif" alt="whatsapp icon"></div>
                     <h3 class="contact-title">WhatsApp</h3>
@@ -718,7 +721,7 @@
         </section> -->
 
         <!-- boton de whastapp -->
-        <a href="https://tinyurl.com/ymltfc99" id="mostrarWapp" class="whatsapp-btn" target="_blank">
+        <a href="https://wa.me/542615104019" id="mostrarWapp" class="whatsapp-btn" target="_blank">
             <i class="fa-brands fa-whatsapp"></i>
         </a>
     </main>
@@ -743,9 +746,8 @@
                         aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
                     <a class="social-link" href="https://www.facebook.com/spa.anandi" target="_blank"
                         aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a>
-                    <a class="social-link"
-                        href="https://wa.me/5492615104019?text=%C2%A1Estamos%20listos%20para%20atenderte!%20%C2%BFCu%C3%A1l%20es%20tu%20nombre%20y%20qu%C3%A9%20servicio%20o%20promo%20te%20gustar%C3%ADa%20reservar?"
-                        target="_blank" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+                    <a class="social-link" href="https://wa.me/542615104019" target="_blank" aria-label="WhatsApp"><i
+                            class="fa-brands fa-whatsapp"></i></a>
                 </div>
             </div>
         </div>

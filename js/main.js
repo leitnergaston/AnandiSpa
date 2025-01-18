@@ -106,25 +106,25 @@ function navHighlighter() {
 
 
 // ========== etiqueta hover tooltip para mini promo cards del hero ========== //
-const promoCards = document.querySelectorAll('.mini-promo-card');
+// const promoCards = document.querySelectorAll('.mini-promo-card');
 
-promoCards.forEach(card => {
-    const tooltip = card.querySelector('.tooltip');
+// promoCards.forEach(card => {
+//     const tooltip = card.querySelector('.tooltip');
 
-    card.addEventListener('mousemove', (e) => {
-        const rect = card.getBoundingClientRect();
-        const x = e.clientX - rect.left;
-        const y = e.clientY - rect.top;
+//     card.addEventListener('mousemove', (e) => {
+//         const rect = card.getBoundingClientRect();
+//         const x = e.clientX - rect.left;
+//         const y = e.clientY - rect.top;
 
-        tooltip.style.left = `${x}px`;
-        tooltip.style.top = `${y}px`;
-        tooltip.style.opacity = '1';
-    });
+//         tooltip.style.left = `${x}px`;
+//         tooltip.style.top = `${y}px`;
+//         tooltip.style.opacity = '1';
+//     });
 
-    card.addEventListener('mouseleave', () => {
-        tooltip.style.opacity = '0';
-    });
-});
+//     card.addEventListener('mouseleave', () => {
+//         tooltip.style.opacity = '0';
+//     });
+// });
 
 
 // ========== Promo Popup de terminos y condiciones ========== //
@@ -177,7 +177,7 @@ function prevTestimonial() {
 // prevBtn.addEventListener('click', prevTestimonial);
 
 // Auto-slide for testimonials
-setInterval(nextTestimonial, 4000); // Cambia de testimonio cada 7 segundos
+setInterval(nextTestimonial, 5000); // Cambia de testimonio cada x milisegundos
 
 
 // ========== Popup Servicios ========== //

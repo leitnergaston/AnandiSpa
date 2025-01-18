@@ -3,162 +3,462 @@ const products = [
     {
         id: 1,
         code: 'PROD001',
-        name: 'Nombre',
-        price: 0,
+        name: 'Frescor Castaña',
+        price: 29680,
         image: './img/001.jpg',
-        description: 'Un smartphone de última generación con características increíbles.',
-        orderLink: 'https://ejemplo.com/pedir/smartphone-x',
+        description: 'Ekos castaña frescor eav de toillette 150ml dulce floral',
+        orderLink: '',
         category: 'Natura'
     },
     {
         id: 2,
         code: 'PROD002',
-        name: 'Nombre',
-        price: 0,
+        name: 'Pulpa Castaña',
+        price: 8048,
         image: './img/002.jpg',
-        description: 'Una laptop potente para profesionales y entusiastas.',
-        orderLink: 'https://ejemplo.com/pedir/laptop-pro',
+        description: 'Pulpa hidratante castaña para manos 75g',
+        orderLink: '',
         category: 'Natura'
     },
     {
         id: 3,
         code: 'PROD003',
-        name: 'Nombre',
-        price: 0,
+        name: 'Desodorante Masculino',
+        price: 4500,
         image: './img/003.jpg',
-        description: 'Un reloj inteligente con múltiples funciones para tu día a día.',
-        orderLink: 'https://ejemplo.com/pedir/smartwatch-y',
+        description: 'Antitranspirante roll-on homem 75ml',
+        orderLink: '',
         category: 'Natura'
     },
     {
         id: 4,
         code: 'PROD004',
-        name: 'Nombre',
-        price: 0,
+        name: 'Cadena Dorada',
+        price: 3000,
         image: './img/004.jpg',
-        description: 'Una tablet versátil para trabajo y entretenimiento.',
-        orderLink: 'https://ejemplo.com/pedir/tablet-z',
-        category: 'Joyeria'
+        description: 'Cadena combinada dorada',
+        orderLink: '',
+        category: 'Bijouterie'
     },
     {
         id: 5,
         code: 'PROD005',
-        name: 'Nombre',
-        price: 0,
+        name: 'Cadena Plateada',
+        price: 3000,
         image: './img/005.jpg',
-        description: '',
+        description: 'Cadena combinada plateada',
         orderLink: '',
-        category: 'Joyeria'
+        category: 'Bijouterie'
     },
     {
         id: 6,
         code: 'PROD006',
-        name: 'Nombre',
-        price: 0,
+        name: 'Cadena Plateada',
+        price: 3500,
         image: './img/006.jpg',
-        description: '',
+        description: 'Detalle rosa grande, gema celeste',
         orderLink: '',
-        category: 'Joyeria'
+        category: 'Bijouterie'
     },
     {
         id: 7,
         code: 'PROD007',
-        name: 'Nombre',
-        price: 0,
+        name: 'Cadena Larga Búho',
+        price: 3000,
         image: './img/007.jpg',
-        description: '',
+        description: 'Detalle búho, colores',
         orderLink: '',
-        category: 'Joyeria'
+        category: 'Bijouterie'
     },
     {
         id: 8,
         code: 'PROD008',
-        name: 'Nombre',
-        price: 0,
+        name: 'Cadena Larga Búho',
+        price: 3000,
         image: './img/008.jpg',
-        description: '',
+        description: 'Detalle búho, colores',
         orderLink: '',
-        category: 'Joyeria'
+        category: 'Bijouterie'
     },
     {
         id: 9,
         code: 'PROD009',
-        name: 'Nombre',
-        price: 0,
+        name: 'Cadena Larga Ojo',
+        price: 3000,
         image: './img/009.jpg',
-        description: '',
+        description: 'Plateado con negro',
         orderLink: '',
-        category: 'Joyeria'
+        category: 'Bijouterie'
     },
     {
         id: 10,
         code: 'PROD010',
-        name: 'Nombre',
-        price: 0,
+        name: 'Dije Corazón Plateado',
+        price: 2800,
         image: './img/010.jpg',
-        description: '',
+        description: 'Detalle calado, tamaño grande',
         orderLink: '',
-        category: 'Joyeria'
+        category: 'Bijouterie'
     },
     {
         id: 11,
         code: 'PROD011',
-        name: 'Nombre',
-        price: 0,
+        name: 'Dije Bigote Fucsia',
+        price: 2800,
         image: './img/011.jpg',
-        description: '',
+        description: 'Bigotes fucsia, detalle strass plateado',
         orderLink: '',
-        category: 'Joyeria'
+        category: 'Bijouterie'
     },
     {
         id: 12,
         code: 'PROD012',
-        name: 'Nombre',
-        price: 0,
+        name: 'Dije Cruz Plateado',
+        price: 3000,
         image: './img/012.jpg',
-        description: '',
+        description: 'Cruz Jesús, calada',
         orderLink: '',
-        category: 'Joyeria'
+        category: 'Bijouterie'
     },
     {
         id: 13,
         code: 'PROD013',
-        name: 'Nombre',
-        price: 0,
+        name: 'Dije Cristo',
+        price: 5000,
         image: './img/013.jpg',
-        description: '',
+        description: 'Tamaño chico',
         orderLink: '',
-        category: 'Joyeria'
+        category: 'Bijouterie'
     },
     {
         id: 14,
         code: 'PROD014',
-        name: 'Nombre',
-        price: 0,
+        name: 'Dije Bolita Violeta',
+        price: 3000,
         image: './img/014.jpg',
-        description: '',
+        description: 'Bola de strass',
         orderLink: '',
-        category: 'Joyeria'
+        category: 'Bijouterie'
     },
     {
         id: 15,
         code: 'PROD015',
-        name: 'Nombre',
-        price: 0,
+        name: 'Pulsera Plateada',
+        price: 5000,
         image: './img/015.jpg',
-        description: '',
+        description: 'Calada sin dije',
         orderLink: '',
-        category: 'Joyeria'
+        category: 'Bijouterie'
     },
     {
         id: 16,
         code: 'PROD016',
-        name: 'Nombre',
-        price: 0,
+        name: 'Pulsera Plateada',
+        price: 5000,
         image: './img/016.jpg',
-        description: '',
+        description: 'Chapa plateada',
         orderLink: '',
-        category: 'Joyeria'
+        category: 'Bijouterie'
+    },
+    {
+        id: 17,
+        code: 'PROD017',
+        name: 'Esmalte UNA',
+        price: 12000,
+        image: './img/017.jpg',
+        description: 'Hipoalergénico color "Outono" 8ml vegano',
+        orderLink: '',
+        category: 'Natura'
+    },
+    {
+        id: 18,
+        code: 'PROD018',
+        name: 'Esmalte UNA',
+        price: 12000,
+        image: './img/018.jpg',
+        description: 'Hipoalergénico color "Calor" 8ml vegano',
+        orderLink: '',
+        category: 'Natura'
+    },
+    {
+        id: 19,
+        code: 'PROD019',
+        name: 'Esmalte UNA',
+        price: 12000,
+        image: './img/019.jpg',
+        description: 'Hipoalergénico color "Pitanga" 8ml vegano',
+        orderLink: '',
+        category: 'Natura'
+    },
+    {
+        id: 20,
+        code: 'PROD020',
+        name: 'Esmalte UNA',
+        price: 12000,
+        image: './img/020.jpg',
+        description: 'Hipoalergénico color "Beijo" 8ml vegano',
+        orderLink: '',
+        category: 'Natura'
+    },
+    {
+        id: 21,
+        code: 'PROD021',
+        name: 'Esmalte UNA',
+        price: 12000,
+        image: './img/021.jpg',
+        description: 'Hipoalergénico color "Praia" 8ml vegano',
+        orderLink: '',
+        category: 'Natura'
+    },
+    {
+        id: 22,
+        code: 'PROD022',
+        name: 'Esmalte UNA',
+        price: 12000,
+        image: './img/022.jpg',
+        description: 'Hipoalergénico color "Car de pimenta" 8ml vegano',
+        orderLink: '',
+        category: 'Natura'
+    },
+    {
+        id: 23,
+        code: 'PROD023',
+        name: 'Esmalte UNA',
+        price: 12000,
+        image: './img/023.jpg',
+        description: 'Hipoalergénico color "Una n°1" 8ml vegano',
+        orderLink: '',
+        category: 'Natura'
+    },
+    {
+        id: 24,
+        code: 'PROD024',
+        name: 'Esmalte UNA',
+        price: 12000,
+        image: './img/024.jpg',
+        description: 'Hipoalergénico color "Flores" 8ml vegano',
+        orderLink: '',
+        category: 'Natura'
+    },
+    {
+        id: 25,
+        code: 'PROD025',
+        name: 'Esmalte UNA',
+        price: 12000,
+        image: './img/025.jpg',
+        description: 'Hipoalergénico color "Flores" 8ml vegano',
+        orderLink: '',
+        category: 'Natura'
+    },
+    {
+        id: 26,
+        code: 'PROD026',
+        name: 'Labial Faces',
+        price: 13000,
+        image: './img/026.jpg',
+        description: 'Baton color hidra, lápiz 3,5g, aquarela Natura',
+        orderLink: '',
+        category: 'Natura'
+    },
+    {
+        id: 27,
+        code: 'PROD027',
+        name: 'Labial Faces',
+        price: 13000,
+        image: './img/027.jpg',
+        description: 'Baton color hidra',
+        orderLink: '',
+        category: 'Natura'
+    },
+    {
+        id: 28,
+        code: 'PROD028',
+        name: 'Labial Faces',
+        price: 13000,
+        image: './img/028.jpg',
+        description: 'Baton Aquarela Natura',
+        orderLink: '',
+        category: 'Natura'
+    },
+    {
+        id: 29,
+        code: 'PROD029',
+        name: 'Labial Faces',
+        price: 13000,
+        image: './img/029.jpg',
+        description: 'Baton color hidra',
+        orderLink: '',
+        category: 'Natura'
+    },
+    {
+        id: 30,
+        code: 'PROD030',
+        name: 'Labial Faces',
+        price: 13000,
+        image: './img/030.jpg',
+        description: 'Baton color hidra',
+        orderLink: '',
+        category: 'Natura'
+    },
+    {
+        id: 31,
+        code: 'PROD031',
+        name: 'Labial Raden',
+        price: 1500,
+        image: './img/031.jpg',
+        description: 'Lapiz rojo',
+        orderLink: '',
+        category: 'Otros'
+    },
+    {
+        id: 32,
+        code: 'PROD032',
+        name: 'Labial Raden',
+        price: 1500,
+        image: './img/032.jpg',
+        description: 'Lapiz violeta',
+        orderLink: '',
+        category: 'Otros'
+    },
+    {
+        id: 33,
+        code: 'PROD033',
+        name: 'Labial UNA',
+        price: 23000,
+        image: './img/033.jpg',
+        description: 'Batom CC lapiz labial, 3.8g, "Rouge 8C"',
+        orderLink: '',
+        category: 'Natura'
+    },
+    {
+        id: 34,
+        code: 'PROD034',
+        name: 'Labial UNA',
+        price: 16000,
+        image: './img/034.jpg',
+        description: 'Batom acetinado en óleo 7ml',
+        orderLink: '',
+        category: 'Natura'
+    },
+    {
+        id: 35,
+        code: 'PROD035',
+        name: 'Labial UNA',
+        price: 16000,
+        image: './img/035.jpg',
+        description: 'Batom satinado en óleo',
+        orderLink: '',
+        category: 'Natura'
+    },
+    {
+        id: 36,
+        code: 'PROD036',
+        name: 'Labial UNA',
+        price: 16000,
+        image: './img/036.jpg',
+        description: 'Batom satinado en óleo',
+        orderLink: '',
+        category: 'Natura'
+    },
+    {
+        id: 37,
+        code: 'PROD037',
+        name: 'Labial UNA',
+        price: 16000,
+        image: './img/037.jpg',
+        description: 'Batom satinado en óleo',
+        orderLink: '',
+        category: 'Natura'
+    },
+    {
+        id: 38,
+        code: 'PROD038',
+        name: 'Esmalte Jactans',
+        price: 1500,
+        image: './img/038.jpg',
+        description: 'Violeta',
+        orderLink: '',
+        category: 'Otros'
+    },
+    {
+        id: 39,
+        code: 'PROD039',
+        name: 'Neutralizador de espinillas Faces',
+        price: 11000,
+        image: './img/039.jpg',
+        description: '10g',
+        orderLink: '',
+        category: 'Natura'
+    },
+    {
+        id: 40,
+        code: 'PROD040',
+        name: 'Sombra de ojos Eye Shadow',
+        price: 2500,
+        image: './img/040.jpg',
+        description: 'Combinado 2 colores',
+        orderLink: '',
+        category: 'Otros'
+    },
+    {
+        id: 41,
+        code: 'PROD041',
+        name: 'Sombra de ojos Eye Shadow',
+        price: 2500,
+        image: './img/041.jpg',
+        description: 'Combinado 2 colores',
+        orderLink: '',
+        category: 'Otros'
+    },
+    {
+        id: 42,
+        code: 'PROD042',
+        name: 'Esponja Violetta',
+        price: 3500,
+        image: './img/042.jpg',
+        description: 'Para maquillaje, 2 unidades',
+        orderLink: '',
+        category: 'Otros'
+    },
+    {
+        id: 43,
+        code: 'PROD043',
+        name: 'Apaga Vela Corona',
+        price: 3000,
+        image: './img/043.jpg',
+        description: 'Corona plateada de acero',
+        orderLink: '',
+        category: 'Accesorios'
+    },
+    {
+        id: 44,
+        code: 'PROD044',
+        name: 'Apaga Vela Piramide',
+        price: 3000,
+        image: './img/044.jpg',
+        description: 'Piramide plateada de acero',
+        orderLink: '',
+        category: 'Accesorios'
+    },
+    {
+        id: 45,
+        code: 'PROD045',
+        name: 'Apaga Vela Pluma',
+        price: 3000,
+        image: './img/045.jpg',
+        description: 'Pluma plateada de acero',
+        orderLink: '',
+        category: 'Accesorios'
+    },
+    {
+        id: 46,
+        code: 'PROD046',
+        name: 'Apaga Vela Llave',
+        price: 3000,
+        image: './img/046.jpg',
+        description: 'Llave plateada de acero',
+        orderLink: '',
+        category: 'Accesorios'
     },
 ];
 
