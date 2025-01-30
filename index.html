@@ -44,7 +44,7 @@
                 <li class="nav-item"><a href="#promos" class="nav-link">Promos</a></li>
                 <li class="nav-item"><a href="#servicios" class="nav-link">Servicios</a></li>
                 <li class="nav-item"><a href="#galeria" class="nav-link">Galeria</a></li>
-                <!-- <li class="nav-item"><a href="Productos/productos.html" class="nav-link" target="_blank">Tienda</a></li> -->
+                <li class="nav-item"><a href="Productos/productos.html" class="nav-link" target="_blank">Tienda</a></li>
                 <li class="nav-item"><a href="#contacto" class="nav-link">Contacto</a></li>
             </ul>
         </nav>
@@ -100,23 +100,40 @@
                     <div class="swiper-button-prev"></div>
                     <div class="swiper-container">
                         <div class="swiper-wrapper">
-                            <!-- <div class="promo-card swiper-slide">
+                            <div class="promo-card swiper-slide">
                                 <div class="image-container">
-                                    <img src="img/promos/sorteoNavidad.jpg" alt="sorteo navidad" class="swiper-img">
+                                    <img src="img/promos/sanValentin1.jpg" alt="promo san valentin" class="swiper-img">
                                 </div>
                                 <div class="swiper-card-content">
                                     <div class="swiper-card-title">
-                                        <h4>Sorteo Navideño</h4>
+                                        <h4>Promo San Valentin 1</h4>
                                     </div>
                                     <div class="swiper-card-description">
-                                        <p>Participa del sorteo en nuestro instagram!
+                                        <p>Promo San Valentin durante todo el mes del Amor
                                         </p>
                                     </div>
                                     <div class="swiper-card-link">
-                                        <a href="https://www.instagram.com/p/DDiTydTJks8/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==" target="_blank">Ir a participar</a>
+                                        <a onclick="mostrarPromoPopup('https://wa.me/542615104019?text=Hola!%20Queria%20pedir%20la%20promo%20de%20San%20Valentin%201')" target="_blank">Pedir Promo</a>
                                     </div>
                                 </div>
-                            </div> -->
+                            </div>
+                            <div class="promo-card swiper-slide">
+                                <div class="image-container">
+                                    <img src="img/promos/sanValentin2.jpg" alt="promo san valentin" class="swiper-img">
+                                </div>
+                                <div class="swiper-card-content">
+                                    <div class="swiper-card-title">
+                                        <h4>Promo San Valentin 2</h4>
+                                    </div>
+                                    <div class="swiper-card-description">
+                                        <p>Promo San Valentin durante todo el mes del Amor
+                                        </p>
+                                    </div>
+                                    <div class="swiper-card-link">
+                                        <a onclick="mostrarPromoPopup('https://wa.me/542615104019?text=Hola!%20Queria%20pedir%20la%20promo%20de%20San%20Valentin%202')" target="_blank">Pedir Promo</a>
+                                    </div>
+                                </div>
+                            </div>
                             <div class="promo-card swiper-slide">
                                 <div class="image-container">
                                     <img src="img/promos/TardesParaCompartir.jpg" alt="" class="swiper-img">
@@ -153,22 +170,6 @@
                             </div>
                             <div class="promo-card swiper-slide">
                                 <div class="image-container">
-                                    <img src="img/promos/promoNavidad.jpg" alt="" class="swiper-img">
-                                </div>
-                                <div class="swiper-card-content">
-                                    <div class="swiper-card-title">
-                                        <h4>Promo Navideña</h4>
-                                    </div>
-                                    <div class="swiper-card-description">
-                                        <p>Promo Navidad y Año Nuevo en Anandi Spa durante todo Enero.</p>
-                                    </div>
-                                    <div class="swiper-card-link">
-                                        <a onclick="mostrarPromoPopup('https://tinyurl.com/2cgg9gqd')">Pedir Promo</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="promo-card swiper-slide">
-                                <div class="image-container">
                                     <img src="img/promos/superPromo.jpg" alt="" class="swiper-img">
                                 </div>
                                 <div class="swiper-card-content">
@@ -197,6 +198,58 @@
             <div class="container">
                 <h2>Nuestras Promos</h2>
                 <div class="promo-grid">
+                    <!-- Promo san valentin 1 -->
+                    <div class="promo-card destacada-5">
+                        <div class="image-container">
+                            <img src="img/promos/sanValentin1.jpg" alt="promo san valentin">
+                            <div class="image-overlay">
+                                <i class="fas fa-eye"></i>
+                            </div>
+                        </div>
+                        <div class="promo-content">
+                            <h3>Promo San Valentin 1</h3>
+                            <p>¡Enciende la llama de la pasión con nuestra promoción de San Valentín!
+                                Disfruta de un masaje sueco relajante, un pulido corporal con exfoliante de cappuccino y un obsequio especial.
+                                ¡La combinación perfecta para una velada romántica!</p>
+                            <button class="btn" onclick="mostrarPromoPopup('https://wa.me/542615104019?text=Hola!%20Queria%20pedir%20la%20promo%20de%20San%20Valentin%201')">Reservar
+                                ahora</button>
+                        </div>
+                    </div>
+                    <!-- Promo san valentin 2 -->
+                    <div class="promo-card destacada-5">
+                        <div class="image-container">
+                            <img src="img/promos/sanValentin2.jpg" alt="promo san valentin">
+                            <div class="image-overlay">
+                                <i class="fas fa-eye"></i>
+                            </div>
+                        </div>
+                        <div class="promo-content">
+                            <h3>Promo San Valentin 2</h3>
+                            <p>¡Desconecta y reconecta con tu pareja! 
+                                Nuestra promoción incluye un masaje sueco, 
+                                exfoliación corporal, piscina con una limonada y una rica merienda para terminar. ¡El regalo ideal para celebrar el amor!</p>
+                            <button class="btn" onclick="mostrarPromoPopup('https://wa.me/542615104019?text=Hola!%20Queria%20pedir%20la%20promo%20de%20San%20Valentin%202')">Reservar
+                                ahora</button>
+                        </div>
+                    </div>
+                    <!-- Promo bienestar -->
+                    <div class="promo-card destacada-3">
+                        <div class="image-container">
+                            <img src="img/promos/promoBienestar.avif" alt="Promo bienestar">
+                            <div class="image-overlay">
+                                <i class="fas fa-eye"></i>
+                            </div>
+                        </div>
+                        <div class="promo-content">
+                            <h3>Promo Bienestar</h3>
+                            <p>Disfruta de un masaje descontracturante o sueco, seguido de una
+                                relajación con piedras calientes. Nuestra limpieza facial con exfoliante de
+                                coco-vainilla dejará tu piel radiante. Refrescate en nuestra piscina al aire libre. Y
+                                para finalizar, una deliciosa pizza y una bebida refrescante. <br> 10% de dcto viniendo los miercoles!</p>
+                            <button class="btn" onclick="mostrarPromoPopup('https://tinyurl.com/2audv3ky')">Reservar
+                                ahora</button>
+                        </div>
+                    </div>
                     <!-- Promo 1 -->
                     <div class="promo-card" id="promo1">
                         <div class="image-container">
@@ -370,26 +423,8 @@
                                 ahora</button>
                         </div>
                     </div>
-                    <!-- Promo bienestar -->
-                    <div class="promo-card destacada-3">
-                        <div class="image-container">
-                            <img src="img/promos/promoBienestar.avif" alt="Promo bienestar">
-                            <div class="image-overlay">
-                                <i class="fas fa-eye"></i>
-                            </div>
-                        </div>
-                        <div class="promo-content">
-                            <h3>Promo Bienestar</h3>
-                            <p>Disfruta de un masaje descontracturante o sueco, seguido de una
-                                relajación con piedras calientes. Nuestra limpieza facial con exfoliante de
-                                coco-vainilla dejará tu piel radiante. Refrescate en nuestra piscina al aire libre. Y
-                                para finalizar, una deliciosa pizza y una bebida refrescante. <br> 10% de dcto viniendo los miercoles!</p>
-                            <button class="btn" onclick="mostrarPromoPopup('https://tinyurl.com/2audv3ky')">Reservar
-                                ahora</button>
-                        </div>
-                    </div>
                     <!-- Promo navidad -->
-                    <div class="promo-card destacada-2">
+                    <!-- <div class="promo-card destacada-2">
                         <div class="image-container">
                             <img src="img/promos/promoNavidad.jpg" alt="Promo navidad">
                             <div class="image-overlay">
@@ -406,7 +441,7 @@
                             <button class="btn" onclick="mostrarPromoPopup('https://tinyurl.com/2cgg9gqd')">Reservar
                                 ahora</button>
                         </div>
-                    </div>
+                    </div> -->
                     <!-- Super Promo -->
                     <div class="promo-card">
                         <div class="image-container">

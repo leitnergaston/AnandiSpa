@@ -7,7 +7,7 @@ const products = [
         price: 29680,
         image: './img/001.jpg',
         description: 'Ekos castaña frescor eav de toillette 150ml dulce floral',
-        orderLink: '',
+        orderLink: 'https://wa.me/+5492615104019',
         category: 'Natura'
     },
     {
@@ -17,7 +17,7 @@ const products = [
         price: 8048,
         image: './img/002.jpg',
         description: 'Pulpa hidratante castaña para manos 75g',
-        orderLink: '',
+        orderLink: 'https://wa.me/+5492615104019',
         category: 'Natura'
     },
     {
@@ -27,7 +27,7 @@ const products = [
         price: 4500,
         image: './img/003.jpg',
         description: 'Antitranspirante roll-on homem 75ml',
-        orderLink: '',
+        orderLink: 'https://wa.me/+5492615104019',
         category: 'Natura'
     },
     {
@@ -37,7 +37,7 @@ const products = [
         price: 3000,
         image: './img/004.jpg',
         description: 'Cadena combinada dorada',
-        orderLink: '',
+        orderLink: 'https://wa.me/+5492615104019',
         category: 'Bijouterie'
     },
     {
@@ -47,7 +47,7 @@ const products = [
         price: 3000,
         image: './img/005.jpg',
         description: 'Cadena combinada plateada',
-        orderLink: '',
+        orderLink: 'https://wa.me/+5492615104019',
         category: 'Bijouterie'
     },
     {
@@ -57,7 +57,7 @@ const products = [
         price: 3500,
         image: './img/006.jpg',
         description: 'Detalle rosa grande, gema celeste',
-        orderLink: '',
+        orderLink: 'https://wa.me/+5492615104019',
         category: 'Bijouterie'
     },
     {
@@ -67,7 +67,7 @@ const products = [
         price: 3000,
         image: './img/007.jpg',
         description: 'Detalle búho, colores',
-        orderLink: '',
+        orderLink: 'https://wa.me/+5492615104019',
         category: 'Bijouterie'
     },
     {
@@ -77,7 +77,7 @@ const products = [
         price: 3000,
         image: './img/008.jpg',
         description: 'Detalle búho, colores',
-        orderLink: '',
+        orderLink: 'https://wa.me/+5492615104019',
         category: 'Bijouterie'
     },
     {
@@ -87,7 +87,7 @@ const products = [
         price: 3000,
         image: './img/009.jpg',
         description: 'Plateado con negro',
-        orderLink: '',
+        orderLink: 'https://wa.me/+5492615104019',
         category: 'Bijouterie'
     },
     {
@@ -97,7 +97,7 @@ const products = [
         price: 2800,
         image: './img/010.jpg',
         description: 'Detalle calado, tamaño grande',
-        orderLink: '',
+        orderLink: 'https://wa.me/+5492615104019',
         category: 'Bijouterie'
     },
     {
@@ -107,7 +107,7 @@ const products = [
         price: 2800,
         image: './img/011.jpg',
         description: 'Bigotes fucsia, detalle strass plateado',
-        orderLink: '',
+        orderLink: 'https://wa.me/+5492615104019',
         category: 'Bijouterie'
     },
     {
@@ -117,7 +117,7 @@ const products = [
         price: 3000,
         image: './img/012.jpg',
         description: 'Cruz Jesús, calada',
-        orderLink: '',
+        orderLink: 'https://wa.me/+5492615104019',
         category: 'Bijouterie'
     },
     {
@@ -127,7 +127,7 @@ const products = [
         price: 5000,
         image: './img/013.jpg',
         description: 'Tamaño chico',
-        orderLink: '',
+        orderLink: 'https://wa.me/+5492615104019',
         category: 'Bijouterie'
     },
     {
@@ -137,7 +137,7 @@ const products = [
         price: 3000,
         image: './img/014.jpg',
         description: 'Bola de strass',
-        orderLink: '',
+        orderLink: 'https://wa.me/+5492615104019',
         category: 'Bijouterie'
     },
     {
@@ -147,7 +147,7 @@ const products = [
         price: 5000,
         image: './img/015.jpg',
         description: 'Calada sin dije',
-        orderLink: '',
+        orderLink: 'https://wa.me/+5492615104019',
         category: 'Bijouterie'
     },
     {
@@ -157,7 +157,7 @@ const products = [
         price: 5000,
         image: './img/016.jpg',
         description: 'Chapa plateada',
-        orderLink: '',
+        orderLink: 'https://wa.me/+5492615104019',
         category: 'Bijouterie'
     },
     {
@@ -167,7 +167,7 @@ const products = [
         price: 12000,
         image: './img/017.jpg',
         description: 'Hipoalergénico color "Outono" 8ml vegano',
-        orderLink: '',
+        orderLink: 'https://wa.me/+5492615104019',
         category: 'Natura'
     },
     {
@@ -177,7 +177,7 @@ const products = [
         price: 12000,
         image: './img/018.jpg',
         description: 'Hipoalergénico color "Calor" 8ml vegano',
-        orderLink: '',
+        orderLink: 'https://wa.me/+5492615104019',
         category: 'Natura'
     },
     {
@@ -187,7 +187,7 @@ const products = [
         price: 12000,
         image: './img/019.jpg',
         description: 'Hipoalergénico color "Pitanga" 8ml vegano',
-        orderLink: '',
+        orderLink: 'https://wa.me/+5492615104019',
         category: 'Natura'
     },
     {
@@ -197,7 +197,7 @@ const products = [
         price: 12000,
         image: './img/020.jpg',
         description: 'Hipoalergénico color "Beijo" 8ml vegano',
-        orderLink: '',
+        orderLink: 'https://wa.me/+5492615104019',
         category: 'Natura'
     },
     {
@@ -207,7 +207,7 @@ const products = [
         price: 12000,
         image: './img/021.jpg',
         description: 'Hipoalergénico color "Praia" 8ml vegano',
-        orderLink: '',
+        orderLink: 'https://wa.me/+5492615104019',
         category: 'Natura'
     },
     {
@@ -217,7 +217,7 @@ const products = [
         price: 12000,
         image: './img/022.jpg',
         description: 'Hipoalergénico color "Car de pimenta" 8ml vegano',
-        orderLink: '',
+        orderLink: 'https://wa.me/+5492615104019',
         category: 'Natura'
     },
     {
@@ -227,7 +227,7 @@ const products = [
         price: 12000,
         image: './img/023.jpg',
         description: 'Hipoalergénico color "Una n°1" 8ml vegano',
-        orderLink: '',
+        orderLink: 'https://wa.me/+5492615104019',
         category: 'Natura'
     },
     {
@@ -237,7 +237,7 @@ const products = [
         price: 12000,
         image: './img/024.jpg',
         description: 'Hipoalergénico color "Flores" 8ml vegano',
-        orderLink: '',
+        orderLink: 'https://wa.me/+5492615104019',
         category: 'Natura'
     },
     {
@@ -247,7 +247,7 @@ const products = [
         price: 12000,
         image: './img/025.jpg',
         description: 'Hipoalergénico color "Flores" 8ml vegano',
-        orderLink: '',
+        orderLink: 'https://wa.me/+5492615104019',
         category: 'Natura'
     },
     {
@@ -257,7 +257,7 @@ const products = [
         price: 13000,
         image: './img/026.jpg',
         description: 'Baton color hidra, lápiz 3,5g, aquarela Natura',
-        orderLink: '',
+        orderLink: 'https://wa.me/+5492615104019',
         category: 'Natura'
     },
     {
@@ -267,7 +267,7 @@ const products = [
         price: 13000,
         image: './img/027.jpg',
         description: 'Baton color hidra',
-        orderLink: '',
+        orderLink: 'https://wa.me/+5492615104019',
         category: 'Natura'
     },
     {
@@ -277,7 +277,7 @@ const products = [
         price: 13000,
         image: './img/028.jpg',
         description: 'Baton Aquarela Natura',
-        orderLink: '',
+        orderLink: 'https://wa.me/+5492615104019',
         category: 'Natura'
     },
     {
@@ -287,7 +287,7 @@ const products = [
         price: 13000,
         image: './img/029.jpg',
         description: 'Baton color hidra',
-        orderLink: '',
+        orderLink: 'https://wa.me/+5492615104019',
         category: 'Natura'
     },
     {
@@ -297,7 +297,7 @@ const products = [
         price: 13000,
         image: './img/030.jpg',
         description: 'Baton color hidra',
-        orderLink: '',
+        orderLink: 'https://wa.me/+5492615104019',
         category: 'Natura'
     },
     {
@@ -307,7 +307,7 @@ const products = [
         price: 1500,
         image: './img/031.jpg',
         description: 'Lapiz rojo',
-        orderLink: '',
+        orderLink: 'https://wa.me/+5492615104019',
         category: 'Otros'
     },
     {
@@ -317,7 +317,7 @@ const products = [
         price: 1500,
         image: './img/032.jpg',
         description: 'Lapiz violeta',
-        orderLink: '',
+        orderLink: 'https://wa.me/+5492615104019',
         category: 'Otros'
     },
     {
@@ -327,7 +327,7 @@ const products = [
         price: 23000,
         image: './img/033.jpg',
         description: 'Batom CC lapiz labial, 3.8g, "Rouge 8C"',
-        orderLink: '',
+        orderLink: 'https://wa.me/+5492615104019',
         category: 'Natura'
     },
     {
@@ -337,7 +337,7 @@ const products = [
         price: 16000,
         image: './img/034.jpg',
         description: 'Batom acetinado en óleo 7ml',
-        orderLink: '',
+        orderLink: 'https://wa.me/+5492615104019',
         category: 'Natura'
     },
     {
@@ -347,7 +347,7 @@ const products = [
         price: 16000,
         image: './img/035.jpg',
         description: 'Batom satinado en óleo',
-        orderLink: '',
+        orderLink: 'https://wa.me/+5492615104019',
         category: 'Natura'
     },
     {
@@ -357,7 +357,7 @@ const products = [
         price: 16000,
         image: './img/036.jpg',
         description: 'Batom satinado en óleo',
-        orderLink: '',
+        orderLink: 'https://wa.me/+5492615104019',
         category: 'Natura'
     },
     {
@@ -367,7 +367,7 @@ const products = [
         price: 16000,
         image: './img/037.jpg',
         description: 'Batom satinado en óleo',
-        orderLink: '',
+        orderLink: 'https://wa.me/+5492615104019',
         category: 'Natura'
     },
     {
@@ -377,7 +377,7 @@ const products = [
         price: 1500,
         image: './img/038.jpg',
         description: 'Violeta',
-        orderLink: '',
+        orderLink: 'https://wa.me/+5492615104019',
         category: 'Otros'
     },
     {
@@ -387,7 +387,7 @@ const products = [
         price: 11000,
         image: './img/039.jpg',
         description: '10g',
-        orderLink: '',
+        orderLink: 'https://wa.me/+5492615104019',
         category: 'Natura'
     },
     {
@@ -397,7 +397,7 @@ const products = [
         price: 2500,
         image: './img/040.jpg',
         description: 'Combinado 2 colores',
-        orderLink: '',
+        orderLink: 'https://wa.me/+5492615104019',
         category: 'Otros'
     },
     {
@@ -407,7 +407,7 @@ const products = [
         price: 2500,
         image: './img/041.jpg',
         description: 'Combinado 2 colores',
-        orderLink: '',
+        orderLink: 'https://wa.me/+5492615104019',
         category: 'Otros'
     },
     {
@@ -417,7 +417,7 @@ const products = [
         price: 3500,
         image: './img/042.jpg',
         description: 'Para maquillaje, 2 unidades',
-        orderLink: '',
+        orderLink: 'https://wa.me/+5492615104019',
         category: 'Otros'
     },
     {
@@ -427,7 +427,7 @@ const products = [
         price: 3000,
         image: './img/043.jpg',
         description: 'Corona plateada de acero',
-        orderLink: '',
+        orderLink: 'https://wa.me/+5492615104019',
         category: 'Accesorios'
     },
     {
@@ -437,7 +437,7 @@ const products = [
         price: 3000,
         image: './img/044.jpg',
         description: 'Piramide plateada de acero',
-        orderLink: '',
+        orderLink: 'https://wa.me/+5492615104019',
         category: 'Accesorios'
     },
     {
@@ -447,7 +447,7 @@ const products = [
         price: 3000,
         image: './img/045.jpg',
         description: 'Pluma plateada de acero',
-        orderLink: '',
+        orderLink: 'https://wa.me/+5492615104019',
         category: 'Accesorios'
     },
     {
@@ -457,7 +457,7 @@ const products = [
         price: 3000,
         image: './img/046.jpg',
         description: 'Llave plateada de acero',
-        orderLink: '',
+        orderLink: 'https://wa.me/+5492615104019',
         category: 'Accesorios'
     },
 ];
@@ -527,7 +527,7 @@ function createProductCards() {
                 <h2>${product.name}</h2>
                 <p class="product-price">$${new Intl.NumberFormat('es-ES').format(Math.floor(product.price))}</p>
                 <button class="btn view-details" data-id="${product.id}">Ver detalles</button>
-                <a href="${product.orderLink}" class="btn order" data-id="${product.id}">Pedir</a>
+                <a href="${product.orderLink}" class="btn order" data-id="${product.id}" target="_blank">Pedir</a>
             </div>
         `;
         productList.appendChild(card);
