@@ -153,31 +153,72 @@ function cerrarPromoPopup() {
 
 
 // ========== Testimonial Slider ========== //
-const testimonialContainer = document.querySelector('.testimonial-container');
-const testimonialCards = document.querySelectorAll('.testimonial-card');
-const prevBtn = document.getElementById('prevBtn');
-const nextBtn = document.getElementById('nextBtn');
-let currentTestimonial = 0;
+// const testimonialContainer = document.querySelector('.testimonial-container');
+// const testimonialCards = document.querySelectorAll('.testimonial-card');
+// const prevBtn = document.getElementById('prevBtn');
+// const nextBtn = document.getElementById('nextBtn');
+// let currentTestimonial = 0;
 
-function showTestimonial(index) {
-    testimonialContainer.style.transform = `translateX(-${index * 100}%)`;
-}
+// function showTestimonial(index) {
+//     testimonialContainer.style.transform = `translateX(-${index * 100}%)`;
+// }
 
-function nextTestimonial() {
-    currentTestimonial = (currentTestimonial + 1) % testimonialCards.length;
-    showTestimonial(currentTestimonial);
-}
+// function nextTestimonial() {
+//     currentTestimonial = (currentTestimonial + 1) % testimonialCards.length;
+//     showTestimonial(currentTestimonial);
+// }
 
-function prevTestimonial() {
-    currentTestimonial = (currentTestimonial - 1 + testimonialCards.length) % testimonialCards.length;
-    showTestimonial(currentTestimonial);
-}
+// function prevTestimonial() {
+//     currentTestimonial = (currentTestimonial - 1 + testimonialCards.length) % testimonialCards.length;
+//     showTestimonial(currentTestimonial);
+// }
 
-// nextBtn.addEventListener('click', nextTestimonial);
-// prevBtn.addEventListener('click', prevTestimonial);
+//// nextBtn.addEventListener('click', nextTestimonial);
+//// prevBtn.addEventListener('click', prevTestimonial);
 
 // Auto-slide for testimonials
-setInterval(nextTestimonial, 5000); // Cambia de testimonio cada x milisegundos
+// setInterval(nextTestimonial, 5000); // Cambia de testimonio cada x milisegundos
+
+
+// TESTIMONIOS 2
+new Swiper('.card-wrapper', {
+    loop: true,
+    spaceBetween: 30,
+
+    autoplay: {
+        delay: 3000,
+    },
+
+    // pagination bullets
+    pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+        dynamicBullets: true
+    },
+
+    // Navigation arrows
+    navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+    },
+
+    // Responsive breakpoints
+    breakpoints: {
+        0: {
+            slidesPerView: 1
+        },
+        768: {
+            slidesPerView: 2
+        },
+        1020: {
+            slidesPerView: 3
+        },
+    }
+
+
+});
+// TESTIMONIOS 2
+
 
 
 // ========== Popup Servicios ========== //
@@ -312,7 +353,7 @@ var swiper = new Swiper('.swiper-container', {
     },
     slidesPerView: 1,
     spaceBetween: 10,
-    
+
     pagination: {
         el: '.swiper-pagination',
         clickable: true,

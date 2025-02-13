@@ -1063,6 +1063,59 @@ nav {
     align-items: center;
 }
 
+.swiper-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.swiper-container .card-wrapper {
+    max-width: 1100px;
+    margin: 0 60px 35px;
+    padding: 20px 10px;
+    overflow: hidden;
+}
+
+.swiper-container .card-div {
+    height: 280px;
+    user-select: none;
+    display: block;
+    background: #f0f0f0;
+    padding: 18px;
+    border-radius: 12px;
+    text-decoration: none;
+    border: 1px solid #6b3e0a;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.05);
+}
+
+.card-wrapper .swiper-pagination-bullet {
+    width: 13px;
+    height: 13px;
+    opacity: .5;
+    background-color: var(--color-hover);
+}
+
+.card-wrapper .swiper-pagination-bullet-active {
+    opacity: 1;
+}
+
+.card-wrapper .swiper-slide-button {
+    color: var(--color-border-btn);
+    margin-top: -35px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
 .testimonial-slider {
 
     width: 100%;
