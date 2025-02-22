@@ -300,26 +300,26 @@ const products = [
         orderLink: 'https://wa.me/+5492615104019',
         category: 'Natura'
     },
-    {
-        id: 31,
-        code: 'PROD031',
-        name: 'Labial Raden',
-        price: 1500,
-        image: './img/031.jpg',
-        description: 'Lapiz rojo',
-        orderLink: 'https://wa.me/+5492615104019',
-        category: 'Otros'
-    },
-    {
-        id: 32,
-        code: 'PROD032',
-        name: 'Labial Raden',
-        price: 1500,
-        image: './img/032.jpg',
-        description: 'Lapiz violeta',
-        orderLink: 'https://wa.me/+5492615104019',
-        category: 'Otros'
-    },
+    // {
+    //     id: 31,
+    //     code: 'PROD031',
+    //     name: 'Labial Raden',
+    //     price: 1500,
+    //     image: './img/031.jpg',
+    //     description: 'Lapiz rojo',
+    //     orderLink: 'https://wa.me/+5492615104019',
+    //     category: 'Otros'
+    // },
+    // {
+    //     id: 32,
+    //     code: 'PROD032',
+    //     name: 'Labial Raden',
+    //     price: 1500,
+    //     image: './img/032.jpg',
+    //     description: 'Lapiz violeta',
+    //     orderLink: 'https://wa.me/+5492615104019',
+    //     category: 'Otros'
+    // },
     {
         id: 33,
         code: 'PROD033',
@@ -370,16 +370,16 @@ const products = [
         orderLink: 'https://wa.me/+5492615104019',
         category: 'Natura'
     },
-    {
-        id: 38,
-        code: 'PROD038',
-        name: 'Esmalte Jactans',
-        price: 1500,
-        image: './img/038.jpg',
-        description: 'Violeta',
-        orderLink: 'https://wa.me/+5492615104019',
-        category: 'Otros'
-    },
+    // {
+    //     id: 38,
+    //     code: 'PROD038',
+    //     name: 'Esmalte Jactans',
+    //     price: 1500,
+    //     image: './img/038.jpg',
+    //     description: 'Violeta',
+    //     orderLink: 'https://wa.me/+5492615104019',
+    //     category: 'Otros'
+    // },
     {
         id: 39,
         code: 'PROD039',
@@ -460,6 +460,636 @@ const products = [
         orderLink: 'https://wa.me/+5492615104019',
         category: 'Accesorios'
     },
+    // {
+    //     id: 47,
+    //     code: '',
+    //     name: '',
+    //     price: ,
+    //     image: '',
+    //     description: '',
+    //     orderLink: 'https://wa.me/+5492615104019',
+    //     category: ''
+    // },
+    // {
+    //     id: 48,
+    //     code: '',
+    //     name: '',
+    //     price: ,
+    //     image: '',
+    //     description: '',
+    //     orderLink: 'https://wa.me/+5492615104019',
+    //     category: ''
+    // },
+    // {
+    //     id: 49,
+    //     code: '',
+    //     name: '',
+    //     price: ,
+    //     image: '',
+    //     description: '',
+    //     orderLink: 'https://wa.me/+5492615104019',
+    //     category: ''
+    // },
+    // {
+    //     id: 50,
+    //     code: '',
+    //     name: '',
+    //     price: ,
+    //     image: '',
+    //     description: '',
+    //     orderLink: 'https://wa.me/+5492615104019',
+    //     category: ''
+    // },
+    // {
+    //     id: 51,
+    //     code: '',
+    //     name: '',
+    //     price: ,
+    //     image: '',
+    //     description: '',
+    //     orderLink: 'https://wa.me/+5492615104019',
+    //     category: ''
+    // },
+    // {
+    //     id: 52,
+    //     code: '',
+    //     name: '',
+    //     price: ,
+    //     image: '',
+    //     description: '',
+    //     orderLink: 'https://wa.me/+5492615104019',
+    //     category: ''
+    // },
+    // {
+    //     id: 53,
+    //     code: '',
+    //     name: '',
+    //     price: ,
+    //     image: '',
+    //     description: '',
+    //     orderLink: 'https://wa.me/+5492615104019',
+    //     category: ''
+    // },
+    // {
+    //     id: 54,
+    //     code: '',
+    //     name: '',
+    //     price: ,
+    //     image: '',
+    //     description: '',
+    //     orderLink: 'https://wa.me/+5492615104019',
+    //     category: ''
+    // },
+    {
+        id: 55,
+        code: 'PROD055',
+        name: 'Saphirus Linah',
+        price: 4000,
+        image: './img/055.jpg',
+        description: 'Aromatizador Saphirus Linah 250ml',
+        orderLink: 'https://wa.me/+5492615104019',
+        category: 'Saphirus'
+    },
+    {
+        id: 56,
+        code: 'PROD056',
+        name: 'Saphirus Flores Blancas',
+        price: 4000,
+        image: './img/056.jpg',
+        description: 'Aromatizador Saphirus Flores Blancas 250ml',
+        orderLink: 'https://wa.me/+5492615104019',
+        category: 'Saphirus'
+    },
+    {
+        id: 57,
+        code: 'PROD057',
+        name: 'Saphirus Limon',
+        price: 4000,
+        image: './img/057.jpg',
+        description: 'Aromatizador Saphirus Limon 250ml',
+        orderLink: 'https://wa.me/+5492615104019',
+        category: 'Saphirus'
+    },
+    {
+        id: 58,
+        code: 'PROD058',
+        name: 'Saphirus Paula',
+        price: 4000,
+        image: './img/058.jpg',
+        description: 'Aromatizador Saphirus Paula 250ml',
+        orderLink: 'https://wa.me/+5492615104019',
+        category: 'Saphirus'
+    },
+    {
+        id: 59,
+        code: 'PROD059',
+        name: 'Saphirus Cony',
+        price: 4000,
+        image: './img/059.jpg',
+        description: 'Aromatizador Saphirus Cony 250ml',
+        orderLink: 'https://wa.me/+5492615104019',
+        category: 'Saphirus'
+    },
+    {
+        id: 61,
+        code: 'PROD061',
+        name: 'Saumerio Citronella Orange Palo Santo',
+        price: 0,
+        image: './img/061.jpg',
+        description: 'Saumerio Citronella Orange Palo Santo, Sagrada Madre, 8 unidades',
+        orderLink: 'https://wa.me/+5492615104019',
+        category: 'Saumerios'
+    },
+    {
+        id: 62,
+        code: 'PROD062',
+        name: 'Saumerio Myrhh Olibanum',
+        price: 0,
+        image: './img/062.jpg',
+        description: 'Saumerio Myrhh Olibanum, Sagrada Madre, 8 unidades',
+        orderLink: 'https://wa.me/+5492615104019',
+        category: 'Saumerios'
+    },
+    {
+        id: 63,
+        code: 'PROD063',
+        name: 'Saumerio Amber Ambar',
+        price: 0,
+        image: './img/063.jpg',
+        description: 'Saumerio Amber Ambar, Sagrada Madre, 8 unidades',
+        orderLink: 'https://wa.me/+5492615104019',
+        category: 'Saumerios'
+    },
+    {
+        id: 64,
+        code: 'PROD064',
+        name: 'Saumerio Mirra',
+        price: 0,
+        image: './img/064.jpg',
+        description: 'Saumerio Mirra, Sagrada Madre, 8 unidades',
+        orderLink: 'https://wa.me/+5492615104019',
+        category: 'Saumerios'
+    },
+    {
+        id: 65,
+        code: 'PROD065',
+        name: 'Saumerio Olíbano Frankincense',
+        price: 0,
+        image: './img/065.jpg',
+        description: 'Saumerio Olíbano Frankincense, Sagrada Madre, 8 unidades',
+        orderLink: 'https://wa.me/+5492615104019',
+        category: 'Saumerios'
+    },
+    {
+        id: 66,
+        code: 'PROD066',
+        name: 'Saumerio Yagra de la Abundancia',
+        price: 3290,
+        image: './img/066.jpg',
+        description: 'Saumerio Yagra de la Abundancia, Tibetanos, 8 unidades',
+        orderLink: 'https://wa.me/+5492615104019',
+        category: 'Saumerios'
+    },
+    {
+        id: 67,
+        code: 'PROD067',
+        name: 'Saumerio Magia Asiática',
+        price: 3290,
+        image: './img/067.jpg',
+        description: 'Saumerio Magia Asiática, Tibetanos, 8 unidades',
+        orderLink: 'https://wa.me/+5492615104019',
+        category: 'Saumerios'
+    },
+    {
+        id: 68,
+        code: 'PROD068',
+        name: 'Saumerio Capuccino Italiano',
+        price: 3290,
+        image: './img/068.jpg',
+        description: 'Saumerio Capuccino Italiano, Tibetanos, 8 unidades',
+        orderLink: 'https://wa.me/+5492615104019',
+        category: 'Saumerios'
+    },
+    {
+        id: 69,
+        code: 'PROD069',
+        name: 'Saumerio Esencias de la India',
+        price: 3290,
+        image: './img/069.jpg',
+        description: 'Saumerio Esencias de la India, Tibetanos, 8 unidades',
+        orderLink: 'https://wa.me/+5492615104019',
+        category: 'Saumerios'
+    },
+    {
+        id: 70,
+        code: 'PROD070',
+        name: 'Saumerio Coco Beach',
+        price: 3290,
+        image: './img/070.jpg',
+        description: 'Saumerio Coco Beach, Tibetanos, 8 unidades',
+        orderLink: 'https://wa.me/+5492615104019',
+        category: 'Saumerios'
+    },
+    {
+        id: 71,
+        code: 'PROD071',
+        name: 'Saumerio Palo Santo con Fresias',
+        price: 2500,
+        image: './img/071.jpg',
+        description: 'Saumerio Palo Santo con Fresias, Sagrada Madre, 8 unidades',
+        orderLink: 'https://wa.me/+5492615104019',
+        category: 'Saumerios'
+    },
+    {
+        id: 72,
+        code: 'PROD072',
+        name: 'Saumerio Palo Santo con Vainilla',
+        price: 2500,
+        image: './img/072.jpg',
+        description: 'Saumerio Palo Santo con Vainilla, Sagrada Madre, 8 unidades',
+        orderLink: 'https://wa.me/+5492615104019',
+        category: 'Saumerios'
+    },
+    {
+        id: 73,
+        code: 'PROD073',
+        name: 'Saumerio Palo Santo con Mirra',
+        price: 2500,
+        image: './img/073.jpg',
+        description: 'Saumerio Palo Santo con Mirra, Sagrada Madre, 8 unidades',
+        orderLink: 'https://wa.me/+5492615104019',
+        category: 'Saumerios'
+    },
+    {
+        id: 74,
+        code: 'PROD074',
+        name: 'Saumerio Palo Santo con Yagra',
+        price: 2500,
+        image: './img/074.jpg',
+        description: 'Saumerio Palo Santo con Yagra, Sagrada Madre, 8 unidades',
+        orderLink: 'https://wa.me/+5492615104019',
+        category: 'Saumerios'
+    },
+    {
+        id: 75,
+        code: 'PROD075',
+        name: 'Saumerio Palo Santo con Copal',
+        price: 2500,
+        image: './img/075.jpg',
+        description: 'Saumerio Palo Santo con Copal, Sagrada Madre, 8 unidades',
+        orderLink: 'https://wa.me/+5492615104019',
+        category: 'Saumerios'
+    },
+    {
+        id: 76,
+        code: 'PROD076',
+        name: 'Saumerio Rosa Mosqueta',
+        price: 2600,
+        image: './img/076.jpg',
+        description: 'Saumerio Rosa Mosqueta, Patagonia, Sagrada Madre, 6 unidades',
+        orderLink: 'https://wa.me/+5492615104019',
+        category: 'Saumerios'
+    },
+    {
+        id: 77,
+        code: 'PROD077',
+        name: 'Saumerio Jazmín',
+        price: 2600,
+        image: './img/077.jpg',
+        description: 'Saumerio Jazmín, Patagonia, Sagrada Madre, 6 unidades',
+        orderLink: 'https://wa.me/+5492615104019',
+        category: 'Saumerios'
+    },
+    {
+        id: 78,
+        code: 'PROD078',
+        name: 'Saumerio Ruda',
+        price: 2600,
+        image: './img/078.jpg',
+        description: 'Saumerio Ruda, Patagonia, Sagrada Madre, 6 unidades',
+        orderLink: 'https://wa.me/+5492615104019',
+        category: 'Saumerios'
+    },
+    {
+        id: 79,
+        code: 'PROD079',
+        name: 'Saumerio Hibiscus',
+        price: 2600,
+        image: './img/079.jpg',
+        description: 'Saumerio Hibiscus, Patagonia, Sagrada Madre, 6 unidades',
+        orderLink: 'https://wa.me/+5492615104019',
+        category: 'Saumerios'
+    },
+    {
+        id: 80,
+        code: 'PROD080',
+        name: 'Saumerio Palmarosa',
+        price: 2600,
+        image: './img/080.jpg',
+        description: 'Saumerio Palmarosa, Patagonia, Sagrada Madre, 6 unidades',
+        orderLink: 'https://wa.me/+5492615104019',
+        category: 'Saumerios'
+    },
+    {
+        id: 81,
+        code: 'PROD081',
+        name: 'Saumerio Neroli',
+        price: 2600,
+        image: './img/081.jpg',
+        description: 'Saumerio Neroli, Patagonia, Sagrada Madre, 6 unidades',
+        orderLink: 'https://wa.me/+5492615104019',
+        category: 'Saumerios'
+    },
+    {
+        id: 82,
+        code: 'PORD082',
+        name: 'Saumerio Yerba Mate Menta',
+        price: 2600,
+        image: './img/082.jpg',
+        description: 'Saumerio Yerba Mate Menta, Patagonia, Sagrada Madre, 6 unidades',
+        orderLink: 'https://wa.me/+5492615104019',
+        category: 'Saumerios'
+    },
+    {
+        id: 83,
+        code: 'PROD083',
+        name: 'Saumerio Lavanda Menta',
+        price: 1300,
+        image: './img/083.jpg',
+        description: 'Saumerio lavanda Menta, Saumerios de la India, 12 unidades',
+        orderLink: 'https://wa.me/+5492615104019',
+        category: 'Saumerios'
+    },
+    {
+        id: 84,
+        code: 'PROD084',
+        name: 'Saumerio Fresas de la patagonia',
+        price: 1300,
+        image: './img/084.jpg',
+        description: 'Saumerio Fresas de la patagonia, Saumerios de la India, 12 unidades',
+        orderLink: 'https://wa.me/+5492615104019',
+        category: 'Saumerios'
+    },
+    {
+        id: 85,
+        code: 'PROD085',
+        name: 'Saumerio Mirra Palo Santo',
+        price: 1300,
+        image: './img/085.jpg',
+        description: 'Saumerio Mirra Palo Santo, Saumerios de la India, 12 unidades',
+        orderLink: 'https://wa.me/+5492615104019',
+        category: 'Saumerios'
+    },
+    {
+        id: 86,
+        code: 'PROD086',
+        name: 'Saumerio Magnolia Vainilla',
+        price: 1300,
+        image: './img/086.jpg',
+        description: 'Saumerio Magnolia Vainilla, Saumerios de la India, 12 unidades',
+        orderLink: 'https://wa.me/+5492615104019',
+        category: 'Saumerios'
+    },
+    {
+        id: 87,
+        code: 'PROD087',
+        name: 'Saumerio Ruda Romero',
+        price: 1300,
+        image: './img/087.jpg',
+        description: 'Saumerio Ruda Romero, Saumerios de la India, 12 unidades',
+        orderLink: 'https://wa.me/+5492615104019',
+        category: 'Saumerios'
+    },
+    {
+        id: 88,
+        code: 'PROD088',
+        name: 'Saumerio Vainilla Africana',
+        price: 1300,
+        image: './img/088.jpg',
+        description: 'Saumerio Vainilla Africana, Saumerios de la India, 12 unidades',
+        orderLink: 'https://wa.me/+5492615104019',
+        category: 'Saumerios'
+    },
+    {
+        id: 89,
+        code: 'PROD089',
+        name: 'Saumerio Yagra Palo Santo',
+        price: 1300,
+        image: './img/089.jpg',
+        description: 'Saumerio Yagra Palo Santo, Saumerios de la India, 12 unidades',
+        orderLink: 'https://wa.me/+5492615104019',
+        category: 'Saumerios'
+    },
+    {
+        id: 90,
+        code: 'PROD090',
+        name: 'Conitos Cascada Amor',
+        price: 1690,
+        image: './img/090.jpg',
+        description: 'Conitos Cascada Amor, 10 unidades',
+        orderLink: 'https://wa.me/+5492615104019',
+        category: 'Conitos'
+    },
+    {
+        id: 91,
+        code: 'PROD091',
+        name: 'Conitos Cascada Dinero',
+        price: 1690,
+        image: './img/091.jpg',
+        description: 'Conitos Cascada Dinero, 10 unidades',
+        orderLink: 'https://wa.me/+5492615104019',
+        category: 'Conitos'
+    },
+    {
+        id: 92,
+        code: 'PROD092',
+        name: 'Conitos Cascada Energia Limpia',
+        price: 1690,
+        image: './img/092.jpg',
+        description: 'Conitos Cascada Energia Limpia, 10 unidades',
+        orderLink: 'https://wa.me/+5492615104019',
+        category: 'Conitos'
+    },
+    {
+        id: 93,
+        code: 'PROD093',
+        name: 'Conitos Cascada Meditacion',
+        price: 1690,
+        image: './img/093.jpg',
+        description: 'Conitos Cascada Meditacion, 10 unidades',
+        orderLink: 'https://wa.me/+5492615104019',
+        category: 'Conitos'
+    },
+    {
+        id: 94,
+        code: 'PROD094',
+        name: 'Conitos Cascada Pasion',
+        price: 1690,
+        image: './img/094.jpg',
+        description: 'Conitos Cascada Pasion, 10 unidades',
+        orderLink: 'https://wa.me/+5492615104019',
+        category: 'Conitos'
+    },
+    {
+        id: 95,
+        code: 'PROD095',
+        name: 'Saumerios Magicos Vainilla',
+        price: 2990,
+        image: './img/095.jpg',
+        description: 'Saumerios Magicos Vainilla, Aromanza, 10 unidades',
+        orderLink: 'https://wa.me/+5492615104019',
+        category: 'Saumerios'
+    },
+    {
+        id: 96,
+        code: 'PROD096',
+        name: 'Saumerios Magicos Aqua Marine',
+        price: 2990,
+        image: './img/096.jpg',
+        description: 'Saumerios Magicos Aqua Marine, Aromanza, 10 unidades',
+        orderLink: 'https://wa.me/+5492615104019',
+        category: 'Saumerios'
+    },
+    {
+        id: 97,
+        code: 'PROD097',
+        name: 'Saumerios Magicos Sándalo Hindú',
+        price: 2990,
+        image: './img/097.jpg',
+        description: 'Saumerios Magicos Sándalo Hindú, Aromanza, 10 unidades',
+        orderLink: 'https://wa.me/+5492615104019',
+        category: 'Saumerios'
+    },
+    {
+        id: 98,
+        code: 'PROD098',
+        name: 'Saumerios Magicos Rosa Real',
+        price: 2990,
+        image: './img/098.jpg',
+        description: 'Saumerios Magicos Rosa Real, Aromanza, 10 unidades',
+        orderLink: 'https://wa.me/+5492615104019',
+        category: 'Saumerios'
+    },
+    {
+        id: 99,
+        code: 'PROD099',
+        name: 'Saumerios Magicos Escencias de la India',
+        price: 2990,
+        image: './img/099.jpg',
+        description: 'Saumerios Magicos Escencias de la India, Aromanza, 10 unidades',
+        orderLink: 'https://wa.me/+5492615104019',
+        category: 'Saumerios'
+    },
+    {
+        id: 100,
+        code: 'PROD100',
+        name: 'Saumerio Citronela',
+        price: 0,
+        image: './img/100.jpg',
+        description: 'Saumerio Citronela, marca, 5 unidades',
+        orderLink: 'https://wa.me/+5492615104019',
+        category: 'Saumerios'
+    },
+    {
+        id: 101,
+        code: 'PROD101',
+        name: 'Saumerio Limpieza Energética',
+        price: 0,
+        image: './img/101.jpg',
+        description: 'Saumerio Limpieza Energética, marca, 5 unidades',
+        orderLink: 'https://wa.me/+5492615104019',
+        category: 'Saumerios'
+    },
+    {
+        id: 102,
+        code: 'PROD102',
+        name: 'Saumerio Energía Amorosa',
+        price: 0,
+        image: './img/102.jpg',
+        description: 'Saumerio Energía Amorosa, marca, 5 unidades',
+        orderLink: 'https://wa.me/+5492615104019',
+        category: 'Saumerios'
+    },
+    {
+        id: 103,
+        code: 'PROD103',
+        name: 'Saumerio Purificación Amorosa',
+        price: 0,
+        image: './img/103.jpg',
+        description: 'Saumerio Purificación Amorosa, marca, 5 unidades',
+        orderLink: 'https://wa.me/+5492615104019',
+        category: 'Saumerios'
+    },
+    {
+        id: 104,
+        code: 'PROD104',
+        name: 'Saumerio Vainilla',
+        price: 0,
+        image: './img/104.jpg',
+        description: 'Saumerio',
+        orderLink: 'https://wa.me/+5492615104019',
+        category: 'Saumerios'
+    },
+    {
+        id: 105,
+        code: 'PROD105',
+        name: 'Saumerio Sándalo',
+        price: 0,
+        image: './img/105.jpg',
+        description: 'Saumerio',
+        orderLink: 'https://wa.me/+5492615104019',
+        category: 'Saumerios'
+    },
+    {
+        id: 106,
+        code: 'PROD106',
+        name: 'Saumerio Lavanda',
+        price: 0,
+        image: './img/106.jpg',
+        description: 'Saumerio',
+        orderLink: 'https://wa.me/+5492615104019',
+        category: 'Saumerios'
+    },
+    {
+        id: 107,
+        code: 'PROD107',
+        name: 'Saumerio Citronela',
+        price: 0,
+        image: './img/107.jpg',
+        description: 'Saumerio',
+        orderLink: 'https://wa.me/+5492615104019',
+        category: 'Saumerios'
+    },
+    {
+        id: 108,
+        code: 'PROD108',
+        name: 'Saumerio Mirrh',
+        price: 0,
+        image: './img/108.jpg',
+        description: 'Saumerio',
+        orderLink: 'https://wa.me/+5492615104019',
+        category: 'Saumerios'
+    },
+    {
+        id: 109,
+        code: 'PROD109',
+        name: 'Saumerio Incense',
+        price: 0,
+        image: './img/109.jpg',
+        description: 'Saumerio',
+        orderLink: 'https://wa.me/+5492615104019',
+        category: 'Saumerios'
+    },
+    {
+        id: 110,
+        code: 'PROD110',
+        name: 'Saumerio Strawberry',
+        price: 0,
+        image: './img/110.jpg',
+        description: 'Saumerio',
+        orderLink: 'https://wa.me/+5492615104019',
+        category: 'Saumerios'
+    }
 ];
 
 const productsPerPage = 10;
@@ -470,7 +1100,7 @@ let currentCategory = 'all';
 function createCategoryButtons() {
     const categoryFilter = document.getElementById('category-filter');
     const categories = ['all', ...new Set(products.map(product => product.category))];
-    
+
     categories.forEach(category => {
         const button = document.createElement('button');
         button.textContent = category === 'all' ? 'Todos' : category;
@@ -520,16 +1150,16 @@ function createProductCards() {
         const card = document.createElement('div');
         card.className = 'product-card';
         card.innerHTML = `
-            <img src="${product.image}" alt="${product.name}">
-            <div class="product-info">
-                <span class="product-category">${product.category}</span>
-                <p class="product-code">Código: ${product.code}</p>
-                <h2>${product.name}</h2>
-                <p class="product-price">$${new Intl.NumberFormat('es-ES').format(Math.floor(product.price))}</p>
-                <button class="btn view-details" data-id="${product.id}">Ver detalles</button>
-                <a href="${product.orderLink}" class="btn order" data-id="${product.id}" target="_blank">Pedir</a>
-            </div>
-        `;
+             <img src="${product.image}" alt="${product.name}">
+             <div class="product-info">
+                 <span class="product-category">${product.category}</span>
+                 <p class="product-code">Cod: ${product.code}</p>
+                 <h2>${product.name}</h2>
+                 <p class="product-price">$${new Intl.NumberFormat('es-ES').format(Math.floor(product.price))}</p>
+                 <button class="btn view-details" data-id="${product.id}">Ver detalles</button>
+                 <a href="${product.orderLink}" class="btn order" data-id="${product.id}" target="_blank">Pedir</a>
+             </div>
+         `;
         productList.appendChild(card);
     });
 
@@ -552,6 +1182,7 @@ function updatePagination(totalPages) {
         if (currentPage > 1) {
             currentPage--;
             createProductCards();
+            window.scrollTo({ top: 0, behavior: 'smooth' }); // Scroll suave al inicio
         }
     });
     prevButton.disabled = currentPage === 1;
@@ -563,11 +1194,13 @@ function updatePagination(totalPages) {
         if (currentPage < totalPages) {
             currentPage++;
             createProductCards();
+            window.scrollTo({ top: 0, behavior: 'smooth' }); // Scroll suave al inicio
         }
     });
     nextButton.disabled = currentPage === totalPages;
     paginationElement.appendChild(nextButton);
 }
+
 
 // Función para mostrar los detalles del producto
 function showProductDetails(event) {
@@ -576,16 +1209,16 @@ function showProductDetails(event) {
 
     const modal = document.getElementById('product-modal');
     const productDetails = document.getElementById('product-details');
-    
+
     productDetails.innerHTML = `
         <h2>${product.name}</h2>
         <span class="product-category">${product.category}</span>
         <div class="imgContentDetalle">
             <img src="${product.image}" alt="${product.name}">
         </div>
-        <p><strong>Código:</strong> ${product.code}</p>
+        <p class="product-detail-code">Código:${product.code}</p>
         <p><strong>Precio:</strong> $${new Intl.NumberFormat('es-ES').format(Math.floor(product.price))}</p>
-        <p>${product.description}</p>
+        <p class="product-details-description">${product.description}</p>
         <a href="${product.orderLink}" class="btn order" data-id="${product.id}">Pedir ahora</a>
     `;
 
@@ -611,6 +1244,34 @@ document.addEventListener('DOMContentLoaded', () => {
         const modal = document.getElementById('product-modal');
         if (event.target === modal) {
             closeModal();
+        }
+    });
+});
+
+
+document.addEventListener('DOMContentLoaded', function () {
+    // Funcionalidad menu hamburguesa
+    const hamburger = document.querySelector('.hamburger');
+    const navLinks = document.querySelector('.nav-links');
+
+    hamburger.addEventListener('click', function () {
+        hamburger.classList.toggle('active');
+        navLinks.classList.toggle('active');
+    });
+
+    // Cerrar menu cuando se hace clic en un link del navbar
+    document.querySelectorAll('.nav-links a').forEach(link => {
+        link.addEventListener('click', () => {
+            hamburger.classList.remove('active');
+            navLinks.classList.remove('active');
+        });
+    });
+
+    // Cerrar menu cuando se hace clic en cualquier lado
+    document.addEventListener('click', (e) => {
+        if (!hamburger.contains(e.target) && !navLinks.contains(e.target)) {
+            hamburger.classList.remove('active');
+            navLinks.classList.remove('active');
         }
     });
 });

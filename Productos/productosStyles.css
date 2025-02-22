@@ -1,9 +1,22 @@
+/* Fuente Numans */
+@import url('https://fonts.googleapis.com/css2?family=Numans&display=swap');
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Numans', Arial, sans-serif;
     line-height: 1.6;
-    margin: 0;
-    padding: 0;
-    background-color: #f4f4f4;
+    background-color: #ececec;
+}
+
+html {
+    scroll-behavior: smooth;
 }
 
 /* ===== Boton de whatsapp flotante ===== */
@@ -37,18 +50,13 @@ body {
 a {
     text-decoration: none;
 }
+
+/* ========== Header styles ========== */
 header {
     width: 100%;
-    background: rgba(255, 255, 255, 0.95);
+    z-index: 1200;
+    background: #f3f3f2;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-}
-
-/* Logo header */
-.logo {
-    font-size: 2.1rem;
-    font-weight: bold;
-    color: #7a5d5d;
-    text-shadow: 0 1px 0 #ccc, 0 2px 0 #c9c9c9, 0 3px 0 #bbb, 0 4px 0 #b9b9b9, 0 5px 0 #aaa, 0 6px 1px rgba(0, 0, 0, .1), 0 0 5px rgba(0, 0, 0, .1), 0 1px 3px rgba(0, 0, 0, .3), 0 3px 5px rgba(0, 0, 0, .2), 0 5px 10px rgba(0, 0, 0, .25), 0 10px 10px rgba(0, 0, 0, .2), 0 20px 20px rgba(0, 0, 0, .15);
 }
 
 nav {
@@ -58,23 +66,55 @@ nav {
     padding: 1rem 5%;
 }
 
-.img-logo {
-    width: 120px;
+/* Logo texto header */
+.logo {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #7a5d5d;
+    text-shadow: 0 1px 0 #ccc, 0 2px 0 #c9c9c9, 0 3px 0 #bbb, 0 4px 0 #b9b9b9, 0 5px 0 #aaa, 0 6px 1px rgba(0, 0, 0, .1), 0 0 5px rgba(0, 0, 0, .1), 0 1px 3px rgba(0, 0, 0, .3), 0 3px 5px rgba(0, 0, 0, .2), 0 5px 10px rgba(0, 0, 0, .25), 0 10px 10px rgba(0, 0, 0, .2), 0 20px 20px rgba(0, 0, 0, .15);
+}
+
+.hamburger {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 21px;
+    cursor: pointer;
+    z-index: 1001;
+}
+
+.hamburger span {
+    display: block;
+    height: 3px;
+    width: 100%;
+    background-color: #7a5d5d;
+    transition: all .3s ease;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 1.5rem;
 }
 
 .nav-link {
     text-decoration: none;
+    text-transform: uppercase;
     font-weight: bold;
     color: #2c1810;
     transition: color .3s;
 }
 
-.nav-link:hover {
+.nav-link:hover,
+.nav-link.active {
     color: #7a5d5d;
-    text-decoration: underline;
 }
 
-
+.nav-link.active {
+    text-decoration: underline;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
 
 .container {
     width: 90%;
@@ -106,7 +146,8 @@ h1 {
     transition: all 0.3s ease;
 }
 
-.category-btn:hover, .category-btn.active {
+.category-btn:hover,
+.category-btn.active {
     background: #333;
     color: #fff;
 }
@@ -120,7 +161,7 @@ h1 {
 .product-card {
     background: white;
     border-radius: 5px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     overflow: hidden;
 }
 
@@ -136,11 +177,11 @@ h1 {
 
 .product-info h2 {
     margin-top: 0;
-    font-size: 1.2em;
+    font-size: 1em;
 }
 
 .product-code {
-    color: #666;
+    color: #66666685;
     font-size: 0.9em;
 }
 
@@ -170,6 +211,11 @@ h1 {
     text-decoration: none;
 }
 
+/* boton de pedir */
+.order {
+    padding: 5px 15px;
+}
+
 .btn:hover {
     background: #444;
 }
@@ -183,7 +229,7 @@ h1 {
     width: 100%;
     height: 100%;
     overflow: auto;
-    background-color: rgba(0,0,0,0.4);
+    background-color: rgba(0, 0, 0, 0.4);
 }
 
 .modal-content {
@@ -194,6 +240,11 @@ h1 {
     width: 80%;
     max-width: 600px;
     border-radius: 5px;
+}
+
+.product-detail-code {
+    color: #66666685;
+    font-size: 0.9em;
 }
 
 .close {
@@ -246,8 +297,169 @@ h1 {
     cursor: not-allowed;
 }
 
-@media (max-width: 600px) {
-    .product-grid {
-        grid-template-columns: 1fr;
+
+/* ===== Responsive ===== */
+
+@media (max-width: 768px) {
+
+    .logo {
+        font-size: 20px;
+    }
+
+    .nav-link {
+        font-size: .8em;
+    }
+
+    .product-card img {
+        height: auto;
+    }
+
+    .product-info h2 {
+        font-size: 1em;
+    }
+
+    .product-code {
+        font-size: 0.7em;
+    }
+
+    .product-price {
+        font-size: 1.1em;
+    }
+
+    .product-category {
+        font-size: 0.7em;
+    }
+
+    .btn {
+        padding: 8px 12px;
+    }
+
+    .modal-content {
+        max-width: 300px;
+    }
+
+    #product-details {
+        width: 100%;
+    }
+
+    .product-details-description {
+        max-width: 300px;
+    }
+
+    .imgContentDetalle img {
+        width: 200px;
+        height: 200px;
+    }
+}
+
+@media (max-width: 480px) {
+
+    .logo {
+        font-size: 20px;
+    }
+
+    .nav-link {
+        font-size: .8em;
+    }
+
+    .product-card img {
+        height: auto;
+    }
+
+    .product-info h2 {
+        font-size: 1em;
+    }
+
+    .product-code {
+        font-size: 0.6em;
+    }
+
+    .product-price {
+        font-size: 1.1em;
+    }
+
+    .product-category {
+        font-size: 0.7em;
+    }
+
+    .btn {
+        padding: 6px 10px;
+    }
+
+    .order {
+        padding: 4px 8px;
+    }
+
+    .modal-content {
+        max-width: 300px;
+    }
+
+    #product-details {
+        width: 100%;
+    }
+
+    .product-details-description {
+        max-width: 300px;
+    }
+
+    .imgContentDetalle img {
+        width: 200px;
+        height: 200px;
+    }
+}
+
+@media (max-width: 360px) {
+
+    .logo {
+        font-size: 12px;
+    }
+
+    .nav-link {
+        font-size: 0.7em;
+    }
+
+    .product-card img {
+        height: auto;
+    }
+
+    .product-info h2 {
+        font-size: 1em;
+    }
+
+    .product-code {
+        font-size: 0.6em;
+    }
+
+    .product-price {
+        font-size: 1.1em;
+    }
+
+    .product-category {
+        font-size: 0.7em;
+    }
+
+    .btn {
+        padding: 5px 8px;
+    }
+
+    .order {
+        padding: 4px 8px;
+    }
+
+    .modal-content {
+        max-width: 300px;
+    }
+
+    #product-details {
+        width: 100%;
+    }
+
+    .product-details-description {
+        max-width: 300px;
+    }
+
+    .imgContentDetalle img {
+        width: 200px;
+        height: 200px;
     }
 }

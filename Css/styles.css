@@ -8,7 +8,8 @@
     --small-font-size: .875rem;
     --smaller-font-size: .813rem;
 
-    --color-bg: #fadac4;
+    /* --color-bg: #fadac4; */
+    --color-bg: #ffccaa;
     --color-text: #5e3609;
     --color-hover: #c9802e;
 
@@ -17,7 +18,8 @@
     --color-text-btn: #462807;
     --color-shadow-btn-hover: #3b3b3b;
 
-    --color-bg-promo-card: #eeeeee;
+    /* --color-bg-promo-card: #eeeeee; */
+    --color-bg-promo-card: #f0ddd1;
 
     --color-bg-service-card: #f9f9f9;
 
@@ -154,7 +156,7 @@ header {
     position: fixed;
     width: 100%;
     z-index: 1200;
-    background: rgba(255, 255, 255, 0.95);
+    background: #ffe9da;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
@@ -279,9 +281,12 @@ nav {
 }
 
 @keyframes jumpText {
-    0%, 100% {
+
+    0%,
+    100% {
         transform: translateY(0px);
     }
+
     60% {
         transform: translateY(25px);
     }
@@ -1263,8 +1268,10 @@ nav {
 
 .gallery-item {
     position: relative;
-    padding-bottom: 100%; /*aspecto cuadrado*/
-    background-color: #f0f0f0; /*color de fondo mientras carga*/
+    padding-bottom: 100%;
+    /*aspecto cuadrado*/
+    background-color: #f0f0f0;
+    /*color de fondo mientras carga*/
     overflow: hidden;
 }
 
@@ -1505,6 +1512,11 @@ footer {
         text-align: center;
     }
 
+    /* carrusel promos destacadas */
+    .promos-destacadas .swiper-container .promo-card {
+        height: auto;
+    }
+
     .promo-content {
         height: auto;
     }
@@ -1523,6 +1535,11 @@ footer {
 
     .about-text ul {
         margin-left: 0;
+    }
+
+    /* carrusel testimonios */
+    .testimonials .swiper-container .card-wrapper {
+        margin: 0 10px 25px;
     }
 
     .contact-cards {
@@ -1600,6 +1617,16 @@ footer {
 
     .hero-description {
         text-align: center;
+    }
+
+    /* carrusel promos destacadas */
+    .promos-destacadas .swiper-container .promo-card {
+        height: auto;
+    }
+
+    /* carrusel testimonios */
+    .testimonials .swiper-container .card-wrapper {
+        margin: 0 30px 25px;
     }
 
 
