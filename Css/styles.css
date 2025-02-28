@@ -1082,7 +1082,8 @@ nav {
 }
 
 .swiper-container .card-div {
-    height: 280px;
+    height: 300px;
+    width: 320px;
     user-select: none;
     display: block;
     background: #f0f0f0;
@@ -1091,6 +1092,12 @@ nav {
     text-decoration: none;
     border: 1px solid #6b3e0a;
     box-shadow: 0 10px 10px rgba(0, 0, 0, 0.05);
+}
+
+.testimonials .swiper-container .card-div .testimonial-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 .card-wrapper .swiper-pagination-bullet {
@@ -1108,18 +1115,6 @@ nav {
     color: var(--color-border-btn);
     margin-top: -35px;
 }
-
-
-
-
-
-
-
-
-
-
-
-
 
 .testimonial-slider {
 
@@ -1407,8 +1402,91 @@ nav {
     height: 150px;
 } */
 
-/* ========== Footer styles ========== */
+
+/* ========== FOOTER ========== */
 footer {
+    background-color: #6b4f37;
+    padding: 20px 0;
+}
+
+.footer-row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.footer-logo img {
+    max-width: 150px;
+}
+
+.footer-social a {
+    margin: 0 10px;
+    font-size: 1.5em;
+    color: #d8d8d8;
+}
+
+.footer-column {
+    flex: 1;
+    min-width: 150px;
+    margin: 10px 0;
+}
+
+.footer-column h4 {
+    margin-bottom: 10px;
+    color: #f59268;
+}
+
+.footer-column ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-column ul li {
+    margin-bottom: 5px;
+}
+
+.footer-column ul li a {
+    color: #d8d8d8;
+    text-decoration: none;
+}
+
+.footer-column ul li a:hover {
+    text-decoration: underline;
+}
+
+.footer-row p {
+    text-align: center;
+    width: 100%;
+    margin: 0;
+    color: #f8f8f8;
+}
+
+.footer-row .footer-copy-2 a {
+    color: #7591A6;
+}
+
+.footer-row .footer-copy-2 a:hover {
+    text-decoration: underline;
+}
+
+
+
+@media (max-width: 768px) {
+    .footer-row {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-column {
+        margin: 10px 0;
+    }
+}
+
+
+/* ========== Footer viejo styles ========== */
+/* footer {
     background-color: #333;
     color: #fff;
     padding: 2rem 0;
@@ -1445,7 +1523,7 @@ footer {
 .social-link i:hover {
     color: var(--color-hover);
     transform: translateY(-5px);
-}
+} */
 
 
 
@@ -1542,6 +1620,7 @@ footer {
         margin: 0 10px 25px;
     }
 
+    /* Contacto */
     .contact-cards {
         display: flex;
         flex-direction: column;
@@ -1549,6 +1628,7 @@ footer {
         align-items: center;
     }
 
+    /* Footer */
     .footer-content {
         flex-direction: column-reverse;
         align-items: center;

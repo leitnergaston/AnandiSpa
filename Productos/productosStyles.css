@@ -297,6 +297,68 @@ h1 {
     cursor: not-allowed;
 }
 
+/* ========== Footer styles ========== */
+footer {
+    background: #f3f3f2;
+    padding: 20px 0;
+    text-align: center;
+    color: #7a5d5d;
+    font-size: 0.9em;
+    border-top: 1px solid #ddd;
+}
+
+footer .social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+footer .social-icons a {
+    color: #7a5d5d;
+    font-size: 2em;
+    transition: color 0.3s;
+}
+
+footer .social-icons a:hover {
+    color: #333;
+}
+
+footer p {
+    margin: 0;
+}
+
+/* ===== Responsive Footer ===== */
+@media (max-width: 768px) {
+    footer {
+        font-size: 0.8em;
+    }
+
+    footer .social-icons a {
+        font-size: 1em;
+    }
+}
+
+@media (max-width: 480px) {
+    footer {
+        font-size: 0.7em;
+    }
+
+    footer .social-icons a {
+        font-size: 0.9em;
+    }
+}
+
+@media (max-width: 360px) {
+    footer {
+        font-size: 0.6em;
+    }
+
+    footer .social-icons a {
+        font-size: 0.8em;
+    }
+}
+
 
 /* ===== Responsive ===== */
 

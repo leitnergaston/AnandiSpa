@@ -593,292 +593,292 @@ const products = [
     {
         id: 61,
         code: 'PROD061',
-        name: 'Saumerio Citronella Orange Palo Santo',
+        name: 'Sahumerios Citronella Orange Palo Santo',
         price: 2600,
         image: './img/061.jpg',
-        description: 'Saumerio Citronella Orange Palo Santo, Natural, Sagrada Madre, 8 unidades',
+        description: 'Sahumerios Citronella Orange Palo Santo, Natural, Sagrada Madre, 8 unidades',
         orderLink: 'https://wa.me/+5492615104019',
-        category: 'Saumerios'
+        category: 'Sahumerios'
     },
     {
         id: 62,
         code: 'PROD062',
-        name: 'Saumerio Myrhh Olibanum',
+        name: 'Sahumerios Myrhh Olibanum',
         price: 2600,
         image: './img/062.jpg',
-        description: 'Saumerio Myrhh Olibanum, Natural, Sagrada Madre, 8 unidades',
+        description: 'Sahumerios Myrhh Olibanum, Natural, Sagrada Madre, 8 unidades',
         orderLink: 'https://wa.me/+5492615104019',
-        category: 'Saumerios'
+        category: 'Sahumerios'
     },
     {
         id: 63,
         code: 'PROD063',
-        name: 'Saumerio Amber Ambar',
+        name: 'Sahumerios Amber Ambar',
         price: 2600,
         image: './img/063.jpg',
-        description: 'Saumerio Amber Ambar, Natural, Sagrada Madre, 8 unidades',
+        description: 'Sahumerios Amber Ambar, Natural, Sagrada Madre, 8 unidades',
         orderLink: 'https://wa.me/+5492615104019',
-        category: 'Saumerios'
+        category: 'Sahumerios'
     },
     {
         id: 64,
         code: 'PROD064',
-        name: 'Saumerio Mirra',
+        name: 'Sahumerios Mirra',
         price: 2600,
         image: './img/064.jpg',
-        description: 'Saumerio Mirra, Natural, Sagrada Madre, 8 unidades',
+        description: 'Sahumerios Mirra, Natural, Sagrada Madre, 8 unidades',
         orderLink: 'https://wa.me/+5492615104019',
-        category: 'Saumerios'
+        category: 'Sahumerios'
     },
     {
         id: 65,
         code: 'PROD065',
-        name: 'Saumerio Olíbano Frankincense',
+        name: 'Sahumerios Olíbano Frankincense',
         price: 2600,
         image: './img/065.jpg',
-        description: 'Saumerio Olíbano Frankincense, Natural, Sagrada Madre, 8 unidades',
+        description: 'Sahumerios Olíbano Frankincense, Natural, Sagrada Madre, 8 unidades',
         orderLink: 'https://wa.me/+5492615104019',
-        category: 'Saumerios'
+        category: 'Sahumerios'
     },
     {
         id: 66,
         code: 'PROD066',
-        name: 'Saumerio Yagra de la Abundancia',
+        name: 'Sahumerios Yagra de la Abundancia',
         price: 3290,
         image: './img/066.jpg',
-        description: 'Saumerio Yagra de la Abundancia, Tibetanos, 8 unidades',
+        description: 'Sahumerios Yagra de la Abundancia, Tibetanos, 8 unidades',
         orderLink: 'https://wa.me/+5492615104019',
-        category: 'Saumerios'
+        category: 'Sahumerios'
     },
     {
         id: 67,
         code: 'PROD067',
-        name: 'Saumerio Magia Asiática',
+        name: 'Sahumerios Magia Asiática',
         price: 3290,
         image: './img/067.jpg',
-        description: 'Saumerio Magia Asiática, Tibetanos, 8 unidades',
+        description: 'Sahumerios Magia Asiática, Tibetanos, 8 unidades',
         orderLink: 'https://wa.me/+5492615104019',
-        category: 'Saumerios'
+        category: 'Sahumerios'
     },
     {
         id: 68,
         code: 'PROD068',
-        name: 'Saumerio Capuccino Italiano',
+        name: 'Sahumerios Capuccino Italiano',
         price: 3290,
         image: './img/068.jpg',
-        description: 'Saumerio Capuccino Italiano, Tibetanos, 8 unidades',
+        description: 'Sahumerios Capuccino Italiano, Tibetanos, 8 unidades',
         orderLink: 'https://wa.me/+5492615104019',
-        category: 'Saumerios'
+        category: 'Sahumerios'
     },
     {
         id: 69,
         code: 'PROD069',
-        name: 'Saumerio Esencias de la India',
+        name: 'Sahumerios Esencias de la India',
         price: 3290,
         image: './img/069.jpg',
-        description: 'Saumerio Esencias de la India, Tibetanos, 8 unidades',
+        description: 'Sahumerios Esencias de la India, Tibetanos, 8 unidades',
         orderLink: 'https://wa.me/+5492615104019',
-        category: 'Saumerios'
+        category: 'Sahumerios'
     },
     {
         id: 70,
         code: 'PROD070',
-        name: 'Saumerio Coco Beach',
+        name: 'Sahumerios Coco Beach',
         price: 3290,
         image: './img/070.jpg',
-        description: 'Saumerio Coco Beach, Tibetanos, 8 unidades',
+        description: 'Sahumerios Coco Beach, Tibetanos, 8 unidades',
         orderLink: 'https://wa.me/+5492615104019',
-        category: 'Saumerios'
+        category: 'Sahumerios'
     },
     {
         id: 71,
         code: 'PROD071',
-        name: 'Saumerio Palo Santo con Fresias',
+        name: 'Sahumerios Palo Santo con Fresias',
         price: 2500,
         image: './img/071.jpg',
-        description: 'Saumerio Palo Santo con Fresias, Sagrada Madre, 8 unidades',
+        description: 'Sahumerios Palo Santo con Fresias, Sagrada Madre, 8 unidades',
         orderLink: 'https://wa.me/+5492615104019',
-        category: 'Saumerios'
+        category: 'Sahumerios'
     },
     {
         id: 72,
         code: 'PROD072',
-        name: 'Saumerio Palo Santo con Vainilla',
+        name: 'Sahumerios Palo Santo con Vainilla',
         price: 2500,
         image: './img/072.jpg',
-        description: 'Saumerio Palo Santo con Vainilla, Sagrada Madre, 8 unidades',
+        description: 'Sahumerios Palo Santo con Vainilla, Sagrada Madre, 8 unidades',
         orderLink: 'https://wa.me/+5492615104019',
-        category: 'Saumerios'
+        category: 'Sahumerios'
     },
     {
         id: 73,
         code: 'PROD073',
-        name: 'Saumerio Palo Santo con Mirra',
+        name: 'Sahumerios Palo Santo con Mirra',
         price: 2500,
         image: './img/073.jpg',
-        description: 'Saumerio Palo Santo con Mirra, Sagrada Madre, 8 unidades',
+        description: 'Sahumerios Palo Santo con Mirra, Sagrada Madre, 8 unidades',
         orderLink: 'https://wa.me/+5492615104019',
-        category: 'Saumerios'
+        category: 'Sahumerios'
     },
     {
         id: 74,
         code: 'PROD074',
-        name: 'Saumerio Palo Santo con Yagra',
+        name: 'Sahumerios Palo Santo con Yagra',
         price: 2500,
         image: './img/074.jpg',
-        description: 'Saumerio Palo Santo con Yagra, Sagrada Madre, 8 unidades',
+        description: 'Sahumerios Palo Santo con Yagra, Sagrada Madre, 8 unidades',
         orderLink: 'https://wa.me/+5492615104019',
-        category: 'Saumerios'
+        category: 'Sahumerios'
     },
     {
         id: 75,
         code: 'PROD075',
-        name: 'Saumerio Palo Santo con Copal',
+        name: 'Sahumerios Palo Santo con Copal',
         price: 2500,
         image: './img/075.jpg',
-        description: 'Saumerio Palo Santo con Copal, Sagrada Madre, 8 unidades',
+        description: 'Sahumerios Palo Santo con Copal, Sagrada Madre, 8 unidades',
         orderLink: 'https://wa.me/+5492615104019',
-        category: 'Saumerios'
+        category: 'Sahumerios'
     },
     {
         id: 76,
         code: 'PROD076',
-        name: 'Saumerio Rosa Mosqueta',
+        name: 'Sahumerios Rosa Mosqueta',
         price: 2600,
         image: './img/076.jpg',
-        description: 'Saumerio Rosa Mosqueta, Patagonia, Sagrada Madre, 6 unidades',
+        description: 'Sahumerios Rosa Mosqueta, Patagonia, Sagrada Madre, 6 unidades',
         orderLink: 'https://wa.me/+5492615104019',
-        category: 'Saumerios'
+        category: 'Sahumerios'
     },
     {
         id: 77,
         code: 'PROD077',
-        name: 'Saumerio Jazmín',
+        name: 'Sahumerios Jazmín',
         price: 2600,
         image: './img/077.jpg',
-        description: 'Saumerio Jazmín, Patagonia, Sagrada Madre, 6 unidades',
+        description: 'Sahumerios Jazmín, Patagonia, Sagrada Madre, 6 unidades',
         orderLink: 'https://wa.me/+5492615104019',
-        category: 'Saumerios'
+        category: 'Sahumerios'
     },
     {
         id: 78,
         code: 'PROD078',
-        name: 'Saumerio Ruda',
+        name: 'Sahumerios Ruda',
         price: 2600,
         image: './img/078.jpg',
-        description: 'Saumerio Ruda, Patagonia, Sagrada Madre, 6 unidades',
+        description: 'Sahumerios Ruda, Patagonia, Sagrada Madre, 6 unidades',
         orderLink: 'https://wa.me/+5492615104019',
-        category: 'Saumerios'
+        category: 'Sahumerios'
     },
     {
         id: 79,
         code: 'PROD079',
-        name: 'Saumerio Hibiscus',
+        name: 'Sahumerios Hibiscus',
         price: 2600,
         image: './img/079.jpg',
-        description: 'Saumerio Hibiscus, Patagonia, Sagrada Madre, 6 unidades',
+        description: 'Sahumerios Hibiscus, Patagonia, Sagrada Madre, 6 unidades',
         orderLink: 'https://wa.me/+5492615104019',
-        category: 'Saumerios'
+        category: 'Sahumerios'
     },
     {
         id: 80,
         code: 'PROD080',
-        name: 'Saumerio Palmarosa',
+        name: 'Sahumerios Palmarosa',
         price: 2600,
         image: './img/080.jpg',
-        description: 'Saumerio Palmarosa, Patagonia, Sagrada Madre, 6 unidades',
+        description: 'Sahumerios Palmarosa, Patagonia, Sagrada Madre, 6 unidades',
         orderLink: 'https://wa.me/+5492615104019',
-        category: 'Saumerios'
+        category: 'Sahumerios'
     },
     {
         id: 81,
         code: 'PROD081',
-        name: 'Saumerio Neroli',
+        name: 'Sahumerios Neroli',
         price: 2600,
         image: './img/081.jpg',
-        description: 'Saumerio Neroli, Patagonia, Sagrada Madre, 6 unidades',
+        description: 'Sahumerios Neroli, Patagonia, Sagrada Madre, 6 unidades',
         orderLink: 'https://wa.me/+5492615104019',
-        category: 'Saumerios'
+        category: 'Sahumerios'
     },
     {
         id: 82,
         code: 'PORD082',
-        name: 'Saumerio Yerba Mate Menta',
+        name: 'Sahumerios Yerba Mate Menta',
         price: 2600,
         image: './img/082.jpg',
-        description: 'Saumerio Yerba Mate Menta, Patagonia, Sagrada Madre, 6 unidades',
+        description: 'Sahumerios Yerba Mate Menta, Patagonia, Sagrada Madre, 6 unidades',
         orderLink: 'https://wa.me/+5492615104019',
-        category: 'Saumerios'
+        category: 'Sahumerios'
     },
     {
         id: 83,
         code: 'PROD083',
-        name: 'Saumerio Lavanda Menta',
+        name: 'Sahumerios Lavanda Menta',
         price: 1300,
         image: './img/083.jpg',
-        description: 'Saumerio lavanda Menta, Saumerios de la India, 12 unidades',
+        description: 'Sahumerios lavanda Menta, Sahumerios de la India, 12 unidades',
         orderLink: 'https://wa.me/+5492615104019',
-        category: 'Saumerios'
+        category: 'Sahumerios'
     },
     {
         id: 84,
         code: 'PROD084',
-        name: 'Saumerio Fresas de la patagonia',
+        name: 'Sahumerios Fresas de la patagonia',
         price: 1300,
         image: './img/084.jpg',
-        description: 'Saumerio Fresas de la patagonia, Saumerios de la India, 12 unidades',
+        description: 'Sahumerios Fresas de la patagonia, Sahumerios de la India, 12 unidades',
         orderLink: 'https://wa.me/+5492615104019',
-        category: 'Saumerios'
+        category: 'Sahumerios'
     },
     {
         id: 85,
         code: 'PROD085',
-        name: 'Saumerio Mirra Palo Santo',
+        name: 'Sahumerios Mirra Palo Santo',
         price: 1300,
         image: './img/085.jpg',
-        description: 'Saumerio Mirra Palo Santo, Saumerios de la India, 12 unidades',
+        description: 'Sahumerios Mirra Palo Santo, Sahumerios de la India, 12 unidades',
         orderLink: 'https://wa.me/+5492615104019',
-        category: 'Saumerios'
+        category: 'Sahumerios'
     },
     {
         id: 86,
         code: 'PROD086',
-        name: 'Saumerio Magnolia Vainilla',
+        name: 'Sahumerios Magnolia Vainilla',
         price: 1300,
         image: './img/086.jpg',
-        description: 'Saumerio Magnolia Vainilla, Saumerios de la India, 12 unidades',
+        description: 'Sahumerios Magnolia Vainilla, Sahumerios de la India, 12 unidades',
         orderLink: 'https://wa.me/+5492615104019',
-        category: 'Saumerios'
+        category: 'Sahumerios'
     },
     {
         id: 87,
         code: 'PROD087',
-        name: 'Saumerio Ruda Romero',
+        name: 'Sahumerios Ruda Romero',
         price: 1300,
         image: './img/087.jpg',
-        description: 'Saumerio Ruda Romero, Saumerios de la India, 12 unidades',
+        description: 'Sahumerios Ruda Romero, Sahumerios de la India, 12 unidades',
         orderLink: 'https://wa.me/+5492615104019',
-        category: 'Saumerios'
+        category: 'Sahumerios'
     },
     {
         id: 88,
         code: 'PROD088',
-        name: 'Saumerio Vainilla Africana',
+        name: 'Sahumerios Vainilla Africana',
         price: 1300,
         image: './img/088.jpg',
-        description: 'Saumerio Vainilla Africana, Saumerios de la India, 12 unidades',
+        description: 'Sahumerios Vainilla Africana, Sahumerios de la India, 12 unidades',
         orderLink: 'https://wa.me/+5492615104019',
-        category: 'Saumerios'
+        category: 'Sahumerios'
     },
     {
         id: 89,
         code: 'PROD089',
-        name: 'Saumerio Yagra Palo Santo',
+        name: 'Sahumerios Yagra Palo Santo',
         price: 1300,
         image: './img/089.jpg',
-        description: 'Saumerio Yagra Palo Santo, Saumerios de la India, 12 unidades',
+        description: 'Sahumerios Yagra Palo Santo, Sahumerios de la India, 12 unidades',
         orderLink: 'https://wa.me/+5492615104019',
-        category: 'Saumerios'
+        category: 'Sahumerios'
     },
     {
         id: 90,
@@ -933,162 +933,162 @@ const products = [
     {
         id: 95,
         code: 'PROD095',
-        name: 'Saumerios Magicos Vainilla',
+        name: 'Sahumerios Magicos Vainilla',
         price: 2990,
         image: './img/095.jpg',
-        description: 'Saumerios Magicos Vainilla, Aromanza, 10 unidades',
+        description: 'Sahumerios Magicos Vainilla, Aromanza, 10 unidades',
         orderLink: 'https://wa.me/+5492615104019',
-        category: 'Saumerios'
+        category: 'Sahumerios'
     },
     {
         id: 96,
         code: 'PROD096',
-        name: 'Saumerios Magicos Aqua Marine',
+        name: 'Sahumerios Magicos Aqua Marine',
         price: 2990,
         image: './img/096.jpg',
-        description: 'Saumerios Magicos Aqua Marine, Aromanza, 10 unidades',
+        description: 'Sahumerios Magicos Aqua Marine, Aromanza, 10 unidades',
         orderLink: 'https://wa.me/+5492615104019',
-        category: 'Saumerios'
+        category: 'Sahumerios'
     },
     {
         id: 97,
         code: 'PROD097',
-        name: 'Saumerios Magicos Sándalo Hindú',
+        name: 'Sahumerios Magicos Sándalo Hindú',
         price: 2990,
         image: './img/097.jpg',
-        description: 'Saumerios Magicos Sándalo Hindú, Aromanza, 10 unidades',
+        description: 'Sahumerios Magicos Sándalo Hindú, Aromanza, 10 unidades',
         orderLink: 'https://wa.me/+5492615104019',
-        category: 'Saumerios'
+        category: 'Sahumerios'
     },
     {
         id: 98,
         code: 'PROD098',
-        name: 'Saumerios Magicos Rosa Real',
+        name: 'Sahumerios Magicos Rosa Real',
         price: 2990,
         image: './img/098.jpg',
-        description: 'Saumerios Magicos Rosa Real, Aromanza, 10 unidades',
+        description: 'Sahumerios Magicos Rosa Real, Aromanza, 10 unidades',
         orderLink: 'https://wa.me/+5492615104019',
-        category: 'Saumerios'
+        category: 'Sahumerios'
     },
     {
         id: 99,
         code: 'PROD099',
-        name: 'Saumerios Magicos Escencias de la India',
+        name: 'Sahumerios Magicos Escencias de la India',
         price: 2990,
         image: './img/099.jpg',
-        description: 'Saumerios Magicos Escencias de la India, Aromanza, 10 unidades',
+        description: 'Sahumerios Magicos Escencias de la India, Aromanza, 10 unidades',
         orderLink: 'https://wa.me/+5492615104019',
-        category: 'Saumerios'
+        category: 'Sahumerios'
     },
     {
         id: 100,
         code: 'PROD100',
-        name: 'Saumerio Citronela',
+        name: 'Sahumerios Citronela',
         price: 1350,
         image: './img/100.jpg',
-        description: 'Saumerio Citronela, marca, 5 unidades',
+        description: 'Sahumerios Citronela, marca, 5 unidades',
         orderLink: 'https://wa.me/+5492615104019',
-        category: 'Saumerios'
+        category: 'Sahumerios'
     },
     {
         id: 101,
         code: 'PROD101',
-        name: 'Saumerio Limpieza Energética',
+        name: 'Sahumerios Limpieza Energética',
         price: 1350,
         image: './img/101.jpg',
-        description: 'Saumerio Limpieza Energética, marca, 5 unidades',
+        description: 'Sahumerios Limpieza Energética, marca, 5 unidades',
         orderLink: 'https://wa.me/+5492615104019',
-        category: 'Saumerios'
+        category: 'Sahumerios'
     },
     {
         id: 102,
         code: 'PROD102',
-        name: 'Saumerio Energía Amorosa',
+        name: 'Sahumerios Energía Amorosa',
         price: 1350,
         image: './img/102.jpg',
-        description: 'Saumerio Energía Amorosa, marca, 5 unidades',
+        description: 'Sahumerios Energía Amorosa, marca, 5 unidades',
         orderLink: 'https://wa.me/+5492615104019',
-        category: 'Saumerios'
+        category: 'Sahumerios'
     },
     {
         id: 103,
         code: 'PROD103',
-        name: 'Saumerio Purificación Amorosa',
+        name: 'Sahumerios Purificación Amorosa',
         price: 1350,
         image: './img/103.jpg',
-        description: 'Saumerio Purificación Amorosa, marca, 5 unidades',
+        description: 'Sahumerios Purificación Amorosa, marca, 5 unidades',
         orderLink: 'https://wa.me/+5492615104019',
-        category: 'Saumerios'
+        category: 'Sahumerios'
     },
     {
         id: 104,
         code: 'PROD104',
-        name: 'Saumerio Vainilla',
+        name: 'Sahumerios Vainilla',
         price: 1300,
         image: './img/104.jpg',
-        description: 'Saumerio Vainilla, Saumerios de la India Hexagonal, ',
+        description: 'Sahumerios Vainilla, Sahumerios de la India Hexagonal, ',
         orderLink: 'https://wa.me/+5492615104019',
-        category: 'Saumerios'
+        category: 'Sahumerios'
     },
     {
         id: 105,
         code: 'PROD105',
-        name: 'Saumerio Sándalo',
+        name: 'Sahumerios Sándalo',
         price: 1300,
         image: './img/105.jpg',
-        description: 'Saumerio',
+        description: 'Sahumerios',
         orderLink: 'https://wa.me/+5492615104019',
-        category: 'Saumerios'
+        category: 'Sahumerios'
     },
     {
         id: 106,
         code: 'PROD106',
-        name: 'Saumerio Lavanda',
+        name: 'Sahumerios Lavanda',
         price: 1300,
         image: './img/106.jpg',
-        description: 'Saumerio',
+        description: 'Sahumerios',
         orderLink: 'https://wa.me/+5492615104019',
-        category: 'Saumerios'
+        category: 'Sahumerios'
     },
     {
         id: 107,
         code: 'PROD107',
-        name: 'Saumerio Citronela',
+        name: 'Sahumerios Citronela',
         price: 1300,
         image: './img/107.jpg',
-        description: 'Saumerio',
+        description: 'Sahumerios',
         orderLink: 'https://wa.me/+5492615104019',
-        category: 'Saumerios'
+        category: 'Sahumerios'
     },
     {
         id: 108,
         code: 'PROD108',
-        name: 'Saumerio Mirrh',
+        name: 'Sahumerios Mirrh',
         price: 1300,
         image: './img/108.jpg',
-        description: 'Saumerio',
+        description: 'Sahumerios',
         orderLink: 'https://wa.me/+5492615104019',
-        category: 'Saumerios'
+        category: 'Sahumerios'
     },
     {
         id: 109,
         code: 'PROD109',
-        name: 'Saumerio Incense',
+        name: 'Sahumerios Incense',
         price: 1300,
         image: './img/109.jpg',
-        description: 'Saumerio',
+        description: 'Sahumerios',
         orderLink: 'https://wa.me/+5492615104019',
-        category: 'Saumerios'
+        category: 'Sahumerios'
     },
     {
         id: 110,
         code: 'PROD110',
-        name: 'Saumerio Strawberry',
+        name: 'Sahumerios Strawberry',
         price: 1300,
         image: './img/110.jpg',
-        description: 'Saumerio',
+        description: 'Sahumerios',
         orderLink: 'https://wa.me/+5492615104019',
-        category: 'Saumerios'
+        category: 'Sahumerios'
     }
 ];
 
