@@ -1,0 +1,918 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anandi Spa</title>
+
+    <meta name="title" content="anandispaestetica.com">
+    <meta name="description"
+        content="Nos dedicamos a proporcionar una experiencia de relajación y bienestar. Ofrecemos una amplia variedad de circuitos para revitalizar su cuerpo y mente">
+    <meta name="keywords"
+        content="Masajes descontracturantes, Piedras Calientes, Pindas Herbáticas, Almohadillas térmicas, Tratamientos faciales, Exfoliaciones, Hidromasaje, Sauna finlandés, Piscina, Meriendas, Circuitos de spa">
+    <meta name="robots" content="index, follow">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="language" content="Spanish">
+    <meta name="author" content="GC Code Devs">
+
+
+    <!-- scroll reveal -->
+    <!-- <script src="https://unpkg.com/scrollreveal@4.0.0/dist/scrollreveal.min.js"></script> -->
+
+    <!-- SWIPER CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+    <!-- ICONOS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- ESTILOS -->
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- FAVICON -->
+    <link rel="icon" type="image/png" href="/img/paginaSpa/logos/favicon/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="/img/paginaSpa/logos/favicon/favicon.svg" />
+    <link rel="shortcut icon" href="/img/paginaSpa/logos/favicon/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/img/paginaSpa/logos/favicon/apple-touch-icon.png" />
+    <meta name="apple-mobile-web-app-title" content="Anandi Spa" />
+    <link rel="manifest" href="/img/paginaSpa/logos/favicon/site.webmanifest" />
+
+
+
+</head>
+
+
+<body>
+    <!-- ===== HEADER ===== -->
+    <header>
+        <nav>
+            <a href="#" class="logo">Anandi Spa</a>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul class="nav-links">
+                <li class="nav-item"><a href="#inicio" class="nav-link active smoothscroll">Inicio</a></li>
+                <li class="nav-item"><a href="#promos" class="nav-link smoothscroll">Promos</a></li>
+                <li class="nav-item"><a href="#servicios" class="nav-link smoothscroll">Servicios</a></li>
+                <li class="nav-item"><a href="#galeria" class="nav-link smoothscroll">Galeria</a></li>
+                <li class="nav-item"><a href="Productos/productos.html" class="nav-link" target="_blank">Tienda</a></li>
+                <li class="nav-item"><a href="#contacto" class="nav-link smoothscroll">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+
+        <!-- ===== HERO ===== -->
+        <section class="hero" id="inicio">
+            <div class="hero-container">
+                <div class="hero-img">
+                    <img src="/img/paginaSpa/Otros/imagenHero.png" alt="imagen-inicio">
+                </div>
+                <div class="hero-content">
+                    <!-- <h1 class="hero-title">Bienvenidos a Anandi Spa</h1> -->
+                    <h1 class="hero-title">Servicios de Spa</h1>
+                    <p class="hero-description">Relájate y desconecta del mundo en nuestro spa. Disfruta de masajes
+                        descontracturantes, hidromasaje,
+                        sauna finlandés, tratamientos faciales y corporales. Además, te ofrecemos circuitos de spa
+                        completos
+                        y deliciosas meriendas. ¡Reservá ahora y descubre nuestras promociones especiales!</p>
+                    <p class="hero-text"> <i class="fa-solid fa-arrow-down"></i> Mira nuestras promos <i
+                            class="fa-solid fa-arrow-down"></i></p>
+                    <!-- <a href="#promos-destacadas" class="btn">Mira Nuestras Promos</a> -->
+                </div>
+            </div>
+        </section>
+
+
+        <!-- ===== PROMOS DESTACADAS ===== -->
+        <section class="promos-destacadas">
+            <div class="container">
+                <h2>Promos Destacadas</h2>
+
+                <!-- Swiper -->
+                <div class="swiper-contenedor swiper">
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-container">
+                        <div class="swiper-wrapper">
+                            <div class="promo-card swiper-slide">
+                                <div class="image-container">
+                                    <img src="/img/paginaSpa/promos/sanValentin1.jpg" alt="promo san valentin"
+                                        class="swiper-img">
+                                </div>
+                                <div class="swiper-card-content">
+                                    <div class="swiper-card-title">
+                                        <h4>Promo San Valentin 1</h4>
+                                    </div>
+                                    <div class="swiper-card-description">
+                                        <p>Promo San Valentin durante todo el mes del Amor
+                                        </p>
+                                    </div>
+                                    <div class="swiper-card-link">
+                                        <a onclick="mostrarPromoPopup('https://wa.me/542615104019?text=Hola!%20Queria%20pedir%20la%20promo%20de%20San%20Valentin%201')"
+                                            target="_blank">Pedir Promo</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="promo-card swiper-slide">
+                                <div class="image-container">
+                                    <img src="/img/paginaSpa/promos/sanValentin2.jpg" alt="promo san valentin"
+                                        class="swiper-img">
+                                </div>
+                                <div class="swiper-card-content">
+                                    <div class="swiper-card-title">
+                                        <h4>Promo San Valentin 2</h4>
+                                    </div>
+                                    <div class="swiper-card-description">
+                                        <p>Promo San Valentin durante todo el mes del Amor
+                                        </p>
+                                    </div>
+                                    <div class="swiper-card-link">
+                                        <a onclick="mostrarPromoPopup('https://wa.me/542615104019?text=Hola!%20Queria%20pedir%20la%20promo%20de%20San%20Valentin%202')"
+                                            target="_blank">Pedir Promo</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="promo-card swiper-slide">
+                                <div class="image-container">
+                                    <img src="/img/paginaSpa/promos/TardesParaCompartir.jpg" alt="tardes para compartir"
+                                        class="swiper-img">
+                                </div>
+                                <div class="swiper-card-content">
+                                    <div class="swiper-card-title">
+                                        <h4>10% de descuento</h4>
+                                    </div>
+                                    <div class="swiper-card-description">
+                                        <p>En la promo "Tardes para compartir" todos los miercoles de Febrero.
+                                        </p>
+                                    </div>
+                                    <div class="swiper-card-link">
+                                        <a onclick="mostrarPromoPopup('https://tinyurl.com/2bzmk2bo')">Pedir
+                                            Promo</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="promo-card swiper-slide">
+                                <div class="image-container">
+                                    <img src="/img/paginaSpa/promos/promoBienestar.jpg" alt="promo bienestar"
+                                        class="swiper-img">
+                                </div>
+                                <div class="swiper-card-content">
+                                    <div class="swiper-card-title">
+                                        <h4>Promo Verano</h4>
+                                    </div>
+                                    <div class="swiper-card-description">
+                                        <p>Nueva promo de verano. Circuito de spa con pileta, 10% dcto todos los
+                                            miercoles.</p>
+                                    </div>
+                                    <div class="swiper-card-link">
+                                        <a onclick="mostrarPromoPopup('https://tinyurl.com/2audv3ky')">Pedir
+                                            Promo</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="promo-card swiper-slide">
+                                <div class="image-container">
+                                    <img src="/img/paginaSpa/promos/superPromo.jpg" alt="super promo"
+                                        class="swiper-img">
+                                </div>
+                                <div class="swiper-card-content">
+                                    <div class="swiper-card-title">
+                                        <h4>Super Promo</h4>
+                                    </div>
+                                    <div class="swiper-card-description">
+                                        <p>3 masajes de 60' a $60.000 disponible durante todo Enero.</p>
+                                    </div>
+                                    <div class="swiper-card-link">
+                                        <a onclick="mostrarPromoPopup('https://tinyurl.com/29g57qqj')">Pedir
+                                            Promo</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-pagination"></div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- ===== PROMOS ===== -->
+        <section id="promos" class="promotions lazy-section">
+            <div class="container">
+                <h2>Nuestras Promos</h2>
+                <div class="promo-grid">
+                    <!-- Promo san valentin 1 -->
+                    <div class="promo-card destacada-5">
+                        <div class="image-container">
+                            <img src="/img/paginaSpa/promos/sanValentin1.jpg" alt="promo san valentin">
+                            <div class="image-overlay">
+                                <i class="fas fa-eye"></i>
+                            </div>
+                        </div>
+                        <div class="promo-content">
+                            <h3>Promo San Valentin 1</h3>
+                            <p>¡Enciende la llama de la pasión con nuestra promoción de San Valentín!
+                                Disfruta de un masaje sueco relajante, un pulido corporal con exfoliante de
+                                cappuccino y
+                                un obsequio especial.
+                                ¡La combinación perfecta para una velada romántica!</p>
+                            <button class="btn"
+                                onclick="mostrarPromoPopup('https://wa.me/542615104019?text=Hola!%20Queria%20pedir%20la%20promo%20de%20San%20Valentin%201')">Reservar
+                                ahora</button>
+                        </div>
+                    </div>
+                    <!-- Promo san valentin 2 -->
+                    <div class="promo-card destacada-5">
+                        <div class="image-container">
+                            <img src="/img/paginaSpa/promos/sanValentin2.jpg" alt="promo san valentin">
+                            <div class="image-overlay">
+                                <i class="fas fa-eye"></i>
+                            </div>
+                        </div>
+                        <div class="promo-content">
+                            <h3>Promo San Valentin 2</h3>
+                            <p>¡Desconecta y reconecta con tu pareja!
+                                Nuestra promoción incluye un masaje sueco,
+                                exfoliación corporal, piscina con una limonada y una rica merienda para terminar.
+                                ¡El
+                                regalo ideal para celebrar el amor!</p>
+                            <button class="btn"
+                                onclick="mostrarPromoPopup('https://wa.me/542615104019?text=Hola!%20Queria%20pedir%20la%20promo%20de%20San%20Valentin%202')">Reservar
+                                ahora</button>
+                        </div>
+                    </div>
+                    <!-- Promo bienestar -->
+                    <div class="promo-card destacada-3">
+                        <div class="image-container">
+                            <img src="/img/paginaSpa/promos/promoBienestar.jpg" alt="Promo bienestar">
+                            <div class="image-overlay">
+                                <i class="fas fa-eye"></i>
+                            </div>
+                        </div>
+                        <div class="promo-content">
+                            <h3>Promo Bienestar</h3>
+                            <p>Disfruta de un masaje descontracturante o sueco, seguido de una
+                                relajación con piedras calientes. Nuestra limpieza facial con exfoliante de
+                                coco-vainilla dejará tu piel radiante. Refrescate en nuestra piscina al aire libre.
+                                Y
+                                para finalizar, una deliciosa pizza y una bebida refrescante. <br> 10% de dcto
+                                viniendo
+                                los miercoles!</p>
+                            <button class="btn" onclick="mostrarPromoPopup('https://tinyurl.com/2audv3ky')">Reservar
+                                ahora</button>
+                        </div>
+                    </div>
+                    <!-- Promo 1 -->
+                    <div class="promo-card" id="promo1">
+                        <div class="image-container">
+                            <img src="/img/paginaSpa/promos/Promo1.jpg" alt="Promo 1">
+                            <div class="image-overlay">
+                                <i class="fas fa-eye"></i>
+                            </div>
+                        </div>
+                        <div class="promo-content">
+                            <h3>Promo 1</h3>
+                            <p>Desconectá del estrés con nuestro masaje
+                                descontracturante o sedativo. La lavanda y las pindas herbáticas te envolverán en
+                                una sensación de calma profunda. Elige la duración que más se adapte a ti y completa
+                                la experiencia con una refrescante limonada y frutos secos.</p>
+                            <button class="btn" onclick="mostrarPromoPopup('https://tinyurl.com/25b5etzq')">Reservar
+                                ahora</button>
+                        </div>
+                    </div>
+                    <!-- Promo 2 -->
+                    <div class="promo-card">
+                        <div class="image-container">
+                            <img src="/img/paginaSpa/promos/Promo2.jpg" alt="Promo 2">
+                            <div class="image-overlay">
+                                <i class="fas fa-eye"></i>
+                            </div>
+                        </div>
+                        <div class="promo-content">
+                            <h3>Promo 2</h3>
+                            <p>Conectá con tu energía interior con nuestro masaje con
+                                piedras calientes. Las piedras se colocan en los chakras, desbloqueando la energía y
+                                promoviendo la armonía. Un viaje sensorial para cuerpo y alma.</p>
+                            <button class="btn" onclick="mostrarPromoPopup('https://tinyurl.com/2ad6yy76')">Reservar
+                                ahora</button>
+                        </div>
+                    </div>
+                    <!-- Promo 3 -->
+                    <div class="promo-card">
+                        <div class="image-container">
+                            <img src="/img/paginaSpa/promos/Promo3.jpg" alt="Promo 3">
+                            <div class="image-overlay">
+                                <i class="fas fa-eye"></i>
+                            </div>
+                        </div>
+                        <div class="promo-content">
+                            <h3>Promo 3</h3>
+                            <p>Déjate envolver por los aromas de la lavanda y la
+                                vainilla en nuestro masaje con pindas herbáticas. El calor de las pindas y los
+                                aceites esenciales te proporcionarán una relajación profunda y duradera.</p>
+                            <button class="btn" onclick="mostrarPromoPopup('https://tinyurl.com/24alpjgd')">Reservar
+                                ahora</button>
+                        </div>
+                    </div>
+                    <!-- Promo 4 -->
+                    <div class="promo-card">
+                        <div class="image-container">
+                            <img src="/img/paginaSpa/promos/Promo4.jpg" alt="Promo 4">
+                            <div class="image-overlay">
+                                <i class="fas fa-eye"></i>
+                            </div>
+                        </div>
+                        <div class="promo-content">
+                            <h3>Promo 4</h3>
+                            <p>Renueva tu piel con nuestra limpieza facial profunda.
+                                La fangoterapia y los productos hidratantes dejarán tu rostro radiante y luminoso.
+                            </p>
+                            <button class="btn" onclick="mostrarPromoPopup('https://tinyurl.com/23gsjdq3')">Reservar
+                                ahora</button>
+                        </div>
+                    </div>
+                    <!-- Promo 5 -->
+                    <div class="promo-card">
+                        <div class="image-container">
+                            <img src="/img/paginaSpa/promos/Promo5.jpg" alt="Promo 5">
+                            <div class="image-overlay">
+                                <i class="fas fa-eye"></i>
+                            </div>
+                        </div>
+                        <div class="promo-content">
+                            <h3>Promo 5</h3>
+                            <p>Reconecta contigo mismo o disfruta de una experiencia
+                                única junto a esa persona especial. Combina un masaje relajante o descontracturante
+                                con una limpieza facial profunda y un tratamiento corporal que nutrirá tu piel. ¡La
+                                combinación perfecta para desconectar y pasar un momento inolvidable!.</p>
+                            <button class="btn" onclick="mostrarPromoPopup('https://tinyurl.com/24m5w6pe')">Reservar
+                                ahora</button>
+                        </div>
+                    </div>
+                    <!-- Promo relax 1 -->
+                    <div class="promo-card">
+                        <div class="image-container">
+                            <img src="/img/paginaSpa/promos/promoRelax1.jpg" alt="Promo relax 1">
+                            <div class="image-overlay">
+                                <i class="fas fa-eye"></i>
+                            </div>
+                        </div>
+                        <div class="promo-content">
+                            <h3>Promo Relax 1</h3>
+                            <p>Relájate y desconecta del estrés ó comparte un momento
+                                de bienestar con tu pareja. Nuestro circuito incluye masaje relajante con un baño en
+                                nuestro hidromasaje con sales aromáticas y una deliciosa merienda. ¡El regalo
+                                perfecto para celebrar cualquier ocasión!.</p>
+                            <button class="btn" onclick="mostrarPromoPopup('https://tinyurl.com/28ge8ov7')">Reservar
+                                ahora</button>
+                        </div>
+                    </div>
+                    <!-- Promo relax 2 -->
+                    <div class="promo-card destacada">
+                        <div class="image-container">
+                            <img src="/img/paginaSpa/promos/promoRelax2.jpg" alt="Promo relax 2">
+                            <div class="image-overlay">
+                                <i class="fas fa-eye"></i>
+                            </div>
+                        </div>
+                        <div class="promo-content">
+                            <h3>Promo Relax 2</h3>
+                            <p>Regálate a ti o disfruta de una experiencia de lujo con
+                                tu pareja. Combina un masaje descontracturante con piedras calientes y pindas
+                                herbáticas, un facial hidratante y una relajación profunda. ¡La escapada perfecta
+                                para desconectar!.</p>
+                            <button class="btn" onclick="mostrarPromoPopup('https://tinyurl.com/29rynr3z')">Reservar
+                                ahora</button>
+                        </div>
+                    </div>
+                    <!-- Promo romance -->
+                    <div class="promo-card destacada">
+                        <div class="image-container">
+                            <img src="/img/paginaSpa/promos/promoRomance.jpg" alt="Promo romance">
+                            <div class="image-overlay">
+                                <i class="fas fa-eye"></i>
+                            </div>
+                        </div>
+                        <div class="promo-content">
+                            <h3>Promo Romance</h3>
+                            <p>Enciende la llama de la pasión con nuestra promoción
+                                romántica. Disfruta de un masaje relajante para dos, exfoliación corporal y sauna
+                                finlandés. ¡Una velada inolvidable para celebrar el amor!.</p>
+                            <button class="btn" onclick="mostrarPromoPopup('https://tinyurl.com/2dpjfty6')">Reservar
+                                ahora</button>
+                        </div>
+                    </div>
+                    <!-- Promo tardes para compartir -->
+                    <div class="promo-card destacada-3">
+                        <div class="image-container">
+                            <img src="/img/paginaSpa/promos/tardesParaCompartir.jpg" alt="Promo tardes para compartir">
+                            <div class="image-overlay">
+                                <i class="fas fa-eye"></i>
+                            </div>
+                        </div>
+                        <div class="promo-content">
+                            <h3>Tardes para Compartir</h3>
+                            <p>¡Reúne a tus amigas y disfruta de una tarde de relax y
+                                diversión en nuestro spa!. Masajes, exfoliaciones, sauna y una deliciosa merienda te
+                                esperan. <br> Aprovecha un 10% de dcto viniendo los miercoles!</p>
+                            <button class="btn" onclick="mostrarPromoPopup('https://tinyurl.com/2bzmk2bo')">Reservar
+                                ahora</button>
+                        </div>
+                    </div>
+                    <!-- Promo cumple -->
+                    <div class="promo-card">
+                        <div class="image-container">
+                            <img src="/img/paginaSpa/promos/promoCumple.jpg" alt="Promo cumple">
+                            <div class="image-overlay">
+                                <i class="fas fa-eye"></i>
+                            </div>
+                        </div>
+                        <div class="promo-content">
+                            <h3>Promo Cumple</h3>
+                            <p>¡Celebra tu cumpleaños por todo lo alto! Nuestro
+                                paquete especial incluye masaje, facial, aromaterapia y una deliosa merienda. ¡Te
+                                haremos sentir especial en tu día!.</p>
+                            <button class="btn" onclick="mostrarPromoPopup('https://tinyurl.com/27jr7sso')">Reservar
+                                ahora</button>
+                        </div>
+                    </div>
+                    <!-- Promo navidad -->
+                    <!-- <div class="promo-card destacada-2">
+                        <div class="image-container">
+                            <img src="img/promos/promoNavidad.jpg" alt="Promo navidad">
+                            <div class="image-overlay">
+                                <i class="fas fa-eye"></i>
+                            </div>
+                        </div>
+                        <div class="promo-content">
+                            <h3>Promo Navideña</h3>
+                            <p>Regala bienestar esta Navidad. Nuestra promoción incluye un masaje sueco para aliviar
+                                tensiones,
+                                terapia de calor para relajar los músculos y un tratamiento facial o corporal para
+                                renovar tu piel.
+                                ¡Completo tu experiencia con una copa de vino y una merienda deliciosa!</p>
+                            <button class="btn" onclick="mostrarPromoPopup('https://tinyurl.com/2cgg9gqd')">Reservar
+                                ahora</button>
+                        </div>
+                    </div> -->
+                    <!-- Super Promo -->
+                    <div class="promo-card">
+                        <div class="image-container">
+                            <img src="/img/paginaSpa/promos/superPromo.jpg" alt="super promo">
+                            <div class="image-overlay">
+                                <i class="fas fa-eye"></i>
+                            </div>
+                        </div>
+                        <div class="promo-content">
+                            <h3>Super Promo</h3>
+                            <p>Aprovechá 3 sesiones de masajes de 60 minutos a solo $60.000. Disponible durante todo
+                                el
+                                mes de Febrero!</p>
+                            <button class="btn" onclick="mostrarPromoPopup('https://tinyurl.com/29g57qqj')">Reservar
+                                ahora</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Popup de confirmacion TyC -->
+            <div class="promo-popup" id="terminos-promo-popup">
+                <div class="promo-popup-content">
+                    <p>Antes de continuar, te invitamos a leer nuestros <a
+                            href="/TerminosYCondiciones/terminos-y-condiciones.html" target="_blank">Términos y
+                            Condiciones</a> <br> Al hacer clic en 'Aceptar',
+                        confirmas que has leído y estás de acuerdo con ellos.</p>
+                    <button onclick="cerrarPromoPopup()" class="promo-popup-cancel-btn">Cancelar</button>
+                    <button onclick="aceptarPromoPopup()" class="promo-popup-accept-btn">Aceptar</button>
+                </div>
+            </div>
+
+            <!-- Imagen ampliada de promos -->
+            <div id="imagePopup" class="image-popup">
+                <span class="close-image-popup" onclick="closeImagePopup()">&times;</span>
+                <img id="popupImageAmpliada" src="" alt="Imagen ampliada">
+            </div>
+        </section>
+
+        <hr>
+
+        <!-- ===== SERVICIOS ===== -->
+        <section id="servicios" class="services lazy-section">
+            <div class="container">
+                <h2>Nuestros Servicios</h2>
+                <div class="service-grid">
+                    <!-- card 1 - masajes descontracturantes -->
+                    <div class="service-card">
+                        <img src="/img/paginaSpa/servicios/iconos/servicios-icono-masaje-descontracturante.png"
+                            alt="masajes descontracturantes">
+                        <h3>Masajes Descontracturantes</h3>
+                        <p>Disfrutá de un masaje profundo y relajante, diseñado para aliviar dolores musculares.</p>
+                        <button class="service-btn" data-service="masajes-descontracturantes">Mas Info</button>
+                    </div>
+                    <!-- card 2 - masajes relajantes -->
+                    <div class="service-card">
+                        <img src="/img/paginaSpa/servicios/iconos/servicios-icono-masaje-relajante.png"
+                            alt="masajes relajantes">
+                        <h3>Masajes relajantes</h3>
+                        <p>Disfruta de un momento de calma y bienestar con nuestros masajes relajantes.</p>
+                        <button class="service-btn" data-service="masajes-relajantes">Mas Info</button>
+                    </div>
+                    <!-- card 3 - masajes sedativos -->
+                    <div class="service-card">
+                        <img src="/img/paginaSpa/servicios/iconos/servicios-icono-masaje-sedativo.png"
+                            alt="masajes sedativos">
+                        <h3>Masajes sedativos</h3>
+                        <p>Sumérgete en un estado de profunda relajación con nuestro masaje sedativo, desconecta de
+                            la
+                            rutina y alivia el estrés.</p>
+                        <button class="service-btn" data-service="masajes-sedativos">Mas Info</button>
+                    </div>
+                    <!-- card 4 - masaje sueco -->
+                    <div class="service-card">
+                        <img src="/img/paginaSpa/servicios/iconos/servicios-icono-masaje-sueco.png" alt="masaje sueco">
+                        <h3>Masaje sueco</h3>
+                        <p>Experimenta la técnica sueca, ideal para relajar músculos, aliviar tensiones y mejorar la
+                            circulación.</p>
+                        <button class="service-btn" data-service="masaje-sueco">Mas Info</button>
+                    </div>
+                    <!-- card 5 - hidromasaje -->
+                    <div class="service-card">
+                        <img src="/img/paginaSpa/servicios/iconos/servicios-icono-hidromasaje.png" alt="hidromasaje">
+                        <h3>Hidromasaje</h3>
+                        <p>Sumérgete en nuestro hidromasaje y deja que el agua caliente y las burbujas alivien tus
+                            tensiones.</p>
+                        <button class="service-btn" data-service="hidromasaje">Mas Info</button>
+                    </div>
+                    <!-- card 6 - sauna finalndes -->
+                    <div class="service-card">
+                        <img src="/img/paginaSpa/servicios/iconos/servicios-icono-sauna.png" alt="sauna finlandes">
+                        <h3>Sauna Finlandés</h3>
+                        <p>Experimenta los beneficios del sauna tradicional finlandés.</p>
+                        <button class="service-btn" data-service="sauna">Mas Info</button>
+                    </div>
+                    <!-- card 7 - Limpieza de cutis -->
+                    <div class="service-card">
+                        <img src="/img/paginaSpa/servicios/iconos/servicios-icono-faciales.png" alt="limpieza de cutis">
+                        <h3>Limpieza de cutis</h3>
+                        <p>Luce una piel radiante con nuestra limpieza facial y revitaliza tu cutis.</p>
+                        <button class="service-btn" data-service="cutis">Mas Info</button>
+                    </div>
+                    <!-- card 8 - Exfoliaciones -->
+                    <div class="service-card">
+                        <img src="/img/paginaSpa/servicios/iconos/servicios-icono-exfoliaciones.png"
+                            alt="exfoliaciones">
+                        <h3>Exfoliaciones</h3>
+                        <p>Exfoliaciones corporales para una piel suave y tersa.</p>
+                        <button class="service-btn" data-service="exfoliaciones">Mas Info</button>
+                    </div>
+                    <!-- card 9 - piscina -->
+                    <div class="service-card">
+                        <img src="/img/paginaSpa/servicios/iconos/servicios-icono-piscina.png" alt="piscina">
+                        <h3>Piscina</h3>
+                        <p>Disfruta de un baño refrescante en nuestra piscina al aire libre.</p>
+                        <button class="service-btn" data-service="piscina">Mas Info</button>
+                    </div>
+                    <!-- card 10 - Meriendas -->
+                    <div class="service-card">
+                        <img src="/img/paginaSpa/servicios/iconos/servicios-icono-meriendas.png" alt="meriendas">
+                        <h3>Meriendas</h3>
+                        <p>Complementa tu experiencia con nuestras exquisitas meriendas.</p>
+                        <button class="service-btn" data-service="meriendas">Mas Info</button>
+                    </div>
+                    <!-- card 11 - circuitos -->
+                    <div class="service-card">
+                        <img src="/img/paginaSpa/servicios/iconos/servicios-icono-circuitos.png" alt="circuitos de spa">
+                        <h3>Circuitos de Spa</h3>
+                        <p>Vive una experiencia única con nuestros circuitos de spa que te transportarán a un estado
+                            de
+                            relajación total.</p>
+                        <button class="service-btn" data-service="circuitos">Mas Info</button>
+                    </div>
+                    <!-- card 12 - promociones -->
+                    <div class="service-card">
+                        <img src="/img/paginaSpa/servicios/iconos/servicios-icono-promociones.png" alt="promociones">
+                        <h3>Promociones</h3>
+                        <p>No te pierdas nuestras promociones, descubre promos especiales y regálate un momento de
+                            bienestar.</p>
+                        <button class="service-btn" data-service="promociones">Mas Info</button>
+                    </div>
+                </div>
+            </div>
+            <!-- popup servicios -->
+            <div class="popup-servicios">
+                <div class="popup-servicios-content">
+                    <img src="" alt="" class="popup-servicios-img">
+                    <div class="popup-servicios-text">
+                        <h3 class="popup-servicios-title"></h3>
+                        <p class="popup-servicios-description"></p>
+                    </div>
+                </div>
+                <button class="popup-servicios-close">&times;</button>
+            </div>
+        </section>
+
+        <hr>
+
+        <!-- ===== NOSOTROS ===== -->
+        <section class="about container">
+            <div class="container">
+                <h2>Sobre Nuestro Spa</h2>
+                <div class="about-content">
+                    <img src="/img/paginaSpa/Otros/imagenSobreNosotros.webp" alt="Sobre nuestro spa"
+                        class="img-about-inicio">
+                    <div class="about-text">
+                        <p>En nuestro spa, nos dedicamos a proporcionar una experiencia de relajación y bienestar
+                            incomparable. Ofrecemos una amplia variedad de circuitos diseñados para revitalizar su
+                            cuerpo y mente, incluyendo: </p>
+                        <ul>
+                            <li>Masajes descontracturantes, relajantes, sedativos</li>
+                            <li>Piedras calientes, pindas herbáticas, almohadillas térmicas</li>
+                            <li>Tratamientos faciales</li>
+                            <li>Exfoliaciones</li>
+                            <li>Hidromasaje, Sauna finlandés</li>
+                            <li>Piscina y Meriendas</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <hr>
+
+        <!-- ===== TESTIMONIOS ===== -->
+        <section class="testimonials lazy-section">
+            <div class="container">
+                <h2>Lo que dicen nuestros clientes</h2>
+                <div class="swiper-container swiper">
+                    <div class="card-wrapper">
+                        <ul class="card-list swiper-wrapper">
+
+                            <!-- Card 1 -->
+                            <li class="card-item swiper-slide">
+                                <div class="card-div">
+                                    <img src="/img/paginaSpa/testimonios/testimonio1.jpg" alt="testimonio 1"
+                                        class="testimonial-img">
+                                </div>
+                            </li>
+                            <!-- Card 2 -->
+                            <li class="card-item swiper-slide">
+                                <div class="card-div">
+                                    <img src="/img/paginaSpa/testimonios/testimonio2.jpg" alt="testimonio 2"
+                                        class="testimonial-img">
+                                </div>
+                            </li>
+                            <!-- Card 3 -->
+                            <li class="card-item swiper-slide">
+                                <div class="card-div">
+                                    <img src="/img/paginaSpa/testimonios/testimonio3.jpg" alt="testimonio 3"
+                                        class="testimonial-img">
+                                </div>
+                            </li>
+                            <!-- Card 4 -->
+                            <li class="card-item swiper-slide">
+                                <div class="card-div">
+                                    <img src="/img/paginaSpa/testimonios/testimonio4.jpg" alt="testimonio 4"
+                                        class="testimonial-img">
+                                </div>
+                            </li>
+                            <!-- Card 5 -->
+                            <li class="card-item swiper-slide">
+                                <div class="card-div">
+                                    <img src="/img/paginaSpa/testimonios/testimonio5.jpg" alt="testimonio 5"
+                                        class="testimonial-img">
+                                </div>
+                            </li>
+                            <!-- Card 6 -->
+                            <li class="card-item swiper-slide">
+                                <div class="card-div">
+                                    <img src="/img/paginaSpa/testimonios/testimonio6.jpg" alt="testimonio 6"
+                                        class="testimonial-img">
+                                </div>
+                            </li>
+
+                        </ul>
+
+                        <div class="swiper-pagination"></div>
+                        <div class="swiper-slide-button swiper-button-next"></div>
+                        <div class="swiper-slide-button swiper-button-prev"></div>
+                    </div>
+                </div>
+            </div>
+            <button class="share-experience" onclick="window.open('https://bit.ly/tuExperiencia')">
+                <div>
+                    <span>
+                        <p>Comparte tu experiencia</p>
+                        <p>📍</p>
+                    </span>
+                </div>
+                <div>
+                    <span>
+                        <p class="p2">Gracias!</p>
+                        <p>😄</p>
+                    </span>
+                </div>
+            </button>
+        </section>
+
+        <hr>
+
+        <!-- ===== GALERIA ===== -->
+        <section id="galeria" class="gallery lazy-section">
+            <div class="container">
+                <h2>Nuestra Galeria</h2>
+                <div class="gallery-grid">
+                    <div class="gallery-item">
+                        <img class="img-gallery-inicio" data-src="/img/paginaSpa/galeria/galeria1.webp"
+                            alt="Masajes descontracturantes">
+                    </div>
+                    <div class="gallery-item">
+                        <img class="img-gallery-inicio" data-src="/img/paginaSpa/galeria/galeria2.webp"
+                            alt="Masajes sedativos">
+                    </div>
+                    <div class="gallery-item">
+                        <img class="img-gallery-inicio" data-src="/img/paginaSpa/galeria/galeria3.webp"
+                            alt="Masajes relajantes">
+                    </div>
+                    <div class="gallery-item">
+                        <img class="img-gallery-inicio" data-src="/img/paginaSpa/galeria/galeria4.webp"
+                            alt="Piedras calientes">
+                    </div>
+                    <div class="gallery-item">
+                        <img class="img-gallery-inicio" data-src="/img/paginaSpa/galeria/galeria5.webp"
+                            alt="Pindas herbaticas">
+                    </div>
+                    <div class="gallery-item">
+                        <img class="img-gallery-inicio" data-src="/img/paginaSpa/galeria/galeria6.webp"
+                            alt="Exfoliaciones">
+                    </div>
+                    <div class="gallery-item">
+                        <img class="img-gallery-inicio" data-src="/img/paginaSpa/galeria/galeria7.webp" alt="Faciales">
+                    </div>
+                    <div class="gallery-item">
+                        <img class="img-gallery-inicio" data-src="/img/paginaSpa/galeria/galeria8.webp" alt="Pileta">
+                    </div>
+                    <div class="gallery-item">
+                        <img class="img-gallery-inicio" data-src="/img/paginaSpa/galeria/galeria9.webp" alt="Meriendas">
+                    </div>
+                    <div class="gallery-item">
+                        <img class="img-gallery-inicio" data-src="/img/paginaSpa/galeria/galeria10.webp"
+                            alt="Meriendas">
+                    </div>
+                </div>
+                <!-- <a href="Galeria/galeria.html" class="btn" target="_blank">Ver mas</a> -->
+            </div>
+        </section>
+
+        <hr>
+
+        <!-- ==== CONTACTO ==== -->
+        <section id="contacto" class="contact container">
+            <h2>Contáctanos</h2>
+            <div class="contact-cards">
+                <div class="contact-card" onclick="window.open('https://wa.me/542615104019')">
+                    <!-- <div class="contact-icon"><i class="fa-brands fa-whatsapp" style="color: #31c462;"></i></div> -->
+                    <div class="contact-icon"><img src="/img/paginaSpa/logos/icon-whatsapp-animated.gif"
+                            alt="whatsapp icon"></div>
+                    <h3 class="contact-title">WhatsApp</h3>
+                    <p class="contact-info">+54 9 261 510 4019</p>
+                </div>
+                <div class="contact-card" onclick="window.open('https://instagram.com/anandi.spa')">
+                    <!-- <div class="contact-icon"><i class="fa-regular fa-envelope" style="color: #e33b3b;"></i></div> -->
+                    <div class="contact-icon"><img src="/img/paginaSpa/logos/icon-instagram-animated.gif"
+                            alt="email icon"></div>
+                    <h3 class="contact-title">Instagram</h3>
+                    <p class="contact-info">@anandi.spa</p>
+                </div>
+            </div>
+        </section>
+
+
+
+        <!-- boton de whastapp -->
+        <a href="https://wa.me/542615104019" id="mostrarWapp" class="whatsapp-btn" target="_blank">
+            <i class="fa-brands fa-whatsapp"></i>
+        </a>
+    </main>
+
+    <!-- Footer -->
+    <footer id="footer">
+        <div class="container">
+            <!-- First Row -->
+            <div class="footer-row">
+                <div class="footer-logo">
+                    <a href="#"><img src="img/logos/ASlogoLetrasBlancoVectorizadoPng.png" alt="Anandi Spa Logo"></a>
+                </div>
+                <div class="footer-social">
+                    <a href="https://www.instagram.com/anandi.spa" target="_blank" aria-label="Instagram"><i
+                            class="fa-brands fa-instagram"></i></a>
+                    <a href="https://www.facebook.com/spa.anandi" target="_blank" aria-label="Facebook"><i
+                            class="fa-brands fa-facebook"></i></a>
+                    <a href="https://wa.me/542615104019" target="_blank" aria-label="WhatsApp"><i
+                            class="fa-brands fa-whatsapp"></i></a>
+                </div>
+            </div>
+            <!-- Second Row -->
+            <div class="footer-row">
+                <div class="footer-column">
+                    <h4>Menu Principal</h4>
+                    <ul>
+                        <li><a href="#inicio smoothscroll">Inicio</a></li>
+                        <li><a href="#promos smoothscroll">Promos</a></li>
+                        <li><a href="#servicios smoothscroll">Servicios</a></li>
+                        <li><a href="#galeria smoothscroll">Galeria</a></li>
+                        <li><a href="Productos/productos.html" target="_blank">Tienda</a></li>
+                        <li><a href="#contacto smoothscroll">Contacto</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Nuestros Servicios</h4>
+                    <ul>
+                        <li><a href="#footer">Masajes</a></li>
+                        <li><a href="#footer">Piedras y Pindas</a></li>
+                        <li><a href="#footer">Hidromasaje</a></li>
+                        <li><a href="#footer">Sauna finlandés</a></li>
+                        <li><a href="#footer">Faciales</a></li>
+                        <li><a href="#footer">Exfoliaciones</a></li>
+                        <li><a href="#footer">Piscina</a></li>
+                        <li><a href="#footer">Meriendas</a></li>
+                        <li><a href="#footer">Promociones</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Informacion</h4>
+                    <ul>
+                        <li><a href="/TerminosYCondiciones/terminos-y-condiciones.html" target="_blank">Términos y
+                                Condiciones</a></li>
+                        <li><a href="/PoliticaDePrivacidad/politica-de-privacidad.html" target="_blank">Politica de
+                                Privacidad</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column footer-contact-link">
+                    <h4>Contacto Rapido</h4>
+                    <ul>
+                        <li><a href="https://wa.me/542615104019" target="_blank"><i class="fa-brands fa-whatsapp"></i>
+                                +549 261 510 4019</a></li>
+                        <li><a href="mailto:anandispaestetica@gmail.com" target="_blank"><i
+                                    class="fa-solid fa-envelope"></i> anandispaestetica@gmail.com</a></li>
+                    </ul>
+                </div>
+            </div>
+            <!-- Third Row -->
+            <div class="footer-row">
+                <p class="footer-copy-1">Anandi Spa &bull; 2020 - 2025</p>
+                <p class="footer-copy-2">Página desarrollada por <a href="#" target="_blank">GC.CodeDevs</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- footer viejo -->
+    <!-- <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-copy">
+                    <p>Página desarrollada por
+                        <a href="#" target="_blank">GC.CodeDevs</a>
+                    </p>
+                </div>
+                <div class="footer-links">
+                    <a href="#">Anandi Spa &bull; 2024</a>
+                    <a href="/TerminosYCondiciones/terminos-y-condiciones.html" target="_blank">Términos y
+                        Condiciones</a>
+                    <a href="/PoliticaDePrivacidad/politica-de-privacidad.html" target="_blank">Politica de
+                        Privacidad</a>
+                </div>
+                <div class="social-links">
+                    <a class="social-link" href="https://www.instagram.com/anandi.spa" target="_blank"
+                        aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                    <a class="social-link" href="https://www.facebook.com/spa.anandi" target="_blank"
+                        aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a>
+                    <a class="social-link" href="https://wa.me/542615104019" target="_blank" aria-label="WhatsApp"><i
+                            class="fa-brands fa-whatsapp"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer> -->
+
+
+    <!-- Plugin MOVETO JS -->
+    <script src="/Js/plugins.js"></script>
+
+    <!-- script smoothScroll -->
+    <script src="/Js/smoothScroll.js"></script>
+
+
+
+    <!-- SWIPER JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <!-- ========== Main Js ========== -->
+    <script src="main.js"></script>
+
+
+
+</body>
+
+</html>

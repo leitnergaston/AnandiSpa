@@ -1,0 +1,118 @@
+/* LOADER */
+.loader-img {
+    width: 15%;
+    position: absolute;
+}
+
+.loader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #ffccaa;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    z-index: 9999;
+    cursor: wait;
+}
+
+.loader-spinner {
+    position: absolute;
+    transform: translateZ(0) scale(1);
+    backface-visibility: hidden;
+    transform-origin: 0 0;
+    top: 60%;
+}
+
+.loader-spinner div {
+    box-sizing: content-box;
+}
+
+body {
+    overflow: hidden;
+}
+
+@keyframes loader-spinner {
+    0% {
+        opacity: 1
+    }
+
+    100% {
+        opacity: 0
+    }
+}
+
+.loader-spinner div {
+    position: absolute;
+    animation: loader-spinner linear 1s infinite;
+    background: #5e3609;
+    width: 12px;
+    height: 24px;
+    border-radius: 6px / 12px;
+    transform-origin: 6px 42px;
+}
+
+/* Manteniendo la rotación de los elementos */
+.loader-spinner div:nth-child(1) {
+    transform: rotate(0deg);
+    animation-delay: -0.916s;
+}
+
+.loader-spinner div:nth-child(2) {
+    transform: rotate(30deg);
+    animation-delay: -0.833s;
+}
+
+.loader-spinner div:nth-child(3) {
+    transform: rotate(60deg);
+    animation-delay: -0.75s;
+}
+
+.loader-spinner div:nth-child(4) {
+    transform: rotate(90deg);
+    animation-delay: -0.666s;
+}
+
+.loader-spinner div:nth-child(5) {
+    transform: rotate(120deg);
+    animation-delay: -0.583s;
+}
+
+.loader-spinner div:nth-child(6) {
+    transform: rotate(150deg);
+    animation-delay: -0.5s;
+}
+
+.loader-spinner div:nth-child(7) {
+    transform: rotate(180deg);
+    animation-delay: -0.416s;
+}
+
+.loader-spinner div:nth-child(8) {
+    transform: rotate(210deg);
+    animation-delay: -0.333s;
+}
+
+.loader-spinner div:nth-child(9) {
+    transform: rotate(240deg);
+    animation-delay: -0.25s;
+}
+
+.loader-spinner div:nth-child(10) {
+    transform: rotate(270deg);
+    animation-delay: -0.166s;
+}
+
+.loader-spinner div:nth-child(11) {
+    transform: rotate(300deg);
+    animation-delay: -0.083s;
+}
+
+.loader-spinner div:nth-child(12) {
+    transform: rotate(330deg);
+    animation-delay: 0s;
+}
+
