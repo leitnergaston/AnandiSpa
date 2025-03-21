@@ -6,10 +6,10 @@
 // })
 
 // tiempo del loader para detectar cuando toda la pagina se ha cargado por compelto
-window.onload = function() {
+window.onload = function () {
     setTimeout(() => {
-        // ocultar el loader
-        document.querySelector('.loader').style.display = 'none';
+        document.querySelector(".loader").classList.add("loader-hidden");
+        // Vuelve a habilitar el scroll
         document.body.style.overflow = 'auto';
-    }, 2000);
+    }, 1500);
 }
