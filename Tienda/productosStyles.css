@@ -335,17 +335,17 @@ footer p {
     }
 
     footer .social-icons a {
-        font-size: 1em;
+        font-size: 1.2em;
     }
 }
 
 @media (max-width: 480px) {
     footer {
-        font-size: 0.7em;
+        font-size: 0.8em;
     }
 
     footer .social-icons a {
-        font-size: 0.9em;
+        font-size: 1.2em;
     }
 }
 

@@ -168,7 +168,7 @@ const products = [
         image: './img/017.jpg',
         description: 'Hipoalergénico color "Outono" 8ml vegano',
         orderLink: 'https://wa.me/+5492615104019',
-        category: 'Natura'
+        category: 'Esmaltes'
     },
     {
         id: 18,
@@ -178,7 +178,7 @@ const products = [
         image: './img/018.jpg',
         description: 'Hipoalergénico color "Calor" 8ml vegano',
         orderLink: 'https://wa.me/+5492615104019',
-        category: 'Natura'
+        category: 'Esmaltes'
     },
     {
         id: 19,
@@ -188,7 +188,7 @@ const products = [
         image: './img/019.jpg',
         description: 'Hipoalergénico color "Pitanga" 8ml vegano',
         orderLink: 'https://wa.me/+5492615104019',
-        category: 'Natura'
+        category: 'Esmaltes'
     },
     {
         id: 20,
@@ -198,7 +198,7 @@ const products = [
         image: './img/020.jpg',
         description: 'Hipoalergénico color "Beijo" 8ml vegano',
         orderLink: 'https://wa.me/+5492615104019',
-        category: 'Natura'
+        category: 'Esmaltes'
     },
     {
         id: 21,
@@ -208,7 +208,7 @@ const products = [
         image: './img/021.jpg',
         description: 'Hipoalergénico color "Praia" 8ml vegano',
         orderLink: 'https://wa.me/+5492615104019',
-        category: 'Natura'
+        category: 'Esmaltes'
     },
     {
         id: 22,
@@ -218,7 +218,7 @@ const products = [
         image: './img/022.jpg',
         description: 'Hipoalergénico color "Car de pimenta" 8ml vegano',
         orderLink: 'https://wa.me/+5492615104019',
-        category: 'Natura'
+        category: 'Esmaltes'
     },
     {
         id: 23,
@@ -228,7 +228,7 @@ const products = [
         image: './img/023.jpg',
         description: 'Hipoalergénico color "Una n°1" 8ml vegano',
         orderLink: 'https://wa.me/+5492615104019',
-        category: 'Natura'
+        category: 'Esmaltes'
     },
     {
         id: 24,
@@ -238,7 +238,7 @@ const products = [
         image: './img/024.jpg',
         description: 'Hipoalergénico color "Flores" 8ml vegano',
         orderLink: 'https://wa.me/+5492615104019',
-        category: 'Natura'
+        category: 'Esmaltes'
     },
     {
         id: 25,
@@ -248,7 +248,7 @@ const products = [
         image: './img/025.jpg',
         description: 'Hipoalergénico color "Flores" 8ml vegano',
         orderLink: 'https://wa.me/+5492615104019',
-        category: 'Natura'
+        category: 'Esmaltes'
     },
     {
         id: 26,
@@ -258,7 +258,7 @@ const products = [
         image: './img/026.jpg',
         description: 'Baton color hidra, lápiz 3,5g, aquarela Natura',
         orderLink: 'https://wa.me/+5492615104019',
-        category: 'Natura'
+        category: 'Labiales'
     },
     {
         id: 27,
@@ -268,7 +268,7 @@ const products = [
         image: './img/027.jpg',
         description: 'Baton color hidra',
         orderLink: 'https://wa.me/+5492615104019',
-        category: 'Natura'
+        category: 'Labiales'
     },
     {
         id: 28,
@@ -278,7 +278,7 @@ const products = [
         image: './img/028.jpg',
         description: 'Baton Aquarela Natura',
         orderLink: 'https://wa.me/+5492615104019',
-        category: 'Natura'
+        category: 'Labiales'
     },
     {
         id: 29,
@@ -288,7 +288,7 @@ const products = [
         image: './img/029.jpg',
         description: 'Baton color hidra',
         orderLink: 'https://wa.me/+5492615104019',
-        category: 'Natura'
+        category: 'Labiales'
     },
     {
         id: 30,
@@ -298,7 +298,7 @@ const products = [
         image: './img/030.jpg',
         description: 'Baton color hidra',
         orderLink: 'https://wa.me/+5492615104019',
-        category: 'Natura'
+        category: 'Labiales'
     },
     // {
     //     id: 31,
@@ -328,7 +328,7 @@ const products = [
         image: './img/033.jpg',
         description: 'Batom CC lapiz labial, 3.8g, "Rouge 8C"',
         orderLink: 'https://wa.me/+5492615104019',
-        category: 'Natura'
+        category: 'Labiales'
     },
     {
         id: 34,
@@ -338,7 +338,7 @@ const products = [
         image: './img/034.jpg',
         description: 'Batom acetinado en óleo 7ml',
         orderLink: 'https://wa.me/+5492615104019',
-        category: 'Natura'
+        category: 'Labiales'
     },
     {
         id: 35,
@@ -348,7 +348,7 @@ const products = [
         image: './img/035.jpg',
         description: 'Batom satinado en óleo',
         orderLink: 'https://wa.me/+5492615104019',
-        category: 'Natura'
+        category: 'Labiales'
     },
     {
         id: 36,
@@ -358,7 +358,7 @@ const products = [
         image: './img/036.jpg',
         description: 'Batom satinado en óleo',
         orderLink: 'https://wa.me/+5492615104019',
-        category: 'Natura'
+        category: 'Labiales'
     },
     {
         id: 37,
@@ -368,7 +368,7 @@ const products = [
         image: './img/037.jpg',
         description: 'Batom satinado en óleo',
         orderLink: 'https://wa.me/+5492615104019',
-        category: 'Natura'
+        category: 'Labiales'
     },
     // {
     //     id: 38,
