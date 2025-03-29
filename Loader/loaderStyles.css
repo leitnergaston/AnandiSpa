@@ -24,6 +24,7 @@
 .loader-hidden {
     opacity: 0;
     visibility: hidden;
+    cursor: auto;
 }
 
 .loader-spinner {

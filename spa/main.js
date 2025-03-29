@@ -268,7 +268,7 @@ const serviceDetails = {
     },
     'exfoliaciones': {
         title: 'Exfoliaciones',
-        description: 'Elimina células muertas, estimulando al regeneración de la piel. Reduce la apariencia de manchas y cicatrices. Aumenta la luminosidad. Mejora la textura reduciendo la apariencia de piel áspera y seca. Facilita la absorción de los productos aplicados posteriormente. Previene vellos encarnados.',
+        description: 'Elimina células muertas, estimulando la regeneración de la piel. Reduce la apariencia de manchas y cicatrices. Aumenta la luminosidad. Mejora la textura reduciendo la apariencia de piel áspera y seca. Facilita la absorción de los productos aplicados posteriormente. Previene vellos encarnados.',
         image: '/img/servicios/img/servicios-exfo.jpg'
     },
     'piscina': {

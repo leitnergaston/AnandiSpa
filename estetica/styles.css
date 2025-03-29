@@ -4,6 +4,9 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+
+    /*? para depuracion */
+    /* outline: 1px solid red; */
 }
 
 body {
@@ -505,7 +508,7 @@ footer p {
 }
 
 /* ========== RESPONSIVE ========== */
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 479px) {
     .container h2 {
         font-size: 2rem;
     }
@@ -551,6 +554,14 @@ footer p {
         margin-top: 4rem;
         max-width: 100%;
         margin-bottom: 1rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+    }
+
+    .hero-img img {
+        width: 400px;
     }
 
     .hero-content {
@@ -579,7 +590,7 @@ footer p {
     }
 }
 
-@media (min-width: 482px) and (max-width: 768px) {
+@media (min-width: 480px) and (max-width: 768px) {
     .hamburger {
         display: flex;
     }
@@ -621,6 +632,14 @@ footer p {
         margin-top: 4rem;
         max-width: 100%;
         margin-bottom: 1rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+    }
+
+    .hero-img img {
+        width: 500px;
     }
 
     .hero-content {
