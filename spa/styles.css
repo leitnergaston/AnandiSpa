@@ -11,6 +11,7 @@
     /* --color-bg: #fadac4; */
     --color-bg: #ffccaa;
     --color-text: #5e3609;
+    --color-text-h3: #3d2305;
     --color-hover: #c9802e;
 
     --color-bg-btn: #f0d1c4;
@@ -679,6 +680,7 @@ nav {
 }
 
 .promo-content h3 {
+    color: var(--color-text-h3);
     font-size: 1.5rem;
     margin-bottom: .5rem;
 }

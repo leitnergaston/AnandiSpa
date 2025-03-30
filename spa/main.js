@@ -318,7 +318,7 @@ popupOverlay.addEventListener('click', (e) => {
 });
 
 
-// ===== Imagen ampliada de promos ===== //
+//* ===== Imagen ampliada de promos ===== //
 function openImagePopup(imageUrl) {
     document.getElementById('popupImageAmpliada').src = imageUrl;
     document.getElementById('imagePopup').style.display = 'flex';
@@ -345,7 +345,7 @@ document.getElementById('imagePopup').addEventListener('click', function (event)
 });
 
 
-// ===== SWIPER JS promos destacadas ===== //
+//* ===== SWIPER JS promos destacadas ===== //
 var swiper = new Swiper('.swiper-container', {
     navigation: {
         nextEl: '.swiper-button-next',
