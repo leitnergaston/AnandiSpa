@@ -280,16 +280,16 @@ const products = [
         orderLink: 'https://wa.me/+5492615104019',
         category: 'Labiales'
     },
-    {
-        id: 29,
-        code: 'PROD029',
-        name: 'Labial Faces',
-        price: 13000,
-        image: './img/029.jpg',
-        description: 'Baton color hidra',
-        orderLink: 'https://wa.me/+5492615104019',
-        category: 'Labiales'
-    },
+    // {
+    //     id: 29,
+    //     code: 'PROD029',
+    //     name: 'Labial Faces',
+    //     price: 13000,
+    //     image: './img/029.jpg',
+    //     description: 'Baton color hidra',
+    //     orderLink: 'https://wa.me/+5492615104019',
+    //     category: 'Labiales'
+    // },
     {
         id: 30,
         code: 'PROD030',
@@ -350,16 +350,16 @@ const products = [
         orderLink: 'https://wa.me/+5492615104019',
         category: 'Labiales'
     },
-    {
-        id: 36,
-        code: 'PROD036',
-        name: 'Labial UNA',
-        price: 16000,
-        image: './img/036.jpg',
-        description: 'Batom satinado en óleo',
-        orderLink: 'https://wa.me/+5492615104019',
-        category: 'Labiales'
-    },
+    // {
+    //     id: 36,
+    //     code: 'PROD036',
+    //     name: 'Labial UNA',
+    //     price: 16000,
+    //     image: './img/036.jpg',
+    //     description: 'Batom satinado en óleo',
+    //     orderLink: 'https://wa.me/+5492615104019',
+    //     category: 'Labiales'
+    // },
     {
         id: 37,
         code: 'PROD037',
