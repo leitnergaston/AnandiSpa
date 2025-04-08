@@ -27,18 +27,18 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
     <!-- ESTILOS -->
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="/css/spa.css">
 
     <!-- ESTILOS LOADER -->
-    <link rel="stylesheet" href="/Loader/loaderStyles.css">
+    <link rel="stylesheet" href="/css/loader.css">
 
     <!-- FAVICON -->
-    <link rel="icon" type="image/png" href="/img/paginaSpa/logos/favicon/favicon-96x96.png" sizes="96x96" />
-    <link rel="icon" type="image/svg+xml" href="/img/paginaSpa/logos/favicon/favicon.svg" />
-    <link rel="shortcut icon" href="/img/paginaSpa/logos/favicon/favicon.ico" />
-    <link rel="apple-touch-icon" sizes="180x180" href="/img/paginaSpa/logos/favicon/apple-touch-icon.png" />
-    <meta name="apple-mobile-web-app-title" content="Anandi Spa" />
-    <link rel="manifest" href="/img/paginaSpa/logos/favicon/site.webmanifest" />
+    <!-- <link rel="icon" type="image/png" href="/img/paginaSpa/logos/favicon/favicon-96x96.png" sizes="96x96" /> -->
+    <!-- <link rel="icon" type="image/svg+xml" href="/img/paginaSpa/logos/favicon/favicon.svg" /> -->
+    <!-- <link rel="shortcut icon" href="/img/paginaSpa/logos/favicon/favicon.ico" /> -->
+    <!-- <link rel="apple-touch-icon" sizes="180x180" href="/img/paginaSpa/logos/favicon/apple-touch-icon.png" /> -->
+    <!-- <meta name="apple-mobile-web-app-title" content="Anandi Spa" /> -->
+    <!-- <link rel="manifest" href="/img/paginaSpa/logos/favicon/site.webmanifest" /> -->
 
     <!-- FONTS -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -52,7 +52,7 @@
 
     <!-- Loader -->
     <div class="loader">
-        <img src="/Loader/logoLoader.png" alt="logo anandi" class="loader-img">
+        <img src="/img/loader/logoLoader.png" alt="logo anandi" class="loader-img">
         <div class="loader-spinner">
             <div></div>
             <div></div>
@@ -84,8 +84,9 @@
                 <li class="nav-item"><a href="#servicios" class="nav-link smoothscroll">Servicios</a></li>
                 <li class="nav-item"><a href="#galeria" class="nav-link smoothscroll">Galeria</a></li>
                 <li class="nav-item"><a href="#contacto" class="nav-link smoothscroll">Contacto</a></li>
-                <li class="nav-item"><a href="/estetica/estetica.html" class="nav-link">Estética</a></li>
-                <li class="nav-item"><a href="/Tienda/tienda.html" class="nav-link" target="_blank">Tienda</a></li>
+                <li class="nav-item"><span class="nav-link">|</span></li>
+                <li class="nav-item"><a href="estetica.html" class="nav-link">Estética</a></li>
+                <li class="nav-item"><a href="tienda.html" class="nav-link" target="_blank">Tienda</a></li>
             </ul>
         </nav>
     </header>
@@ -96,7 +97,7 @@
         <section class="hero" id="inicio">
             <div class="hero-container">
                 <div class="hero-img">
-                    <img src="/img/paginaSpa/Otros/imagenHero.png" alt="imagen-inicio" loading="lazy">
+                    <img src="/img/spa/imagenHero.png" alt="imagen-inicio" loading="lazy">
                 </div>
                 <div class="hero-content">
                     <!-- <h1 class="hero-title">Bienvenidos a Anandi Spa</h1> -->
@@ -166,7 +167,7 @@
 
                             <div class="promo-card swiper-slide">
                                 <div class="image-container">
-                                    <img src="/img/paginaSpa/promos/TardesParaCompartir.jpg" alt="tardes para compartir"
+                                    <img src="/img/spa/promos/TardesParaCompartir.jpg" alt="tardes para compartir"
                                         class="swiper-img">
                                 </div>
                                 <div class="swiper-card-content">
@@ -184,29 +185,11 @@
                                 </div>
                             </div>
 
-                            <div class="promo-card swiper-slide">
-                                <div class="image-container">
-                                    <img src="/img/paginaSpa/promos/promoBienestar.jpg" alt="promo bienestar"
-                                        class="swiper-img">
-                                </div>
-                                <div class="swiper-card-content">
-                                    <div class="swiper-card-title">
-                                        <h4>Promo Verano</h4>
-                                    </div>
-                                    <div class="swiper-card-description">
-                                        <p>Nueva promo de verano. Circuito de spa con pileta, 10% dcto todos los
-                                            miercoles.</p>
-                                    </div>
-                                    <div class="swiper-card-link">
-                                        <a onclick="mostrarPromoPopup('https://tinyurl.com/2audv3ky')">Aprovechar
-                                            Oferta!</a>
-                                    </div>
-                                </div>
-                            </div>
+                            
 
                             <div class="promo-card swiper-slide">
                                 <div class="image-container">
-                                    <img src="/img/paginaSpa/promos/superPromo.jpg" alt="super promo"
+                                    <img src="/img/spa/promos/superPromo.jpg" alt="super promo"
                                         class="swiper-img">
                                 </div>
                                 <div class="swiper-card-content">
@@ -219,6 +202,24 @@
                                     <div class="swiper-card-link">
                                         <a onclick="mostrarPromoPopup('https://tinyurl.com/29g57qqj')">Pedir
                                             Super Promo</a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="promo-card swiper-slide">
+                                <div class="image-container">
+                                    <img src="/img/spa/promos/promoCampestre.jpg" alt="promo campestre"
+                                        class="swiper-img">
+                                </div>
+                                <div class="swiper-card-content">
+                                    <div class="swiper-card-title">
+                                        <h4>Promo Campestre</h4>
+                                    </div>
+                                    <div class="swiper-card-description">
+                                        <p>Nueva promo de Otoño. Volvió la promo que tanto pedias!</p>
+                                    </div>
+                                    <div class="swiper-card-link">
+                                        <a onclick="mostrarPromoPopup('https://tinyurl.com/2audv3ky')">Reservar</a>
                                     </div>
                                 </div>
                             </div>
@@ -269,30 +270,25 @@
                         </div>
                     </div> -->
                     <!-- Promo bienestar -->
-                    <div class="promo-card destacada-3">
+                    <div class="promo-card">
                         <div class="image-container">
-                            <img src="/img/paginaSpa/promos/promoBienestar.jpg" alt="Promo bienestar">
+                            <img src="/img/spa/promos/promoCampestre.jpg" alt="Promo Campestre">
                             <div class="image-overlay">
                                 <i class="fas fa-eye"></i>
                             </div>
                         </div>
                         <div class="promo-content">
-                            <h3>Promo Bienestar</h3>
-                            <p>Disfruta de un masaje descontracturante o sueco, seguido de una
-                                relajación con piedras calientes. Nuestra limpieza facial con exfoliante de
-                                coco-vainilla dejará tu piel radiante. Refrescate en nuestra piscina al aire libre.
-                                Y
-                                para finalizar, una deliciosa pizza y una bebida refrescante. <br> 10% de dcto
-                                viniendo
-                                los miercoles!</p>
-                            <button class="btn" onclick="mostrarPromoPopup('https://tinyurl.com/2audv3ky')">Reservar
+                            <h3>Promo Campestre</h3>
+                            <p>Disfruta de un masaje de cuerpo completo con piedras calientes y pindas herbáticas de 60'. Seguido de una
+                                mascarilla facial con rodillo de jade y yoga facial. Y para terminar una rica merienda otoñal de Mate con tostado de jamon crudo y queso.</p>
+                            <button class="btn" onclick="mostrarPromoPopup('https://wa.me/542615104019?text=Hola!%20Queria%20pedir%20la%20Promo%20Campestre..')">Reservar
                                 ahora</button>
                         </div>
                     </div>
                     <!-- Promo 1 -->
                     <div class="promo-card" id="promo1">
                         <div class="image-container">
-                            <img src="/img/paginaSpa/promos/Promo1.jpg" alt="Promo 1">
+                            <img src="/img/spa/promos/Promo1.jpg" alt="Promo 1">
                             <div class="image-overlay">
                                 <i class="fas fa-eye"></i>
                             </div>
@@ -310,7 +306,7 @@
                     <!-- Promo 2 -->
                     <div class="promo-card">
                         <div class="image-container">
-                            <img src="/img/paginaSpa/promos/Promo2.jpg" alt="Promo 2">
+                            <img src="/img/spa/promos/Promo2.jpg" alt="Promo 2">
                             <div class="image-overlay">
                                 <i class="fas fa-eye"></i>
                             </div>
@@ -327,7 +323,7 @@
                     <!-- Promo 3 -->
                     <div class="promo-card">
                         <div class="image-container">
-                            <img src="/img/paginaSpa/promos/Promo3.jpg" alt="Promo 3">
+                            <img src="/img/spa/promos/Promo3.jpg" alt="Promo 3">
                             <div class="image-overlay">
                                 <i class="fas fa-eye"></i>
                             </div>
@@ -344,7 +340,7 @@
                     <!-- Promo 4 -->
                     <div class="promo-card">
                         <div class="image-container">
-                            <img src="/img/paginaSpa/promos/Promo4.jpg" alt="Promo 4">
+                            <img src="/img/spa/promos/Promo4.jpg" alt="Promo 4">
                             <div class="image-overlay">
                                 <i class="fas fa-eye"></i>
                             </div>
@@ -361,7 +357,7 @@
                     <!-- Promo 5 -->
                     <div class="promo-card destacada">
                         <div class="image-container">
-                            <img src="/img/paginaSpa/promos/Promo5.jpg" alt="Promo 5">
+                            <img src="/img/spa/promos/Promo5.jpg" alt="Promo 5">
                             <div class="image-overlay">
                                 <i class="fas fa-eye"></i>
                             </div>
@@ -379,7 +375,7 @@
                     <!-- Promo relax 1 -->
                     <div class="promo-card">
                         <div class="image-container">
-                            <img src="/img/paginaSpa/promos/promoRelax1.jpg" alt="Promo relax 1">
+                            <img src="/img/spa/promos/promoRelax1.jpg" alt="Promo relax 1">
                             <div class="image-overlay">
                                 <i class="fas fa-eye"></i>
                             </div>
@@ -397,7 +393,7 @@
                     <!-- Promo relax 2 -->
                     <div class="promo-card">
                         <div class="image-container">
-                            <img src="/img/paginaSpa/promos/promoRelax2.jpg" alt="Promo relax 2">
+                            <img src="/img/spa/promos/promoRelax2.jpg" alt="Promo relax 2">
                             <div class="image-overlay">
                                 <i class="fas fa-eye"></i>
                             </div>
@@ -415,7 +411,7 @@
                     <!-- Promo romance -->
                     <div class="promo-card destacada">
                         <div class="image-container">
-                            <img src="/img/paginaSpa/promos/promoRomance.jpg" alt="Promo romance">
+                            <img src="/img/spa/promos/promoRomance.jpg" alt="Promo romance">
                             <div class="image-overlay">
                                 <i class="fas fa-eye"></i>
                             </div>
@@ -432,7 +428,7 @@
                     <!-- Promo tardes para compartir -->
                     <div class="promo-card destacada-3">
                         <div class="image-container">
-                            <img src="/img/paginaSpa/promos/tardesParaCompartir.jpg" alt="Promo tardes para compartir">
+                            <img src="/img/spa/promos/tardesParaCompartir.jpg" alt="Promo tardes para compartir">
                             <div class="image-overlay">
                                 <i class="fas fa-eye"></i>
                             </div>
@@ -449,7 +445,7 @@
                     <!-- Promo cumple -->
                     <div class="promo-card">
                         <div class="image-container">
-                            <img src="/img/paginaSpa/promos/promoCumple.jpg" alt="Promo cumple">
+                            <img src="/img/spa/promos/promoCumple.jpg" alt="Promo cumple">
                             <div class="image-overlay">
                                 <i class="fas fa-eye"></i>
                             </div>
@@ -485,7 +481,7 @@
                     <!-- Super Promo -->
                     <div class="promo-card">
                         <div class="image-container">
-                            <img src="/img/paginaSpa/promos/superPromo.jpg" alt="super promo">
+                            <img src="/img/spa/promos/superPromo.jpg" alt="super promo">
                             <div class="image-overlay">
                                 <i class="fas fa-eye"></i>
                             </div>
@@ -505,7 +501,7 @@
             <div class="promo-popup" id="terminos-promo-popup">
                 <div class="promo-popup-content">
                     <p>Antes de continuar, te invitamos a leer nuestros <a
-                            href="/TerminosYCondiciones/terminos-y-condiciones.html" target="_blank">Términos y
+                            href="/paginas/terminos-y-condiciones.html" target="_blank">Términos y
                             Condiciones</a> <br> Al hacer clic en 'Aceptar',
                         confirmas que has leído y estás de acuerdo con ellos.</p>
                     <button onclick="cerrarPromoPopup()" class="promo-popup-cancel-btn">Cancelar</button>
@@ -529,7 +525,7 @@
                 <div class="service-grid">
                     <!-- card 1 - masajes descontracturantes -->
                     <div class="service-card">
-                        <img src="/img/paginaSpa/servicios/iconos/servicios-icono-masaje-descontracturante.png"
+                        <img src="/img/spa/servicios/iconos/servicios-icono-masaje-descontracturante.png"
                             alt="masajes descontracturantes">
                         <h3>Masajes Descontracturantes</h3>
                         <p>Disfrutá de un masaje profundo y relajante, diseñado para aliviar dolores musculares.</p>
@@ -537,7 +533,7 @@
                     </div>
                     <!-- card 2 - masajes relajantes -->
                     <div class="service-card">
-                        <img src="/img/paginaSpa/servicios/iconos/servicios-icono-masaje-relajante.png"
+                        <img src="/img/spa/servicios/iconos/servicios-icono-masaje-relajante.png"
                             alt="masajes relajantes">
                         <h3>Masajes relajantes</h3>
                         <p>Disfruta de un momento de calma y bienestar con nuestros masajes relajantes.</p>
@@ -545,7 +541,7 @@
                     </div>
                     <!-- card 3 - masajes sedativos -->
                     <div class="service-card">
-                        <img src="/img/paginaSpa/servicios/iconos/servicios-icono-masaje-sedativo.png"
+                        <img src="/img/spa/servicios/iconos/servicios-icono-masaje-sedativo.png"
                             alt="masajes sedativos">
                         <h3>Masajes sedativos</h3>
                         <p>Sumérgete en un estado de profunda relajación con nuestro masaje sedativo, desconecta de
@@ -555,7 +551,7 @@
                     </div>
                     <!-- card 4 - masaje sueco -->
                     <div class="service-card">
-                        <img src="/img/paginaSpa/servicios/iconos/servicios-icono-masaje-sueco.png" alt="masaje sueco">
+                        <img src="/img/spa/servicios/iconos/servicios-icono-masaje-sueco.png" alt="masaje sueco">
                         <h3>Masaje sueco</h3>
                         <p>Experimenta la técnica sueca, ideal para relajar músculos, aliviar tensiones y mejorar la
                             circulación.</p>
@@ -563,7 +559,7 @@
                     </div>
                     <!-- card 5 - hidromasaje -->
                     <div class="service-card">
-                        <img src="/img/paginaSpa/servicios/iconos/servicios-icono-hidromasaje.png" alt="hidromasaje">
+                        <img src="/img/spa/servicios/iconos/servicios-icono-hidromasaje.png" alt="hidromasaje">
                         <h3>Hidromasaje</h3>
                         <p>Sumérgete en nuestro hidromasaje y deja que el agua caliente y las burbujas alivien tus
                             tensiones.</p>
@@ -571,21 +567,21 @@
                     </div>
                     <!-- card 6 - sauna finalndes -->
                     <div class="service-card">
-                        <img src="/img/paginaSpa/servicios/iconos/servicios-icono-sauna.png" alt="sauna finlandes">
+                        <img src="/img/spa/servicios/iconos/servicios-icono-sauna.png" alt="sauna finlandes">
                         <h3>Sauna Finlandés</h3>
                         <p>Experimenta los beneficios del sauna tradicional finlandés.</p>
                         <button class="service-btn" data-service="sauna">Mas Info</button>
                     </div>
                     <!-- card 7 - Limpieza de cutis -->
                     <div class="service-card">
-                        <img src="/img/paginaSpa/servicios/iconos/servicios-icono-faciales.png" alt="limpieza de cutis">
+                        <img src="/img/spa/servicios/iconos/servicios-icono-faciales.png" alt="limpieza de cutis">
                         <h3>Limpieza de cutis</h3>
                         <p>Luce una piel radiante con nuestra limpieza facial y revitaliza tu cutis.</p>
                         <button class="service-btn" data-service="cutis">Mas Info</button>
                     </div>
                     <!-- card 8 - Exfoliaciones -->
                     <div class="service-card">
-                        <img src="/img/paginaSpa/servicios/iconos/servicios-icono-exfoliaciones.png"
+                        <img src="/img/spa/servicios/iconos/servicios-icono-exfoliaciones.png"
                             alt="exfoliaciones">
                         <h3>Exfoliaciones</h3>
                         <p>Exfoliaciones corporales para una piel suave y tersa.</p>
@@ -593,21 +589,21 @@
                     </div>
                     <!-- card 9 - piscina -->
                     <div class="service-card">
-                        <img src="/img/paginaSpa/servicios/iconos/servicios-icono-piscina.png" alt="piscina">
+                        <img src="/img/spa/servicios/iconos/servicios-icono-piscina.png" alt="piscina">
                         <h3>Piscina</h3>
                         <p>Disfruta de un baño refrescante en nuestra piscina al aire libre.</p>
                         <button class="service-btn" data-service="piscina">Mas Info</button>
                     </div>
                     <!-- card 10 - Meriendas -->
                     <div class="service-card">
-                        <img src="/img/paginaSpa/servicios/iconos/servicios-icono-meriendas.png" alt="meriendas">
+                        <img src="/img/spa/servicios/iconos/servicios-icono-meriendas.png" alt="meriendas">
                         <h3>Meriendas</h3>
                         <p>Complementa tu experiencia con nuestras exquisitas meriendas.</p>
                         <button class="service-btn" data-service="meriendas">Mas Info</button>
                     </div>
                     <!-- card 11 - circuitos -->
                     <div class="service-card">
-                        <img src="/img/paginaSpa/servicios/iconos/servicios-icono-circuitos.png" alt="circuitos de spa">
+                        <img src="/img/spa/servicios/iconos/servicios-icono-circuitos.png" alt="circuitos de spa">
                         <h3>Circuitos de Spa</h3>
                         <p>Vive una experiencia única con nuestros circuitos de spa que te transportarán a un estado
                             de
@@ -616,7 +612,7 @@
                     </div>
                     <!-- card 12 - promociones -->
                     <div class="service-card">
-                        <img src="/img/paginaSpa/servicios/iconos/servicios-icono-promociones.png" alt="promociones">
+                        <img src="/img/spa/servicios/iconos/servicios-icono-promociones.png" alt="promociones">
                         <h3>Promociones</h3>
                         <p>No te pierdas nuestras promociones, descubre promos especiales y regálate un momento de
                             bienestar.</p>
@@ -644,7 +640,7 @@
             <div class="container">
                 <h2>Sobre Nuestro Spa</h2>
                 <div class="about-content">
-                    <img src="/img/paginaSpa/Otros/imagenSobreNosotros.webp" alt="Sobre nuestro spa"
+                    <img src="/img/spa/imagenSobreNosotros.webp" alt="Sobre nuestro spa"
                         class="img-about-inicio">
                     <div class="about-text">
                         <p>En nuestro spa, nos dedicamos a proporcionar una experiencia de relajación y bienestar
@@ -676,42 +672,42 @@
                             <!-- Card 1 -->
                             <li class="card-item swiper-slide">
                                 <div class="card-div">
-                                    <img src="/img/paginaSpa/testimonios/testimonio1.jpg" alt="testimonio 1"
+                                    <img src="/img/spa/testimonios/testimonio1.jpg" alt="testimonio 1"
                                         class="testimonial-img" loading="lazy">
                                 </div>
                             </li>
                             <!-- Card 2 -->
                             <li class="card-item swiper-slide">
                                 <div class="card-div">
-                                    <img src="/img/paginaSpa/testimonios/testimonio2.jpg" alt="testimonio 2"
+                                    <img src="/img/spa/testimonios/testimonio2.jpg" alt="testimonio 2"
                                         class="testimonial-img" loading="lazy">
                                 </div>
                             </li>
                             <!-- Card 3 -->
                             <li class="card-item swiper-slide">
                                 <div class="card-div">
-                                    <img src="/img/paginaSpa/testimonios/testimonio3.jpg" alt="testimonio 3"
+                                    <img src="/img/spa/testimonios/testimonio3.jpg" alt="testimonio 3"
                                         class="testimonial-img" loading="lazy">
                                 </div>
                             </li>
                             <!-- Card 4 -->
                             <li class="card-item swiper-slide">
                                 <div class="card-div">
-                                    <img src="/img/paginaSpa/testimonios/testimonio4.jpg" alt="testimonio 4"
+                                    <img src="/img/spa/testimonios/testimonio4.jpg" alt="testimonio 4"
                                         class="testimonial-img" loading="lazy">
                                 </div>
                             </li>
                             <!-- Card 5 -->
                             <li class="card-item swiper-slide">
                                 <div class="card-div">
-                                    <img src="/img/paginaSpa/testimonios/testimonio5.jpg" alt="testimonio 5"
+                                    <img src="/img/spa/testimonios/testimonio5.jpg" alt="testimonio 5"
                                         class="testimonial-img" loading="lazy">
                                 </div>
                             </li>
                             <!-- Card 6 -->
                             <li class="card-item swiper-slide">
                                 <div class="card-div">
-                                    <img src="/img/paginaSpa/testimonios/testimonio6.jpg" alt="testimonio 6"
+                                    <img src="/img/spa/testimonios/testimonio6.jpg" alt="testimonio 6"
                                         class="testimonial-img" loading="lazy">
                                 </div>
                             </li>
@@ -748,43 +744,43 @@
                 <h2>Nuestra Galeria</h2>
                 <div class="gallery-grid">
                     <div class="gallery-item">
-                        <img class="img-gallery-inicio" data-src="/img/paginaSpa/galeria/galeria1.webp"
+                        <img class="img-gallery-inicio" data-src="/img/spa/galeria/galeria1.webp"
                             alt="Masajes descontracturantes" loading="lazy">
                     </div>
                     <div class="gallery-item">
-                        <img class="img-gallery-inicio" data-src="/img/paginaSpa/galeria/galeria2.webp"
+                        <img class="img-gallery-inicio" data-src="/img/spa/galeria/galeria2.webp"
                             alt="Masajes sedativos" loading="lazy">
                     </div>
                     <div class="gallery-item">
-                        <img class="img-gallery-inicio" data-src="/img/paginaSpa/galeria/galeria3.webp"
+                        <img class="img-gallery-inicio" data-src="/img/spa/galeria/galeria3.webp"
                             alt="Masajes relajantes" loading="lazy">
                     </div>
                     <div class="gallery-item">
-                        <img class="img-gallery-inicio" data-src="/img/paginaSpa/galeria/galeria4.webp"
+                        <img class="img-gallery-inicio" data-src="/img/spa/galeria/galeria4.webp"
                             alt="Piedras calientes" loading="lazy">
                     </div>
                     <div class="gallery-item">
-                        <img class="img-gallery-inicio" data-src="/img/paginaSpa/galeria/galeria5.webp"
+                        <img class="img-gallery-inicio" data-src="/img/spa/galeria/galeria5.webp"
                             alt="Pindas herbaticas" loading="lazy">
                     </div>
                     <div class="gallery-item">
-                        <img class="img-gallery-inicio" data-src="/img/paginaSpa/galeria/galeria6.webp"
+                        <img class="img-gallery-inicio" data-src="/img/spa/galeria/galeria6.webp"
                             alt="Exfoliaciones" loading="lazy">
                     </div>
                     <div class="gallery-item">
-                        <img class="img-gallery-inicio" data-src="/img/paginaSpa/galeria/galeria7.webp" alt="Faciales"
+                        <img class="img-gallery-inicio" data-src="/img/spa/galeria/galeria7.webp" alt="Faciales"
                             loading="lazy">>
                     </div>
                     <div class="gallery-item">
-                        <img class="img-gallery-inicio" data-src="/img/paginaSpa/galeria/galeria8.webp" alt="Pileta"
+                        <img class="img-gallery-inicio" data-src="/img/spa/galeria/galeria8.webp" alt="Pileta"
                             loading="lazy">>
                     </div>
                     <div class="gallery-item">
-                        <img class="img-gallery-inicio" data-src="/img/paginaSpa/galeria/galeria9.webp" alt="Meriendas"
+                        <img class="img-gallery-inicio" data-src="/img/spa/galeria/galeria9.webp" alt="Meriendas"
                             loading="lazy">>
                     </div>
                     <div class="gallery-item">
-                        <img class="img-gallery-inicio" data-src="/img/paginaSpa/galeria/galeria10.webp" alt="Meriendas"
+                        <img class="img-gallery-inicio" data-src="/img/spa/galeria/galeria10.webp" alt="Meriendas"
                             loading="lazy">
                     </div>
                 </div>
@@ -800,14 +796,14 @@
             <div class="contact-cards">
                 <div class="contact-card" onclick="window.open('https://wa.me/542615104019')">
                     <!-- <div class="contact-icon"><i class="fa-brands fa-whatsapp" style="color: #31c462;"></i></div> -->
-                    <div class="contact-icon"><img src="/img/paginaSpa/logos/icon-whatsapp-animated.gif"
+                    <div class="contact-icon"><img src="/img/spa/logos/icon-whatsapp-animated.gif"
                             alt="whatsapp icon"></div>
                     <h3 class="contact-title">WhatsApp</h3>
                     <p class="contact-info">+54 9 261 510 4019</p>
                 </div>
                 <div class="contact-card" onclick="window.open('https://instagram.com/anandi.spa')">
                     <!-- <div class="contact-icon"><i class="fa-regular fa-envelope" style="color: #e33b3b;"></i></div> -->
-                    <div class="contact-icon"><img src="/img/paginaSpa/logos/icon-instagram-animated.gif"
+                    <div class="contact-icon"><img src="/img/spa/logos/icon-instagram-animated.gif"
                             alt="email icon"></div>
                     <h3 class="contact-title">Instagram</h3>
                     <p class="contact-info">@anandi.spa</p>
@@ -829,7 +825,7 @@
             <!-- First Row -->
             <div class="footer-row">
                 <div class="footer-logo">
-                    <a href="#"><img src="/img/paginaSpa/logos/logoLetrasBlanco.png" alt="Anandi Spa Logo"></a>
+                    <a href="#"><img src="/img/spa/logos/logoLetrasBlanco.png" alt="Anandi Spa Logo"></a>
                 </div>
                 <div class="footer-social">
                     <a href="https://www.instagram.com/anandi.spa" target="_blank" aria-label="Instagram"><i
@@ -850,8 +846,8 @@
                         <li><a href="#servicios" class="smoothscroll">Servicios</a></li>
                         <li><a href="#galeria" class="smoothscroll">Galeria</a></li>
                         <li><a href="#contacto" class="smoothscroll">Contacto</a></li>
-                        <li><a href="/estetica/estetica.html">Estética</a></li>
-                        <li><a href="/Tienda/tienda.html" target="_blank">Tienda</a></li>
+                        <li><a href="estetica.html">Estética</a></li>
+                        <li><a href="tienda.html" target="_blank">Tienda</a></li>
                     </ul>
                 </div>
                 <div class="footer-column">
@@ -871,9 +867,9 @@
                 <div class="footer-column">
                     <h4>Información</h4>
                     <ul>
-                        <li><a href="/TerminosYCondiciones/terminos-y-condiciones.html" target="_blank">Términos y
+                        <li><a href="terminos-y-condiciones.html" target="_blank">Términos y
                                 Condiciones</a></li>
-                        <li><a href="/PoliticaDePrivacidad/politica-de-privacidad.html" target="_blank">Politica de
+                        <li><a href="politica-de-privacidad.html" target="_blank">Politica de
                                 Privacidad</a></li>
                     </ul>
                 </div>
@@ -900,19 +896,19 @@
 
 
     <!-- Plugin MOVETO JS -->
-    <script src="/Js/plugins.js"></script>
+    <script src="/js/plugins.js"></script>
 
     <!-- script smoothScroll -->
-    <script src="/Js/smoothScroll.js"></script>
+    <script src="/js/smoothScroll.js"></script>
 
     <!-- LOADER JS -->
-    <script src="/Loader/loaderScript.js"></script>
+    <script src="/js/loader.js"></script>
 
     <!-- SWIPER JS -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
     <!-- ========== Main Js ========== -->
-    <script src="main.js"></script>
+    <script src="/js/main.js"></script>
 
 
 </body>

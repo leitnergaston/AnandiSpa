@@ -12,6 +12,7 @@
     --color-bg: #ffccaa;
     --color-text: #5e3609;
     --color-text-h3: #3d2305;
+    --color-text-p: #442605;
     --color-hover: #c9802e;
 
     --color-bg-btn: #f0d1c4;
@@ -686,6 +687,7 @@ nav {
 }
 
 .promo-content p {
+    color: var(--color-text-p);
     font-weight: 450;
     margin-bottom: 1.5rem;
 }
