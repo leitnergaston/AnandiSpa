@@ -5,7 +5,7 @@ const products = [
         code: 'PROD001',
         name: 'Frescor Castaña',
         price: 29680,
-        image: './img/001.jpg',
+        image: '/img/tienda/productos/001.jpg',
         description: 'Ekos castaña frescor eav de toillette 150ml dulce floral',
         orderLink: 'https://wa.me/+5492615104019',
         category: 'Natura'
@@ -15,7 +15,7 @@ const products = [
         code: 'PROD002',
         name: 'Pulpa Castaña',
         price: 8048,
-        image: './img/002.jpg',
+        image: '/img/tienda/productos/001.jpg',
         description: 'Pulpa hidratante castaña para manos 75g',
         orderLink: 'https://wa.me/+5492615104019',
         category: 'Natura'
@@ -25,7 +25,7 @@ const products = [
         code: 'PROD003',
         name: 'Desodorante Masculino',
         price: 4500,
-        image: './img/003.jpg',
+        image: '/img/tienda/productos/001.jpg',
         description: 'Antitranspirante roll-on homem 75ml',
         orderLink: 'https://wa.me/+5492615104019',
         category: 'Natura'
@@ -35,7 +35,7 @@ const products = [
         code: 'PROD004',
         name: 'Cadena Dorada',
         price: 3000,
-        image: './img/004.jpg',
+        image: '/img/tienda/productos/001.jpg',
         description: 'Cadena combinada dorada',
         orderLink: 'https://wa.me/+5492615104019',
         category: 'Bijouterie'
@@ -45,7 +45,7 @@ const products = [
         code: 'PROD005',
         name: 'Cadena Plateada',
         price: 3000,
-        image: './img/005.jpg',
+        image: '/img/tienda/productos/001.jpg',
         description: 'Cadena combinada plateada',
         orderLink: 'https://wa.me/+5492615104019',
         category: 'Bijouterie'
@@ -55,7 +55,7 @@ const products = [
         code: 'PROD006',
         name: 'Cadena Plateada',
         price: 3500,
-        image: './img/006.jpg',
+        image: '/img/tienda/productos/001.jpg',
         description: 'Detalle rosa grande, gema celeste',
         orderLink: 'https://wa.me/+5492615104019',
         category: 'Bijouterie'
@@ -65,7 +65,7 @@ const products = [
         code: 'PROD007',
         name: 'Cadena Larga Búho',
         price: 3000,
-        image: './img/007.jpg',
+        image: '/img/tienda/productos/001.jpg',
         description: 'Detalle búho, colores',
         orderLink: 'https://wa.me/+5492615104019',
         category: 'Bijouterie'
@@ -75,7 +75,7 @@ const products = [
         code: 'PROD008',
         name: 'Cadena Larga Búho',
         price: 3000,
-        image: './img/008.jpg',
+        image: '/img/tienda/productos/001.jpg',
         description: 'Detalle búho, colores',
         orderLink: 'https://wa.me/+5492615104019',
         category: 'Bijouterie'
@@ -85,7 +85,7 @@ const products = [
         code: 'PROD009',
         name: 'Cadena Larga Ojo',
         price: 3000,
-        image: './img/009.jpg',
+        image: '/img/tienda/productos/001.jpg',
         description: 'Plateado con negro',
         orderLink: 'https://wa.me/+5492615104019',
         category: 'Bijouterie'
@@ -95,7 +95,7 @@ const products = [
         code: 'PROD010',
         name: 'Dije Corazón Plateado',
         price: 2800,
-        image: './img/010.jpg',
+        image: '/img/tienda/productos/001.jpg',
         description: 'Detalle calado, tamaño grande',
         orderLink: 'https://wa.me/+5492615104019',
         category: 'Bijouterie'
@@ -105,7 +105,7 @@ const products = [
         code: 'PROD011',
         name: 'Dije Bigote Fucsia',
         price: 2800,
-        image: './img/011.jpg',
+        image: '/img/tienda/productos/001.jpg',
         description: 'Bigotes fucsia, detalle strass plateado',
         orderLink: 'https://wa.me/+5492615104019',
         category: 'Bijouterie'
@@ -115,7 +115,7 @@ const products = [
         code: 'PROD012',
         name: 'Dije Cruz Plateado',
         price: 3000,
-        image: './img/012.jpg',
+        image: '/img/tienda/productos/001.jpg',
         description: 'Cruz Jesús, calada',
         orderLink: 'https://wa.me/+5492615104019',
         category: 'Bijouterie'
