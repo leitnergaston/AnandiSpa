@@ -5,6 +5,7 @@ const products = [
         code: 'PROD001',
         name: 'Frescor Castaña',
         price: 29680,
+        stock: true,
         image: '/img/tienda/productos/001.jpg',
         description: 'Ekos castaña frescor eav de toillette 150ml dulce floral',
         orderLink: 'https://wa.me/+5492615104019',
@@ -15,7 +16,8 @@ const products = [
         code: 'PROD002',
         name: 'Pulpa Castaña',
         price: 8048,
-        image: '/img/tienda/productos/001.jpg',
+        stock: true,
+        image: '/img/tienda/productos/002.jpg',
         description: 'Pulpa hidratante castaña para manos 75g',
         orderLink: 'https://wa.me/+5492615104019',
         category: 'Natura'
@@ -25,7 +27,8 @@ const products = [
         code: 'PROD003',
         name: 'Desodorante Masculino',
         price: 4500,
-        image: '/img/tienda/productos/001.jpg',
+        stock: true,
+        image: '/img/tienda/productos/003.jpg',
         description: 'Antitranspirante roll-on homem 75ml',
         orderLink: 'https://wa.me/+5492615104019',
         category: 'Natura'
@@ -35,7 +38,8 @@ const products = [
         code: 'PROD004',
         name: 'Cadena Dorada',
         price: 3000,
-        image: '/img/tienda/productos/001.jpg',
+        stock: true,
+        image: '/img/tienda/productos/004.jpg',
         description: 'Cadena combinada dorada',
         orderLink: 'https://wa.me/+5492615104019',
         category: 'Bijouterie'
@@ -45,7 +49,8 @@ const products = [
         code: 'PROD005',
         name: 'Cadena Plateada',
         price: 3000,
-        image: '/img/tienda/productos/001.jpg',
+        stock: true,
+        image: '/img/tienda/productos/005.jpg',
         description: 'Cadena combinada plateada',
         orderLink: 'https://wa.me/+5492615104019',
         category: 'Bijouterie'
@@ -55,7 +60,8 @@ const products = [
         code: 'PROD006',
         name: 'Cadena Plateada',
         price: 3500,
-        image: '/img/tienda/productos/001.jpg',
+        stock: true,
+        image: '/img/tienda/productos/006.jpg',
         description: 'Detalle rosa grande, gema celeste',
         orderLink: 'https://wa.me/+5492615104019',
         category: 'Bijouterie'
@@ -65,7 +71,8 @@ const products = [
         code: 'PROD007',
         name: 'Cadena Larga Búho',
         price: 3000,
-        image: '/img/tienda/productos/001.jpg',
+        stock: true,
+        image: '/img/tienda/productos/007.jpg',
         description: 'Detalle búho, colores',
         orderLink: 'https://wa.me/+5492615104019',
         category: 'Bijouterie'
@@ -75,7 +82,8 @@ const products = [
         code: 'PROD008',
         name: 'Cadena Larga Búho',
         price: 3000,
-        image: '/img/tienda/productos/001.jpg',
+        stock: false,
+        image: '/img/tienda/productos/008.jpg',
         description: 'Detalle búho, colores',
         orderLink: 'https://wa.me/+5492615104019',
         category: 'Bijouterie'
@@ -85,7 +93,8 @@ const products = [
         code: 'PROD009',
         name: 'Cadena Larga Ojo',
         price: 3000,
-        image: '/img/tienda/productos/001.jpg',
+        stock: true,
+        image: '/img/tienda/productos/009.jpg',
         description: 'Plateado con negro',
         orderLink: 'https://wa.me/+5492615104019',
         category: 'Bijouterie'
@@ -95,7 +104,8 @@ const products = [
         code: 'PROD010',
         name: 'Dije Corazón Plateado',
         price: 2800,
-        image: '/img/tienda/productos/001.jpg',
+        stock: true,
+        image: '/img/tienda/productos/010.jpg',
         description: 'Detalle calado, tamaño grande',
         orderLink: 'https://wa.me/+5492615104019',
         category: 'Bijouterie'
@@ -105,7 +115,8 @@ const products = [
         code: 'PROD011',
         name: 'Dije Bigote Fucsia',
         price: 2800,
-        image: '/img/tienda/productos/001.jpg',
+        stock: true,
+        image: '/img/tienda/productos/011.jpg',
         description: 'Bigotes fucsia, detalle strass plateado',
         orderLink: 'https://wa.me/+5492615104019',
         category: 'Bijouterie'
@@ -115,7 +126,8 @@ const products = [
         code: 'PROD012',
         name: 'Dije Cruz Plateado',
         price: 3000,
-        image: '/img/tienda/productos/001.jpg',
+        stock: true,
+        image: '/img/tienda/productos/012.jpg',
         description: 'Cruz Jesús, calada',
         orderLink: 'https://wa.me/+5492615104019',
         category: 'Bijouterie'
@@ -125,7 +137,8 @@ const products = [
         code: 'PROD013',
         name: 'Dije Cristo',
         price: 5000,
-        image: './img/013.jpg',
+        stock: true,
+        image: '/img/tienda/productos/013.jpg',
         description: 'Tamaño chico',
         orderLink: 'https://wa.me/+5492615104019',
         category: 'Bijouterie'
@@ -135,7 +148,8 @@ const products = [
         code: 'PROD014',
         name: 'Dije Bolita Violeta',
         price: 3000,
-        image: './img/014.jpg',
+        stock: true,
+        image: '/img/tienda/productos/014.jpg',
         description: 'Bola de strass',
         orderLink: 'https://wa.me/+5492615104019',
         category: 'Bijouterie'
@@ -145,7 +159,8 @@ const products = [
         code: 'PROD015',
         name: 'Pulsera Plateada',
         price: 5000,
-        image: './img/015.jpg',
+        stock: true,
+        image: '/img/tienda/productos/015.jpg',
         description: 'Calada sin dije',
         orderLink: 'https://wa.me/+5492615104019',
         category: 'Bijouterie'
@@ -155,7 +170,8 @@ const products = [
         code: 'PROD016',
         name: 'Pulsera Plateada',
         price: 5000,
-        image: './img/016.jpg',
+        stock: true,
+        image: '/img/tienda/productos/016.jpg',
         description: 'Chapa plateada',
         orderLink: 'https://wa.me/+5492615104019',
         category: 'Bijouterie'
@@ -165,7 +181,8 @@ const products = [
         code: 'PROD017',
         name: 'Esmalte UNA',
         price: 12000,
-        image: './img/017.jpg',
+        stock: true,
+        image: '/img/tienda/productos/017.jpg',
         description: 'Hipoalergénico color "Outono" 8ml vegano',
         orderLink: 'https://wa.me/+5492615104019',
         category: 'Esmaltes'
@@ -175,7 +192,8 @@ const products = [
         code: 'PROD018',
         name: 'Esmalte UNA',
         price: 12000,
-        image: './img/018.jpg',
+        stock: true,
+        image: '/img/tienda/productos/018.jpg',
         description: 'Hipoalergénico color "Calor" 8ml vegano',
         orderLink: 'https://wa.me/+5492615104019',
         category: 'Esmaltes'
@@ -185,7 +203,8 @@ const products = [
         code: 'PROD019',
         name: 'Esmalte UNA',
         price: 12000,
-        image: './img/019.jpg',
+        stock: true,
+        image: '/img/tienda/productos/019.jpg',
         description: 'Hipoalergénico color "Pitanga" 8ml vegano',
         orderLink: 'https://wa.me/+5492615104019',
         category: 'Esmaltes'
@@ -195,7 +214,8 @@ const products = [
         code: 'PROD020',
         name: 'Esmalte UNA',
         price: 12000,
-        image: './img/020.jpg',
+        stock: true,
+        image: '/img/tienda/productos/020.jpg',
         description: 'Hipoalergénico color "Beijo" 8ml vegano',
         orderLink: 'https://wa.me/+5492615104019',
         category: 'Esmaltes'
@@ -205,7 +225,8 @@ const products = [
         code: 'PROD021',
         name: 'Esmalte UNA',
         price: 12000,
-        image: './img/021.jpg',
+        stock: true,
+        image: '/img/tienda/productos/021.jpg',
         description: 'Hipoalergénico color "Praia" 8ml vegano',
         orderLink: 'https://wa.me/+5492615104019',
         category: 'Esmaltes'
@@ -215,7 +236,8 @@ const products = [
         code: 'PROD022',
         name: 'Esmalte UNA',
         price: 12000,
-        image: './img/022.jpg',
+        stock: true,
+        image: '/img/tienda/productos/022.jpg',
         description: 'Hipoalergénico color "Car de pimenta" 8ml vegano',
         orderLink: 'https://wa.me/+5492615104019',
         category: 'Esmaltes'
@@ -225,7 +247,8 @@ const products = [
         code: 'PROD023',
         name: 'Esmalte UNA',
         price: 12000,
-        image: './img/023.jpg',
+        stock: true,
+        image: '/img/tienda/productos/023.jpg',
         description: 'Hipoalergénico color "Una n°1" 8ml vegano',
         orderLink: 'https://wa.me/+5492615104019',
         category: 'Esmaltes'
@@ -235,7 +258,8 @@ const products = [
         code: 'PROD024',
         name: 'Esmalte UNA',
         price: 12000,
-        image: './img/024.jpg',
+        stock: true,
+        image: '/img/tienda/productos/024.jpg',
         description: 'Hipoalergénico color "Flores" 8ml vegano',
         orderLink: 'https://wa.me/+5492615104019',
         category: 'Esmaltes'
@@ -245,7 +269,8 @@ const products = [
         code: 'PROD025',
         name: 'Esmalte UNA',
         price: 12000,
-        image: './img/025.jpg',
+        stock: true,
+        image: '/img/tienda/productos/025.jpg',
         description: 'Hipoalergénico color "Flores" 8ml vegano',
         orderLink: 'https://wa.me/+5492615104019',
         category: 'Esmaltes'
@@ -255,7 +280,8 @@ const products = [
         code: 'PROD026',
         name: 'Labial Faces',
         price: 13000,
-        image: './img/026.jpg',
+        stock: true,
+        image: '/img/tienda/productos/026.jpg',
         description: 'Baton color hidra, lápiz 3,5g, aquarela Natura',
         orderLink: 'https://wa.me/+5492615104019',
         category: 'Labiales'
@@ -265,7 +291,8 @@ const products = [
         code: 'PROD027',
         name: 'Labial Faces',
         price: 13000,
-        image: './img/027.jpg',
+        stock: true,
+        image: '/img/tienda/productos/027.jpg',
         description: 'Baton color hidra',
         orderLink: 'https://wa.me/+5492615104019',
         category: 'Labiales'
@@ -275,57 +302,31 @@ const products = [
         code: 'PROD028',
         name: 'Labial Faces',
         price: 13000,
-        image: './img/028.jpg',
+        stock: true,
+        image: '/img/tienda/productos/028.jpg',
         description: 'Baton Aquarela Natura',
         orderLink: 'https://wa.me/+5492615104019',
         category: 'Labiales'
     },
-    // {
-    //     id: 29,
-    //     code: 'PROD029',
-    //     name: 'Labial Faces',
-    //     price: 13000,
-    //     image: './img/029.jpg',
-    //     description: 'Baton color hidra',
-    //     orderLink: 'https://wa.me/+5492615104019',
-    //     category: 'Labiales'
-    // },
+
     {
         id: 30,
         code: 'PROD030',
         name: 'Labial Faces',
         price: 13000,
-        image: './img/030.jpg',
+        stock: true,
+        image: '/img/tienda/productos/030.jpg',
         description: 'Baton color hidra',
         orderLink: 'https://wa.me/+5492615104019',
         category: 'Labiales'
     },
-    // {
-    //     id: 31,
-    //     code: 'PROD031',
-    //     name: 'Labial Raden',
-    //     price: 1500,
-    //     image: './img/031.jpg',
-    //     description: 'Lapiz rojo',
-    //     orderLink: 'https://wa.me/+5492615104019',
-    //     category: 'Otros'
-    // },
-    // {
-    //     id: 32,
-    //     code: 'PROD032',
-    //     name: 'Labial Raden',
-    //     price: 1500,
-    //     image: './img/032.jpg',
-    //     description: 'Lapiz violeta',
-    //     orderLink: 'https://wa.me/+5492615104019',
-    //     category: 'Otros'
-    // },
     {
         id: 33,
         code: 'PROD033',
         name: 'Labial UNA',
         price: 23000,
-        image: './img/033.jpg',
+        stock: true,
+        image: '/img/tienda/productos/033.jpg',
         description: 'Batom CC lapiz labial, 3.8g, "Rouge 8C"',
         orderLink: 'https://wa.me/+5492615104019',
         category: 'Labiales'
@@ -335,7 +336,8 @@ const products = [
         code: 'PROD034',
         name: 'Labial UNA',
         price: 16000,
-        image: './img/034.jpg',
+        stock: true,
+        image: '/img/tienda/productos/034.jpg',
         description: 'Batom acetinado en óleo 7ml',
         orderLink: 'https://wa.me/+5492615104019',
         category: 'Labiales'
@@ -345,47 +347,30 @@ const products = [
         code: 'PROD035',
         name: 'Labial UNA',
         price: 16000,
-        image: './img/035.jpg',
+        stock: true,
+        image: '/img/tienda/productos/035.jpg',
         description: 'Batom satinado en óleo',
         orderLink: 'https://wa.me/+5492615104019',
         category: 'Labiales'
     },
-    // {
-    //     id: 36,
-    //     code: 'PROD036',
-    //     name: 'Labial UNA',
-    //     price: 16000,
-    //     image: './img/036.jpg',
-    //     description: 'Batom satinado en óleo',
-    //     orderLink: 'https://wa.me/+5492615104019',
-    //     category: 'Labiales'
-    // },
     {
         id: 37,
         code: 'PROD037',
         name: 'Labial UNA',
         price: 16000,
-        image: './img/037.jpg',
+        stock: true,
+        image: '/img/tienda/productos/037.jpg',
         description: 'Batom satinado en óleo',
         orderLink: 'https://wa.me/+5492615104019',
         category: 'Labiales'
     },
-    // {
-    //     id: 38,
-    //     code: 'PROD038',
-    //     name: 'Esmalte Jactans',
-    //     price: 1500,
-    //     image: './img/038.jpg',
-    //     description: 'Violeta',
-    //     orderLink: 'https://wa.me/+5492615104019',
-    //     category: 'Otros'
-    // },
     {
         id: 39,
         code: 'PROD039',
         name: 'Neutralizador de espinillas Faces',
         price: 11000,
-        image: './img/039.jpg',
+        stock: true,
+        image: '/img/tienda/productos/039.jpg',
         description: '10g',
         orderLink: 'https://wa.me/+5492615104019',
         category: 'Natura'
@@ -395,7 +380,8 @@ const products = [
         code: 'PROD040',
         name: 'Sombra de ojos Eye Shadow',
         price: 2500,
-        image: './img/040.jpg',
+        stock: true,
+        image: '/img/tienda/productos/040.jpg',
         description: 'Combinado 2 colores',
         orderLink: 'https://wa.me/+5492615104019',
         category: 'Otros'
@@ -405,7 +391,8 @@ const products = [
         code: 'PROD041',
         name: 'Sombra de ojos Eye Shadow',
         price: 2500,
-        image: './img/041.jpg',
+        stock: true,
+        image: '/img/tienda/productos/041.jpg',
         description: 'Combinado 2 colores',
         orderLink: 'https://wa.me/+5492615104019',
         category: 'Otros'
@@ -415,7 +402,8 @@ const products = [
         code: 'PROD042',
         name: 'Esponja Violetta',
         price: 3500,
-        image: './img/042.jpg',
+        stock: true,
+        image: '/img/tienda/productos/042.jpg',
         description: 'Para maquillaje, 2 unidades',
         orderLink: 'https://wa.me/+5492615104019',
         category: 'Otros'
@@ -425,7 +413,8 @@ const products = [
         code: 'PROD043',
         name: 'Apaga Vela Corona',
         price: 3000,
-        image: './img/043.jpg',
+        stock: true,
+        image: '/img/tienda/productos/043.jpg',
         description: 'Corona plateada de acero',
         orderLink: 'https://wa.me/+5492615104019',
         category: 'Accesorios'
@@ -435,7 +424,8 @@ const products = [
         code: 'PROD044',
         name: 'Apaga Vela Piramide',
         price: 3000,
-        image: './img/044.jpg',
+        stock: true,
+        image: '/img/tienda/productos/044.jpg',
         description: 'Piramide plateada de acero',
         orderLink: 'https://wa.me/+5492615104019',
         category: 'Accesorios'
@@ -445,7 +435,8 @@ const products = [
         code: 'PROD045',
         name: 'Apaga Vela Pluma',
         price: 3000,
-        image: './img/045.jpg',
+        stock: true,
+        image: '/img/tienda/productos/045.jpg',
         description: 'Pluma plateada de acero',
         orderLink: 'https://wa.me/+5492615104019',
         category: 'Accesorios'
@@ -455,97 +446,96 @@ const products = [
         code: 'PROD046',
         name: 'Apaga Vela Llave',
         price: 3000,
-        image: './img/046.jpg',
+        stock: true,
+        image: '/img/tienda/productos/046.jpg',
         description: 'Llave plateada de acero',
         orderLink: 'https://wa.me/+5492615104019',
         category: 'Accesorios'
     },
-    // {
-    //     id: 47,
-    //     code: '',
-    //     name: '',
-    //     price: ,
-    //     image: '',
-    //     description: '',
-    //     orderLink: 'https://wa.me/+5492615104019',
-    //     category: ''
-    // },
-    // {
-    //     id: 48,
-    //     code: '',
-    //     name: '',
-    //     price: ,
-    //     image: '',
-    //     description: '',
-    //     orderLink: 'https://wa.me/+5492615104019',
-    //     category: ''
-    // },
-    // {
-    //     id: 49,
-    //     code: '',
-    //     name: '',
-    //     price: ,
-    //     image: '',
-    //     description: '',
-    //     orderLink: 'https://wa.me/+5492615104019',
-    //     category: ''
-    // },
-    // {
-    //     id: 50,
-    //     code: '',
-    //     name: '',
-    //     price: ,
-    //     image: '',
-    //     description: '',
-    //     orderLink: 'https://wa.me/+5492615104019',
-    //     category: ''
-    // },
-    // {
-    //     id: 51,
-    //     code: '',
-    //     name: '',
-    //     price: ,
-    //     image: '',
-    //     description: '',
-    //     orderLink: 'https://wa.me/+5492615104019',
-    //     category: ''
-    // },
-    // {
-    //     id: 52,
-    //     code: '',
-    //     name: '',
-    //     price: ,
-    //     image: '',
-    //     description: '',
-    //     orderLink: 'https://wa.me/+5492615104019',
-    //     category: ''
-    // },
-    // {
-    //     id: 53,
-    //     code: '',
-    //     name: '',
-    //     price: ,
-    //     image: '',
-    //     description: '',
-    //     orderLink: 'https://wa.me/+5492615104019',
-    //     category: ''
-    // },
-    // {
-    //     id: 54,
-    //     code: '',
-    //     name: '',
-    //     price: ,
-    //     image: '',
-    //     description: '',
-    //     orderLink: 'https://wa.me/+5492615104019',
-    //     category: ''
-    // },
+    {
+        id: 47,
+        code: 'PROD047',
+        name: 'Base nude',
+        price: 25000,
+        stock: true,
+        image: '/img/tienda/productos/047.jpg',
+        description: 'Base nude UNA claro 22 30ml',
+        orderLink: 'https://wa.me/+5492615104019',
+        category: 'Natura'
+    },
+    {
+        id: 48,
+        code: 'PROD048',
+        name: 'Pincel PRO',
+        price: 34000,
+        stock: true,
+        image: '/img/tienda/productos/048.jpg',
+        description: 'Pincel PRO base liquida',
+        orderLink: 'https://wa.me/+5492615104019',
+        category: 'Natura'
+    },
+    {
+        id: 49,
+        code: 'PROD049',
+        name: 'Lapiz de Ojos',
+        price: 12000,
+        stock: true,
+        image: '/img/tienda/productos/049.jpg',
+        description: 'Lapiz de ojos FACES',
+        orderLink: 'https://wa.me/+5492615104019',
+        category: 'Natura'
+    },
+    {
+        id: 50,
+        code: 'PROD050',
+        name: 'Perfume',
+        price: 42200,
+        stock: true,
+        image: '/img/tienda/productos/050.jpg',
+        description: 'Perfume kriska 100ml',
+        orderLink: 'https://wa.me/+5492615104019',
+        category: 'Natura'
+    },
+    {
+        id: 51,
+        code: 'PROD051',
+        name: 'Mascara purificante',
+        price: 46780,
+        stock: true,
+        image: '/img/tienda/productos/051.jpg',
+        description: 'Mascara de argila purificante CHRONOS 70g',
+        orderLink: 'https://wa.me/+5492615104019',
+        category: 'Natura'
+    },
+    {
+        id: 52,
+        code: 'PROD052',
+        name: 'Exfoliante CHRONOS',
+        price: 31800,
+        stock: true,
+        image: '/img/tienda/productos/052.jpg',
+        description: 'Exfoliante antiseñales CHRONOS 50g',
+        orderLink: 'https://wa.me/+5492615104019',
+        category: 'Natura'
+    },
+    {
+        id: 53,
+        code: 'PROD053',
+        name: 'Repuesto crema corporal',
+        price: 12000,
+        stock: true,
+        image: '/img/tienda/productos/053.jpg',
+        description: 'Repuesto crema corporal avellana y casis tododia 400ml',
+        orderLink: 'https://wa.me/+5492615104019',
+        category: 'Natura'
+    },
     {
         id: 55,
         code: 'PROD055',
         name: 'Saphirus Linah',
-        price: 4000,
-        image: './img/055.jpg',
+        price: 4500,
+        stock: true,
+        image: '/img/tienda/productos/055.jpg',
         description: 'Aromatizador Saphirus Linah 250ml',
         orderLink: 'https://wa.me/+5492615104019',
         category: 'Saphirus'
@@ -554,8 +544,9 @@ const products = [
         id: 56,
         code: 'PROD056',
         name: 'Saphirus Flores Blancas',
-        price: 4000,
-        image: './img/056.jpg',
+        price: 4500,
+        stock: true,
+        image: '/img/tienda/productos/056.jpg',
         description: 'Aromatizador Saphirus Flores Blancas 250ml',
         orderLink: 'https://wa.me/+5492615104019',
         category: 'Saphirus'
@@ -564,8 +555,9 @@ const products = [
         id: 57,
         code: 'PROD057',
         name: 'Saphirus Limon',
-        price: 4000,
-        image: './img/057.jpg',
+        price: 4500,
+        stock: true,
+        image: '/img/tienda/productos/057.jpg',
         description: 'Aromatizador Saphirus Limon 250ml',
         orderLink: 'https://wa.me/+5492615104019',
         category: 'Saphirus'
@@ -574,8 +566,9 @@ const products = [
         id: 58,
         code: 'PROD058',
         name: 'Saphirus Paula',
-        price: 4000,
-        image: './img/058.jpg',
+        price: 4500,
+        stock: false,
+        image: '/img/tienda/productos/058.jpg',
         description: 'Aromatizador Saphirus Paula 250ml',
         orderLink: 'https://wa.me/+5492615104019',
         category: 'Saphirus'
@@ -584,8 +577,9 @@ const products = [
         id: 59,
         code: 'PROD059',
         name: 'Saphirus Cony',
-        price: 4000,
-        image: './img/059.jpg',
+        price: 4500,
+        stock: true,
+        image: '/img/tienda/productos/059.jpg',
         description: 'Aromatizador Saphirus Cony 250ml',
         orderLink: 'https://wa.me/+5492615104019',
         category: 'Saphirus'
@@ -595,7 +589,8 @@ const products = [
         code: 'PROD061',
         name: 'Sahumerios Citronella Orange Palo Santo',
         price: 2600,
-        image: './img/061.jpg',
+        stock: true,
+        image: '/img/tienda/productos/061.jpg',
         description: 'Sahumerios Citronella Orange Palo Santo, Natural, Sagrada Madre, 8 unidades',
         orderLink: 'https://wa.me/+5492615104019',
         category: 'Sahumerios'
@@ -605,7 +600,8 @@ const products = [
         code: 'PROD062',
         name: 'Sahumerios Myrhh Olibanum',
         price: 2600,
-        image: './img/062.jpg',
+        stock: true,
+        image: '/img/tienda/productos/062.jpg',
         description: 'Sahumerios Myrhh Olibanum, Natural, Sagrada Madre, 8 unidades',
         orderLink: 'https://wa.me/+5492615104019',
         category: 'Sahumerios'
@@ -615,7 +611,8 @@ const products = [
         code: 'PROD063',
         name: 'Sahumerios Amber Ambar',
         price: 2600,
-        image: './img/063.jpg',
+        stock: true,
+        image: '/img/tienda/productos/063.jpg',
         description: 'Sahumerios Amber Ambar, Natural, Sagrada Madre, 8 unidades',
         orderLink: 'https://wa.me/+5492615104019',
         category: 'Sahumerios'
@@ -625,7 +622,8 @@ const products = [
         code: 'PROD064',
         name: 'Sahumerios Mirra',
         price: 2600,
-        image: './img/064.jpg',
+        stock: true,
+        image: '/img/tienda/productos/064.jpg',
         description: 'Sahumerios Mirra, Natural, Sagrada Madre, 8 unidades',
         orderLink: 'https://wa.me/+5492615104019',
         category: 'Sahumerios'
@@ -635,7 +633,8 @@ const products = [
         code: 'PROD065',
         name: 'Sahumerios Olíbano Frankincense',
         price: 2600,
-        image: './img/065.jpg',
+        stock: true,
+        image: '/img/tienda/productos/065.jpg',
         description: 'Sahumerios Olíbano Frankincense, Natural, Sagrada Madre, 8 unidades',
         orderLink: 'https://wa.me/+5492615104019',
         category: 'Sahumerios'
@@ -645,7 +644,8 @@ const products = [
         code: 'PROD066',
         name: 'Sahumerios Yagra de la Abundancia',
         price: 3290,
-        image: './img/066.jpg',
+        stock: true,
+        image: '/img/tienda/productos/066.jpg',
         description: 'Sahumerios Yagra de la Abundancia, Tibetanos, 8 unidades',
         orderLink: 'https://wa.me/+5492615104019',
         category: 'Sahumerios'
@@ -655,7 +655,8 @@ const products = [
         code: 'PROD067',
         name: 'Sahumerios Magia Asiática',
         price: 3290,
-        image: './img/067.jpg',
+        stock: true,
+        image: '/img/tienda/productos/067.jpg',
         description: 'Sahumerios Magia Asiática, Tibetanos, 8 unidades',
         orderLink: 'https://wa.me/+5492615104019',
         category: 'Sahumerios'
@@ -665,7 +666,8 @@ const products = [
         code: 'PROD068',
         name: 'Sahumerios Capuccino Italiano',
         price: 3290,
-        image: './img/068.jpg',
+        stock: true,
+        image: '/img/tienda/productos/068.jpg',
         description: 'Sahumerios Capuccino Italiano, Tibetanos, 8 unidades',
         orderLink: 'https://wa.me/+5492615104019',
         category: 'Sahumerios'
@@ -675,7 +677,8 @@ const products = [
         code: 'PROD069',
         name: 'Sahumerios Esencias de la India',
         price: 3290,
-        image: './img/069.jpg',
+        stock: true,
+        image: '/img/tienda/productos/069.jpg',
         description: 'Sahumerios Esencias de la India, Tibetanos, 8 unidades',
         orderLink: 'https://wa.me/+5492615104019',
         category: 'Sahumerios'
@@ -685,7 +688,8 @@ const products = [
         code: 'PROD070',
         name: 'Sahumerios Coco Beach',
         price: 3290,
-        image: './img/070.jpg',
+        stock: true,
+        image: '/img/tienda/productos/070.jpg',
         description: 'Sahumerios Coco Beach, Tibetanos, 8 unidades',
         orderLink: 'https://wa.me/+5492615104019',
         category: 'Sahumerios'
@@ -695,7 +699,8 @@ const products = [
         code: 'PROD071',
         name: 'Sahumerios Palo Santo con Fresias',
         price: 2500,
-        image: './img/071.jpg',
+        stock: false,
+        image: '/img/tienda/productos/071.jpg',
         description: 'Sahumerios Palo Santo con Fresias, Sagrada Madre, 8 unidades',
         orderLink: 'https://wa.me/+5492615104019',
         category: 'Sahumerios'
@@ -705,7 +710,8 @@ const products = [
         code: 'PROD072',
         name: 'Sahumerios Palo Santo con Vainilla',
         price: 2500,
-        image: './img/072.jpg',
+        stock: true,
+        image: '/img/tienda/productos/072.jpg',
         description: 'Sahumerios Palo Santo con Vainilla, Sagrada Madre, 8 unidades',
         orderLink: 'https://wa.me/+5492615104019',
         category: 'Sahumerios'
@@ -715,7 +721,8 @@ const products = [
         code: 'PROD073',
         name: 'Sahumerios Palo Santo con Mirra',
         price: 2500,
-        image: './img/073.jpg',
+        stock: true,
+        image: '/img/tienda/productos/073.jpg',
         description: 'Sahumerios Palo Santo con Mirra, Sagrada Madre, 8 unidades',
         orderLink: 'https://wa.me/+5492615104019',
         category: 'Sahumerios'
@@ -725,7 +732,8 @@ const products = [
         code: 'PROD074',
         name: 'Sahumerios Palo Santo con Yagra',
         price: 2500,
-        image: './img/074.jpg',
+        stock: true,
+        image: '/img/tienda/productos/074.jpg',
         description: 'Sahumerios Palo Santo con Yagra, Sagrada Madre, 8 unidades',
         orderLink: 'https://wa.me/+5492615104019',
         category: 'Sahumerios'
@@ -735,7 +743,8 @@ const products = [
         code: 'PROD075',
         name: 'Sahumerios Palo Santo con Copal',
         price: 2500,
-        image: './img/075.jpg',
+        stock: false,
+        image: '/img/tienda/productos/075.jpg',
         description: 'Sahumerios Palo Santo con Copal, Sagrada Madre, 8 unidades',
         orderLink: 'https://wa.me/+5492615104019',
         category: 'Sahumerios'
@@ -745,7 +754,8 @@ const products = [
         code: 'PROD076',
         name: 'Sahumerios Rosa Mosqueta',
         price: 2600,
-        image: './img/076.jpg',
+        stock: true,
+        image: '/img/tienda/productos/076.jpg',
         description: 'Sahumerios Rosa Mosqueta, Patagonia, Sagrada Madre, 6 unidades',
         orderLink: 'https://wa.me/+5492615104019',
         category: 'Sahumerios'
@@ -755,7 +765,8 @@ const products = [
         code: 'PROD077',
         name: 'Sahumerios Jazmín',
         price: 2600,
-        image: './img/077.jpg',
+        stock: true,
+        image: '/img/tienda/productos/077.jpg',
         description: 'Sahumerios Jazmín, Patagonia, Sagrada Madre, 6 unidades',
         orderLink: 'https://wa.me/+5492615104019',
         category: 'Sahumerios'
@@ -765,7 +776,8 @@ const products = [
         code: 'PROD078',
         name: 'Sahumerios Ruda',
         price: 2600,
-        image: './img/078.jpg',
+        stock: true,
+        image: '/img/tienda/productos/078.jpg',
         description: 'Sahumerios Ruda, Patagonia, Sagrada Madre, 6 unidades',
         orderLink: 'https://wa.me/+5492615104019',
         category: 'Sahumerios'
@@ -775,7 +787,8 @@ const products = [
         code: 'PROD079',
         name: 'Sahumerios Hibiscus',
         price: 2600,
-        image: './img/079.jpg',
+        stock: true,
+        image: '/img/tienda/productos/079.jpg',
         description: 'Sahumerios Hibiscus, Patagonia, Sagrada Madre, 6 unidades',
         orderLink: 'https://wa.me/+5492615104019',
         category: 'Sahumerios'
@@ -785,7 +798,8 @@ const products = [
         code: 'PROD080',
         name: 'Sahumerios Palmarosa',
         price: 2600,
-        image: './img/080.jpg',
+        stock: true,
+        image: '/img/tienda/productos/080.jpg',
         description: 'Sahumerios Palmarosa, Patagonia, Sagrada Madre, 6 unidades',
         orderLink: 'https://wa.me/+5492615104019',
         category: 'Sahumerios'
@@ -795,7 +809,8 @@ const products = [
         code: 'PROD081',
         name: 'Sahumerios Neroli',
         price: 2600,
-        image: './img/081.jpg',
+        stock: true,
+        image: '/img/tienda/productos/081.jpg',
         description: 'Sahumerios Neroli, Patagonia, Sagrada Madre, 6 unidades',
         orderLink: 'https://wa.me/+5492615104019',
         category: 'Sahumerios'
@@ -805,7 +820,8 @@ const products = [
         code: 'PORD082',
         name: 'Sahumerios Yerba Mate Menta',
         price: 2600,
-        image: './img/082.jpg',
+        stock: true,
+        image: '/img/tienda/productos/082.jpg',
         description: 'Sahumerios Yerba Mate Menta, Patagonia, Sagrada Madre, 6 unidades',
         orderLink: 'https://wa.me/+5492615104019',
         category: 'Sahumerios'
@@ -815,7 +831,8 @@ const products = [
         code: 'PROD083',
         name: 'Sahumerios Lavanda Menta',
         price: 1300,
-        image: './img/083.jpg',
+        stock: false,
+        image: '/img/tienda/productos/083.jpg',
         description: 'Sahumerios lavanda Menta, Sahumerios de la India, 12 unidades',
         orderLink: 'https://wa.me/+5492615104019',
         category: 'Sahumerios'
@@ -825,7 +842,8 @@ const products = [
         code: 'PROD084',
         name: 'Sahumerios Fresas de la patagonia',
         price: 1300,
-        image: './img/084.jpg',
+        stock: false,
+        image: '/img/tienda/productos/084.jpg',
         description: 'Sahumerios Fresas de la patagonia, Sahumerios de la India, 12 unidades',
         orderLink: 'https://wa.me/+5492615104019',
         category: 'Sahumerios'
@@ -835,7 +853,8 @@ const products = [
         code: 'PROD085',
         name: 'Sahumerios Mirra Palo Santo',
         price: 1300,
-        image: './img/085.jpg',
+        stock: true,
+        image: '/img/tienda/productos/085.jpg',
         description: 'Sahumerios Mirra Palo Santo, Sahumerios de la India, 12 unidades',
         orderLink: 'https://wa.me/+5492615104019',
         category: 'Sahumerios'
@@ -845,7 +864,8 @@ const products = [
         code: 'PROD086',
         name: 'Sahumerios Magnolia Vainilla',
         price: 1300,
-        image: './img/086.jpg',
+        stock: false,
+        image: '/img/tienda/productos/086.jpg',
         description: 'Sahumerios Magnolia Vainilla, Sahumerios de la India, 12 unidades',
         orderLink: 'https://wa.me/+5492615104019',
         category: 'Sahumerios'
@@ -855,7 +875,8 @@ const products = [
         code: 'PROD087',
         name: 'Sahumerios Ruda Romero',
         price: 1300,
-        image: './img/087.jpg',
+        stock: true,
+        image: '/img/tienda/productos/087.jpg',
         description: 'Sahumerios Ruda Romero, Sahumerios de la India, 12 unidades',
         orderLink: 'https://wa.me/+5492615104019',
         category: 'Sahumerios'
@@ -865,7 +886,8 @@ const products = [
         code: 'PROD088',
         name: 'Sahumerios Vainilla Africana',
         price: 1300,
-        image: './img/088.jpg',
+        stock: false,
+        image: '/img/tienda/productos/088.jpg',
         description: 'Sahumerios Vainilla Africana, Sahumerios de la India, 12 unidades',
         orderLink: 'https://wa.me/+5492615104019',
         category: 'Sahumerios'
@@ -875,7 +897,8 @@ const products = [
         code: 'PROD089',
         name: 'Sahumerios Yagra Palo Santo',
         price: 1300,
-        image: './img/089.jpg',
+        stock: false,
+        image: '/img/tienda/productos/089.jpg',
         description: 'Sahumerios Yagra Palo Santo, Sahumerios de la India, 12 unidades',
         orderLink: 'https://wa.me/+5492615104019',
         category: 'Sahumerios'
@@ -885,7 +908,8 @@ const products = [
         code: 'PROD090',
         name: 'Conitos Cascada Amor',
         price: 1690,
-        image: './img/090.jpg',
+        stock: true,
+        image: '/img/tienda/productos/090.jpg',
         description: 'Conitos Cascada Amor, 10 unidades',
         orderLink: 'https://wa.me/+5492615104019',
         category: 'Conitos'
@@ -895,7 +919,8 @@ const products = [
         code: 'PROD091',
         name: 'Conitos Cascada Dinero',
         price: 1690,
-        image: './img/091.jpg',
+        stock: true,
+        image: '/img/tienda/productos/091.jpg',
         description: 'Conitos Cascada Dinero, 10 unidades',
         orderLink: 'https://wa.me/+5492615104019',
         category: 'Conitos'
@@ -905,7 +930,8 @@ const products = [
         code: 'PROD092',
         name: 'Conitos Cascada Energia Limpia',
         price: 1690,
-        image: './img/092.jpg',
+        stock: true,
+        image: '/img/tienda/productos/092.jpg',
         description: 'Conitos Cascada Energia Limpia, 10 unidades',
         orderLink: 'https://wa.me/+5492615104019',
         category: 'Conitos'
@@ -915,7 +941,8 @@ const products = [
         code: 'PROD093',
         name: 'Conitos Cascada Meditacion',
         price: 1690,
-        image: './img/093.jpg',
+        stock: true,
+        image: '/img/tienda/productos/093.jpg',
         description: 'Conitos Cascada Meditacion, 10 unidades',
         orderLink: 'https://wa.me/+5492615104019',
         category: 'Conitos'
@@ -925,7 +952,8 @@ const products = [
         code: 'PROD094',
         name: 'Conitos Cascada Pasion',
         price: 1690,
-        image: './img/094.jpg',
+        stock: true,
+        image: '/img/tienda/productos/094.jpg',
         description: 'Conitos Cascada Pasion, 10 unidades',
         orderLink: 'https://wa.me/+5492615104019',
         category: 'Conitos'
@@ -935,7 +963,8 @@ const products = [
         code: 'PROD095',
         name: 'Sahumerios Magicos Vainilla',
         price: 2990,
-        image: './img/095.jpg',
+        stock: false,
+        image: '/img/tienda/productos/095.jpg',
         description: 'Sahumerios Magicos Vainilla, Aromanza, 10 unidades',
         orderLink: 'https://wa.me/+5492615104019',
         category: 'Sahumerios'
@@ -945,7 +974,8 @@ const products = [
         code: 'PROD096',
         name: 'Sahumerios Magicos Aqua Marine',
         price: 2990,
-        image: './img/096.jpg',
+        stock: true,
+        image: '/img/tienda/productos/096.jpg',
         description: 'Sahumerios Magicos Aqua Marine, Aromanza, 10 unidades',
         orderLink: 'https://wa.me/+5492615104019',
         category: 'Sahumerios'
@@ -955,7 +985,8 @@ const products = [
         code: 'PROD097',
         name: 'Sahumerios Magicos Sándalo Hindú',
         price: 2990,
-        image: './img/097.jpg',
+        stock: true,
+        image: '/img/tienda/productos/097.jpg',
         description: 'Sahumerios Magicos Sándalo Hindú, Aromanza, 10 unidades',
         orderLink: 'https://wa.me/+5492615104019',
         category: 'Sahumerios'
@@ -965,7 +996,8 @@ const products = [
         code: 'PROD098',
         name: 'Sahumerios Magicos Rosa Real',
         price: 2990,
-        image: './img/098.jpg',
+        stock: true,
+        image: '/img/tienda/productos/098.jpg',
         description: 'Sahumerios Magicos Rosa Real, Aromanza, 10 unidades',
         orderLink: 'https://wa.me/+5492615104019',
         category: 'Sahumerios'
@@ -975,7 +1007,8 @@ const products = [
         code: 'PROD099',
         name: 'Sahumerios Magicos Escencias de la India',
         price: 2990,
-        image: './img/099.jpg',
+        stock: true,
+        image: '/img/tienda/productos/099.jpg',
         description: 'Sahumerios Magicos Escencias de la India, Aromanza, 10 unidades',
         orderLink: 'https://wa.me/+5492615104019',
         category: 'Sahumerios'
@@ -985,7 +1018,8 @@ const products = [
         code: 'PROD100',
         name: 'Sahumerios Citronela',
         price: 1350,
-        image: './img/100.jpg',
+        stock: false,
+        image: '/img/tienda/productos/100.jpg',
         description: 'Sahumerios Citronela, marca, 5 unidades',
         orderLink: 'https://wa.me/+5492615104019',
         category: 'Sahumerios'
@@ -995,7 +1029,8 @@ const products = [
         code: 'PROD101',
         name: 'Sahumerios Limpieza Energética',
         price: 1350,
-        image: './img/101.jpg',
+        stock: true,
+        image: '/img/tienda/productos/101.jpg',
         description: 'Sahumerios Limpieza Energética, marca, 5 unidades',
         orderLink: 'https://wa.me/+5492615104019',
         category: 'Sahumerios'
@@ -1005,7 +1040,8 @@ const products = [
         code: 'PROD102',
         name: 'Sahumerios Energía Amorosa',
         price: 1350,
-        image: './img/102.jpg',
+        stock: true,
+        image: '/img/tienda/productos/102.jpg',
         description: 'Sahumerios Energía Amorosa, marca, 5 unidades',
         orderLink: 'https://wa.me/+5492615104019',
         category: 'Sahumerios'
@@ -1015,7 +1051,8 @@ const products = [
         code: 'PROD103',
         name: 'Sahumerios Purificación Amorosa',
         price: 1350,
-        image: './img/103.jpg',
+        stock: true,
+        image: '/img/tienda/productos/103.jpg',
         description: 'Sahumerios Purificación Amorosa, marca, 5 unidades',
         orderLink: 'https://wa.me/+5492615104019',
         category: 'Sahumerios'
@@ -1025,7 +1062,8 @@ const products = [
         code: 'PROD104',
         name: 'Sahumerios Vainilla',
         price: 1300,
-        image: './img/104.jpg',
+        stock: false,
+        image: '/img/tienda/productos/104.jpg',
         description: 'Sahumerios Vainilla, Sahumerios de la India Hexagonal, ',
         orderLink: 'https://wa.me/+5492615104019',
         category: 'Sahumerios'
@@ -1035,7 +1073,8 @@ const products = [
         code: 'PROD105',
         name: 'Sahumerios Sándalo',
         price: 1300,
-        image: './img/105.jpg',
+        stock: false,
+        image: '/img/tienda/productos/105.jpg',
         description: 'Sahumerios',
         orderLink: 'https://wa.me/+5492615104019',
         category: 'Sahumerios'
@@ -1045,7 +1084,8 @@ const products = [
         code: 'PROD106',
         name: 'Sahumerios Lavanda',
         price: 1300,
-        image: './img/106.jpg',
+        stock: false,
+        image: '/img/tienda/productos/106.jpg',
         description: 'Sahumerios',
         orderLink: 'https://wa.me/+5492615104019',
         category: 'Sahumerios'
@@ -1055,7 +1095,8 @@ const products = [
         code: 'PROD107',
         name: 'Sahumerios Citronela',
         price: 1300,
-        image: './img/107.jpg',
+        stock: false,
+        image: '/img/tienda/productos/107.jpg',
         description: 'Sahumerios',
         orderLink: 'https://wa.me/+5492615104019',
         category: 'Sahumerios'
@@ -1065,7 +1106,8 @@ const products = [
         code: 'PROD108',
         name: 'Sahumerios Mirrh',
         price: 1300,
-        image: './img/108.jpg',
+        stock: true,
+        image: '/img/tienda/productos/108.jpg',
         description: 'Sahumerios',
         orderLink: 'https://wa.me/+5492615104019',
         category: 'Sahumerios'
@@ -1075,7 +1117,8 @@ const products = [
         code: 'PROD109',
         name: 'Sahumerios Incense',
         price: 1300,
-        image: './img/109.jpg',
+        stock: true,
+        image: '/img/tienda/productos/109.jpg',
         description: 'Sahumerios',
         orderLink: 'https://wa.me/+5492615104019',
         category: 'Sahumerios'
@@ -1085,10 +1128,121 @@ const products = [
         code: 'PROD110',
         name: 'Sahumerios Strawberry',
         price: 1300,
-        image: './img/110.jpg',
+        stock: true,
+        image: '/img/tienda/productos/110.jpg',
         description: 'Sahumerios',
         orderLink: 'https://wa.me/+5492615104019',
         category: 'Sahumerios'
+    },
+    {
+        id: 111,
+        code: 'PROD111',
+        name: 'Crema castanha para manos',
+        price: 5000,
+        stock: true,
+        image: '/img/tienda/productos/111.jpg',
+        description: 'Crema castanha para manos 40g',
+        orderLink: 'https://wa.me/+5492615104019',
+        category: 'Natura',
+    },
+    {
+        id: 112,
+        code: 'PROD112',
+        name: 'Crema corporal',
+        price: 11000,
+        stock: true,
+        image: '/img/tienda/productos/112.jpg',
+        description: 'Crema corporal nuez pecan y cacao tododia 200ml',
+        orderLink: 'https://wa.me/+5492615104019',
+        category: 'Natura',
+    },
+    {
+        id: 113,
+        code: 'PROD113',
+        name: 'Crema corporal castanha',
+        price: 10000,
+        stock: true,
+        image: '/img/tienda/productos/113.jpg',
+        description: 'Crema corporal castanha 100ml',
+        orderLink: 'https://wa.me/+5492615104019',
+        category: 'Natura',
+    },
+    {
+        id: 114,
+        code: 'PROD114',
+        name: 'Crema corporal',
+        price: 8000,
+        stock: true,
+        image: '/img/tienda/productos/114.jpg',
+        description: 'Crema corporal limon siciliano y flor de gardenia Tododia 80ml',
+        orderLink: 'https://wa.me/+5492615104019',
+        category: 'Natura',
+    },
+    {
+        id: 115,
+        code: 'PROD115',
+        name: 'Desodorante Tododia Femenino',
+        price: 5000,
+        stock: true,
+        image: '/img/tienda/productos/115.jpg',
+        description: 'Desodorante antitranspirante Tododia Femenino 70ml',
+        orderLink: 'https://wa.me/+5492615104019',
+        category: 'Natura',
+    },
+    {
+        id: 116,
+        code: 'PROD116',
+        name: 'Balsamo post barba Homem',
+        price: 8000,
+        stock: true,
+        image: '/img/tienda/productos/116.jpg',
+        description: 'Balsamo post barba Homem 75ml',
+        orderLink: 'https://wa.me/+5492615104019',
+        category: 'Natura',
+    },
+    {
+        id: 117,
+        code: 'PROD117',
+        name: 'Crema de afeitar Homem',
+        price: 5000,
+        stock: true,
+        image: '/img/tienda/productos/117.jpg',
+        description: 'Crema de afeitar para barbear homem 75ml',
+        orderLink: 'https://wa.me/+5492615104019',
+        category: 'Natura',
+    },
+    {
+        id: 118,
+        code: 'PROD118',
+        name: 'Desodorante Kaiak Femenino',
+        price: 5000,
+        stock: true,
+        image: '/img/tienda/productos/118.jpg',
+        description: 'Desodorante antitranspirante Kaiak Femenino 75ml',
+        orderLink: 'https://wa.me/+5492615104019',
+        category: 'Natura',
+    },
+    {
+        id: 119,
+        code: 'PROD119',
+        name: 'Saphirus Amour',
+        price: 4500,
+        stock: true,
+        image: '/img/tienda/productos/119.jpg',
+        description: 'Aromatizador Saphirus Amour 250ml',
+        orderLink: 'https://wa.me/+5492615104019',
+        category: 'Saphirus',
+    },
+    {
+        id: 120,
+        code: 'PROD120',
+        name: 'Saphirus Greeen',
+        price: 4500,
+        stock: true,
+        image: '/img/tienda/productos/120.jpg',
+        description: 'Aromatizador Saphirus Green 250ml',
+        orderLink: 'https://wa.me/+5492615104019',
+        category: 'Saphirus',
     }
 ];
 
@@ -1146,20 +1300,36 @@ function createProductCards() {
     const endIndex = startIndex + productsPerPage;
     const pageProducts = filteredProducts.slice(startIndex, endIndex);
 
+
+
     pageProducts.forEach(product => {
+        // Solo mostrar la imagen sin stock si no hay stock
+        const defaultSinStockImage = '/img/tienda/sin-stock-img.png';
+        const sinStockHTML = !product.stock ? `<img class="sin-stock-img" src="${defaultSinStockImage}" alt="Sin stock">` : '';
+
+        // Bloquar boton de pedir cuando no hay stock, sino mostrar boton normal
+        const orderButtonHTML = !product.stock
+            ? `<button class="btn order disabled" disabled>No disponible</button>`
+            : `<a href="${product.orderLink}" class="btn order" data-id="${product.id}" target="_blank">Pedir</a>`;
+
+
         const card = document.createElement('div');
         card.className = 'product-card';
+
         card.innerHTML = `
-             <img src="${product.image}" alt="${product.name}">
-             <div class="product-info">
-                 <span class="product-category">${product.category}</span>
-                 <p class="product-code">Cod: ${product.code}</p>
-                 <h2>${product.name}</h2>
-                 <p class="product-price">$${new Intl.NumberFormat('es-ES').format(Math.floor(product.price))}</p>
-                 <button class="btn view-details" data-id="${product.id}">Ver detalles</button>
-                 <a href="${product.orderLink}" class="btn order" data-id="${product.id}" target="_blank">Pedir</a>
-             </div>
-         `;
+        <div class="product-img-container">
+            ${sinStockHTML}
+            <img class="product-img" src="${product.image}" alt="${product.name}" loading="lazy">
+        </div>
+        <div class="product-info">
+            <span class="product-category">${product.category}</span>
+            <p class="product-code">Cod: ${product.code}</p>
+            <h2>${product.name}</h2>
+            <p class="product-price">$${new Intl.NumberFormat('es-ES').format(Math.floor(product.price))}</p>
+            <button class="btn view-details" data-id="${product.id}">Ver detalles</button>
+            ${orderButtonHTML}
+        </div>
+        `;
         productList.appendChild(card);
     });
 
