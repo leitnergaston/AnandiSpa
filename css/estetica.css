@@ -3,6 +3,7 @@
 :root {
     --color-text: #5e3609;
     --color-text-h3: #3d2305;
+    --color-text-p: #442605;
 }
 
 * {
@@ -301,7 +302,6 @@ nav {
 .promo-card .image-container {
     position: relative;
     overflow: hidden;
-    margin-bottom: 15px;
 }
 
 .promo-card .image-container img {
@@ -309,6 +309,47 @@ nav {
     height: auto;
     transition: transform 0.3s ease;
 }
+
+/* Etiqueta para la promo */
+.promo-card .promo-tag {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: #e74c3c;
+    color: white;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 12px;
+    font-weight: bold;
+    z-index: 10;
+    text-transform: uppercase;
+    letter-spacing: .5px;
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+/* etiquetas especificas */
+.promo-tag.descuento {
+    background-color: #2ecc71;
+}
+
+.promo-tag.nueva {
+    background-color: #1e5799;
+}
+
+/* icono lupa */
+.promo-card .image-container .lupa {
+    position: absolute;
+    bottom: 15px;
+    right: 10px;
+    width: 30px;
+    height: auto;
+    background-color: #fff;
+    color: #333;
+    padding: 8px;
+    border-radius: 100%;
+    z-index: 10;
+}
+
 
 .promo-card .image-overlay {
     position: absolute;
@@ -381,7 +422,25 @@ nav {
     align-items: flex-start;
     justify-content: space-between;
     height: 24rem;
-    padding: 1.5rem;
+    padding: .5rem 1.3rem 1.3rem 1.3rem;
+}
+
+/* mini etiquetas */
+.feature-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+}
+
+.feature-tag {
+    background-color: #dfdfdf;
+    color: var(--color-text-p);
+    padding: 3px 8px;
+    border-radius: 4px;
+    font-size: 11px;
+    font-weight: 500;
+    border: 1px solid #ffd2ac;
+    white-space: nowrap;
 }
 
 .promo-content h3 {
@@ -391,6 +450,7 @@ nav {
 }
 
 .promo-content p {
+    color: var(--color-text-p);
     font-weight: 450;
     margin-bottom: 1.5rem;
 }

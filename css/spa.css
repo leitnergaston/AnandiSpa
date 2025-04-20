@@ -597,13 +597,61 @@ nav {
 .promo-card .image-container {
     position: relative;
     overflow: hidden;
-    margin-bottom: 15px;
 }
 
 .promo-card .image-container img {
     width: 100%;
     height: auto;
     transition: transform 0.3s ease;
+}
+
+/* etiqueta para la promo */
+.promo-card .promo-tag {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: #e74c3c;
+    color: white;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 12px;
+    font-weight: bold;
+    z-index: 10;
+    text-transform: uppercase;
+    letter-spacing: .5px;
+    box-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+}
+
+/* Etiquetas especificas */
+.promo-tag.popular{
+    background-color: #f1c72d;
+    color: #333;
+}
+
+.promo-tag.descuento {
+    background-color: #2ecc71;
+}
+
+.promo-tag.otonio {
+    background-color: #e67e22;
+}
+
+.promo-tag.superPromo {
+    background-color: #1e5799;
+}
+
+/* Icono lupa */
+.promo-card .image-container .lupa {
+    position: absolute;
+    bottom: 15px;
+    right: 10px;
+    width: 30px;
+    height: auto;
+    background-color: #fff;
+    color: #333;
+    padding: 8px;
+    border-radius: 100%;
+    z-index: 10;
 }
 
 .promo-card .image-overlay {
@@ -677,7 +725,25 @@ nav {
     align-items: flex-start;
     justify-content: space-between;
     height: 24rem;
-    padding: 1.5rem;
+    padding: .5rem 1.3rem 1.3rem 1.3rem;
+}
+
+/* mini etiquetas */
+.feature-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+}
+
+.feature-tag {
+    background-color: #dfdfdf;
+    color: var(--color-text-p);
+    padding: 3px 8px;
+    border-radius: 4px;
+    font-size: 11px;
+    font-weight: 500;
+    border: 1px solid #ffd2ac;
+    white-space: nowrap;
 }
 
 .promo-content h3 {
@@ -759,7 +825,7 @@ nav {
 }
 
 .destacada-4::before {
-    content: "Promo Verano";
+    content: "Promo Otoño";
     display: block;
     color: #333;
     text-shadow: 0 1px 10px #fff;

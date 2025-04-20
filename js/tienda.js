@@ -5,6 +5,9 @@ const products = [
         code: 'PROD001',
         name: 'Frescor Castaña',
         price: 29680,
+        // discount: 10,
+        // isOnSale: true,
+        //isNew: true,
         stock: true,
         image: '/img/tienda/productos/001.jpg',
         description: 'Ekos castaña frescor eav de toillette 150ml dulce floral',
@@ -502,6 +505,7 @@ const products = [
         name: 'Mascara purificante',
         price: 46780,
         stock: true,
+        isNew: true,
         image: '/img/tienda/productos/051.jpg',
         description: 'Mascara de argila purificante CHRONOS 70g',
         orderLink: 'https://wa.me/+5492615104019',
@@ -513,6 +517,7 @@ const products = [
         name: 'Exfoliante CHRONOS',
         price: 31800,
         stock: true,
+        isNew: true,
         image: '/img/tienda/productos/052.jpg',
         description: 'Exfoliante antiseñales CHRONOS 50g',
         orderLink: 'https://wa.me/+5492615104019',
@@ -535,6 +540,7 @@ const products = [
         name: 'Saphirus Linah',
         price: 4500,
         stock: true,
+        isNew: true,
         image: '/img/tienda/productos/055.jpg',
         description: 'Aromatizador Saphirus Linah 250ml',
         orderLink: 'https://wa.me/+5492615104019',
@@ -546,6 +552,7 @@ const products = [
         name: 'Saphirus Flores Blancas',
         price: 4500,
         stock: true,
+        isNew: true,
         image: '/img/tienda/productos/056.jpg',
         description: 'Aromatizador Saphirus Flores Blancas 250ml',
         orderLink: 'https://wa.me/+5492615104019',
@@ -557,6 +564,7 @@ const products = [
         name: 'Saphirus Limon',
         price: 4500,
         stock: true,
+        isNew: true,
         image: '/img/tienda/productos/057.jpg',
         description: 'Aromatizador Saphirus Limon 250ml',
         orderLink: 'https://wa.me/+5492615104019',
@@ -579,6 +587,7 @@ const products = [
         name: 'Saphirus Cony',
         price: 4500,
         stock: true,
+        isNew: true,
         image: '/img/tienda/productos/059.jpg',
         description: 'Aromatizador Saphirus Cony 250ml',
         orderLink: 'https://wa.me/+5492615104019',
@@ -1140,6 +1149,7 @@ const products = [
         name: 'Crema castanha para manos',
         price: 5000,
         stock: true,
+        isNew: true,
         image: '/img/tienda/productos/111.jpg',
         description: 'Crema castanha para manos 40g',
         orderLink: 'https://wa.me/+5492615104019',
@@ -1151,6 +1161,7 @@ const products = [
         name: 'Crema corporal',
         price: 11000,
         stock: true,
+        isNew: true,
         image: '/img/tienda/productos/112.jpg',
         description: 'Crema corporal nuez pecan y cacao tododia 200ml',
         orderLink: 'https://wa.me/+5492615104019',
@@ -1162,6 +1173,7 @@ const products = [
         name: 'Crema corporal castanha',
         price: 10000,
         stock: true,
+        isNew: true,
         image: '/img/tienda/productos/113.jpg',
         description: 'Crema corporal castanha 100ml',
         orderLink: 'https://wa.me/+5492615104019',
@@ -1173,6 +1185,7 @@ const products = [
         name: 'Crema corporal',
         price: 8000,
         stock: true,
+        isNew: true,
         image: '/img/tienda/productos/114.jpg',
         description: 'Crema corporal limon siciliano y flor de gardenia Tododia 80ml',
         orderLink: 'https://wa.me/+5492615104019',
@@ -1184,6 +1197,7 @@ const products = [
         name: 'Desodorante Tododia Femenino',
         price: 5000,
         stock: true,
+        isNew: true,
         image: '/img/tienda/productos/115.jpg',
         description: 'Desodorante antitranspirante Tododia Femenino 70ml',
         orderLink: 'https://wa.me/+5492615104019',
@@ -1195,6 +1209,7 @@ const products = [
         name: 'Balsamo post barba Homem',
         price: 8000,
         stock: true,
+        isNew: true,
         image: '/img/tienda/productos/116.jpg',
         description: 'Balsamo post barba Homem 75ml',
         orderLink: 'https://wa.me/+5492615104019',
@@ -1206,6 +1221,7 @@ const products = [
         name: 'Crema de afeitar Homem',
         price: 5000,
         stock: true,
+        isNew: true,
         image: '/img/tienda/productos/117.jpg',
         description: 'Crema de afeitar para barbear homem 75ml',
         orderLink: 'https://wa.me/+5492615104019',
@@ -1217,6 +1233,7 @@ const products = [
         name: 'Desodorante Kaiak Femenino',
         price: 5000,
         stock: true,
+        isNew: true,
         image: '/img/tienda/productos/118.jpg',
         description: 'Desodorante antitranspirante Kaiak Femenino 75ml',
         orderLink: 'https://wa.me/+5492615104019',
@@ -1228,6 +1245,7 @@ const products = [
         name: 'Saphirus Amour',
         price: 4500,
         stock: true,
+        isNew: true,
         image: '/img/tienda/productos/119.jpg',
         description: 'Aromatizador Saphirus Amour 250ml',
         orderLink: 'https://wa.me/+5492615104019',
@@ -1239,6 +1257,7 @@ const products = [
         name: 'Saphirus Greeen',
         price: 4500,
         stock: true,
+        isNew: true,
         image: '/img/tienda/productos/120.jpg',
         description: 'Aromatizador Saphirus Green 250ml',
         orderLink: 'https://wa.me/+5492615104019',
@@ -1307,10 +1326,26 @@ function createProductCards() {
         const defaultSinStockImage = '/img/tienda/sin-stock-img.png';
         const sinStockHTML = !product.stock ? `<img class="sin-stock-img" src="${defaultSinStockImage}" alt="Sin stock">` : '';
 
-        // Bloquar boton de pedir cuando no hay stock, sino mostrar boton normal
+        // Bloquear boton de pedir cuando no hay stock, sino mostrar boton normal
         const orderButtonHTML = !product.stock
             ? `<button class="btn order disabled" disabled>No disponible</button>`
             : `<a href="${product.orderLink}" class="btn order" data-id="${product.id}" target="_blank">Pedir</a>`;
+
+        // etiqueta de 'nuevo' en productos nuevos
+        const newTagHTML = product.isNew ? `<span class="new-tag">Nuevo</span>` : '';
+        // Etiqueta "%dcto"
+        const offerTagHTML = product.isOnSale ? `<span class="new-tag offer">-${product.discount}%</span>` : '';
+
+        // Precio
+        const hasDiscount = product.discount && product.isOnSale;
+        const discountedPrice = hasDiscount ? product.price * (1 - product.discount / 100) : product.price;
+        const priceHTML = hasDiscount
+            ? `<p class="product-price">
+        <span class="original-price">$${new Intl.NumberFormat('es-ES').format(Math.floor(product.price))}</span>
+        <span class="discounted-price">$${new Intl.NumberFormat('es-ES').format(Math.floor(discountedPrice))}</span>
+                </p>`
+            : `<p class="product-price">$${new Intl.NumberFormat('es-ES').format(Math.floor(product.price))}</p>`;
+
 
 
         const card = document.createElement('div');
@@ -1319,13 +1354,15 @@ function createProductCards() {
         card.innerHTML = `
         <div class="product-img-container">
             ${sinStockHTML}
+            ${newTagHTML}
+            ${offerTagHTML}
             <img class="product-img" src="${product.image}" alt="${product.name}" loading="lazy">
         </div>
         <div class="product-info">
             <span class="product-category">${product.category}</span>
             <p class="product-code">Cod: ${product.code}</p>
             <h2>${product.name}</h2>
-            <p class="product-price">$${new Intl.NumberFormat('es-ES').format(Math.floor(product.price))}</p>
+            ${priceHTML}
             <button class="btn view-details" data-id="${product.id}">Ver detalles</button>
             ${orderButtonHTML}
         </div>
