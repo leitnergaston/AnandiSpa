@@ -4,17 +4,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Anandi Spa</title>
+    <title>Anandi | Spa</title>
 
-    <meta name="title" content="anandispaestetica.com">
     <meta name="description"
         content="Nos dedicamos a proporcionar una experiencia de relajación y bienestar. Ofrecemos una amplia variedad de circuitos para revitalizar su cuerpo y mente">
     <meta name="keywords"
         content="Masajes descontracturantes, Piedras Calientes, Pindas Herbáticas, Almohadillas térmicas, Tratamientos faciales, Exfoliaciones, Hidromasaje, Sauna finlandés, Piscina, Meriendas, Circuitos de spa">
-    <meta name="robots" content="index, follow">
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <meta name="language" content="Spanish">
-    <meta name="author" content="GC Code Devs">
+    <meta property="og:title" content="Spa en Mendoza | Anandi Spa">
+    <meta property="og:description"
+        content="Viví una experiencia de bienestar con nuestros servicios de spa. Reservá tu turno.">
+    <meta property="og:image" content="/img/loader/logoLoader.png">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://anandispaestetica.com/spa">
 
 
     <!-- scroll reveal -->
@@ -26,10 +27,10 @@
     <!-- ICONOS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
-    <!-- ESTILOS -->
+    <!-- ESTILOS CSS -->
     <link rel="stylesheet" href="/css/spa.css">
 
-    <!-- ESTILOS LOADER -->
+    <!-- ESTILOS CSS LOADER -->
     <link rel="stylesheet" href="/css/loader.css">
 
     <!-- FAVICON -->
@@ -127,44 +128,6 @@
                     <div class="swiper-container">
                         <div class="swiper-wrapper">
 
-                            <!-- <div class="promo-card swiper-slide">
-                                <div class="image-container">
-                                    <img src="/img/paginaSpa/promos/mujer 1.jpg" alt="promo mujer 1" class="swiper-img">
-                                </div>
-                                <div class="swiper-card-content">
-                                    <div class="swiper-card-title">
-                                        <h4>Promo Mujer 1</h4>
-                                    </div>
-                                    <div class="swiper-card-description">
-                                        <p>Promo Dia de la Mujer durante todo el mes.
-                                        </p>
-                                    </div>
-                                    <div class="swiper-card-link">
-                                        <a onclick="mostrarPromoPopup('https://wa.me/5492615104019?text=Hola,%20me%20gustaria%20pedir%20la%20promo%20Mujer%201..')"
-                                            target="_blank">Pedir Promo</a>
-                                    </div>
-                                </div>
-                            </div> -->
-
-                            <!-- <div class="promo-card swiper-slide">
-                                <div class="image-container">
-                                    <img src="/img/paginaSpa/promos/mujer 2.jpg" alt="promo mujer 2" class="swiper-img">
-                                </div>
-                                <div class="swiper-card-content">
-                                    <div class="swiper-card-title">
-                                        <h4>Promo Mujer 2</h4>
-                                    </div>
-                                    <div class="swiper-card-description">
-                                        <p>Promo Dia de la Mujer durante todo el mes.
-                                        </p>
-                                    </div>
-                                    <div class="swiper-card-link">
-                                        <a onclick="mostrarPromoPopup('https://wa.me/5492615104019?text=Hola,%20me%20gustaria%20pedir%20la%20promo%20Mujer%202..')"
-                                            target="_blank">Pedir Promo</a>
-                                    </div>
-                                </div>
-                            </div> -->
-
                             <div class="promo-card swiper-slide">
                                 <div class="image-container">
                                     <img src="/img/spa/promos/tardes-para-compartir.jpg" alt="tardes para compartir"
@@ -184,8 +147,6 @@
                                     </div>
                                 </div>
                             </div>
-
-
 
                             <div class="promo-card swiper-slide">
                                 <div class="image-container">
@@ -223,7 +184,7 @@
                                     </div>
                                 </div>
                             </div>
-
+                            
                         </div>
                     </div>
                     <div class="swiper-pagination"></div>
@@ -769,8 +730,278 @@
 
         <hr>
 
-        <!-- ===== GALERIA ===== -->
+        <!--* ===== GALERIA ===== -->
         <section id="galeria" class="gallery lazy-section">
+            <div class="container">
+                <h2>Nuestra Galeria</h2>
+                <div>
+                    <div class="gallery-nav-container">
+                        <ul class="gallery-nav-links">
+                            <li class="gallery-nav-item">
+                                <a href="#tab-1" class="gallery-nav-link active">
+                                    <span>Todas</span>
+                                </a>
+                            </li>
+                            <li class="gallery-nav-item">
+                                <a href="#tab-2" class="gallery-nav-link">
+                                    <span>Servicios</span>
+                                </a>
+                            </li>
+                            <li class="gallery-nav-item">
+                                <a href="#tab-3" class="gallery-nav-link">
+                                    <span>Hidromasaje</span>
+                                </a>
+                            </li>
+                            <li class="gallery-nav-item">
+                                <a href="#tab-4" class="gallery-nav-link">
+                                    <span>Sauna</span>
+                                </a>
+                            </li>
+                            <li class="gallery-nav-item">
+                                <a href="#tab-5" class="gallery-nav-link">
+                                    <span>Piscina</span>
+                                </a>
+                            </li>
+                            <li class="gallery-nav-item">
+                                <a href="#tab-6" class="gallery-nav-link">
+                                    <span>Meriendas</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="tab-content">
+                        <div id="tab-1" class="tab-pane active">
+                            <div class="gallery-grid">
+                                <div class="gallery-item">
+                                    <img class="img-gallery-inicio" data-src="/img/spa/galeria/hidro2.jpg"
+                                        alt="Masajes descontracturantes" loading="lazy">
+                                </div>
+                                <div class="gallery-item">
+                                    <img class="img-gallery-inicio" data-src="/img/spa/galeria/merienda1.jpg"
+                                        alt="Masajes relajantes" loading="lazy">
+                                </div>
+                                <div class="gallery-item">
+                                    <img class="img-gallery-inicio" data-src="/img/spa/galeria/piscina1.webp"
+                                        alt="Piedras calientes" loading="lazy">
+                                </div>
+                                <div class="gallery-item">
+                                    <img class="img-gallery-inicio" data-src="/img/spa/galeria/sauna1.webp"
+                                        alt="Exfoliaciones" loading="lazy">
+                                </div>
+                                <div class="gallery-item">
+                                    <img class="img-gallery-inicio" data-src="/img/spa/galeria/hidro4.webp" alt="Pileta"
+                                        loading="lazy">
+                                </div>
+                                <div class="gallery-item">
+                                    <img class="img-gallery-inicio" data-src="/img/spa/galeria/masaje5.jpg"
+                                        alt="Faciales" loading="lazy">
+                                </div>
+                                <div class="gallery-item">
+                                    <img class="img-gallery-inicio" data-src="/img/spa/galeria/sauna5.jpg"
+                                        alt="Meriendas" loading="lazy">
+                                </div>
+                                <div class="gallery-item">
+                                    <img class="img-gallery-inicio" data-src="/img/spa/galeria/piscina2.webp"
+                                        alt="Meriendas" loading="lazy">
+                                </div>
+                                <div class="gallery-item">
+                                    <img class="img-gallery-inicio" data-src="/img/spa/galeria/masaje1.webp"
+                                        alt="Meriendas" loading="lazy">
+                                </div>
+                                <div class="gallery-item">
+                                    <img class="img-gallery-inicio" data-src="/img/spa/galeria/masaje4.jpg"
+                                        alt="Meriendas" loading="lazy">
+                                </div>
+                            </div>
+                        </div>
+                        <!-- galeria masajes -->
+                        <div id="tab-2" class="tab-pane">
+                            <div class="gallery-grid">
+                                <div class="gallery-item">
+                                    <img class="img-gallery-inicio" data-src="/img/spa/galeria/masaje1.webp"
+                                        alt="Meriendas" loading="lazy">
+                                </div>
+                                <div class="gallery-item">
+                                    <img class="img-gallery-inicio" data-src="/img/spa/galeria/masaje2.webp"
+                                        alt="Meriendas" loading="lazy">
+                                </div>
+                                <div class="gallery-item">
+                                    <img class="img-gallery-inicio" data-src="/img/spa/galeria/masaje3.webp"
+                                        alt="Meriendas" loading="lazy">
+                                </div>
+                                <div class="gallery-item">
+                                    <img class="img-gallery-inicio" data-src="/img/spa/galeria/masaje4.jpg"
+                                        alt="Meriendas" loading="lazy">
+                                </div>
+                                <div class="gallery-item">
+                                    <img class="img-gallery-inicio" data-src="/img/spa/galeria/masaje5.jpg"
+                                        alt="Meriendas" loading="lazy">
+                                </div>
+                            </div>
+                        </div>
+                        <!-- galeria hidromasaje -->
+                        <div id="tab-3" class="tab-pane">
+                            <div class="gallery-grid">
+                                <div class="gallery-item">
+                                    <img class="img-gallery-inicio" data-src="/img/spa/galeria/hidro1.jpg"
+                                        alt="Meriendas" loading="lazy">
+                                </div>
+                                <div class="gallery-item">
+                                    <img class="img-gallery-inicio" data-src="/img/spa/galeria/hidro2.jpg"
+                                        alt="Meriendas" loading="lazy">
+                                </div>
+                                <div class="gallery-item">
+                                    <img class="img-gallery-inicio" data-src="/img/spa/galeria/hidro3.jpg"
+                                        alt="Meriendas" loading="lazy">
+                                </div>
+                                <div class="gallery-item">
+                                    <img class="img-gallery-inicio" data-src="/img/spa/galeria/hidro4.webp"
+                                        alt="Meriendas" loading="lazy">
+                                </div>
+                                <div class="gallery-item">
+                                    <img class="img-gallery-inicio" data-src="/img/spa/galeria/hidro5.jpg"
+                                        alt="Meriendas" loading="lazy">
+                                </div>
+                                <div class="gallery-item">
+                                    <img class="img-gallery-inicio" data-src="/img/spa/galeria/hidro6.jpg"
+                                        alt="Meriendas" loading="lazy">
+                                </div>
+                            </div>
+                        </div>
+                        <!-- galeria sauna -->
+                        <div id="tab-4" class="tab-pane">
+                            <div class="gallery-grid">
+                                <div class="gallery-item">
+                                    <img class="img-gallery-inicio" data-src="/img/spa/galeria/sauna1.webp"
+                                        alt="Meriendas" loading="lazy">
+                                </div>
+                                <div class="gallery-item">
+                                    <img class="img-gallery-inicio" data-src="/img/spa/galeria/sauna2.jpg"
+                                        alt="Meriendas" loading="lazy">
+                                </div>
+                                <div class="gallery-item">
+                                    <img class="img-gallery-inicio" data-src="/img/spa/galeria/sauna3.jpg"
+                                        alt="Meriendas" loading="lazy">
+                                </div>
+                                <div class="gallery-item">
+                                    <img class="img-gallery-inicio" data-src="/img/spa/galeria/sauna4.jpg"
+                                        alt="Meriendas" loading="lazy">
+                                </div>
+                                <div class="gallery-item">
+                                    <img class="img-gallery-inicio" data-src="/img/spa/galeria/sauna5.jpg"
+                                        alt="Meriendas" loading="lazy">
+                                </div>
+                                <div class="gallery-item">
+                                    <img class="img-gallery-inicio" data-src="/img/spa/galeria/sauna6.jpg"
+                                        alt="Meriendas" loading="lazy">
+                                </div>
+                                <div class="gallery-item">
+                                    <img class="img-gallery-inicio" data-src="/img/spa/galeria/sauna7.jpg"
+                                        alt="Meriendas" loading="lazy">
+                                </div>
+                            </div>
+                        </div>
+                        <!-- galeria piscina -->
+                        <div id="tab-5" class="tab-pane">
+                            <div class="gallery-grid">
+                                <div class="gallery-item">
+                                    <img class="img-gallery-inicio" data-src="/img/spa/galeria/piscina1.webp"
+                                        alt="Meriendas" loading="lazy">
+                                </div>
+                                <div class="gallery-item">
+                                    <img class="img-gallery-inicio" data-src="/img/spa/galeria/piscina2.webp"
+                                        alt="Meriendas" loading="lazy">
+                                </div>
+                                <div class="gallery-item">
+                                    <img class="img-gallery-inicio" data-src="/img/spa/galeria/piscina3.jpg"
+                                        alt="Meriendas" loading="lazy">
+                                </div>
+                                <div class="gallery-item">
+                                    <img class="img-gallery-inicio" data-src="/img/spa/galeria/piscina4.jpg"
+                                        alt="Meriendas" loading="lazy">
+                                </div>
+                                <div class="gallery-item">
+                                    <img class="img-gallery-inicio" data-src="/img/spa/galeria/piscina5.jpg"
+                                        alt="Meriendas" loading="lazy">
+                                </div>
+                                <div class="gallery-item">
+                                    <img class="img-gallery-inicio" data-src="/img/spa/galeria/piscina6.jpg"
+                                        alt="Meriendas" loading="lazy">
+                                </div>
+                            </div>
+                        </div>
+                        <!-- galeria merienda -->
+                        <div id="tab-6" class="tab-pane">
+                            <div class="gallery-grid">
+                                <div class="gallery-item">
+                                    <img class="img-gallery-inicio" data-src="/img/spa/galeria/merienda1.jpg"
+                                        alt="Meriendas" loading="lazy">
+                                </div>
+                                <div class="gallery-item">
+                                    <img class="img-gallery-inicio" data-src="/img/spa/galeria/merienda2.jpg"
+                                        alt="Meriendas" loading="lazy">
+                                </div>
+                                <div class="gallery-item">
+                                    <img class="img-gallery-inicio" data-src="/img/spa/galeria/merienda3.webp"
+                                        alt="Meriendas" loading="lazy">
+                                </div>
+                                <div class="gallery-item">
+                                    <img class="img-gallery-inicio" data-src="/img/spa/galeria/merienda4.jpg"
+                                        alt="Meriendas" loading="lazy">
+                                </div>
+                                <div class="gallery-item">
+                                    <img class="img-gallery-inicio" data-src="/img/spa/galeria/merienda5.jpg"
+                                        alt="Meriendas" loading="lazy">
+                                </div>
+                                <div class="gallery-item">
+                                    <img class="img-gallery-inicio" data-src="/img/spa/galeria/merienda6.jpg"
+                                        alt="Meriendas" loading="lazy">
+                                </div>
+                                <div class="gallery-item">
+                                    <img class="img-gallery-inicio" data-src="/img/spa/galeria/merienda7.jpg"
+                                        alt="Meriendas" loading="lazy">
+                                </div>
+                                <div class="gallery-item">
+                                    <img class="img-gallery-inicio" data-src="/img/spa/galeria/merienda8.jpg"
+                                        alt="Meriendas" loading="lazy">
+                                </div>
+                                <div class="gallery-item">
+                                    <img class="img-gallery-inicio" data-src="/img/spa/galeria/merienda9.jpg"
+                                        alt="Meriendas" loading="lazy">
+                                </div>
+                                <div class="gallery-item">
+                                    <img class="img-gallery-inicio" data-src="/img/spa/galeria/merienda10.jpg"
+                                        alt="Meriendas" loading="lazy">
+                                </div>
+                                <div class="gallery-item">
+                                    <img class="img-gallery-inicio" data-src="/img/spa/galeria/merienda11.jpg"
+                                        alt="Meriendas" loading="lazy">
+                                </div>
+                                <div class="gallery-item">
+                                    <img class="img-gallery-inicio" data-src="/img/spa/galeria/merienda12.jpg"
+                                        alt="Meriendas" loading="lazy">
+                                </div>
+                                <div class="gallery-item">
+                                    <img class="img-gallery-inicio" data-src="/img/spa/galeria/merienda13.jpg"
+                                        alt="Meriendas" loading="lazy">
+                                </div>
+                                <div class="gallery-item">
+                                    <img class="img-gallery-inicio" data-src="/img/spa/galeria/merienda14.jpg"
+                                        alt="Meriendas" loading="lazy">
+                                </div>
+                                <div class="gallery-item">
+                                    <img class="img-gallery-inicio" data-src="/img/spa/galeria/merienda15.jpg"
+                                        alt="Meriendas" loading="lazy">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== GALERIA vieja ===== -->
+        <!-- <section id="galeria" class="gallery lazy-section">
             <div class="container">
                 <h2>Nuestra Galeria</h2>
                 <div class="gallery-grid">
@@ -814,10 +1045,10 @@
                         <img class="img-gallery-inicio" data-src="/img/spa/galeria/galeria10.webp" alt="Meriendas"
                             loading="lazy">
                     </div>
-                </div>
-                <!-- <a href="Galeria/galeria.html" class="btn" target="_blank">Ver mas</a> -->
-            </div>
-        </section>
+                </div> -->
+        <!-- <a href="Galeria/galeria.html" class="btn" target="_blank">Ver mas</a> -->
+        <!-- </div> -->
+        <!-- </section> -->
 
         <hr>
 
@@ -850,7 +1081,7 @@
         </a>
     </main>
 
-    <!-- Footer -->
+    <!--* ===== Footer ===== -->
     <footer id="footer">
         <div class="container">
             <!-- First Row -->
@@ -861,16 +1092,16 @@
                 <div class="footer-social">
                     <a href="https://www.instagram.com/anandi.spa" target="_blank" aria-label="Instagram"><i
                             class="fa-brands fa-instagram"></i></a>
-                    <a href="https://www.facebook.com/spa.anandi" target="_blank" aria-label="Facebook"><i
+                    <a href="https://www.facebook.com/anandispaestetica" target="_blank" aria-label="Facebook"><i
                             class="fa-brands fa-facebook"></i></a>
-                    <a href="https://wa.me/542615104019" target="_blank" aria-label="WhatsApp"><i
+                    <a href="https://wa.me/+542615104019" target="_blank" aria-label="WhatsApp"><i
                             class="fa-brands fa-whatsapp"></i></a>
                 </div>
             </div>
             <!-- Second Row -->
             <div class="footer-row">
                 <div class="footer-column">
-                    <h4>Menu Principal</h4>
+                    <h3>Menu Rápido</h3>
                     <ul>
                         <li><a href="#inicio" class="smoothscroll">Inicio</a></li>
                         <li><a href="#promos" class="smoothscroll">Promos</a></li>
@@ -882,7 +1113,7 @@
                     </ul>
                 </div>
                 <div class="footer-column">
-                    <h4>Nuestros Servicios</h4>
+                    <h3>Nuestros Servicios</h3>
                     <ul>
                         <li><a href="#footer">Masajes</a></li>
                         <li><a href="#footer">Piedras y Pindas</a></li>
@@ -896,7 +1127,7 @@
                     </ul>
                 </div>
                 <div class="footer-column">
-                    <h4>Información</h4>
+                    <h3>Información</h3>
                     <ul>
                         <li><a href="terminos-y-condiciones.html" target="_blank">Términos y
                                 Condiciones</a></li>
@@ -905,7 +1136,7 @@
                     </ul>
                 </div>
                 <div class="footer-column footer-contact-link">
-                    <h4>Contacto Rápido</h4>
+                    <h3>Contacto Rápido</h3>
                     <ul>
                         <li><a href="https://wa.me/542615104019" target="_blank"><i class="fa-brands fa-whatsapp"></i>
                                 +549 261 510 4019</a></li>
@@ -915,7 +1146,7 @@
                 </div>
             </div>
 
-            <hr class="hr">
+            <hr class="hr-footer">
 
             <!-- Third Row -->
             <div class="footer-row">

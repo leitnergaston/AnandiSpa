@@ -327,7 +327,7 @@ nav {
     box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
 }
 
-/* etiquetas especificas */
+/** etiquetas especificas promo-tag */
 .promo-tag.descuento {
     background-color: #2ecc71;
 }
@@ -336,7 +336,80 @@ nav {
     background-color: #1e5799;
 }
 
-/* icono lupa */
+.promo-tag.limitada {
+    background-color: #ffd61e;
+    color: #333;
+}
+
+/* cards promos limitadas efecto 1 */
+/* .promo-card .promo-tag.promo-limitada { */
+/* border: 3px solid #FF6B6B; */
+/* animation: palpitar-borde 1s infinite ease-in-out; */
+/* position: relative; */
+/* } */
+
+/* @keyframes palpitar-borde {
+    0% {
+        border-color: #FF6B6B;
+        box-shadow: 0 0 5px #FF6B6B, 0 0 10px #FF6B6B inset;
+    }
+
+    50% {
+        border-color: #FFA07A;
+        box-shadow: 0 0 15px #FFA07A, 0 0 20px #FFA07A inset;
+    }
+
+    100% {
+        border-color: #FF6B6B;
+        box-shadow: 0 0 5px #FF6B6B, 0 0 10px #FF6B6B inset;
+    }
+} */
+
+/* efecto 2 */
+/* .promo-card.promo-limitada {
+    position: relative;
+    border: 3px solid transparent;
+    background: linear-gradient(white, white) padding-box,
+        linear-gradient(to right, #ff7e5f, #feb47b, #ff7e5f) border-box;
+    background-size: 200% auto;
+    animation: gradiente-animado 3s linear infinite;
+    border-radius: 8px;
+}
+@keyframes gradiente-animado {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+} */
+
+/** efecto 3 card promo limitada */
+.promo-tag.flash-offer {
+    background-color: #ffd61e;
+    color: #333;
+    animation: flash-anim 1.5s infinite ease-in-out;
+    filter: drop-shadow(0px 0px 10px #FF6B6B);
+}
+
+@keyframes flash-anim {
+
+    0%,
+    100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.05);
+    }
+}
+
+/** icono lupa */
 .promo-card .image-container .lupa {
     position: absolute;
     bottom: 15px;
@@ -425,7 +498,7 @@ nav {
     padding: .5rem 1.3rem 1.3rem 1.3rem;
 }
 
-/* mini etiquetas */
+/** mini etiquetas dentro de las cards promos */
 .feature-tags {
     display: flex;
     flex-wrap: wrap;
@@ -456,7 +529,7 @@ nav {
 }
 
 
-/* ========== Contact section styles ========== */
+/** ========== Contact section styles ========== */
 .contact {
     padding: 4rem 0;
     display: flex;
@@ -511,8 +584,254 @@ nav {
     font-weight: 500;
 }
 
-/* ========== Footer styles ========== */
+/** ========== Footer styles ========== */
+/* --- Importar Font Awesome (si no lo tienes ya) --- */
+/* Añade esto en el <head> de tu HTML:
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+*/
+
+/* --- Estilos Generales del Footer --- */
 footer {
+    background-color: #FAF0E6;
+    /* Un tono pastel muy suave (Linen) - puedes ajustarlo */
+    color: #5D4037;
+    /* Marrón oscuro para el texto, buen contraste */
+    padding: 40px 20px 10px 20px;
+    /* Espaciado: arriba, izq/der, abajo */
+    font-family: 'Arial', sans-serif;
+    /* O una fuente más elegante que ya uses */
+    line-height: 1.6;
+}
+
+.footer-main-content {
+    display: flex;
+    flex-wrap: wrap;
+    /* Para que las columnas se ajusten en pantallas pequeñas */
+    justify-content: space-between;
+    gap: 30px;
+    /* Espacio entre columnas */
+    margin-bottom: 30px;
+}
+
+.footer-column {
+    flex: 1;
+    /* Permite que las columnas crezcan */
+    min-width: 220px;
+    /* Ancho mínimo para cada columna antes de que se envuelvan */
+    margin-bottom: 20px;
+    /* Espacio si se apilan verticalmente */
+}
+
+.footer-column h4 {
+    font-size: 1.1em;
+    margin-bottom: 15px;
+    color: #4E342E;
+    /* Un marrón un poco más oscuro para títulos */
+    font-weight: 600;
+    border-bottom: 1px solid #D7CCC8;
+    /* Línea sutil debajo del título */
+    padding-bottom: 8px;
+}
+
+/* --- Columna "About" (Logo y Slogan) --- */
+.footer-logo {
+    max-width: 150px;
+}
+
+.footer-slogan {
+    font-size: 0.9em;
+    color: #795548;
+    /* Marrón medio */
+}
+
+/* --- Columna "Enlaces Útiles" --- */
+.footer-links ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-links ul li {
+    margin-bottom: 8px;
+}
+
+.footer-links ul li a {
+    text-decoration: none;
+    color: #5D4037;
+    /* Marrón oscuro */
+    transition: color 0.3s ease;
+}
+
+.footer-links ul li a:hover {
+    color: #A1887F;
+    /* Marrón más claro al pasar el cursor */
+}
+
+/* --- Columna "Contacto y Redes" --- */
+.contact-details p {
+    margin-bottom: 10px;
+    font-size: 0.9em;
+}
+
+.contact-details p i {
+    /* Iconos de contacto */
+    margin-right: 8px;
+    color: #8D6E63;
+    /* Marrón medio para iconos */
+}
+
+.footer-contact-link {
+    color: #5D4037;
+    text-decoration: none;
+}
+
+.footer-contact-link:hover {
+    color: #A1887F;
+}
+
+.footer-social-icons {
+    margin-top: 15px;
+}
+
+.footer-social-icons a {
+    color: #5D4037;
+    /* Marrón oscuro para iconos sociales */
+    font-size: 1.5em;
+    /* Tamaño de los iconos */
+    margin-right: 15px;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-social-icons a:last-child {
+    margin-right: 0;
+}
+
+.footer-social-icons a:hover {
+    color: #A1887F;
+    /* Marrón más claro al pasar el cursor */
+}
+
+/* --- Columna "Newsletter" --- */
+.footer-newsletter p {
+    font-size: 0.9em;
+    margin-bottom: 15px;
+}
+
+#newsletter-form {
+    display: flex;
+    gap: 5px;
+    /* Espacio entre input y botón */
+}
+
+#newsletter-form input[type="email"] {
+    flex-grow: 1;
+    /* El input ocupa el espacio disponible */
+    padding: 10px;
+    border: 1px solid #D7CCC8;
+    /* Borde pastel */
+    border-radius: 4px;
+    background-color: #fff;
+    /* Fondo blanco para el input */
+    font-size: 0.9em;
+    color: #5D4037;
+}
+
+#newsletter-form input[type="email"]::placeholder {
+    color: #A1887F;
+}
+
+.btn-newsletter {
+    padding: 10px 15px;
+    background-color: #8D6E63;
+    /* Marrón medio, color pastel pero con suficiente contraste */
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.9em;
+    transition: background-color 0.3s ease;
+}
+
+.btn-newsletter:hover {
+    background-color: #795548;
+    /* Marrón un poco más oscuro al pasar el cursor */
+}
+
+/* --- Barra Inferior del Footer (Copyright) --- */
+.footer-bottom-bar {
+    text-align: center;
+    padding-top: 20px;
+    border-top: 1px solid #D7CCC8;
+    /* Línea divisoria sutil */
+    font-size: 0.85em;
+    color: #795548;
+    /* Marrón medio */
+}
+
+/* --- Media Queries para Responsividad --- */
+@media (max-width: 992px) {
+
+    /* Para tablets */
+    .footer-main-content {
+        /* Podrías ajustar el número de columnas aquí si quieres, ej. 2 columnas */
+    }
+
+    .footer-column {
+        min-width: calc(50% - 20px);
+        /* Apunta a 2 columnas en tablets */
+    }
+}
+
+@media (max-width: 768px) {
+
+    /* Para móviles */
+    .footer-main-content {
+        flex-direction: column;
+        /* Apila las columnas verticalmente */
+        align-items: center;
+        /* Centra el contenido de las columnas apiladas */
+        text-align: center;
+        /* Centra el texto dentro de cada columna */
+    }
+
+    .footer-column {
+        min-width: 100%;
+        /* Cada columna ocupa todo el ancho */
+        margin-bottom: 30px;
+    }
+
+    .footer-column h4 {
+        /* Podrías quitar el border-bottom si no se ve bien centrado */
+    }
+
+    #newsletter-form {
+        flex-direction: column;
+        /* Apila el input y el botón del newsletter */
+        align-items: stretch;
+        /* Hace que el botón ocupe el ancho */
+    }
+
+    #newsletter-form input[type="email"] {
+        margin-bottom: 10px;
+    }
+
+    .footer-social-icons {
+        justify-content: center;
+        /* Centra los iconos sociales */
+        display: flex;
+    }
+
+    .contact-details {
+        text-align: center;
+        /* O left si prefieres que los iconos y texto no se centren forzosamente */
+    }
+}
+
+
+
+
+/* footer {
     background: #f3f3f2;
     padding: 20px 0;
     text-align: center;
@@ -540,10 +859,10 @@ footer .social-icons a:hover {
 
 footer p {
     margin: 0;
-}
+} */
 
 /* ===== Responsive Footer ===== */
-@media (max-width: 768px) {
+/* @media (max-width: 768px) {
     footer {
         font-size: 0.8em;
     }
@@ -571,7 +890,7 @@ footer p {
     footer .social-icons a {
         font-size: 0.8em;
     }
-}
+} */
 
 /* ========== RESPONSIVE ========== */
 @media screen and (max-width: 479px) {

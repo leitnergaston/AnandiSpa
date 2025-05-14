@@ -118,8 +118,8 @@ header h1 {
 
 /* Footer */
 footer {
-    padding-bottom: 2rem;
-    position: fixed;
+    /* padding-bottom: 2rem; */
+    /* position: fixed; */
     bottom: 0;
     width: 100%;
     display: flex;

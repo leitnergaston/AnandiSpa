@@ -1,16 +1,4 @@
 document.addEventListener('DOMContentLoaded', function () {
-    // // Carrusel de imagenes
-    // const slides = document.querySelectorAll('.carousel-slide');
-    // let currentSlide = 0;
-
-    // function nextSlide() {
-    //     slides[currentSlide].classList.remove('active');
-    //     currentSlide = (currentSlide + 1) % slides.length;
-    //     slides[currentSlide].classList.add('active');
-    // }
-
-    // setInterval(nextSlide, 5000);
-
     // Funcionalidad menu hamburguesa
     const hamburger = document.querySelector('.hamburger');
     const navLinks = document.querySelector('.nav-links');
@@ -35,12 +23,100 @@ document.addEventListener('DOMContentLoaded', function () {
             navLinks.classList.remove('active');
         }
     });
+
+    //* ========== galeria de imagenes con nav ========== //
+    // Select the gallery section
+    const gallerySection = document.getElementById('galeria');
+
+    // If the gallery section doesn't exist on the page, do nothing further
+    if (!gallerySection) {
+        return;
+    }
+
+    // Get all tab navigation links and the container for tab content panes
+    const tabLinks = gallerySection.querySelectorAll('.gallery-nav-link');
+    const tabPanesContainer = gallerySection.querySelector('.tab-content');
+
+    // If there are no tab links or no tab panes container, do nothing further
+    if (!tabLinks.length || !tabPanesContainer) {
+        return;
+    }
+
+    const tabPanes = tabPanesContainer.querySelectorAll('.tab-pane');
+
+    // Function to handle switching tabs
+    function switchTab(clickedLink) {
+        // Remove 'active' class from all tab links
+        tabLinks.forEach(link => {
+            link.classList.remove('active');
+        });
+
+        // Remove 'active' class from all tab content panes
+        tabPanes.forEach(pane => {
+            pane.classList.remove('active');
+        });
+
+        // Add 'active' class to the clicked navigation link
+        clickedLink.classList.add('active');
+
+        // Get the ID of the target content pane from the link's href attribute
+        const targetPaneId = clickedLink.getAttribute('href').substring(1); // e.g., 'tab-2'
+        const targetPane = document.getElementById(targetPaneId);
+
+        // If the target pane exists, add 'active' class to it to display it
+        if (targetPane) {
+            targetPane.classList.add('active');
+        }
+    }
+
+    // Attach event listeners to each tab navigation link
+    tabLinks.forEach(link => {
+        link.addEventListener('click', function (event) {
+            // Prevent the default anchor link behavior (e.g., jumping to the hash)
+            event.preventDefault();
+            // Call the function to switch to the tab associated with this link
+            switchTab(this);
+        });
+    });
+
+    // Initial setup: Ensure the tab marked 'active' in HTML is correctly displayed.
+    // This also cleans up any potential multiple 'active' classes in panes.
+    const initiallyActiveLink = gallerySection.querySelector('.gallery-nav-link.active');
+    if (initiallyActiveLink) {
+        // Deactivate all panes first to ensure a clean state, except the one that should be active.
+        const initialTargetPaneId = initiallyActiveLink.getAttribute('href').substring(1);
+        tabPanes.forEach(pane => {
+            if (pane.id === initialTargetPaneId) {
+                pane.classList.add('active'); // Ensure the correct one is active
+            } else {
+                pane.classList.remove('active'); // Deactivate others
+            }
+        });
+        // Ensure the link itself is active and others are not (already handled by HTML, but good for consistency)
+        tabLinks.forEach(link => {
+            if (link === initiallyActiveLink) {
+                link.classList.add('active');
+            } else {
+                link.classList.remove('active');
+            }
+        });
+
+    } else if (tabLinks.length > 0 && tabPanes.length > 0) {
+        // Fallback: If no link/pane is 'active' in HTML, activate the first tab by default.
+        // This ensures the gallery is not empty if HTML is misconfigured.
+        // (The provided HTML has tab-1 active, so this is a safety net)
+        tabLinks[0].classList.add('active');
+        tabPanes[0].classList.add('active');
+    }
+
 });
 
 
 
 
-// ========== Preloader de pagina inicio seccion galeria ========== //
+
+
+//* ========== Preloader de pagina inicio seccion galeria ========== //
 const observerOptions = {
     root: null,
     rootMargin: '0px',
@@ -82,7 +158,7 @@ document.querySelectorAll('.gallery-item img').forEach(img => {
 // ScrollReveal().reveal('.gallery-grid', { delay: 300 });
 
 
-// ========== Efecto scroll sections active link del navbar ========== //
+//* ========== Efecto scroll sections active link del navbar ========== //
 const sections = document.querySelectorAll("section[id]");
 
 window.addEventListener("scroll", navHighlighter);
@@ -127,7 +203,7 @@ function navHighlighter() {
 // });
 
 
-// ========== Promo Popup de terminos y condiciones ========== //
+//* ========== Promo Popup de terminos y condiciones ========== //
 let redirectUrl = '';
 
 function mostrarPromoPopup(url) {
@@ -180,7 +256,7 @@ function cerrarPromoPopup() {
 // setInterval(nextTestimonial, 5000); // Cambia de testimonio cada x milisegundos
 
 
-// TESTIMONIOS 2
+//* ========== TESTIMONIOS 2
 new Swiper('.card-wrapper', {
     loop: true,
     spaceBetween: 30,
@@ -204,7 +280,7 @@ new Swiper('.card-wrapper', {
 
     // Responsive breakpoints
     breakpoints: {
-        0: {
+        480: {
             slidesPerView: 1
         },
         768: {
@@ -221,7 +297,7 @@ new Swiper('.card-wrapper', {
 
 
 
-// ========== Popup Servicios ========== //
+//* ========== Popup Servicios ========== //
 const serviceButtons = document.querySelectorAll('.service-btn');
 const popupOverlay = document.querySelector('.popup-servicios');
 const popupContent = document.querySelector('.popup-servicios-content');
@@ -234,32 +310,32 @@ const serviceDetails = {
     'masajes-descontracturantes': {
         title: 'Masajes Descontracturantes',
         description: 'Alivia el dolor. Disuelve contracturas. Activa la circulación sanguínea y de la linfa eliminando toxinas. Relaja y ayuda a dormir bien. Alivia las migrañas y dolores de cabeza. Ayuda a evuacuar mejor. Mantiene la piel elástica eliminando células muertas y la nutre.',
-        image: '/img/servicios/img/servicios-masaje-descontracturante.jpg'
+        image: '/img/spa/servicios/img/servicios-masaje-descontracturante.jpg'
     },
     'masajes-relajantes': {
         title: 'Masajes Relajantes',
         description: 'Aumenta la función inmune. Mejora la calidad del sueño. Mejora la movilidad de las articulaciones. Estimula el movimiento linfático. Reduce el dolor muscular. Mejora la actividad mental. Agiliza la curación de lesiones de tejidos blandos. Alivia el estrés. Mejora la circulación y reduce la tensión muscular.',
-        image: '/img/servicios/img/servicios-masajes-relajantes.jpg'
+        image: '/img/spa/servicios/img/servicios-masajes-relajantes.jpg'
     },
     'masajes-sedativos': {
         title: 'Masajes Sedativos',
         description: 'Induce a un estado de calma y tranquilidad, disminuyendo la ansiedad y el estrés. Alivia las tensiones musculares, especialmente en áreas como el cuello, los hombros y la espalda. Favorece un sueño mas profundo y reparador, al reducir la actividad del sistema nervioso. Ayuda a equilibrar las emociones y a promover una sensación de bienestar general.',
-        image: '/img/servicios/img/servicios-masajes-sedativos.webp'
+        image: '/img/spa/servicios/img/servicios-masajes-sedativos.webp'
     },
     'masaje-sueco': {
         title: 'Masaje Sueco',
         description: 'Alivia las tensiones musculares y aumenta la flexibilidad. Estimula la circulación sanguínea y linfática, favoreciendo la eliminación de toxinas. Alivia dolores musculares y articulares, como los asociados a la tensión o lesiones leves. Fortalece los músculos y mejora el tono muscular. Proporciona una sensación de bienestar y vitalidad.',
-        image: '/img/servicios/img/servicios-masaje-sueco.webp'
+        image: '/img/spa/servicios/img/servicios-masaje-sueco.webp'
     },
     'hidromasaje': {
         title: 'Hidromasaje',
         description: 'Relajación muscular aliviando tensiones y dolores. Estimula la circulacion lo que ayuda a reducir la inflamación y a oxigenar los tejidos. Alivio del estrés. Ayuda a aliviar dolores musculares y articulares. Mejora la calidad del sueño. Ayuda a suavizar y nutrir la piel.',
-        image: '/img/servicios/img/servicios-hidromasaje.webp'
+        image: '/img/spa/servicios/img/servicios-hidromasaje.webp'
     },
     'sauna': {
         title: 'Sauna Finlandés',
         description: 'Ayuda a eliminar toxinas del cuerpo. Estimula el sistema inmunológico ayudando a prevenir enfermedades. La vasodilatación producida por el calor mejora la circulación sanguínea. El calor y la humedad relajan los músculos y la mente reduciendo el estrés y la ansiedad. Tambien ayuda a abrir los poros y trae un beneficio para la piel. Mejora la calidad del sueño.',
-        image: '/img/servicios/img/servicios-sauna.jpg'
+        image: '/img/spa/servicios/img/servicios-sauna.jpg'
     },
     'cutis': {
         title: 'Limpieza de cutis',
@@ -269,22 +345,22 @@ const serviceDetails = {
     'exfoliaciones': {
         title: 'Exfoliaciones',
         description: 'Elimina células muertas, estimulando la regeneración de la piel. Reduce la apariencia de manchas y cicatrices. Aumenta la luminosidad. Mejora la textura reduciendo la apariencia de piel áspera y seca. Facilita la absorción de los productos aplicados posteriormente. Previene vellos encarnados.',
-        image: '/img/servicios/img/servicios-exfo.jpg'
+        image: '/img/spa/servicios/img/servicios-exfo.jpg'
     },
     'piscina': {
         title: 'Piscina refrescante',
         description: 'Refrescante y revitalizante, el lugar perfecto para relajarte y recargar energías.',
-        image: '/img/servicios/img/servicios-piscina.jpg'
+        image: '/img/spa/servicios/img/servicios-piscina.jpg'
     },
     'meriendas': {
         title: 'Meriendas',
         description: 'Disfrutá luego de tu circuito de spa nuestras deliciosas meriendas. ',
-        image: '/img/servicios/img/servicios-meriendas.jpg'
+        image: '/img/spa/servicios/img/servicios-meriendas.jpg'
     },
     'circuitos': {
         title: 'Circuitos de Spa',
         description: 'Experimenta una experiencia única individual o en compañia con nuestros circuitos de spa, relájate, revitaliza tu cuerpo y disfruta. ',
-        image: '/img/servicios/img/servicios-circuitos.jpg'
+        image: '/img/spa/servicios/img/servicios-circuitos.jpg'
     },
     'promociones': {
         title: 'Promociones',
@@ -361,21 +437,25 @@ var swiper = new Swiper('.swiper-container', {
 
 
     breakpoints: {
+        480: {
+            slidesPerView: 1,
+            spaceBetween: 50,
+        },
         620: {
             slidesPerView: 1,
-            spaceBetween: 20,
+            spaceBetween: 50,
         },
         680: {
             slidesPerView: 2,
-            spaceBetween: 40,
+            spaceBetween: 50,
         },
         920: {
             slidesPerView: 3,
             spaceBetween: 40,
         },
-        1240: {
+        1280: {
             slidesPerView: 4,
-            spaceBetween: 50,
+            spaceBetween: 40,
         },
     }
 });
