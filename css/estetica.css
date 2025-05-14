@@ -801,10 +801,6 @@ footer {
         margin-bottom: 30px;
     }
 
-    .footer-column h4 {
-        /* Podrías quitar el border-bottom si no se ve bien centrado */
-    }
-
     #newsletter-form {
         flex-direction: column;
         /* Apila el input y el botón del newsletter */

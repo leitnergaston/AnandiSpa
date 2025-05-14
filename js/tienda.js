@@ -460,7 +460,7 @@ const products = [
         code: 'PROD047',
         name: 'Base nude',
         price: 25000,
-        stock: true,
+        stock: false,
         image: '/img/tienda/productos/047.jpg',
         description: 'Base nude UNA claro 22 30ml',
         orderLink: 'https://wa.me/+5492615104019',
