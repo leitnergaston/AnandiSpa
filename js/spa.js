@@ -109,6 +109,46 @@ document.addEventListener('DOMContentLoaded', function () {
         tabPanes[0].classList.add('active');
     }
 
+    //* ========== BANNER TERMINOS Y CONDICIONES ========== //
+    const termsBanner = document.getElementById('terms-banner');
+    const acceptButton = document.getElementById('accept-terms-btn');
+    const termsAcceptedKey = 'spaTermsAndConditionsAccepted_v1';
+
+    if (termsBanner) { // Asegurarse de que el banner existe
+        // Verificar si los términos ya fueron aceptados
+        if (!localStorage.getItem(termsAcceptedKey)) {
+            // Forzar un pequeño retraso para que la transición de entrada funcione correctamente
+            // si el CSS inicial es opacity 0 / transform translateY(100%)
+            setTimeout(function () {
+                termsBanner.classList.add('terms-banner--visible');
+            }, 100); // Un pequeño retraso es a veces necesario para que el navegador registre el cambio de estado para la transición inicial
+        } else {
+            // Si ya están aceptados, no hacemos nada, el banner permanecerá oculto (con opacity 0, transform y visibility hidden)
+            // O, si quieres asegurarte de que no ocupe espacio y no haya posibilidad de flash:
+            termsBanner.style.display = 'none'; // Ocultar completamente si ya fue aceptado
+        }
+
+        // Manejar el clic en el botón "Aceptar"
+        if (acceptButton) {
+            acceptButton.addEventListener('click', function () {
+                localStorage.setItem(termsAcceptedKey, 'true');
+                termsBanner.classList.remove('terms-banner--visible'); // Prepara para ocultar
+                termsBanner.classList.add('terms-banner--hiding');   // Inicia la animación de ocultar
+
+                // Opcional: remover el elemento del DOM después de la animación para limpiar
+                // Esto es útil si el banner, incluso con visibility:hidden, interfiriera con algo (raro).
+                // O si quieres que no esté en el inspector de elementos.
+                termsBanner.addEventListener('transitionend', function handleTransitionEnd() {
+                    // Solo queremos que se ejecute si se está ocultando (opacity llega a 0)
+                    if (termsBanner.classList.contains('terms-banner--hiding')) {
+                        termsBanner.style.display = 'none'; // Ahora sí lo quitamos del flujo
+                    }
+                    termsBanner.removeEventListener('transitionend', handleTransitionEnd); // Limpiar el listener
+                });
+            });
+        }
+    }
+
 });
 
 

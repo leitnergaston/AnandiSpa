@@ -629,6 +629,13 @@ nav {
     background-color: #e67e22;
 }
 
+.promo-tag.padre {
+    right: inherit;
+    left: 10px;
+    background-color: #ffdaba;
+    color: #4e2e18;
+}
+
 .promo-tag.superPromo {
     background-color: #1e5799;
 }
@@ -1508,7 +1515,112 @@ footer .container .footer-row:nth-child(2) {
 
 }
 
+/** ========== Banner Terminos y Condiciones ========== */
+/* Estilos para el Banner de Términos y Condiciones */
+.terms-banner {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #f8f0e3;
+    color: #3f2a25;
+    font-weight: 500;
+    padding: 15px 20px;
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    /* Asegura que esté por encima de otro contenido */
+    /* display: none; */
+    /* Inicialmente oculto, JavaScript lo mostrará */
+    opacity: 0;
+    /* Inicia invisible para la animación de entrada */
+    transform: translateY(100%);
+    /* Inicia abajo, fuera de la pantalla para animación de entrada */
+    visibility: hidden;
+    /* Inicia oculto del DOM y no interactuable */
+    transition: opacity 1s ease-out, transform 1s ease-out, visibility 0s linear 1s;
+    font-size: 0.9em;
+    border-top: 1px solid #e0d5c6;
+}
 
+/* Clase para mostrar el banner con animación */
+.terms-banner--visible {
+    opacity: 1;
+    transform: translateY(0);
+    visibility: visible;
+    transition: opacity 0.7s ease-out, transform 0.7s ease-out, visibility 0s linear 0s;
+}
+
+/* Clase para ocultar el banner con animación */
+.terms-banner--hiding {
+    opacity: 0;
+    transform: translateY(100%);
+    /* Lo desliza hacia abajo al ocultarse */
+    visibility: hidden;
+    /* Se oculta después de la transición de opacidad y transformación */
+    /* La transición se define en la clase base .terms-banner */
+}
+
+.terms-banner-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    /* Para que se ajuste en pantallas pequeñas */
+    max-width: 1200px;
+    /* Limita el ancho del contenido en pantallas grandes */
+    margin: 0 auto;
+    /* Centra el contenido */
+    gap: 15px;
+    /* Espacio entre texto y botón si se envuelven */
+}
+
+.terms-banner-text {
+    margin: 0;
+    flex-grow: 1;
+    /* Permite que el texto ocupe el espacio disponible */
+    line-height: 1.5;
+}
+
+.terms-banner-link {
+    color: #8D6E63;
+    /* Un color que destaque ligeramente, como el de tu footer */
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+.terms-banner-link:hover {
+    color: #5D4037;
+}
+
+.terms-banner-button {
+    background-color: #8D6E63;
+    /* Color del botón, similar al newsletter de tu footer */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    white-space: nowrap;
+    /* Evita que el texto del botón se parta */
+}
+
+.terms-banner-button:hover {
+    background-color: #795548;
+}
+
+/* Para pantallas más pequeñas */
+@media (max-width: 768px) {
+    .terms-banner-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .terms-banner-text {
+        margin-bottom: 15px;
+    }
+}
 
 
 /** ========== Responsive ========== */
