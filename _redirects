@@ -1,0 +1,4 @@
+# Rewrites
+/spa    /paginas/spa.html    200
+/estetica   /paginas/estetica.html    200
+/tienda    /paginas/tienda.html    200
