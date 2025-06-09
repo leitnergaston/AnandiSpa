@@ -135,10 +135,11 @@ h1 {
     margin-bottom: 20px;
 }
 
+/* filtros de categorias */
 .category-btn {
     background: #fff;
     color: #333;
-    border: 1px solid #ddd;
+    border: 1px solid #72450b;
     padding: 10px 15px;
     margin: 5px;
     cursor: pointer;
@@ -148,7 +149,7 @@ h1 {
 
 .category-btn:hover,
 .category-btn.active {
-    background: #333;
+    background: #72450b;
     color: #fff;
 }
 
@@ -161,7 +162,7 @@ h1 {
 .product-card {
     background: white;
     border-radius: 5px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4);
     overflow: hidden;
 }
 
@@ -218,7 +219,7 @@ h1 {
 }
 
 .product-code {
-    color: #66666685;
+    color: #66666670;
     font-size: 0.9em;
 }
 
@@ -231,6 +232,7 @@ h1 {
     font-weight: bold;
     font-size: 1.1em;
     margin: 10px 0;
+    color: #583608;
 }
 
 /* precio original cuando hay descuento */
@@ -247,9 +249,10 @@ h1 {
     font-size: 16px;
 }
 
+/* categoria del producto */
 .product-category {
     display: inline-block;
-    background: #eee;
+    background: #e7e7e7;
     padding: 5px 10px;
     border-radius: 3px;
     font-size: 0.8em;
@@ -265,6 +268,7 @@ h1 {
     border-radius: 5px;
     cursor: pointer;
     text-decoration: none;
+    transition: .2s;
 }
 
 /* boton de pedir */
@@ -280,8 +284,16 @@ h1 {
     opacity: .8;
 }
 
+/* boton ver detalles */
+.view-details {
+    background-color: rgba(255, 255, 255, 0.2);
+    color: #333;
+    border: 1px solid #333;
+}
+
 .btn:hover {
-    background: #444;
+    background: #72450b;
+    color: #fff;
 }
 
 .modal {
