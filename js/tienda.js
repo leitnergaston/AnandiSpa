@@ -89,18 +89,6 @@ const products = [
         dateAdded: '2025-05-01'
     },
     {
-        id: 8,
-        code: 'PROD008',
-        name: 'Cadena Larga Búho',
-        price: 3000,
-        stock: false,
-        image: '/img/tienda/productos/008.jpg',
-        description: 'Detalle búho, colores',
-        orderLink: 'https://wa.me/+5492615104019',
-        category: 'Bijouterie',
-        dateAdded: '2025-05-01'
-    },
-    {
         id: 9,
         code: 'PROD009',
         name: 'Cadena Larga Ojo',
@@ -483,18 +471,6 @@ const products = [
         dateAdded: '2025-05-01'
     },
     {
-        id: 45,
-        code: 'PROD045',
-        name: 'Apaga Vela Pluma',
-        price: 3000,
-        stock: true,
-        image: '/img/tienda/productos/045.jpg',
-        description: 'Pluma plateada de acero',
-        orderLink: 'https://wa.me/+5492615104019',
-        category: 'Accesorios',
-        dateAdded: '2025-05-01'
-    },
-    {
         id: 46,
         code: 'PROD046',
         name: 'Apaga Vela Llave',
@@ -504,18 +480,6 @@ const products = [
         description: 'Llave plateada de acero',
         orderLink: 'https://wa.me/+5492615104019',
         category: 'Accesorios',
-        dateAdded: '2025-05-01'
-    },
-    {
-        id: 47,
-        code: 'PROD047',
-        name: 'Base nude',
-        price: 25000,
-        stock: false,
-        image: '/img/tienda/productos/047.jpg',
-        description: 'Base nude UNA claro 22 30ml',
-        orderLink: 'https://wa.me/+5492615104019',
-        category: 'Natura',
         dateAdded: '2025-05-01'
     },
     {
@@ -690,7 +654,7 @@ const products = [
         id: 121,
         code: 'PROD121',
         name: 'Perfumeros x unidad',
-        price: 0,
+        price: 2500,
         stock: true,
         image: '/img/tienda/productos/121.jpg',
         description: 'Perfumeros',
@@ -702,7 +666,7 @@ const products = [
         id: 122,
         code: 'PROD122',
         name: 'Aromatizador para auto Limon',
-        price: 0,
+        price: 3500,
         stock: true,
         image: '/img/tienda/productos/122.jpg',
         description: 'Aromatizador para auto de limon',
@@ -714,7 +678,7 @@ const products = [
         id: 123,
         code: 'PROD123',
         name: 'Aromatizador par auto Vainilla y Azucar',
-        price: 0,
+        price: 3500,
         stock: true,
         image: '/img/tienda/productos/123.jpg',
         description: 'Aromatizador para auto de vainilla y azucar',
@@ -726,7 +690,7 @@ const products = [
         id: 124,
         code: 'PROD124',
         name: 'Cascada para conitos',
-        price: 0,
+        price: 3000,
         stock: true,
         image: '/img/tienda/productos/124.jpg',
         description: 'Cascada para sahumerios conitos',
@@ -738,7 +702,7 @@ const products = [
         id: 125,
         code: 'PROD125',
         name: 'Cascada para conitos',
-        price: 0,
+        price: 3000,
         stock: true,
         image: '/img/tienda/productos/125.jpg',
         description: 'Cascada para sahumerios conitos',
@@ -750,7 +714,7 @@ const products = [
         id: 126,
         code: 'PROD126',
         name: 'Cascada para conitos',
-        price: 0,
+        price: 3000,
         stock: true,
         image: '/img/tienda/productos/126.jpg',
         description: 'Cascada para sahumerios conitos',
@@ -762,7 +726,7 @@ const products = [
         id: 127,
         code: 'PROD127',
         name: 'Cascada para conitos',
-        price: 0,
+        price: 3000,
         stock: true,
         image: '/img/tienda/productos/127.jpg',
         description: 'Cascada para sahumerios conitos',
@@ -774,7 +738,7 @@ const products = [
         id: 128,
         code: 'PROD128',
         name: 'Cascada para conitos',
-        price: 0,
+        price: 3000,
         stock: true,
         image: '/img/tienda/productos/128.jpg',
         description: 'Cascada para sahumerios conitos',
@@ -786,55 +750,43 @@ const products = [
         id: 129,
         code: 'PROD129',
         name: 'Cascada para conitos',
-        price: 0,
+        price: 5000,
         stock: true,
         image: '/img/tienda/productos/129.jpg',
         description: 'Cascada para sahumerios conitos',
         orderLink: 'https://wa.me/+5492615104019',
         category: 'Cascadas',
-        dateAdded: '2025-05-01'
+        dateAdded: '2025-06-08'
     },
     {
         id: 130,
         code: 'PROD130',
         name: 'Cascada para conitos',
-        price: 0,
+        price: 3000,
         stock: true,
         image: '/img/tienda/productos/130.jpg',
         description: 'Cascada para sahumerios conitos',
         orderLink: 'https://wa.me/+5492615104019',
         category: 'Cascadas',
-        dateAdded: '2025-06-01'
+        dateAdded: '2025-06-08'
     },
     {
         id: 131,
         code: 'PROD131',
         name: 'Cascada para conitos',
-        price: 0,
+        price: 3000,
         stock: true,
         image: '/img/tienda/productos/131.jpg',
         description: 'Cascada para sahumerios conitos',
         orderLink: 'https://wa.me/+5492615104019',
         category: 'Cascadas',
-        dateAdded: '2025-06-01'
-    },
-    {
-        id: 132,
-        code: 'PROD132',
-        name: 'Aromatizante Ambiente Magnolia Fresas',
-        price: 0,
-        stock: true,
-        image: '/img/tienda/productos/132.jpg',
-        description: 'Aromatizante ambiente de magnolia fresas',
-        orderLink: 'https://wa.me/+5492615104019',
-        category: 'Saphirus',
         dateAdded: '2025-06-08'
     },
     {
         id: 133,
         code: 'PROD133',
         name: 'Aromatizante Ambiente Café con Chocolate',
-        price: 0,
+        price: 4500,
         stock: true,
         image: '/img/tienda/productos/133.jpg',
         description: 'Aromatizante ambiente de cafe con chocolate',
@@ -852,7 +804,7 @@ const products = [
         description: 'Saphirus Textiles Varias fragancias (consultar fragancias)',
         orderLink: 'https://wa.me/+5492615104019',
         category: 'Saphirus',
-        dateAdded: '2025-05-01'
+        dateAdded: '2025-06-08'
     },
     {
         id: 134,
@@ -866,13 +818,13 @@ const products = [
         description: 'Promo 2 Saphirus textiles a elección x $7.000 (consultar fragancias)',
         orderLink: 'https://wa.me/+5492615104019',
         category: 'Saphirus',
-        dateAdded: '2025-05-01'
+        dateAdded: '2025-06-08'
     },
     {
         id: 135,
         code: 'PROD135',
         name: 'Sahumerios Aromanza Palo Santo x unidad',
-        price: 0,
+        price: 4000,
         stock: true,
         image: '/img/tienda/productos/135.jpg',
         description: 'Sahumerios Aromanza Palo Santo',
@@ -884,7 +836,7 @@ const products = [
         id: 136,
         code: 'PROD136',
         name: 'Sahumerios Aromanza Orgánicos x unidad',
-        price: 0,
+        price: 2500,
         stock: true,
         image: '/img/tienda/productos/136.jpg',
         description: 'Sahumerios Aromanza Orgánicos',
@@ -896,7 +848,7 @@ const products = [
         id: 137,
         code: 'PROD137',
         name: 'Sahumrios Aromanza Tibetanos x unidad',
-        price: 0,
+        price: 4000,
         stock: true,
         image: '/img/tienda/productos/137.jpg',
         description: 'Sahumerios Aromanza Tibetanos',
@@ -908,7 +860,7 @@ const products = [
         id: 139,
         code: 'PROD139',
         name: 'Sahumerios Aromanza Momentos x unidad',
-        price: 0,
+        price: 4000,
         stock: true,
         image: '/img/tienda/productos/139.jpg',
         description: 'Sahumerios Aromanza Momentos',
@@ -1126,7 +1078,7 @@ function mostrarNovedades() {
     const productosNuevos = products
         .filter(product => esProductoNuevo(product.dateAdded))
         .sort((a, b) => new Date(b.dateAdded) - new Date(a.dateAdded)) // Los mas nuevos primero
-        .slice(0, 8); // Mostrar solo los ultimos 8
+        .slice(0, 10); // Mostrar solo los ultimos 8
 
     newArrivalsGrid.innerHTML = ''; // Limpiar por si acaso
     if (productosNuevos.length > 0) {
@@ -1150,7 +1102,12 @@ function updatePagination(totalPages) {
         if (currentPage > 1) {
             currentPage--;
             createProductCards();
-            window.scrollTo({ top: 1150, behavior: 'smooth' }); // Scroll suave al inicio
+
+            // hacer scroll hasta la seccion de los filtros al darle clic a 'Anterior'
+            const catalogSection = document.getElementById('category-filter');
+            if (catalogSection) {
+                catalogSection.scrollIntoView({ behavior: 'smooth' });
+            }
         }
     });
     prevButton.disabled = currentPage === 1;
@@ -1162,7 +1119,12 @@ function updatePagination(totalPages) {
         if (currentPage < totalPages) {
             currentPage++;
             createProductCards();
-            window.scrollTo({ top: 1150, behavior: 'smooth' }); // Scroll suave al inicio
+
+            // hacer scroll hasta la seccion de los filtros al darle clic a 'Siguiente'
+            const catalogSection = document.getElementById('category-filter');
+            if (catalogSection) {
+                catalogSection.scrollIntoView({ behavior: 'smooth' });
+            }
         }
     });
     nextButton.disabled = currentPage === totalPages;
