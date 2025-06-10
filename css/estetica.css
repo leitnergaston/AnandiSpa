@@ -900,7 +900,7 @@ footer p {
     }
 } */
 
-/* ========== RESPONSIVE ========== */
+/** ========== RESPONSIVE ========== */
 @media screen and (max-width: 479px) {
     .container h2 {
         font-size: 2rem;
@@ -1074,7 +1074,7 @@ footer p {
     }
 }
 
-/* ANIMACIONES DE SCROLL EN SECCIONES */
+/** ANIMACIONES DE SCROLL EN SECCIONES */
 .promo-card {
     animation: appear linear;
     animation-timeline: view();

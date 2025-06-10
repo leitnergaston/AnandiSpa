@@ -450,7 +450,7 @@ nav {
 } */
 
 
-/* ===== PROMOS DESTACADAS SECTION ===== */
+/** ===== PROMOS DESTACADAS SECTION ===== */
 .promos-destacadas {
     padding: 4rem 0;
     display: flex;
@@ -545,7 +545,7 @@ nav {
 }
 
 
-/* ========== PROMOTIONS SECTION STYLES ========== */
+/** ========== PROMOTIONS SECTION STYLES ========== */
 .promotions {
     padding: 4rem 0;
 }
@@ -598,7 +598,7 @@ nav {
     transition: transform 0.3s ease;
 }
 
-/* etiqueta para la promo */
+/** etiqueta para la promo */
 .promo-card .promo-tag {
     position: absolute;
     top: 10px;
