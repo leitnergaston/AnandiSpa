@@ -53,6 +53,7 @@ a {
 
 /* ========== Header styles ========== */
 header {
+    position: fixed;
     width: 100%;
     z-index: 1200;
     background: #f3f3f2;
@@ -114,6 +115,29 @@ nav {
 .nav-link.active {
     text-decoration: underline;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* Barra de busqueda */
+.search-container {
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto 1rem auto;
+    display: flex;
+    justify-content: center;
+}
+
+#product-search {
+    width: 100%;
+    padding: 0.5em 1em;
+    border-radius: 20px;
+    border: 1px solid #ccc;
+    font-size: 1em;
+    transition: box-shadow 0.2s;
+}
+
+#product-search:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px #b3d4fc;
 }
 
 .container {
@@ -467,6 +491,7 @@ footer p {
 /** ========== Responsive ========== */
 
 @media (min-width: 1920px) {
+
     .product-grid,
     .novedades-grid {
         grid-template-columns: repeat(5, 1fr);
@@ -522,6 +547,18 @@ footer p {
     .imgContentDetalle img {
         width: 200px;
         height: 200px;
+    }
+}
+
+@media (max-width: 600px) {
+    .search-container {
+        max-width: 95%;
+        margin-bottom: 0.5em;
+    }
+
+    #product-search {
+        font-size: 0.95em;
+        padding: 0.4em 0.8em;
     }
 }
 

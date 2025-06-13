@@ -29,18 +29,6 @@ const products = [
         dateAdded: '2025-05-01'
     },
     {
-        id: 3,
-        code: 'PROD003',
-        name: 'Desodorante Masculino',
-        price: 4500,
-        stock: true,
-        image: '/img/tienda/productos/003.jpg',
-        description: 'Antitranspirante roll-on homem 75ml',
-        orderLink: 'https://wa.me/+5492615104019',
-        category: 'Natura',
-        dateAdded: '2025-05-01'
-    },
-    {
         id: 4,
         code: 'PROD004',
         name: 'Cadena Dorada',
@@ -603,18 +591,6 @@ const products = [
         dateAdded: '2025-05-01'
     },
     {
-        id: 115,
-        code: 'PROD115',
-        name: 'Desodorante Tododia Femenino',
-        price: 5000,
-        stock: true,
-        image: '/img/tienda/productos/115.jpg',
-        description: 'Desodorante antitranspirante Tododia Femenino 70ml',
-        orderLink: 'https://wa.me/+5492615104019',
-        category: 'Natura',
-        dateAdded: '2025-05-01'
-    },
-    {
         id: 116,
         code: 'PROD116',
         name: 'Balsamo post barba Homem',
@@ -875,6 +851,20 @@ const productsPerPage = 10; // Mostrar 10 productos en el grid por pagina
 let currentPage = 1;
 let currentCategory = 'all';
 
+//* Buscador en tiempo real
+// variable global para el termino de busqueda
+let searchTerm = "";
+
+//* Funcion para filtrar productos por busqueda (nombre o categoria)
+function filterProductsBySearch(products, search) {
+    if (!search) return products;
+    const searchLower = search.trim().toLowerCase();
+    return products.filter(product =>
+        product.name.toLowerCase().includes(searchLower) ||
+        product.category.toLowerCase().includes(searchLower)
+    );
+}
+
 //* Variables para calcular productos nuevos
 const HOY = new Date();
 const DIAS_PARA_SER_NUEVO = 15; // Considerar nuevo si tiene 15 días o menos
@@ -1056,8 +1046,17 @@ function createProductCards() {
     const productList = document.getElementById('product-list');
     productList.innerHTML = '';
 
-    const filteredProducts = filterProductsByCategory(products, currentCategory);
+    // Filtrar por categoría y luego por búsqueda
+    let filteredProducts = filterProductsByCategory(products, currentCategory);
+    filteredProducts = filterProductsBySearch(filteredProducts, searchTerm);
+
+
     const totalPages = Math.ceil(filteredProducts.length / productsPerPage);
+
+    // Si la página actual se queda sin productos, volver a la primera
+    if (currentPage > totalPages && totalPages > 0) {
+        currentPage = 1;
+    }
 
     const startIndex = (currentPage - 1) * productsPerPage;
     const endIndex = startIndex + productsPerPage;
@@ -1165,6 +1164,16 @@ document.addEventListener('DOMContentLoaded', () => {
     mostrarNovedades();
     createCategoryButtons();
     createProductCards();
+
+    // Evento para el input de busqueda
+    const searchInput = document.getElementById('product-search');
+    if (searchInput) {
+        searchInput.addEventListener('input', (e) => {
+            searchTerm = e.target.value;
+            currentPage = 1;
+            createProductCards();
+        });
+    }
 
     // Cerrar el modal cuando se hace clic en la X
     document.querySelector('.close').addEventListener('click', closeModal);
