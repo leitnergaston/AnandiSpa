@@ -28,13 +28,16 @@
     <header>
         <nav>
             <a href="#" class="logo">Anandi Tienda</a>
+            <!-- menu hamburguesa responsive -->
             <div class="hamburger">
                 <span></span>
                 <span></span>
                 <span></span>
             </div>
+            <!-- barra de busqueda -->
             <div class="search-container">
                 <input type="text" id="product-search" placeholder="Buscar productos..." autocomplete="off">
+                <button type="button" id="clear-search" aria-label="Limpiar búsqueda">&times;</button>
             </div>
             <ul class="nav-links">
                 <li class="nav-item"><a href="/index.html" class="nav-link">Volver</a></li>
@@ -44,26 +47,25 @@
 
     <div class="container">
 
-        <!-- seccion de novedades -->
-        <h1>✨ Novedades ✨</h1>
-        <br>
+        <!--* ===== seccion de novedades ===== -->
         <div id="new-arrivals-section" class="novedades-section">
+            <h1>✨ Novedades ✨</h1>
             <div id="new-arrivals-grid" class="product-grid novedades-grid"></div>
         </div>
-        <br>
 
-        <!-- seccion del catalogo principal -->
-        <h1>Nuestro Catálogo</h1>
+        <!--* ===== seccion del catalogo principal ===== -->
+        <h1 id="titulo-catalogo" class="titulo-catalogo">Nuestro Catálogo</h1>
         <div id="category-filter" class="category-filter">
             <!-- <button class="category-btn active" data-category="all">Todos</button> -->
             <!-- Las categorías se agregarán dinámicamente aquí -->
         </div>
 
-        <!-- grid productos generados en JS -->
+        <!--* ===== grid productos generados en JS ===== -->
         <div id="product-list" class="product-grid"></div>
 
-        <!-- Paginacion del grid de productos -->
+        <!--* ===== Paginacion del grid de productos ===== -->
         <div id="pagination" class="pagination"></div>
+
     </div>
 
     <div id="product-modal" class="modal">
@@ -73,12 +75,12 @@
         </div>
     </div>
 
-    <!-- boton de whastapp -->
+    <!--* ===== boton de whastapp ===== -->
     <a href="https://wa.me/542615104019" id="mostrarWapp" class="whatsapp-btn" target="_blank">
         <i class="fa-brands fa-whatsapp"></i>
     </a>
 
-    <!-- ===== FOOTER ===== -->
+    <!--* ===== FOOTER ===== -->
     <footer>
         <div class="social-icons">
             <a href="https://instagram.com/anandi.spa" target="_blank"><i class="fa-brands fa-instagram"></i></a>

@@ -64,12 +64,12 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1rem 5%;
+    padding: 0.8em 5%;
 }
 
 /* Logo texto header */
 .logo {
-    font-size: 1.8rem;
+    font-size: 1.5rem;
     font-weight: bold;
     color: #7a5d5d;
     text-shadow: 0 1px 0 #ccc, 0 2px 0 #c9c9c9, 0 3px 0 #bbb, 0 4px 0 #b9b9b9, 0 5px 0 #aaa, 0 6px 1px rgba(0, 0, 0, .1), 0 0 5px rgba(0, 0, 0, .1), 0 1px 3px rgba(0, 0, 0, .3), 0 3px 5px rgba(0, 0, 0, .2), 0 5px 10px rgba(0, 0, 0, .25), 0 10px 10px rgba(0, 0, 0, .2), 0 20px 20px rgba(0, 0, 0, .15);
@@ -117,18 +117,20 @@ nav {
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
-/* Barra de busqueda */
+/** Barra de busqueda */
 .search-container {
+    position: relative;
     width: 100%;
-    max-width: 400px;
-    margin: 0 auto 1rem auto;
+    max-width: 300px;
+    /* margin: 0 auto 1rem auto; */
+    margin: 0 auto;
     display: flex;
     justify-content: center;
 }
 
 #product-search {
     width: 100%;
-    padding: 0.5em 1em;
+    padding: 0.5em 2.5em 0.5em 1em;
     border-radius: 20px;
     border: 1px solid #ccc;
     font-size: 1em;
@@ -138,6 +140,25 @@ nav {
 #product-search:focus {
     outline: none;
     box-shadow: 0 0 0 2px #b3d4fc;
+}
+
+#clear-search {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: transparent;
+    border: none;
+    font-size: 1.3em;
+    color: #888;
+    cursor: pointer;
+    display: none;
+    padding: 0;
+    z-index: 2;
+}
+
+#clear-search.visible {
+    display: block;
 }
 
 .container {
@@ -150,6 +171,10 @@ nav {
 h1 {
     text-align: center;
     color: #333;
+}
+
+.titulo-catalogo {
+    margin-top: 2rem;
 }
 
 .category-filter {
@@ -180,6 +205,7 @@ h1 {
 /** seccion de novedades */
 .novedades-section {
     background-color: #e2d6c7;
+    padding: 0 10px 10px 10px;
 }
 
 /** grid de productos */
@@ -396,14 +422,14 @@ h1 {
     height: 400px;
 }
 
-/* paginacion */
+/** paginacion */
 .pagination {
     display: flex;
     justify-content: center;
     margin-top: 20px;
 }
 
-/* botones de la paginacion */
+/** botones de la paginacion */
 .pagination button {
     background: #333;
     color: #fff;
@@ -425,7 +451,7 @@ h1 {
 
 
 
-/* ========== Footer styles ========== */
+/** ========== Footer styles ========== */
 footer {
     background: #f3f3f2;
     padding: 20px 0;
@@ -552,20 +578,20 @@ footer p {
 
 @media (max-width: 600px) {
     .search-container {
-        max-width: 95%;
-        margin-bottom: 0.5em;
+        max-width: 50%;
+        /* margin-bottom: 0.5em; */
     }
 
     #product-search {
         font-size: 0.95em;
-        padding: 0.4em 0.8em;
+        padding: 0.4em 2.2em 0.4em 0.8em;
     }
 }
 
 @media (max-width: 480px) {
 
     .logo {
-        font-size: 20px;
+        font-size: 15px;
     }
 
     .nav-link {

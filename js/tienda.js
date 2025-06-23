@@ -653,7 +653,7 @@ const products = [
     {
         id: 123,
         code: 'PROD123',
-        name: 'Aromatizador par auto Vainilla y Azucar',
+        name: 'Aromatizador para auto Vainilla y Azucar',
         price: 3500,
         stock: true,
         image: '/img/tienda/productos/123.jpg',
@@ -665,98 +665,98 @@ const products = [
     {
         id: 124,
         code: 'PROD124',
-        name: 'Cascada para conitos',
-        price: 3000,
+        name: 'Cascada para conitos mediana',
+        price: 5000,
         stock: true,
         image: '/img/tienda/productos/124.jpg',
         description: 'Cascada para sahumerios conitos',
         orderLink: 'https://wa.me/+5492615104019',
         category: 'Cascadas',
-        dateAdded: '2025-05-01'
+        dateAdded: '2025-06-23'
     },
     {
         id: 125,
         code: 'PROD125',
-        name: 'Cascada para conitos',
-        price: 3000,
+        name: 'Cascada para conitos chica',
+        price: 3500,
         stock: true,
         image: '/img/tienda/productos/125.jpg',
         description: 'Cascada para sahumerios conitos',
         orderLink: 'https://wa.me/+5492615104019',
         category: 'Cascadas',
-        dateAdded: '2025-05-01'
+        dateAdded: '2025-06-23'
     },
     {
         id: 126,
         code: 'PROD126',
-        name: 'Cascada para conitos',
-        price: 3000,
+        name: 'Cascada para conitos mediana',
+        price: 5000,
         stock: true,
         image: '/img/tienda/productos/126.jpg',
         description: 'Cascada para sahumerios conitos',
         orderLink: 'https://wa.me/+5492615104019',
         category: 'Cascadas',
-        dateAdded: '2025-05-01'
+        dateAdded: '2025-06-23'
     },
     {
         id: 127,
         code: 'PROD127',
-        name: 'Cascada para conitos',
-        price: 3000,
+        name: 'Cascada para conitos mediana',
+        price: 5000,
         stock: true,
         image: '/img/tienda/productos/127.jpg',
         description: 'Cascada para sahumerios conitos',
         orderLink: 'https://wa.me/+5492615104019',
         category: 'Cascadas',
-        dateAdded: '2025-05-01'
+        dateAdded: '2025-06-23'
     },
     {
         id: 128,
         code: 'PROD128',
-        name: 'Cascada para conitos',
-        price: 3000,
+        name: 'Cascada para conitos chica',
+        price: 3500,
         stock: true,
         image: '/img/tienda/productos/128.jpg',
         description: 'Cascada para sahumerios conitos',
         orderLink: 'https://wa.me/+5492615104019',
         category: 'Cascadas',
-        dateAdded: '2025-05-01'
+        dateAdded: '2025-06-23'
     },
     {
         id: 129,
         code: 'PROD129',
-        name: 'Cascada para conitos',
-        price: 5000,
+        name: 'Cascada para conitos grande',
+        price: 7000,
         stock: true,
         image: '/img/tienda/productos/129.jpg',
         description: 'Cascada para sahumerios conitos',
         orderLink: 'https://wa.me/+5492615104019',
         category: 'Cascadas',
-        dateAdded: '2025-06-08'
+        dateAdded: '2025-06-23'
     },
     {
         id: 130,
         code: 'PROD130',
-        name: 'Cascada para conitos',
-        price: 3000,
+        name: 'Cascada para conitos chica',
+        price: 3500,
         stock: true,
         image: '/img/tienda/productos/130.jpg',
         description: 'Cascada para sahumerios conitos',
         orderLink: 'https://wa.me/+5492615104019',
         category: 'Cascadas',
-        dateAdded: '2025-06-08'
+        dateAdded: '2025-06-23'
     },
     {
         id: 131,
         code: 'PROD131',
-        name: 'Cascada para conitos',
-        price: 3000,
+        name: 'Cascada para conitos chica',
+        price: 3500,
         stock: true,
         image: '/img/tienda/productos/131.jpg',
         description: 'Cascada para sahumerios conitos',
         orderLink: 'https://wa.me/+5492615104019',
         category: 'Cascadas',
-        dateAdded: '2025-06-08'
+        dateAdded: '2025-06-23'
     },
     {
         id: 133,
@@ -780,7 +780,7 @@ const products = [
         description: 'Saphirus Textiles Varias fragancias (consultar fragancias)',
         orderLink: 'https://wa.me/+5492615104019',
         category: 'Saphirus',
-        dateAdded: '2025-06-08'
+        dateAdded: '2025-06-23'
     },
     {
         id: 134,
@@ -867,7 +867,7 @@ function filterProductsBySearch(products, search) {
 
 //* Variables para calcular productos nuevos
 const HOY = new Date();
-const DIAS_PARA_SER_NUEVO = 15; // Considerar nuevo si tiene 15 días o menos
+const DIAS_PARA_SER_NUEVO = 10; // Considerar nuevo si tiene 10 días o menos
 
 //* Funcion para saber si es un producto nuevo
 function esProductoNuevo(dateAddedString) {
@@ -880,6 +880,8 @@ function esProductoNuevo(dateAddedString) {
 //* Función para crear los botones de categoría
 function createCategoryButtons() {
     const categoryFilter = document.getElementById('category-filter');
+    categoryFilter.innerHTML = ''; // limpiar botones previos si recarga
+
     const categories = ['all', ...new Set(products.map(product => product.category))];
 
     categories.forEach(category => {
@@ -891,6 +893,16 @@ function createCategoryButtons() {
             currentCategory = category;
             currentPage = 1;
             updateActiveCategory();
+
+            // Limpiar el input de busqueda al cambiar filtro
+            const searchInput = document.getElementById('product-search');
+            const clearBtn = document.getElementById('clear-search');
+            if (searchInput) {
+                searchInput.value = '';
+                searchTerm = '';
+                if (clearBtn) clearBtn.classList.remove('visible');
+            }
+
             createProductCards();
         });
         categoryFilter.appendChild(button);
@@ -989,7 +1001,7 @@ function filterProductsByCategory(products, category) {
 //     updatePagination(totalPages);
 // }
 
-//* NUEVA FUNCION PARA CREAR PRODUCTOS
+//* FUNCION PARA CREAR PRODUCTOS
 function crearTarjetaProducto(product) {
     const defaultSinStockImage = '/img/tienda/sin-stock-img.png'; // mostrar la imagen 'sin stock' solo si no hay stock
     const sinStockHTML = !product.stock ? `<img class="sin-stock-img" src="${defaultSinStockImage}" alt="Sin stock">` : '';
@@ -1103,7 +1115,7 @@ function updatePagination(totalPages) {
             createProductCards();
 
             // hacer scroll hasta la seccion de los filtros al darle clic a 'Anterior'
-            const catalogSection = document.getElementById('category-filter');
+            const catalogSection = document.getElementById('titulo-catalogo');
             if (catalogSection) {
                 catalogSection.scrollIntoView({ behavior: 'smooth' });
             }
@@ -1120,7 +1132,7 @@ function updatePagination(totalPages) {
             createProductCards();
 
             // hacer scroll hasta la seccion de los filtros al darle clic a 'Siguiente'
-            const catalogSection = document.getElementById('category-filter');
+            const catalogSection = document.getElementById('titulo-catalogo');
             if (catalogSection) {
                 catalogSection.scrollIntoView({ behavior: 'smooth' });
             }
@@ -1159,26 +1171,46 @@ function closeModal() {
     modal.style.display = 'none';
 }
 
-//* Inicializar la página
+//* Inicializar la página / barra de busqueda
 document.addEventListener('DOMContentLoaded', () => {
     mostrarNovedades();
     createCategoryButtons();
     createProductCards();
 
-    // Evento para el input de busqueda
+    // Buscador con boton de limpiar
     const searchInput = document.getElementById('product-search');
-    if (searchInput) {
+    const clearBTN = document.getElementById('clear-search');
+    if (searchInput && clearBTN) {
+        // Mostrar u ocultar la X segun haya texto
         searchInput.addEventListener('input', (e) => {
             searchTerm = e.target.value;
             currentPage = 1;
+
+            // Si hay texto en el buscador, forzar categoría "all"
+            if (searchTerm.length > 0 && currentCategory !== 'all') {
+                currentCategory = 'all';
+                updateActiveCategory();
+            }
+
             createProductCards();
+            clearBTN.classList.toggle('visible', searchInput.value.length > 0);
         });
+
+        // Limpiar el input al hacer clic en la X
+        clearBTN.addEventListener('click', () => {
+            searchInput.value = '';
+            searchTerm = '';
+            currentPage = 1;
+            createProductCards();
+            clearBTN.classList.remove('visible');
+            searchInput.focus();
+        })
     }
 
-    // Cerrar el modal cuando se hace clic en la X
+    // Cerrar el modal de 'ver detalles' de los productos cuando se hace clic en la X
     document.querySelector('.close').addEventListener('click', closeModal);
 
-    // Cerrar el modal cuando se hace clic fuera de él
+    // Cerrar el modal de 'ver detalles' de los productos cuando se hace clic fuera de él
     window.addEventListener('click', (event) => {
         const modal = document.getElementById('product-modal');
         if (event.target === modal) {
