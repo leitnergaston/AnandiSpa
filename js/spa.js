@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', function () {
-    // Funcionalidad menu hamburguesa
+    //* Funcionalidad menu hamburguesa
     const hamburger = document.querySelector('.hamburger');
     const navLinks = document.querySelector('.nav-links');
 
@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', function () {
         navLinks.classList.toggle('active');
     });
 
-    // Cerrar menu cuando se hace clic en un link del navbar
+    //* Cerrar menu cuando se hace clic en un link del navbar
     document.querySelectorAll('.nav-links a').forEach(link => {
         link.addEventListener('click', () => {
             hamburger.classList.remove('active');
@@ -16,13 +16,16 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     });
 
-    // Cerrar menu cuando se hace clic en cualquier lado
+    //* Cerrar menu cuando se hace clic en cualquier lado
     document.addEventListener('click', (e) => {
         if (!hamburger.contains(e.target) && !navLinks.contains(e.target)) {
             hamburger.classList.remove('active');
             navLinks.classList.remove('active');
         }
     });
+
+    //* Año actualizado automaticamente en footer
+    document.getElementById('current-year').textContent = new Date().getFullYear();
 
     //* ========== galeria de imagenes con nav ========== //
     // Select the gallery section
@@ -296,7 +299,43 @@ function cerrarPromoPopup() {
 // setInterval(nextTestimonial, 5000); // Cambia de testimonio cada x milisegundos
 
 
-//* ========== TESTIMONIOS 2
+//* ========== DESTACADAS =========== //
+new Swiper('.destacadas-card-wrapper', {
+    loop: true,
+    spaceBetween: 30,
+
+    autoplay: false,
+
+    // pagination bullets
+    pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+        dynamicBullets: true
+    },
+
+    // Navigation arrows
+    navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+    },
+
+    // Responsive breakpoints
+    breakpoints: {
+        480: {
+            slidesPerView: 1
+        },
+        768: {
+            slidesPerView: 2
+        },
+        1020: {
+            slidesPerView: 3
+        },
+    }
+
+
+});
+
+//* ========== TESTIMONIOS 2 =========== //
 new Swiper('.card-wrapper', {
     loop: true,
     spaceBetween: 30,
@@ -333,7 +372,6 @@ new Swiper('.card-wrapper', {
 
 
 });
-// TESTIMONIOS 2
 
 
 
@@ -462,40 +500,40 @@ document.getElementById('imagePopup').addEventListener('click', function (event)
 
 
 //* ===== SWIPER JS promos destacadas ===== //
-var swiper = new Swiper('.swiper-container', {
-    navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev'
-    },
-    slidesPerView: 1,
-    spaceBetween: 10,
+// var swiper = new Swiper('.swiper-container', {
+//     navigation: {
+//         nextEl: '.swiper-button-next',
+//         prevEl: '.swiper-button-prev'
+//     },
+//     slidesPerView: 1,
+//     spaceBetween: 10,
 
-    pagination: {
-        el: '.swiper-pagination',
-        clickable: true,
-    },
+//     pagination: {
+//         el: '.swiper-pagination',
+//         clickable: true,
+//     },
 
 
-    breakpoints: {
-        480: {
-            slidesPerView: 1,
-            spaceBetween: 50,
-        },
-        620: {
-            slidesPerView: 1,
-            spaceBetween: 50,
-        },
-        680: {
-            slidesPerView: 2,
-            spaceBetween: 50,
-        },
-        920: {
-            slidesPerView: 3,
-            spaceBetween: 40,
-        },
-        1280: {
-            slidesPerView: 4,
-            spaceBetween: 40,
-        },
-    }
-});
+//     breakpoints: {
+//         480: {
+//             slidesPerView: 1,
+//             spaceBetween: 50,
+//         },
+//         620: {
+//             slidesPerView: 1,
+//             spaceBetween: 50,
+//         },
+//         680: {
+//             slidesPerView: 2,
+//             spaceBetween: 50,
+//         },
+//         920: {
+//             slidesPerView: 3,
+//             spaceBetween: 40,
+//         },
+//         1280: {
+//             slidesPerView: 4,
+//             spaceBetween: 40,
+//         },
+//     }
+// });

@@ -482,7 +482,7 @@ footer p {
     margin: 0;
 }
 
-/* ===== Responsive Footer ===== */
+/** Responsive Footer */
 @media (max-width: 768px) {
     footer {
         font-size: 0.8em;
