@@ -451,21 +451,20 @@ nav {
     background-color: #f1c72d;
     color: #333;
 }
-
 .promo-tag.descuento {
     background-color: #2ecc71;
 }
-
 .promo-tag.otonio {
     background-color: #e67e22;
 }
-
 .promo-tag.superPromo {
     background-color: #1e5799;
 }
-
 .promo-tag.friends {
     background-color: #991e93;
+}
+.promo-tag.maestro {
+    background-color: #447a6c;
 }
 
 /* Icono lupa */
@@ -653,7 +652,7 @@ nav {
     background-color: #dfdad7;
 }
 
-/* ========== Services section styles ========== */
+/** ========== Services section styles ========== */
 .services {
     padding: 4rem 0;
 }
@@ -679,9 +678,7 @@ nav {
 }
 
 .service-card img {
-    /* width: 64px; */
-    /* height: 64px; */
-    /* border-radius: 50%; */
+    /* width: 70%; */
     margin-bottom: 1rem;
     /* clip-path: circle(50% at 50% 50%); */
 }
