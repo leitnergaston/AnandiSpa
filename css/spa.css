@@ -89,7 +89,7 @@ body::-webkit-scrollbar-thumb {
 
 
 
-/* ===== Boton de whatsapp flotante ===== */
+/** ===== Boton de whatsapp flotante ===== */
 .whatsapp-btn {
     position: fixed;
     bottom: 20px;
@@ -149,7 +149,7 @@ body::-webkit-scrollbar-thumb {
     cursor: pointer;
 }
 
-/* ========== Header styles ========== */
+/** ========== Header styles ========== */
 header {
     position: fixed;
     width: 100%;
@@ -215,7 +215,7 @@ nav {
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
-/* ========== Hero section styles ========== */
+/** ========== Hero section styles ========== */
 .hero {
     display: flex;
     align-items: center;
@@ -465,6 +465,10 @@ nav {
 }
 .promo-tag.maestro {
     background-color: #447a6c;
+}
+
+.promo-tag.mama {
+    background-color: #944d8f;
 }
 
 /* Icono lupa */
@@ -1766,8 +1770,38 @@ footer .container .footer-row:nth-child(2) {
         text-align: center;
     }
 
+    /* seccion de promos */
+    .promo-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+    }
+
     .promo-content {
         height: auto;
+        padding: .5rem .8rem .8rem .8rem;
+    }
+
+    .promo-content h3 {
+        font-size: 1.2rem;
+        margin-bottom: .3rem;
+    }
+
+    .promo-content p {
+        font-size: 0.85rem;
+        margin-bottom: 1rem;
+        display: -webkit-box;
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    .promo-card .promo-tag {
+        font-size: 7px;
+    }
+
+    .promo-content .feature-tags {
+        display: none;
     }
 
     .about-content {
@@ -1833,7 +1867,7 @@ footer .container .footer-row:nth-child(2) {
 
 }
 
-@media (min-width: 482px) and (max-width: 768px) {
+@media (min-width: 481px) and (max-width: 768px) {
     .hamburger {
         display: flex;
     }
@@ -1890,8 +1924,36 @@ footer .container .footer-row:nth-child(2) {
         text-align: center;
     }
 
+    /* seccion promos */
+    .promo-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+    }
+
     .promo-content {
         height: auto;
+        padding: .5rem .8rem .8rem .8rem;
+    }
+
+    .promo-content h3 {
+        font-size: 1.2rem;
+        margin-bottom: .3rem;
+    }
+
+    /* .promo-content p {
+        display: -webkit-box;
+        -webkit-line-clamp: 4;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    } */
+
+    .promo-card .promo-tag {
+        font-size: 7px;
+    }
+
+    .promo-content .feature-tags {
+        display: none;
     }
 
     .about-content {
@@ -1951,6 +2013,35 @@ footer .container .footer-row:nth-child(2) {
 
     .promo-content {
         height: auto;
+    }
+}
+
+@media screen and (max-width: 390px) {
+    .promo-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    .promo-content {
+        height: auto;
+        padding: .8rem 1rem 1rem 1rem;
+    }
+    
+    .promo-content h3 {
+        font-size: 1.3rem;
+        margin-bottom: .5rem;
+    }
+    
+    .promo-content p {
+        font-size: 0.9rem;
+        -webkit-line-clamp: 4;
+    }
+    
+    .btn {
+        max-width: 100%;
+        width: 100%;
+        margin: 5px 0;
+        text-align: center;
     }
 }
 
