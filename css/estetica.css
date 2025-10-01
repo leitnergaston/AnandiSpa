@@ -970,29 +970,6 @@ footer p {
         text-align: center;
     }
 
-    /* Seccion de promos */
-    .promo-grid {
-        grid-template-columns: repeat(2, 1fr);
-        gap: .8rem;
-    }
-
-    .promo-card .promo-tag {
-        font-size: 8px;
-    }
-
-    .promo-card .image-container .lupa {
-        bottom: 6px;
-        left: 5px;
-        font-size: 12px;
-        width: 28px;
-    }
-
-    .promo-content {
-        display: none;
-        visibility: hidden;
-        overflow: hidden;
-    }
-
     .promo-content {
         height: auto;
     }
