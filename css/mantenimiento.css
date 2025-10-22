@@ -1,0 +1,225 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #f5e6d3 0%, #e8d5c4 100%);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    overflow-x: hidden;
+}
+
+.container {
+    text-align: center;
+    max-width: 600px;
+    background: rgba(255, 255, 255, 0.9);
+    padding: 50px 40px;
+    border-radius: 30px;
+    box-shadow: 0 20px 60px rgba(139, 101, 75, 0.15);
+    animation: fadeInUp 1s ease-out;
+}
+
+.icon-container {
+    margin-bottom: 30px;
+    animation: float 3s ease-in-out infinite;
+}
+
+.maintenance-icon img {
+    width: 200px;
+    animation: pulse 2s ease-in-out infinite;
+}
+
+h1 {
+    color: #8b654b;
+    font-size: 2.5em;
+    margin-bottom: 15px;
+    animation: fadeIn 1.2s ease-out;
+}
+
+p {
+    color: #a0826d;
+    font-size: 1.1em;
+    line-height: 1.6;
+    margin-bottom: 40px;
+    animation: fadeIn 1.4s ease-out;
+}
+
+.buttons {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+    animation: fadeIn 1.6s ease-out;
+}
+
+.btn {
+    padding: 15px 35px;
+    border: none;
+    border-radius: 50px;
+    font-size: 1em;
+    font-weight: 600;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(139, 101, 75, 0.2);
+}
+
+.btn-whatsapp {
+    background: #c9a88c;
+    color: white;
+}
+
+.btn-whatsapp:hover {
+    background: #b89678;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(75, 139, 75, 0.7);
+}
+
+.fa-whatsapp,
+.fa-instagram {
+    font-size: 20px;
+    transition: .3s ease;
+}
+
+.btn-whatsapp:hover .fa-whatsapp {
+    color: green;
+}
+
+.btn-instagram:hover .fa-instagram {
+    color: #ff5100;
+}
+
+.btn-instagram {
+    background: #d4b5a0;
+    color: white;
+}
+
+.btn-instagram:hover {
+    background: #c4a590;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(139, 77, 75, 0.7);
+}
+
+.decorative-circles {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    z-index: -1;
+}
+
+.circle {
+    position: absolute;
+    border-radius: 50%;
+    background: rgba(216, 185, 158, 0.3);
+    animation: float 6s ease-in-out infinite;
+}
+
+.circle1 {
+    width: 100px;
+    height: 100px;
+    top: 10%;
+    left: 15%;
+    animation-delay: 0s;
+}
+
+.circle2 {
+    width: 150px;
+    height: 150px;
+    top: 60%;
+    right: 10%;
+    animation-delay: 2s;
+}
+
+.circle3 {
+    width: 80px;
+    height: 80px;
+    bottom: 15%;
+    left: 10%;
+    animation-delay: 4s;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes float {
+
+    0%,
+    100% {
+        transform: translateY(0px);
+    }
+
+    50% {
+        transform: translateY(-20px);
+    }
+}
+
+@keyframes pulse {
+
+    0%,
+    100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.05);
+    }
+}
+
+@media (max-width: 600px) {
+    .container {
+        padding: 40px 25px;
+    }
+
+    h1 {
+        font-size: 2em;
+    }
+
+    p {
+        font-size: 1em;
+    }
+
+    .buttons {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .btn {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .maintenance-icon {
+        font-size: 60px;
+    }
+}
