@@ -125,7 +125,9 @@ body::-webkit-scrollbar-thumb {
 
 .btn {
     display: inline-block;
-    max-width: 12em;
+    /* max-width: 12em; */
+    width: 18em;
+    text-align: center;
     height: 2.6em;
     line-height: 2.5em;
     overflow: hidden;

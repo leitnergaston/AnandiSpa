@@ -1,0 +1,2120 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anandi Spa & Estética - Catálogo Digital</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- FAVICON -->
+    <link rel="icon" type="image/png" href="/imagenes/favicon/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="/imagenes/favicon/favicon.svg" />
+    <link rel="shortcut icon" href="/imagenes/favicon/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/imagenes/favicon/apple-touch-icon.png" />
+    <meta name="apple-mobile-web-app-title" content="Anandi" />
+    <link rel="manifest" href="/imagenes/favicon/site.webmanifest" />
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            overflow-x: hidden;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        h1,
+        h2,
+        h3 {
+            font-family: 'Playfair Display', serif;
+        }
+
+        .spa-theme {
+            --primary: #8B6F47;
+            --secondary: #A0826D;
+            --accent: #C9A87C;
+            --light: #F5EFE7;
+            --dark: #5D4E37;
+        }
+
+        .estetica-theme {
+            --primary: #B565A7;
+            --secondary: #D88FC7;
+            --accent: #E9B7E5;
+            --light: #F9F0F8;
+            --dark: #7A3E6F;
+        }
+
+        /* Menu hamburguesa */
+        header {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            z-index: 1000;
+            display: flex;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .hamburger {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            width: 50px;
+            height: 50px;
+            cursor: pointer;
+            z-index: 1001;
+            background: linear-gradient(135deg, #B4936E 0%, #8B7355 100%);
+            padding: 12px;
+            border-radius: 12px;
+            box-shadow: 0 8px 25px rgba(153, 124, 96, 0.4);
+            transition: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+        }
+
+        .hamburger:hover {
+            transform: scale(1.05);
+            box-shadow: 0 12px 35px rgba(153, 124, 96, 0.5);
+        }
+
+        .hamburger:active {
+            transform: scale(0.95);
+        }
+
+        .hamburger span {
+            display: block;
+            height: 3px;
+            width: 26px;
+            background-color: #fff;
+            border-radius: 3px;
+            transition: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+        }
+
+        /* Overlay oscuro */
+        .overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100vh;
+            background: rgba(0, 0, 0, 0.5);
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.4s ease;
+            z-index: 999;
+            backdrop-filter: blur(3px);
+        }
+
+        .overlay.active {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        /* Panel de navegación */
+        .nav-links {
+            list-style: none;
+            position: fixed;
+            top: 0;
+            left: -320px;
+            height: 100vh;
+            width: 300px;
+            background: linear-gradient(180deg, #B4936E 0%, #997C60 50%, #8B7355 100%);
+            flex-direction: column;
+            padding: 100px 20px 30px;
+            transition: left 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+            box-shadow: 5px 0 30px rgba(0, 0, 0, 0.3);
+            z-index: 1000;
+            overflow-y: auto;
+        }
+
+        .nav-links.active {
+            left: 0;
+        }
+
+        /* Animación hamburguesa */
+        .hamburger.active {
+            background: linear-gradient(135deg, #8B7355 0%, #6D5D4A 100%);
+        }
+
+        .hamburger.active span:nth-child(1) {
+            transform: rotate(45deg) translate(8px, 8px);
+        }
+
+        .hamburger.active span:nth-child(2) {
+            opacity: 0;
+            transform: translateX(-20px);
+        }
+
+        .hamburger.active span:nth-child(3) {
+            transform: rotate(-45deg) translate(8px, -8px);
+        }
+
+        /* Items del menú */
+        .nav-item {
+            margin-bottom: 8px;
+            opacity: 0;
+            transform: translateX(-30px);
+            transition: all 0.3s ease;
+        }
+
+        .nav-links.active .nav-item {
+            opacity: 1;
+            transform: translateX(0);
+        }
+
+        /* Delay escalonado para cada item */
+        /* Delay escalonado para cada item - SPA */
+        .nav-links.active .nav-item.spa-nav:nth-of-type(1) {
+            transition-delay: 0.1s;
+        }
+
+        .nav-links.active .nav-item.spa-nav:nth-of-type(2) {
+            transition-delay: 0.15s;
+        }
+
+        .nav-links.active .nav-item.spa-nav:nth-of-type(3) {
+            transition-delay: 0.2s;
+        }
+
+        .nav-links.active .nav-item.spa-nav:nth-of-type(4) {
+            transition-delay: 0.25s;
+        }
+
+        .nav-links.active .nav-item.spa-nav:nth-of-type(5) {
+            transition-delay: 0.3s;
+        }
+
+        .nav-links.active .nav-item.spa-nav:nth-of-type(6) {
+            transition-delay: 0.35s;
+        }
+
+        /* Delay escalonado para cada item - ESTÉTICA */
+        .nav-links.active .nav-item.estetica-nav:nth-of-type(7) {
+            transition-delay: 0.1s;
+        }
+
+        .nav-links.active .nav-item.estetica-nav:nth-of-type(8) {
+            transition-delay: 0.15s;
+        }
+
+        .nav-links.active .nav-item.estetica-nav:nth-of-type(9) {
+            transition-delay: 0.2s;
+        }
+
+        .nav-links.active .nav-item.estetica-nav:nth-of-type(10) {
+            transition-delay: 0.25s;
+        }
+
+        .nav-links.active .nav-item.estetica-nav:nth-of-type(11) {
+            transition-delay: 0.3s;
+        }
+
+        .nav-links.active .nav-item.estetica-nav:nth-of-type(12) {
+            transition-delay: 0.35s;
+        }
+
+        .nav-links.active .nav-item.estetica-nav:nth-of-type(13) {
+            transition-delay: 0.4s;
+        }
+
+        .nav-links.active .nav-item.estetica-nav:nth-of-type(14) {
+            transition-delay: 0.45s;
+        }
+
+        /* Enlaces con rectángulos individuales */
+        .nav-link {
+            display: block;
+            text-decoration: none;
+            text-transform: uppercase;
+            font-weight: 600;
+            font-size: 0.9rem;
+            letter-spacing: 0.5px;
+            color: #fff;
+            padding: 14px 20px;
+            border-radius: 10px;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border: 2px solid transparent;
+            transition: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* Efecto de brillo al hover */
+        .nav-link::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+            transition: left 0.5s ease;
+        }
+
+        .nav-link:hover::before {
+            left: 100%;
+        }
+
+        .nav-link:hover {
+            background: rgba(255, 255, 255, 0.25);
+            border-color: rgba(255, 255, 255, 0.5);
+            transform: translateX(8px) scale(1.02);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .nav-link.active {
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.15));
+            border-color: rgba(255, 255, 255, 0.6);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2), inset 0 1px 3px rgba(255, 255, 255, 0.3);
+            transform: translateX(5px);
+        }
+
+        /* Scrollbar personalizado */
+        .nav-links::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        .nav-links::-webkit-scrollbar-track {
+            background: rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+        }
+
+        .nav-links::-webkit-scrollbar-thumb {
+            background: rgba(255, 255, 255, 0.3);
+            border-radius: 10px;
+        }
+
+        .nav-links::-webkit-scrollbar-thumb:hover {
+            background: rgba(255, 255, 255, 0.5);
+        }
+
+
+
+        .hero {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: white;
+            text-align: center;
+            position: relative;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg width="100" height="100" xmlns="http://www.w3.org/2000/svg"><circle cx="50" cy="50" r="1" fill="white" opacity="1"/></svg>');
+            /* background-image: url('imagenes/spa/logos/ASlogoSoloMarronPng.png'); */
+            /* background-size: cover; */
+            /* background-position: center; */
+            /* width: 50%; */
+            /* margin: 0 auto; */
+            /* transform: translate(-3%, -35%); */
+            opacity: 0.5;
+        }
+
+        .catalogo-hero-text {
+            position: absolute;
+            top: 16em;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .catalogo-hero-text i {
+            font-size: 8em;
+            animation: jump 2s ease infinite;
+        }
+
+        @keyframes jump {
+
+            0%,
+            100% {
+                transform: translateY(0px);
+            }
+
+            60% {
+                transform: translateY(25px);
+            }
+        }
+
+        .catalog-toggle {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            z-index: 1000;
+            display: flex;
+            gap: 10px;
+            background: white;
+            padding: 8px;
+            border-radius: 50px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+        }
+
+        .toggle-btn {
+            padding: 12px 24px;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: all 0.3s;
+            font-size: 14px;
+        }
+
+        .toggle-btn.active {
+            color: white;
+            transform: scale(1.05);
+        }
+
+        .promo-card {
+            background: white;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .promo-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+        }
+
+        .promo-image {
+            width: 100%;
+            height: auto;
+            background: linear-gradient(135deg, var(--accent), var(--secondary));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 18px;
+            font-weight: 600;
+        }
+
+        .featured-badge {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            background: #FFD700;
+            color: #333;
+            padding: 8px 16px;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 12px;
+            z-index: 10;
+        }
+
+        .whatsapp-btn {
+            background: #25D366;
+            color: white;
+            padding: 12px 24px;
+            border-radius: 50px;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            font-weight: 600;
+            transition: all 0.3s;
+        }
+
+        .whatsapp-btn:hover {
+            background: #20ba5b;
+            transform: scale(1.02);
+        }
+
+        .whatsapp-btn i {
+            font-size: 22px;
+        }
+
+        .instagram-btn {
+            transition: all .3s;
+        }
+
+        .instagram-btn:hover {
+            transform: scale(1.02);
+        }
+
+        .instagram-btn i {
+            font-size: 22px;
+        }
+
+        .back-to-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background: var(--primary);
+            color: white;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+            opacity: 0;
+            transition: all 0.3s;
+            z-index: 999;
+        }
+
+        .back-to-top.visible {
+            opacity: 1;
+        }
+
+        .back-to-top:hover {
+            transform: scale(1.1);
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: var(--dark);
+            text-align: center;
+        }
+
+        .service-item {
+            background: white;
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+            transition: all 0.3s;
+        }
+
+        .service-item:hover {
+            transform: translateX(10px);
+            box-shadow: 0 6px 25px rgba(0, 0, 0, 0.12);
+        }
+
+        .info-card {
+            background-color: white;
+            padding: 30px;
+            border-radius: 20px;
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .info-card-informacion {
+            display: flex;
+            background: white;
+            padding: 30px;
+            border-radius: 20px;
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+            position: relative;
+        }
+
+        .info-card-img {
+            height: 200px;
+        }
+
+        .info-card-img.calendario {
+            height: 180px;
+            position: absolute;
+            right: 10px;
+        }
+
+        .info-card-img.reloj {
+            height: 180px;
+            position: absolute;
+            right: 10px;
+        }
+
+
+        @media (max-width: 768px) {
+            .section-title {
+                font-size: 2rem;
+            }
+
+            .promo-image {
+                height: auto;
+            }
+
+            .catalog-toggle {
+                top: 10px;
+                right: 10px;
+            }
+
+            .toggle-btn {
+                padding: 10px 16px;
+                font-size: 12px;
+            }
+
+            .info-card {
+                flex-wrap: wrap;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Overlay oscuro -->
+    <div class="overlay">
+
+    </div>
+
+    <header>
+        <nav>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul class="nav-links">
+                <!-- Links de spa (mostrados por defecto) -->
+                <li class="nav-item spa-nav"><a href="#inicio" class="nav-link active">Inicio</a></li>
+                <li class="nav-item spa-nav"><a href="#promosdestacadas" class="nav-link">Promos Destacadas</a></li>
+                <li class="nav-item spa-nav"><a href="#promosvigentes" class="nav-link">Promos Vigentes</a></li>
+                <li class="nav-item spa-nav"><a href="#servicios" class="nav-link">Servicios</a></li>
+                <li class="nav-item spa-nav"><a href="#informacion" class="nav-link">Información</a></li>
+                <li class="nav-item spa-nav"><a href="#contacto" class="nav-link">Contacto</a></li>
+
+                <!-- Links de estética -->
+                <li class="nav-item estetica-nav" style="display: none;"><a href="#inicioestetica"
+                        class="nav-link active">Inicio</a></li>
+                <li class="nav-item estetica-nav" style="display: none;"><a href="#promosdestacadasestetica"
+                        class="nav-link">Promos Destacadas</a></li>
+                <li class="nav-item estetica-nav" style="display: none;"><a href="#tratamientosfaciales"
+                        class="nav-link">Tratamientos Faciales</a></li>
+                <li class="nav-item estetica-nav" style="display: none;"><a href="#tratamientoscorporales"
+                        class="nav-link">Tratamientos Corporales</a></li>
+                <li class="nav-item estetica-nav" style="display: none;"><a href="#tratamientoscapilares"
+                        class="nav-link">Tratamientos Capilares</a></li>
+                <li class="nav-item estetica-nav" style="display: none;"><a href="#promociones"
+                        class="nav-link">Promociones</a></li>
+                <li class="nav-item estetica-nav" style="display: none;"><a href="#informacionestetica"
+                        class="nav-link">Información</a></li>
+                <li class="nav-item estetica-nav" style="display: none;"><a href="#contactoestetica"
+                        class="nav-link">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+
+    <!-- Toggle de Catálogo -->
+    <div class="catalog-toggle">
+        <button class="toggle-btn active spa-btn" onclick="switchCatalog('spa')">🌿 Spa</button>
+        <button class="toggle-btn estetica-btn" onclick="switchCatalog('estetica')">✨ Estética</button>
+    </div>
+
+    <!-- Botón Back to Top -->
+    <div class="back-to-top" onclick="scrollToTop()">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M12 19V5M5 12l7-7 7 7" />
+        </svg>
+    </div>
+
+    <!-- CATÁLOGO SPA -->
+    <div id="spa-catalog" class="catalog-section spa-theme">
+        <!-- Hero Section -->
+        <section class="hero" id="inicio">
+            <div style="position: relative; z-index: 1;">
+                <h1 style="font-size: 3.5rem; margin-bottom: 1rem;">Anandi Spa</h1>
+                <p style="font-size: 1.2rem; opacity: 0.9;">Momentos de paz y bienestar</p>
+                <p class="catalogo-hero-text"><i class="fa-solid fa-chevron-down"></i></p>
+            </div>
+        </section>
+
+        <!-- Promociones Destacadas -->
+        <section style="padding: 80px 20px; background: var(--light);" id="promosdestacadas">
+            <div style="max-width: 1200px; margin: 0 auto;">
+                <h2 class="section-title">✨ Promociones Destacadas del Mes</h2>
+                <p style="text-align: center; color: var(--dark); margin-bottom: 50px; font-size: 1.1rem;">
+                    Aprovechá estas ofertas especiales
+                </p>
+
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px;">
+                    <!-- Promo Navidad -->
+                    <div class="promo-card" style="position: relative;">
+                        <div class="featured-badge">🎄 Navidad</div>
+                        <img src="imagenes/spa/promos/promo-navidad.jpg" alt="" class="promo-image">
+                        <div style="padding: 30px;">
+                            <h3 style="font-size: 1.8rem; margin-bottom: 15px; color: var(--dark);">Promo Navidad</h3>
+                            <p style="color: #666; margin-bottom: 20px; line-height: 1.6;">
+                                Pedí o regalá tu promo Navideña!
+                            </p>
+                            <div style="display: flex; justify-content: space-between; align-items: center;">
+                                <a href="https://wa.me/5492615104019?text=Hola! Me interesa la promo Viernes de Spa"
+                                    class="whatsapp-btn" target="_blank">
+                                    <i class="fa-brands fa-whatsapp"></i> Reservar
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Promo Bienestar -->
+                    <div class="promo-card" style="position: relative;">
+                        <div class="featured-badge">⛱ Verano</div>
+                        <img src="imagenes/spa/promos/promo-bienestar.jpg" alt="" class="promo-image">
+                        <div style="padding: 30px;">
+                            <h3 style="font-size: 1.8rem; margin-bottom: 15px; color: var(--dark);">Promo Bienestar</h3>
+                            <p style="color: #666; margin-bottom: 20px; line-height: 1.6;">
+                                Pedí o regalá tu promo Navideña!
+                            </p>
+                            <div style="display: flex; justify-content: space-between; align-items: center;">
+                                <a href="https://wa.me/5492615104019?text=Hola! Me interesa la promo Viernes de Spa"
+                                    class="whatsapp-btn" target="_blank">
+                                    <i class="fa-brands fa-whatsapp"></i> Reservar
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Viernes de Spa -->
+                    <div class="promo-card" style="position: relative;">
+                        <div class="featured-badge">📣 Descuento</div>
+                        <img src="imagenes/spa/promos/viernes-de-spa.jpg" alt="" class="promo-image">
+                        <div style="padding: 30px;">
+                            <h3 style="font-size: 1.8rem; margin-bottom: 15px; color: var(--dark);">Viernes de Spa</h3>
+                            <p style="color: #666; margin-bottom: 20px; line-height: 1.6;">
+                                🎉 <strong>15% de descuento</strong> en cualquier promoción de spa todos los viernes
+                            </p>
+                            <div style="display: flex; justify-content: space-between; align-items: center;">
+                                <span style="font-size: 1.5rem; font-weight: 700; color: var(--primary);">15% OFF</span>
+                                <a href="https://wa.me/5492615104019?text=Hola! Me interesa la promo Viernes de Spa"
+                                    class="whatsapp-btn" target="_blank">
+                                    <i class="fa-brands fa-whatsapp"></i> Reservar
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Super Promo -->
+                    <div class="promo-card" style="position: relative;">
+                        <div class="featured-badge">🔥 SUPER PROMO</div>
+                        <img src="imagenes/spa/promos/super-promo.jpg" alt="" class="promo-image">
+                        <div style="padding: 30px;">
+                            <h3 style="font-size: 1.8rem; margin-bottom: 15px; color: var(--dark);">Super Promo</h3>
+                            <p style="color: #666; margin-bottom: 20px; line-height: 1.6;">
+                                💆 3 masajes de 60 minutos completos
+                            </p>
+                            <div style="display: flex; justify-content: space-between; align-items: center;">
+                                <span style="font-size: 1.5rem; font-weight: 700; color: var(--primary);">$80.000</span>
+                                <a href="https://wa.me/5492615104019?text=Hola! Me interesa la Super Promo de 3 masajes"
+                                    class="whatsapp-btn" target="_blank">
+                                    <i class="fa-brands fa-whatsapp"></i> Reservar
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Promociones Vigentes -->
+        <section style="padding: 80px 20px;" id="promosvigentes">
+            <div style="max-width: 1200px; margin: 0 auto;">
+                <h2 class="section-title">💆 Promociones Vigentes</h2>
+                <div
+                    style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 30px; margin-top: 50px;">
+
+                    <!-- Promo 1 -->
+                    <div class="promo-card">
+                        <img src="imagenes/spa/promos/promo-1.jpg" alt="" class="promo-image">
+                        <div style="padding: 30px;">
+                            <h3 style="font-size: 1.5rem; margin-bottom: 15px; color: var(--dark);">Promo 1</h3>
+                            <ul
+                                style="color: #666; margin-bottom: 20px; line-height: 1.8; list-style: none; padding: 0;">
+                                <li>✓ Masaje descontracturante o sedativo</li>
+                                <li>✓ Aceites esenciales de lavanda</li>
+                                <li>✓ Relajación con pindas</li>
+                                <li>✓ Limonada con frutos secos</li>
+                            </ul>
+                            <div style="margin-bottom: 20px;">
+                                <div style="display: flex; justify-content: space-between; margin-bottom: 10px;">
+                                    <span>30 minutos</span>
+                                    <strong style="color: var(--primary);">$30.000</strong>
+                                </div>
+                                <div style="display: flex; justify-content: space-between;">
+                                    <span>60 minutos</span>
+                                    <strong style="color: var(--primary);">$60.000</strong>
+                                </div>
+                            </div>
+                            <a href="https://wa.me/5492615104019?text=Hola! Me interesa la Promo 1 de masaje descontracturante"
+                                class="whatsapp-btn" target="_blank" style="width: 100%; justify-content: center;">
+                                <i class="fa-brands fa-whatsapp"></i> Reservar
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Promo 2 -->
+                    <div class="promo-card">
+                        <img src="imagenes/spa/promos/promo-2.jpg" alt="" class="promo-image">
+                        <div style="padding: 30px;">
+                            <h3 style="font-size: 1.5rem; margin-bottom: 15px; color: var(--dark);">Promo 2</h3>
+                            <ul
+                                style="color: #666; margin-bottom: 20px; line-height: 1.8; list-style: none; padding: 0;">
+                                <li>✓ Masaje con piedras calientes</li>
+                                <li>✓ Aceites esenciales</li>
+                                <li>✓ Piedras en los chakras</li>
+                                <li>✓ 30 minutos</li>
+                            </ul>
+                            <div style="margin-bottom: 20px; text-align: center;">
+                                <span style="font-size: 1.8rem; font-weight: 700; color: var(--primary);">$20.000</span>
+                            </div>
+                            <a href="https://wa.me/5492615104019?text=Hola! Me interesa la Promo 2 de piedras calientes"
+                                class="whatsapp-btn" target="_blank" style="width: 100%; justify-content: center;">
+                                <i class="fa-brands fa-whatsapp"></i> Reservar
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Promo 3 -->
+                    <div class="promo-card">
+                        <img src="imagenes/spa/promos/promo-3.jpg" alt="" class="promo-image">
+                        <div style="padding: 30px;">
+                            <h3 style="font-size: 1.5rem; margin-bottom: 15px; color: var(--dark);">Promo 3</h3>
+                            <ul
+                                style="color: #666; margin-bottom: 20px; line-height: 1.8; list-style: none; padding: 0;">
+                                <li>✓ Masaje con pindas herbáticas</li>
+                                <li>✓ Relajación con aromaterapia</li>
+                                <li>✓ Lavanda, vainilla, aceites</li>
+                                <li>✓ 30 minutos</li>
+                            </ul>
+                            <div style="margin-bottom: 20px; text-align: center;">
+                                <span style="font-size: 1.8rem; font-weight: 700; color: var(--primary);">$20.000</span>
+                            </div>
+                            <a href="https://wa.me/5492615104019?text=Hola! Me interesa la Promo 3 de pindas herbáticas"
+                                class="whatsapp-btn" target="_blank" style="width: 100%; justify-content: center;">
+                                <i class="fa-brands fa-whatsapp"></i> Reservar
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Promo 5 -->
+                    <div class="promo-card">
+                        <img src="imagenes/spa/promos/promo-5.jpg" alt="" class="promo-image">
+                        <div style="padding: 30px;">
+                            <h3 style="font-size: 1.5rem; margin-bottom: 15px; color: var(--dark);">Promo 5</h3>
+                            <ul
+                                style="color: #666; margin-bottom: 20px; line-height: 1.8; list-style: none; padding: 0;">
+                                <li>✓ Masaje descontracturante o relajante</li>
+                                <li>✓ Limpieza de cutis</li>
+                                <li>✓ Exfoliación corporal</li>
+                                <li>✓ Nutrición corporal</li>
+                                <li>✓ Merienda incluida</li>
+                            </ul>
+                            <div style="margin-bottom: 20px; font-size: 0.9rem;">
+                                <div style="display: flex; justify-content: space-between; margin-bottom: 8px;">
+                                    <span>30 min - 1 persona</span>
+                                    <strong style="color: var(--primary);">$60.000</strong>
+                                </div>
+                                <div style="display: flex; justify-content: space-between; margin-bottom: 8px;">
+                                    <span>30 min - 2 personas</span>
+                                    <strong style="color: var(--primary);">$95.000</strong>
+                                </div>
+                                <div style="display: flex; justify-content: space-between; margin-bottom: 8px;">
+                                    <span>60 min - 1 persona</span>
+                                    <strong style="color: var(--primary);">$70.000</strong>
+                                </div>
+                                <div style="display: flex; justify-content: space-between;">
+                                    <span>60 min - 2 personas</span>
+                                    <strong style="color: var(--primary);">$120.000</strong>
+                                </div>
+                            </div>
+                            <a href="https://wa.me/5492615104019?text=Hola! Me interesa la Promo 5 - Experiencia Completa"
+                                class="whatsapp-btn" target="_blank" style="width: 100%; justify-content: center;">
+                                <i class="fa-brands fa-whatsapp"></i> Reservar
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Promo Relax 1 -->
+                    <div class="promo-card">
+                        <img src="imagenes/spa/promos/promo-relax-1.jpg" alt="" class="promo-image">
+                        <div style="padding: 30px;">
+                            <h3 style="font-size: 1.5rem; margin-bottom: 15px; color: var(--dark);">Promo Relax 1</h3>
+                            <ul
+                                style="color: #666; margin-bottom: 20px; line-height: 1.8; list-style: none; padding: 0;">
+                                <li>✓ Masaje 30 min descontracturante</li>
+                                <li>✓ Relajación con piedras calientes</li>
+                                <li>✓ Hidromasaje con sales aromáticas</li>
+                                <li>✓ Merienda incluida</li>
+                            </ul>
+                            <div style="margin-bottom: 20px;">
+                                <div style="display: flex; justify-content: space-between; margin-bottom: 10px;">
+                                    <span>1 persona</span>
+                                    <strong style="color: var(--primary);">$75.000</strong>
+                                </div>
+                                <div style="display: flex; justify-content: space-between;">
+                                    <span>2 personas</span>
+                                    <strong style="color: var(--primary);">$140.000</strong>
+                                </div>
+                            </div>
+                            <a href="https://wa.me/5492615104019?text=Hola! Me interesa la Promo Relax 1"
+                                class="whatsapp-btn" target="_blank" style="width: 100%; justify-content: center;">
+                                <i class="fa-brands fa-whatsapp"></i> Reservar
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Promo Relax 2 -->
+                    <div class="promo-card">
+                        <img src="imagenes/spa/promos/promo-relax-2.jpg" alt="" class="promo-image">
+                        <div style="padding: 30px;">
+                            <h3 style="font-size: 1.5rem; margin-bottom: 15px; color: var(--dark);">Promo Relax 2</h3>
+                            <ul
+                                style="color: #666; margin-bottom: 20px; line-height: 1.8; list-style: none; padding: 0;">
+                                <li>✓ Masaje 60 min cuerpo completo</li>
+                                <li>✓ Piedras calientes y pindas</li>
+                                <li>✓ Facial hidratante con antifaz</li>
+                                <li>✓ Merienda incluida</li>
+                            </ul>
+                            <div style="margin-bottom: 20px;">
+                                <div style="display: flex; justify-content: space-between; margin-bottom: 10px;">
+                                    <span>1 persona</span>
+                                    <strong style="color: var(--primary);">$70.000</strong>
+                                </div>
+                                <div style="display: flex; justify-content: space-between;">
+                                    <span>2 personas</span>
+                                    <strong style="color: var(--primary);">$125.000</strong>
+                                </div>
+                            </div>
+                            <a href="https://wa.me/5492615104019?text=Hola! Me interesa la Promo Relax 2"
+                                class="whatsapp-btn" target="_blank" style="width: 100%; justify-content: center;">
+                                <i class="fa-brands fa-whatsapp"></i> Reservar
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Promo Romance -->
+                    <div class="promo-card">
+                        <img src="imagenes/spa/promos/promo-romance.jpg" alt="" class="promo-image">
+                        <div style="padding: 30px;">
+                            <h3 style="font-size: 1.5rem; margin-bottom: 15px; color: var(--dark);">💕 Promo Romance
+                            </h3>
+                            <ul
+                                style="color: #666; margin-bottom: 20px; line-height: 1.8; list-style: none; padding: 0;">
+                                <li>✓ Masaje 40 min descontracturante</li>
+                                <li>✓ Piedras calientes y almohadillas</li>
+                                <li>✓ Exfoliación con espuma o facial</li>
+                                <li>✓ Sauna finlandés con limonada</li>
+                                <li>✓ Aromaterapia + Merienda</li>
+                            </ul>
+                            <div style="margin-bottom: 20px; text-align: center;">
+                                <span style="font-size: 0.9rem;">2 personas</span><br>
+                                <span
+                                    style="font-size: 1.8rem; font-weight: 700; color: var(--primary);">$125.000</span>
+                            </div>
+                            <a href="https://wa.me/5492615104019?text=Hola! Me interesa la Promo Romance para 2 personas"
+                                class="whatsapp-btn" target="_blank" style="width: 100%; justify-content: center;">
+                                <i class="fa-brands fa-whatsapp"></i> Reservar
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Promo Tardes para Compartir -->
+                    <div class="promo-card">
+                        <img src="imagenes/spa/promos/tardes-para-compartir.jpg" alt="" class="promo-image">
+                        <div style="padding: 30px;">
+                            <h3 style="font-size: 1.5rem; margin-bottom: 15px; color: var(--dark);">👨‍👩‍👧‍👦 Tardes
+                                para
+                                Compartir</h3>
+                            <ul
+                                style="color: #666; margin-bottom: 20px; line-height: 1.8; list-style: none; padding: 0;">
+                                <li>✓ Masaje relajante 30 min</li>
+                                <li>✓ Pindas y piedras calientes</li>
+                                <li>✓ Exfoliación de espalda o facial</li>
+                                <li>✓ Sauna con aromaterapia</li>
+                                <li>✓ Limonada con jengibre + Merienda</li>
+                            </ul>
+                            <div style="margin-bottom: 20px; font-size: 0.9rem;">
+                                <div style="display: flex; justify-content: space-between; margin-bottom: 8px;">
+                                    <span>3 personas</span>
+                                    <strong style="color: var(--primary);">$160.000</strong>
+                                </div>
+                                <div style="display: flex; justify-content: space-between; margin-bottom: 8px;">
+                                    <span>4 personas</span>
+                                    <strong style="color: var(--primary);">$200.000</strong>
+                                </div>
+                                <div style="display: flex; justify-content: space-between;">
+                                    <span>5 personas</span>
+                                    <strong style="color: var(--primary);">$260.000</strong>
+                                </div>
+                            </div>
+                            <a href="https://wa.me/5492615104019?text=Hola! Me interesa la Promo Tardes para Compartir"
+                                class="whatsapp-btn" target="_blank" style="width: 100%; justify-content: center;">
+                                <i class="fa-brands fa-whatsapp"></i> Reservar
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Promo Cumpleaños -->
+                    <div class="promo-card">
+                        <img src="imagenes/spa/promos/promo-cumple.jpg" alt="" class="promo-image">
+                        <div style="padding: 30px;">
+                            <h3 style="font-size: 1.5rem; margin-bottom: 15px; color: var(--dark);">🎂 Festejá tu Cumple
+                            </h3>
+                            <ul
+                                style="color: #666; margin-bottom: 20px; line-height: 1.8; list-style: none; padding: 0;">
+                                <li>✓ Masaje 40 min de espalda</li>
+                                <li>✓ Piedras calientes y pindas</li>
+                                <li>✓ Limpieza de cutis con fangoterapia</li>
+                                <li>✓ Aromaterapia + Merienda</li>
+                                <li>✓ Mini torta de regalo 🎁</li>
+                            </ul>
+                            <div style="margin-bottom: 20px;">
+                                <div style="display: flex; justify-content: space-between; margin-bottom: 10px;">
+                                    <span>2 personas</span>
+                                    <strong style="color: var(--primary);">$120.000</strong>
+                                </div>
+                                <div style="display: flex; justify-content: space-between;">
+                                    <span>3 personas</span>
+                                    <strong style="color: var(--primary);">$160.000</strong>
+                                </div>
+                            </div>
+                            <a href="https://wa.me/5492615104019?text=Hola! Me interesa la Promo de Cumpleaños en Anandi Spa"
+                                class="whatsapp-btn" target="_blank" style="width: 100%; justify-content: center;">
+                                <i class="fa-brands fa-whatsapp"></i> Reservar
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Servicios de Spa -->
+        <section style="padding: 80px 20px; background: var(--light);" id="servicios">
+            <div style="max-width: 1000px; margin: 0 auto;">
+                <h2 class="section-title">🌿 Nuestros Servicios de Spa</h2>
+                <div style="display: grid; gap: 20px; margin-top: 50px;">
+                    <div class="service-item">
+                        <h4 style="color: var(--primary); margin-bottom: 10px; font-size: 1.2rem;">Masajes Terapéuticos
+                        </h4>
+                        <p style="color: #666;">Descontracturantes, relajantes, sedativos, suecos, con piedras
+                            calientes, pindas herbáticas, almohadillas térmicas
+                        </p>
+                    </div>
+                    <div class="service-item">
+                        <h4 style="color: var(--primary); margin-bottom: 10px; font-size: 1.2rem;">Tratamientos
+                            Corporales</h4>
+                        <p style="color: #666;">Exfoliación, nutrición corporal</p>
+                    </div>
+                    <div class="service-item">
+                        <h4 style="color: var(--primary); margin-bottom: 10px; font-size: 1.2rem;">Hidroterapia</h4>
+                        <p style="color: #666;">Sauna finlandés, hidromasaje con sales aromáticas</p>
+                    </div>
+                    <div class="service-item">
+                        <h4 style="color: var(--primary); margin-bottom: 10px; font-size: 1.2rem;">Aromaterapia</h4>
+                        <p style="color: #666;">Aceites esenciales de lavanda, eucaliptus, vainilla</p>
+                    </div>
+                    <div class="service-item">
+                        <h4 style="color: var(--primary); margin-bottom: 10px; font-size: 1.2rem;">Tratamientos Faciales
+                        </h4>
+                        <p style="color: #666;">Limpieza de cutis, hidratación, mascarillas</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Información Importante -->
+        <section style="padding: 80px 20px;" id="informacion">
+            <div style="max-width: 1000px; margin: 0 auto;">
+                <h2 class="section-title">ℹ️ Información Importante</h2>
+                <div style="display: grid; gap: 30px; margin-top: 50px;">
+
+                    <div class="info-card-informacion">
+                        <div>
+                            <h3 style="color: var(--primary); margin-bottom: 15px; font-size: 1.5rem;">🎁 Gift Card</h3>
+                            <p style="color: #666; line-height: 1.8;">
+                                Regalá una experiencia única. Nuestros vouchers son el regalo perfecto para cualquier
+                                ocasión.
+                                Consultá por disponibilidad y personalizá tu voucher.
+                            </p>
+                        </div>
+                        <img src="imagenes/spa/gift-card.jpg" alt="" class="info-card-img giftcard">
+                    </div>
+
+                    <div class="info-card-informacion">
+                        <div>
+                            <h3 style="color: var(--primary); margin-bottom: 15px; font-size: 1.5rem;">📅 Reservas y
+                                Señas</h3>
+                            <p style="color: #666; line-height: 1.8;">
+                                • Para confirmar tu turno es necesario enviar una seña del 30% del valor total<br>
+                                • Las cancelaciones deben realizarse con 24hs de anticipación<br>
+                                • Se envía disponibilidad horaria para coordinar tu visita<br>
+                                • Horarios: Consultar disponibilidad<br>
+                                • Editar editar editar editar
+                            </p>
+                        </div>
+                        <img src="imagenes/spa/calendario.svg" alt="" class="info-card-img calendario">
+                    </div>
+
+                    <div class="info-card-informacion">
+                        <div>
+                            <h3 style="color: var(--primary); margin-bottom: 15px; font-size: 1.5rem;">⏰ Recomendaciones
+                            </h3>
+                            <p style="color: #666; line-height: 1.8;">
+                                • Llegá 10 minutos antes de tu turno<br>
+                                • Traé ropa cómoda<br>
+                                • Evitá comidas pesadas antes del tratamiento<br>
+                                • Comunicá con anticipación cualquier condición médica o alergia<br>
+                                • Editar editar editar editar
+                            </p>
+                        </div>
+                        <img src="imagenes/spa/reloj.svg" alt="" class="info-card-img reloj">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Métodos de Pago -->
+        <section style="padding: 80px 20px; background: var(--light);">
+            <div style="max-width: 1000px; margin: 0 auto;">
+                <h2 class="section-title">💳 Métodos de Pago</h2>
+                <div class="info-card" style="margin-top: 50px;">
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px;">
+                        <div>
+                            <h4 style="color: var(--primary); margin-bottom: 10px; font-size: 1.2rem;">Transferencia /
+                                Mercado Pago</h4>
+                            <p style="color: #666; font-size: 0.95rem;">
+                                <strong>Alias / CBU</strong><br>
+                                Consultar por WhatsApp
+                            </p>
+                        </div>
+                        <div>
+                            <h4 style="color: var(--primary); margin-bottom: 10px; font-size: 1.2rem;">Tarjetas de
+                                Crédito</h4>
+                            <p style="color: #666; font-size: 0.95rem;">
+                                Se genera un link de pago con intereses
+                            </p>
+                        </div>
+                        <div>
+                            <h4 style="color: var(--primary); margin-bottom: 10px; font-size: 1.2rem;">Efectivo</h4>
+                            <p style="color: #666; font-size: 0.95rem;">
+                                Pago en el momento de tu visita
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contacto y Ubicación -->
+        <section style="padding: 80px 20px;" id="contacto">
+            <div style="max-width: 1000px; margin: 0 auto;">
+                <h2 class="section-title">📍 Contacto y Ubicación</h2>
+                <div class="info-card" style="margin-top: 50px; text-align: center;">
+                    <p style="color: #666; font-size: 1.1rem; margin-bottom: 20px;">
+                        <strong style="color: var(--primary);">📍 Dirección:</strong> Godoy Cruz, Mendoza, Argentina
+                    </p>
+                    <div style="display: flex; gap: 20px; justify-content: center; flex-wrap: wrap;">
+                        <a href="https://wa.me/5492615104019" class="whatsapp-btn" target="_blank"
+                            style="font-size: 1.1rem;">
+                            <i class="fa-brands fa-whatsapp"></i> WhatsApp
+                        </a>
+                        <a href="https://instagram.com/anandi.spa" class="instagram-btn" target="_blank" style="background: linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%); 
+                                color: white; padding: 12px 24px; border-radius: 50px; text-decoration: none; 
+                                display: inline-flex; align-items: center; gap: 8px; font-weight: 600;">
+                            <i class="fa-brands fa-instagram"></i> Instagram
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- CATÁLOGO ESTÉTICA -->
+    <div id="estetica-catalog" class="catalog-section estetica-theme" style="display: none;">
+        <!-- Hero Section -->
+        <section class="hero" id="inicioestetica">
+            <div style="position: relative; z-index: 1;">
+                <h1 style="font-size: 3.5rem; margin-bottom: 1rem;">Anandi Estética</h1>
+                <p style="font-size: 1.2rem; opacity: 0.9;">Realzá tu belleza natural</p>
+                <p class="catalogo-hero-text"><i class="fa-solid fa-chevron-down"></i></p>
+            </div>
+        </section>
+
+        <!-- Promociones Destacadas Estética -->
+        <section style="padding: 80px 20px; background: var(--light);" id="promosdestacadasestetica">
+            <div style="max-width: 1200px; margin: 0 auto;">
+                <h2 class="section-title">✨ Promociones Destacadas del Mes</h2>
+                <p style="text-align: center; color: var(--dark); margin-bottom: 50px; font-size: 1.1rem;">
+                    Aprovechá estas ofertas especiales
+                </p>
+
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px;">
+                    <!-- Miércoles de Estética -->
+                    <div class="promo-card" style="position: relative;">
+                        <div class="featured-badge">📣 DESCUENTO</div>
+                        <img src="imagenes/estetica/promos/miercoles-de-estetica.jpg" alt="promo miercoles"
+                            class="promo-image">
+                        <div style="padding: 30px;">
+                            <h3 style="font-size: 1.8rem; margin-bottom: 15px; color: var(--dark);">Miércoles de
+                                Estética</h3>
+                            <p style="color: #666; margin-bottom: 20px; line-height: 1.6;">
+                                🎉 <strong>10% de descuento</strong> en cualquier servicio de estética todos los
+                                miércoles
+                            </p>
+                            <div style="display: flex; justify-content: space-between; align-items: center;">
+                                <span style="font-size: 1.5rem; font-weight: 700; color: var(--primary);">10% OFF</span>
+                                <a href="https://wa.me/5492615104019?text=Hola! Me interesa la promo Miércoles de Estética"
+                                    class="whatsapp-btn" target="_blank">
+                                    <i class="fa-brands fa-whatsapp"></i> Reservar
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Promo Jueves -->
+                    <div class="promo-card" style="position: relative;">
+                        <div class="featured-badge">🎁 REGALO</div>
+                        <img src="imagenes/estetica/promos/promo-jueves-estetica.jpg" alt="promo jueves"
+                            class="promo-image">
+                        <div style="padding: 30px;">
+                            <h3 style="font-size: 1.8rem; margin-bottom: 15px; color: var(--dark);">Promo Jueves</h3>
+                            <p style="color: #666; margin-bottom: 20px; line-height: 1.6;">
+                                De 14hs a 16hs reservando cualquier servicio <strong>te llevás un set facial de
+                                    regalo</strong> 🎁
+                            </p>
+                            <div style="display: flex; justify-content: center;">
+                                <a href="https://wa.me/5492615104019?text=Hola! Me interesa la promo de Jueves con set facial de regalo"
+                                    class="whatsapp-btn" target="_blank">
+                                    <i class="fa-brands fa-whatsapp"></i> Reservar
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Tratamientos Faciales -->
+        <section style="padding: 80px 20px;" id="tratamientosfaciales">
+            <div style="max-width: 1200px; margin: 0 auto;">
+                <h2 class="section-title">✨ Tratamientos Faciales</h2>
+                <div
+                    style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 30px; margin-top: 50px;">
+
+                    <!-- Consulta + Higiene -->
+                    <div class="promo-card">
+                        <img src="imagenes/estetica/promos/consulta-cosmetologica.jpg" alt="consulta cosmetologica"
+                            class="promo-image">
+                        <div style="padding: 30px;">
+                            <h3 style="font-size: 1.5rem; margin-bottom: 15px; color: var(--dark);">Consulta + Higiene
+                                Facial</h3>
+                            <p style="color: #666; margin-bottom: 20px; line-height: 1.8;">
+                                ✓ Consulta cosmetológica completa<br>
+                                ✓ Asesoramiento personalizado<br>
+                                ✓ Limpieza facial de regalo 🎁
+                            </p>
+                            <div style="margin-bottom: 20px; text-align: center;">
+                                <span style="font-size: 1.8rem; font-weight: 700; color: var(--primary);">$18.000</span>
+                            </div>
+                            <a href="https://wa.me/5492615104019?text=Hola! Me interesa la Consulta cosmetológica con higiene facial"
+                                class="whatsapp-btn" target="_blank" style="width: 100%; justify-content: center;">
+                                <i class="fa-brands fa-whatsapp"></i> Reservar
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Limpieza Profunda -->
+                    <div class="promo-card">
+                        <img src="imagenes/estetica/promos/limpieza-facial-profunda.jpg"
+                            alt="promo limpieza facial profunda" class="promo-image">
+                        <div style="padding: 30px;">
+                            <h3 style="font-size: 1.5rem; margin-bottom: 15px; color: var(--dark);">Limpieza Facial
+                                Profunda</h3>
+                            <p style="color: #666; margin-bottom: 20px; line-height: 1.8;">
+                                ✓ Limpieza facial profunda<br>
+                                ✓ Yoga facial con microcorriente
+                            </p>
+                            <div style="margin-bottom: 20px; text-align: center;">
+                                <span style="font-size: 1.8rem; font-weight: 700; color: var(--primary);">$20.000</span>
+                            </div>
+                            <a href="https://wa.me/5492615104019?text=Hola! Me interesa la Limpieza facial profunda"
+                                class="whatsapp-btn" target="_blank" style="width: 100%; justify-content: center;">
+                                <i class="fa-brands fa-whatsapp"></i> Reservar
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Perfil + Dermaplaning -->
+                    <div class="promo-card">
+                        <img src="imagenes/estetica/promos/perfilado-y-dermaplaning.jpg"
+                            alt="promo perfilado y dermaplaning" class="promo-image">
+                        <div style="padding: 30px;">
+                            <h3 style="font-size: 1.5rem; margin-bottom: 15px; color: var(--dark);">Perfilado +
+                                Dermaplaning</h3>
+                            <p style="color: #666; margin-bottom: 20px; line-height: 1.8;">
+                                ✓ Perfilado profesional<br>
+                                ✓ Dermaplaning facial completo
+                            </p>
+                            <div style="margin-bottom: 20px; text-align: center;">
+                                <span style="font-size: 1.8rem; font-weight: 700; color: var(--primary);">$35.000</span>
+                            </div>
+                            <a href="https://wa.me/5492615104019?text=Hola! Me interesa Perfil + Dermaplaning"
+                                class="whatsapp-btn" target="_blank" style="width: 100%; justify-content: center;">
+                                <i class="fa-brands fa-whatsapp"></i> Reservar
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- 3 en 1 -->
+                    <div class="promo-card">
+                        <img src="imagenes/estetica/promos/3-en-1.jpg" alt="promo 3 en 1" class="promo-image">
+                        <div style="padding: 30px;">
+                            <h3 style="font-size: 1.5rem; margin-bottom: 15px; color: var(--dark);">Tratamiento 3 en 1
+                            </h3>
+                            <ul
+                                style="color: #666; margin-bottom: 20px; line-height: 1.8; list-style: none; padding: 0;">
+                                <li>✓ Espátula ultrasónica</li>
+                                <li>✓ Dermapen + dermaplaning</li>
+                                <li>✓ Alta frecuencia</li>
+                                <li>✓ Máscara de LED</li>
+                                <li>✓ Masaje de regalo 🎁</li>
+                            </ul>
+                            <div style="margin-bottom: 20px; text-align: center;">
+                                <span style="font-size: 1.8rem; font-weight: 700; color: var(--primary);">$50.000</span>
+                            </div>
+                            <a href="https://wa.me/5492615104019?text=Hola! Me interesa el Tratamiento 3 en 1"
+                                class="whatsapp-btn" target="_blank" style="width: 100%; justify-content: center;">
+                                <i class="fa-brands fa-whatsapp"></i> Reservar
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Hilos Tensores -->
+                    <div class="promo-card">
+                        <img src="imagenes/estetica/promos/hilos-tensores.jpg" alt="promo hilos tensores"
+                            class="promo-image">
+                        <div style="padding: 30px;">
+                            <h3 style="font-size: 1.5rem; margin-bottom: 15px; color: var(--dark);">Hilos Tensores</h3>
+                            <ul
+                                style="color: #666; margin-bottom: 20px; line-height: 1.8; list-style: none; padding: 0;">
+                                <li>✓ Limpieza y exfoliación</li>
+                                <li>✓ Espátula ultrasónica</li>
+                                <li>✓ Dermapen + dermaplaning</li>
+                                <li>✓ Hilos tensores de colágeno</li>
+                                <li>✓ Máscara hidratante + LED</li>
+                            </ul>
+                            <div style="margin-bottom: 20px; text-align: center;">
+                                <span style="font-size: 1.8rem; font-weight: 700; color: var(--primary);">$48.000</span>
+                            </div>
+                            <a href="https://wa.me/5492615104019?text=Hola! Me interesa el tratamiento de Hilos Tensores"
+                                class="whatsapp-btn" target="_blank" style="width: 100%; justify-content: center;">
+                                <i class="fa-brands fa-whatsapp"></i> Reservar
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Facial con LED -->
+                    <div class="promo-card">
+                        <img src="imagenes/estetica/promos/facial-mascara-led.jpg" alt="promo facial con mascara de led"
+                            class="promo-image">
+                        <div style="padding: 30px;">
+                            <h3 style="font-size: 1.5rem; margin-bottom: 15px; color: var(--dark);">Facial con Máscara
+                                LED</h3>
+                            <ul
+                                style="color: #666; margin-bottom: 20px; line-height: 1.8; list-style: none; padding: 0;">
+                                <li>✓ Limpieza profunda facial</li>
+                                <li>✓ Extracción de puntos negros</li>
+                                <li>✓ Máscara de oro</li>
+                                <li>✓ Máscara de LED</li>
+                            </ul>
+                            <div style="margin-bottom: 20px;">
+                                <div style="display: flex; justify-content: space-between; margin-bottom: 10px;">
+                                    <span>1 sesión</span>
+                                    <strong style="color: var(--primary);">$30.000</strong>
+                                </div>
+                                <div style="display: flex; justify-content: space-between;">
+                                    <span>3 sesiones</span>
+                                    <strong style="color: var(--primary);">$80.000</strong>
+                                </div>
+                            </div>
+                            <a href="https://wa.me/5492615104019?text=Hola! Me interesa el Facial con máscara de LED"
+                                class="whatsapp-btn" target="_blank" style="width: 100%; justify-content: center;">
+                                <i class="fa-brands fa-whatsapp"></i> Reservar
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Limpieza con Alta Frecuencia -->
+                    <div class="promo-card">
+                        <img src="imagenes/estetica/promos/facial-alta-frecuencia.jpg"
+                            alt="promo facial con alta frecuencia" class="promo-image">
+                        <div style="padding: 30px;">
+                            <h3 style="font-size: 1.5rem; margin-bottom: 15px; color: var(--dark);">Limpieza con Alta
+                                Frecuencia</h3>
+                            <ul
+                                style="color: #666; margin-bottom: 20px; line-height: 1.8; list-style: none; padding: 0;">
+                                <li>✓ Limpieza facial</li>
+                                <li>✓ Exfoliación</li>
+                                <li>✓ Máscara de almendras</li>
+                                <li>✓ Alta frecuencia</li>
+                                <li>✓ Alta frecuencia capilar de regalo 🎁</li>
+                            </ul>
+                            <div style="margin-bottom: 20px;">
+                                <div style="display: flex; justify-content: space-between; margin-bottom: 10px;">
+                                    <span>1 sesión</span>
+                                    <strong style="color: var(--primary);">$30.000</strong>
+                                </div>
+                                <div style="display: flex; justify-content: space-between;">
+                                    <span>3 sesiones</span>
+                                    <strong style="color: var(--primary);">$80.000</strong>
+                                </div>
+                            </div>
+                            <a href="https://wa.me/5492615104019?text=Hola! Me interesa la Limpieza facial con alta frecuencia"
+                                class="whatsapp-btn" target="_blank" style="width: 100%; justify-content: center;">
+                                <i class="fa-brands fa-whatsapp"></i> Reservar
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Dermapen -->
+                    <div class="promo-card">
+                        <img src="imagenes/estetica/promos/dermapen.jpg" alt="promo dermapen" class="promo-image">
+                        <div style="padding: 30px;">
+                            <h3 style="font-size: 1.5rem; margin-bottom: 15px; color: var(--dark);">Dermapen</h3>
+                            <ul
+                                style="color: #666; margin-bottom: 20px; line-height: 1.8; list-style: none; padding: 0;">
+                                <li>✓ Restaura colágeno y elastina</li>
+                                <li>✓ Cicatrices del acné</li>
+                                <li>✓ Rejuvenecimiento facial</li>
+                                <li>✓ Hidratación e iluminación</li>
+                                <li>✓ Arrugas y manchas</li>
+                            </ul>
+                            <div style="margin-bottom: 20px;">
+                                <div style="display: flex; justify-content: space-between; margin-bottom: 10px;">
+                                    <span>1 sesión</span>
+                                    <strong style="color: var(--primary);">$30.000</strong>
+                                </div>
+                                <div style="display: flex; justify-content: space-between;">
+                                    <span>3 sesiones</span>
+                                    <strong style="color: var(--primary);">$80.000</strong>
+                                </div>
+                            </div>
+                            <a href="https://wa.me/5492615104019?text=Hola! Me interesa el tratamiento con Dermapen"
+                                class="whatsapp-btn" target="_blank" style="width: 100%; justify-content: center;">
+                                <i class="fa-brands fa-whatsapp"></i> Reservar
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Perfilado de Cejas -->
+                    <div class="promo-card">
+                        <img src="imagenes/estetica/promos/perfilado-cejas.jpg" alt="promo perfilado de cejas"
+                            class="promo-image">
+                        <div style="padding: 30px;">
+                            <h3 style="font-size: 1.5rem; margin-bottom: 15px; color: var(--dark);">Perfilado de Cejas
+                            </h3>
+                            <p style="color: #666; margin-bottom: 20px; line-height: 1.8;">
+                                ✓ Diseño y perfilado profesional
+                            </p>
+                            <div style="margin-bottom: 20px; text-align: center;">
+                                <span style="font-size: 1.8rem; font-weight: 700; color: var(--primary);">$9.000</span>
+                            </div>
+                            <a href="https://wa.me/5492615104019?text=Hola! Me interesa el Perfilado de cejas"
+                                class="whatsapp-btn" target="_blank" style="width: 100%; justify-content: center;">
+                                <i class="fa-brands fa-whatsapp"></i> Reservar
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Tratamientos Corporales -->
+        <section style="padding: 80px 20px; background: var(--light);" id="tratamientoscorporales">
+            <div style="max-width: 1200px; margin: 0 auto;">
+                <h2 class="section-title">💆 Tratamientos Corporales</h2>
+                <div
+                    style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 30px; margin-top: 50px;">
+
+                    <!-- Drenajes Linfáticos -->
+                    <div class="promo-card">
+                        <img src="imagenes/estetica/promos/drenajes-linfaticos.jpg" alt="promo drenajes linfaticos"
+                            class="promo-image">
+                        <div style="padding: 30px;">
+                            <h3 style="font-size: 1.5rem; margin-bottom: 15px; color: var(--dark);">Drenaje Linfático
+                            </h3>
+                            <p style="color: #666; margin-bottom: 20px; line-height: 1.8;">
+                                ✓ Mejora la circulación<br>
+                                ✓ Reduce retención de líquidos<br>
+                                ✓ Desintoxica el organismo
+                            </p>
+                            <div style="margin-bottom: 20px;">
+                                <div style="display: flex; justify-content: space-between; margin-bottom: 10px;">
+                                    <span>1 sesión</span>
+                                    <strong style="color: var(--primary);">$30.000</strong>
+                                </div>
+                                <div style="display: flex; justify-content: space-between;">
+                                    <span>3 sesiones</span>
+                                    <strong style="color: var(--primary);">$75.000</strong>
+                                </div>
+                            </div>
+                            <a href="https://wa.me/5492615104019?text=Hola! Me interesa el Drenaje linfático"
+                                class="whatsapp-btn" target="_blank" style="width: 100%; justify-content: center;">
+                                <i class="fa-brands fa-whatsapp"></i> Reservar
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Reflexología Podal -->
+                    <div class="promo-card">
+                        <img src="imagenes/estetica/promos/reflexologia.jpg" alt="promo reflexologia"
+                            class="promo-image">
+                        <div style="padding: 30px;">
+                            <h3 style="font-size: 1.5rem; margin-bottom: 15px; color: var(--dark);">Reflexología Podal
+                            </h3>
+                            <p style="color: #666; margin-bottom: 20px; line-height: 1.8;">
+                                ✓ Sesión de 45 minutos<br>
+                                ✓ Guante de seda de regalo 🎁
+                            </p>
+                            <div style="margin-bottom: 20px; text-align: center;">
+                                <span style="font-size: 1.8rem; font-weight: 700; color: var(--primary);">$20.000</span>
+                            </div>
+                            <a href="https://wa.me/5492615104019?text=Hola! Me interesa la Reflexología podal"
+                                class="whatsapp-btn" target="_blank" style="width: 100%; justify-content: center;">
+                                <i class="fa-brands fa-whatsapp"></i> Reservar
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Masaje + Reiki -->
+                    <div class="promo-card">
+                        <img src="imagenes/estetica/promos/masaje-y-reiki.jpg" alt="promo masaje y reiki"
+                            class="promo-image">
+                        <div style="padding: 30px;">
+                            <h3 style="font-size: 1.5rem; margin-bottom: 15px; color: var(--dark);">Masaje + Reiki</h3>
+                            <p style="color: #666; margin-bottom: 20px; line-height: 1.8;">
+                                ✓ Masaje de espalda 30 min<br>
+                                ✓ Descontracturante<br>
+                                ✓ Sesión de reiki
+                            </p>
+                            <div style="margin-bottom: 20px; text-align: center;">
+                                <span style="font-size: 1.8rem; font-weight: 700; color: var(--primary);">$35.000</span>
+                            </div>
+                            <a href="https://wa.me/5492615104019?text=Hola! Me interesa Masaje + Reiki"
+                                class="whatsapp-btn" target="_blank" style="width: 100%; justify-content: center;">
+                                <i class="fa-brands fa-whatsapp"></i> Reservar
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Masajes Deportivos -->
+                    <div class="promo-card">
+                        <img src="imagenes/estetica/promos/masajes deportivos.jpg" alt="promo masajes deportivos"
+                            class="promo-image">
+                        <div style="padding: 30px;">
+                            <h3 style="font-size: 1.5rem; margin-bottom: 15px; color: var(--dark);">Masajes Deportivos
+                            </h3>
+                            <ul
+                                style="color: #666; margin-bottom: 20px; line-height: 1.8; list-style: none; padding: 0;">
+                                <li>✓ Mejora el rendimiento</li>
+                                <li>✓ Previene lesiones</li>
+                                <li>✓ Recuperación post-ejercicio</li>
+                                <li>✓ 15 min de presoterapia mecánica</li>
+                            </ul>
+                            <div style="margin-bottom: 20px;">
+                                <div style="display: flex; justify-content: space-between; margin-bottom: 10px;">
+                                    <span>1 sesión</span>
+                                    <strong style="color: var(--primary);">$30.000</strong>
+                                </div>
+                                <div style="display: flex; justify-content: space-between;">
+                                    <span>3 sesiones</span>
+                                    <strong style="color: var(--primary);">$75.000</strong>
+                                </div>
+                            </div>
+                            <a href="https://wa.me/5492615104019?text=Hola! Me interesa el Masaje deportivo"
+                                class="whatsapp-btn" target="_blank" style="width: 100%; justify-content: center;">
+                                <i class="fa-brands fa-whatsapp"></i> Reservar
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Reductor y Anticelulítico -->
+                    <div class="promo-card">
+                        <img src="imagenes/estetica/promos/piernas-y-gluteos.jpg" alt="promo reductor y anticelulitico"
+                            class="promo-image">
+                        <div style="padding: 30px;">
+                            <h3 style="font-size: 1.5rem; margin-bottom: 15px; color: var(--dark);">Tratamiento Reductor
+                            </h3>
+                            <ul
+                                style="color: #666; margin-bottom: 20px; line-height: 1.8; list-style: none; padding: 0;">
+                                <li>✓ Piernas y glúteos</li>
+                                <li>✓ Masaje manual 40 min</li>
+                                <li>✓ Drenaje linfático 30 min</li>
+                                <li>✓ Gel criógeno + electrodos</li>
+                                <li>✓ Presoterapia</li>
+                            </ul>
+                            <div style="margin-bottom: 20px;">
+                                <div style="display: flex; justify-content: space-between; margin-bottom: 10px;">
+                                    <span>3 sesiones</span>
+                                    <strong style="color: var(--primary);">$60.000</strong>
+                                </div>
+                                <div style="display: flex; justify-content: space-between;">
+                                    <span>6 sesiones</span>
+                                    <strong style="color: var(--primary);">$95.000</strong>
+                                </div>
+                            </div>
+                            <a href="https://wa.me/5492615104019?text=Hola! Me interesa el Tratamiento reductor y anticelulítico"
+                                class="whatsapp-btn" target="_blank" style="width: 100%; justify-content: center;">
+                                <i class="fa-brands fa-whatsapp"></i> Reservar
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Paquete Reductor Abdomen -->
+                    <div class="promo-card">
+                        <img src="imagenes/estetica/promos/reductod-abdomen.jpg" alt="promo reductor de abdomen"
+                            class="promo-image">
+                        <div style="padding: 30px;">
+                            <h3 style="font-size: 1.5rem; margin-bottom: 15px; color: var(--dark);">Paquete Reductor
+                                Abdomen</h3>
+                            <ul
+                                style="color: #666; margin-bottom: 20px; line-height: 1.8; list-style: none; padding: 0;">
+                                <li>✓ Toma de medidas</li>
+                                <li>✓ Masaje manual 30 min</li>
+                                <li>✓ Maderoterapia</li>
+                                <li>✓ Electrodos 45 min</li>
+                                <li>✓ Gel criógeno</li>
+                            </ul>
+                            <div style="margin-bottom: 20px;">
+                                <div style="display: flex; justify-content: space-between; margin-bottom: 10px;">
+                                    <span>3 sesiones</span>
+                                    <strong style="color: var(--primary);">$60.000</strong>
+                                </div>
+                                <div style="display: flex; justify-content: space-between;">
+                                    <span>6 sesiones</span>
+                                    <strong style="color: var(--primary);">$95.000</strong>
+                                </div>
+                            </div>
+                            <a href="https://wa.me/5492615104019?text=Hola! Me interesa el Paquete reductor de abdomen"
+                                class="whatsapp-btn" target="_blank" style="width: 100%; justify-content: center;">
+                                <i class="fa-brands fa-whatsapp"></i> Reservar
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Sesión Podología -->
+                    <div class="promo-card">
+                        <img src="imagenes/estetica/promos/podologia.jpg" alt="promo podologia" class="promo-image">
+                        <div style="padding: 30px;">
+                            <h3 style="font-size: 1.5rem; margin-bottom: 15px; color: var(--dark);">Sesión de Podología
+                            </h3>
+                            <p style="color: #666; margin-bottom: 20px; line-height: 1.8;">
+                                ✓ Tratamiento podológico completo<br>
+                                ✓ Cuidado profesional de tus pies
+                            </p>
+                            <div style="margin-bottom: 20px; text-align: center;">
+                                <span style="font-size: 1.8rem; font-weight: 700; color: var(--primary);">$28.000</span>
+                            </div>
+                            <a href="https://wa.me/5492615104019?text=Hola! Me interesa la Sesión de podología"
+                                class="whatsapp-btn" target="_blank" style="width: 100%; justify-content: center;">
+                                <i class="fa-brands fa-whatsapp"></i> Reservar
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Promo Especial Belleza Pies -->
+                    <div class="promo-card">
+                        <img src="imagenes/estetica/promos/reflexo-podal.jpg" alt="promo reflexo podal"
+                            class="promo-image">
+                        <div style="padding: 30px;">
+                            <h3 style="font-size: 1.5rem; margin-bottom: 15px; color: var(--dark);">Promo Especial</h3>
+                            <p style="color: #666; margin-bottom: 20px; line-height: 1.8;">
+                                ✓ Belleza de pies<br>
+                                ✓ Reflexología podal de regalo 🎁
+                            </p>
+                            <div style="margin-bottom: 20px; text-align: center;">
+                                <span style="font-size: 1.8rem; font-weight: 700; color: var(--primary);">$30.000</span>
+                            </div>
+                            <a href="https://wa.me/5492615104019?text=Hola! Me interesa la Promo especial de belleza de pies"
+                                class="whatsapp-btn" target="_blank" style="width: 100%; justify-content: center;">
+                                <i class="fa-brands fa-whatsapp"></i> Reservar
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Pulido Corporal -->
+                    <div class="promo-card">
+                        <img src="imagenes/estetica/promos/pulido-corporal.jpg" alt="promo pulido corporal"
+                            class="promo-image">
+                        <div style="padding: 30px;">
+                            <h3 style="font-size: 1.5rem; margin-bottom: 15px; color: var(--dark);">Pulido Corporal</h3>
+                            <p style="color: #666; margin-bottom: 20px; line-height: 1.8;">
+                                ✓ 30 minutos de sauna finlandés<br>
+                                ✓ Pulido corporal manual
+                            </p>
+                            <div style="margin-bottom: 20px; text-align: center;">
+                                <span style="font-size: 1.2rem; color: var(--primary); font-weight: 600;">Consultar
+                                    precio</span>
+                            </div>
+                            <a href="https://wa.me/5492615104019?text=Hola! Me interesa consultar por el Pulido corporal"
+                                class="whatsapp-btn" target="_blank" style="width: 100%; justify-content: center;">
+                                <i class="fa-brands fa-whatsapp"></i> Reservar
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Tratamientos Capilares -->
+        <section style="padding: 80px 20px;" id="tratamientoscapilares">
+            <div style="max-width: 1200px; margin: 0 auto;">
+                <h2 class="section-title">💇 Tratamientos Capilares</h2>
+                <div
+                    style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 30px; margin-top: 50px;">
+
+                    <!-- Nutrición Capilar -->
+                    <div class="promo-card">
+                        <img src="imagenes/estetica/promos/nutricion.jpg" alt="promo nutricion capilar"
+                            class="promo-image">
+                        <div style="padding: 30px;">
+                            <h3 style="font-size: 1.5rem; margin-bottom: 15px; color: var(--dark);">Tratamiento Capilar
+                                Nutrición</h3>
+                            <p style="color: #666; margin-bottom: 20px; line-height: 1.8;">
+                                Nutrición profunda según largo de cabello
+                            </p>
+                            <div style="margin-bottom: 20px; font-size: 0.9rem;">
+                                <div style="display: flex; justify-content: space-between; margin-bottom: 8px;">
+                                    <span>Corto</span>
+                                    <strong style="color: var(--primary);">$20.000</strong>
+                                </div>
+                                <div style="display: flex; justify-content: space-between; margin-bottom: 8px;">
+                                    <span>Medio</span>
+                                    <strong style="color: var(--primary);">$25.000</strong>
+                                </div>
+                                <div style="display: flex; justify-content: space-between; margin-bottom: 8px;">
+                                    <span>Largo</span>
+                                    <strong style="color: var(--primary);">$30.000</strong>
+                                </div>
+                                <div style="display: flex; justify-content: space-between;">
+                                    <span>Extralargo</span>
+                                    <strong style="color: var(--primary);">$35.000</strong>
+                                </div>
+                            </div>
+                            <a href="https://wa.me/5492615104019?text=Hola! Me interesa el Tratamiento capilar de nutrición"
+                                class="whatsapp-btn" target="_blank" style="width: 100%; justify-content: center;">
+                                <i class="fa-brands fa-whatsapp"></i> Reservar
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Alisado + Nutrición -->
+                    <div class="promo-card">
+                        <img src="imagenes/estetica/promos/alisado-y-nutricion.jpg"
+                            alt="promo alisado y nutricion capilar" class="promo-image">
+                        <div style="padding: 30px;">
+                            <h3 style="font-size: 1.5rem; margin-bottom: 15px; color: var(--dark);">Alisado + Nutrición
+                            </h3>
+                            <p style="color: #666; margin-bottom: 20px; line-height: 1.8;">
+                                Alisado natural con nutrición profunda
+                            </p>
+                            <div style="margin-bottom: 20px; font-size: 0.9rem;">
+                                <div style="display: flex; justify-content: space-between; margin-bottom: 8px;">
+                                    <span>Corto</span>
+                                    <strong style="color: var(--primary);">$25.000</strong>
+                                </div>
+                                <div style="display: flex; justify-content: space-between; margin-bottom: 8px;">
+                                    <span>Medio</span>
+                                    <strong style="color: var(--primary);">$30.000</strong>
+                                </div>
+                                <div style="display: flex; justify-content: space-between; margin-bottom: 8px;">
+                                    <span>Largo</span>
+                                    <strong style="color: var(--primary);">$35.000</strong>
+                                </div>
+                                <div style="display: flex; justify-content: space-between;">
+                                    <span>Extralargo</span>
+                                    <strong style="color: var(--primary);">$40.000</strong>
+                                </div>
+                            </div>
+                            <a href="https://wa.me/5492615104019?text=Hola! Me interesa el Tratamiento de alisado + nutrición"
+                                class="whatsapp-btn" target="_blank" style="width: 100%; justify-content: center;">
+                                <i class="fa-brands fa-whatsapp"></i> Reservar
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Promociones 2x1 -->
+        <section style="padding: 80px 20px; background: var(--light);" id="promociones">
+            <div style="max-width: 1200px; margin: 0 auto;">
+                <h2 class="section-title">🎉 Promociones 2x1</h2>
+                <div
+                    style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; margin-top: 50px;">
+
+                    <div class="promo-card" style="position: relative;">
+                        <div class="featured-badge">2x1</div>
+                        <img src="imagenes/estetica/promos/facial-de-cobre.jpg" alt="promo limpieza facial de cobre"
+                            class="promo-image">
+                        <div style="padding: 30px;">
+                            <h3 style="font-size: 1.5rem; margin-bottom: 15px; color: var(--dark);">2x1 Limpieza Facial
+                            </h3>
+                            <p style="color: #666; margin-bottom: 20px;">
+                                Limpieza facial profunda con máscara de cobre
+                            </p>
+                            <div style="margin-bottom: 20px; text-align: center;">
+                                <span style="font-size: 1.8rem; font-weight: 700; color: var(--primary);">$35.000</span>
+                            </div>
+                            <a href="https://wa.me/5492615104019?text=Hola! Me interesa el 2x1 en limpieza facial"
+                                class="whatsapp-btn" target="_blank" style="width: 100%; justify-content: center;">
+                                <i class="fa-brands fa-whatsapp"></i> Reservar
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="promo-card" style="position: relative;">
+                        <div class="featured-badge">2x1</div>
+                        <img src="imagenes/estetica/promos/2x1-perfilados.jpg" alt="promo perfilado de cejas"
+                            class="promo-image">
+                        <div style="padding: 30px;">
+                            <h3 style="font-size: 1.5rem; margin-bottom: 15px; color: var(--dark);">2x1 Perfilado de
+                                Cejas</h3>
+                            <p style="color: #666; margin-bottom: 20px;">
+                                Dos perfilados de cejas
+                            </p>
+                            <div style="margin-bottom: 20px; text-align: center;">
+                                <span style="font-size: 1.8rem; font-weight: 700; color: var(--primary);">$15.000</span>
+                            </div>
+                            <a href="https://wa.me/5492615104019?text=Hola! Me interesa el 2x1 en perfilado de cejas"
+                                class="whatsapp-btn" target="_blank" style="width: 100%; justify-content: center;">
+                                <i class="fa-brands fa-whatsapp"></i> Reservar
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="promo-card" style="position: relative;">
+                        <div class="featured-badge">2x1</div>
+                        <img src="imagenes/estetica/promos/2x1-reflexologia.jpg" alt="promo reflexologia"
+                            class="promo-image">
+                        <div style="padding: 30px;">
+                            <h3 style="font-size: 1.5rem; margin-bottom: 15px; color: var(--dark);">2x1 Reflexología
+                            </h3>
+                            <p style="color: #666; margin-bottom: 20px;">
+                                Dos sesiones de reflexología podal
+                            </p>
+                            <div style="margin-bottom: 20px; text-align: center;">
+                                <span style="font-size: 1.8rem; font-weight: 700; color: var(--primary);">$30.000</span>
+                            </div>
+                            <a href="https://wa.me/5492615104019?text=Hola! Me interesa el 2x1 en reflexología"
+                                class="whatsapp-btn" target="_blank" style="width: 100%; justify-content: center;">
+                                <i class="fa-brands fa-whatsapp"></i> Reservar
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="promo-card" style="position: relative;">
+                        <div class="featured-badge">2x1</div>
+                        <img src="imagenes/estetica/promos/2x1-nutricion.jpg" alt="promo nutricion capilar"
+                            class="promo-image">
+                        <div style="padding: 30px;">
+                            <h3 style="font-size: 1.5rem; margin-bottom: 15px; color: var(--dark);">2x1 Nutrición
+                                Capilar</h3>
+                            <p style="color: #666; margin-bottom: 20px;">
+                                Dos sesiones de nutrición capilar
+                            </p>
+                            <div style="margin-bottom: 20px; text-align: center;">
+                                <span style="font-size: 1.8rem; font-weight: 700; color: var(--primary);">$45.000</span>
+                            </div>
+                            <a href="https://wa.me/5492615104019?text=Hola! Me interesa el 2x1 en nutrición capilar"
+                                class="whatsapp-btn" target="_blank" style="width: 100%; justify-content: center;">
+                                <i class="fa-brands fa-whatsapp"></i> Reservar
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="promo-card" style="position: relative;">
+                        <div class="featured-badge">2x1</div>
+                        <img src="imagenes/estetica/promos/alisado-natural.jpg" alt="promo alisado natural"
+                            class="promo-image">
+                        <div style="padding: 30px;">
+                            <h3 style="font-size: 1.5rem; margin-bottom: 15px; color: var(--dark);">2x1 Alisado Natural
+                            </h3>
+                            <p style="color: #666; margin-bottom: 20px;">
+                                Dos sesiones de alisado natural
+                            </p>
+                            <div style="margin-bottom: 20px; text-align: center;">
+                                <span style="font-size: 1.8rem; font-weight: 700; color: var(--primary);">$65.000</span>
+                            </div>
+                            <a href="https://wa.me/5492615104019?text=Hola! Me interesa el 2x1 en alisado natural"
+                                class="whatsapp-btn" target="_blank" style="width: 100%; justify-content: center;">
+                                <i class="fa-brands fa-whatsapp"></i> Reservar
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Combo Egresadas -->
+                    <div class="promo-card" style="position: relative;">
+                        <div class="featured-badge">🎓 EGRESADAS</div>
+                        <img src="imagenes/estetica/promos/combo-egresadas.jpg" alt="promo combo de egresadas"
+                            class="promo-image">
+                        <div style="padding: 30px;">
+                            <h3 style="font-size: 1.5rem; margin-bottom: 15px; color: var(--dark);">Combo Egresadas</h3>
+                            <ul
+                                style="color: #666; margin-bottom: 20px; line-height: 1.8; list-style: none; padding: 0; font-size: 0.9rem;">
+                                <li>✓ Limpieza facial + Dermaplaning</li>
+                                <li>✓ Perfilado de cejas</li>
+                                <li>✓ Exfoliación de café + Mascarilla</li>
+                                <li>✓ Nutrición con protector solar</li>
+                                <li>✓ Yoga facial con microcorriente</li>
+                                <li>✓ Nutrición capilar + Alta frecuencia</li>
+                                <li>✓ Kit facial de regalo 🎁</li>
+                            </ul>
+                            <div style="margin-bottom: 20px; text-align: center;">
+                                <span style="font-size: 1.8rem; font-weight: 700; color: var(--primary);">$60.000</span>
+                            </div>
+                            <a href="https://wa.me/5492615104019?text=Hola! Me interesa el Combo para egresadas"
+                                class="whatsapp-btn" target="_blank" style="width: 100%; justify-content: center;">
+                                <i class="fa-brands fa-whatsapp"></i> Reservar
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Información Importante Estética -->
+        <section style="padding: 80px 20px;" id="informacionestetica">
+            <div style="max-width: 1000px; margin: 0 auto;">
+                <h2 class="section-title">ℹ️ Información Importante</h2>
+                <div style="display: grid; gap: 30px; margin-top: 50px;">
+
+                    <div class="info-card">
+                        <h3 style="color: var(--primary); margin-bottom: 15px; font-size: 1.5rem;">🎁 Vouchers de Regalo
+                        </h3>
+                        <p style="color: #666; line-height: 1.8;">
+                            Regalá una experiencia de belleza única. Nuestros vouchers son el regalo perfecto para
+                            cualquier ocasión.
+                            Consultá por disponibilidad y personalizá tu voucher.
+                        </p>
+                    </div>
+
+                    <div class="info-card">
+                        <h3 style="color: var(--primary); margin-bottom: 15px; font-size: 1.5rem;">📅 Reservas y Señas
+                        </h3>
+                        <p style="color: #666; line-height: 1.8;">
+                            • Para confirmar tu turno es necesario enviar una seña del 30% del valor total<br>
+                            • Las cancelaciones deben realizarse con 24hs de anticipación<br>
+                            • Enviá disponibilidad horaria para coordinar tu visita<br>
+                            • Horarios: Consultar disponibilidad
+                            • Editar editar editar editar
+                        </p>
+                    </div>
+
+                    <div class="info-card">
+                        <h3 style="color: var(--primary); margin-bottom: 15px; font-size: 1.5rem;">⏰ Recomendaciones
+                        </h3>
+                        <p style="color: #666; line-height: 1.8;">
+                            • Llegá 10 minutos antes de tu turno<br>
+                            • Evitá maquillaje antes de tratamientos faciales<br>
+                            • Comunicá cualquier alergia o sensibilidad en la piel<br>
+                            • Para tratamientos capilares, vení con el cabello limpio
+                            • Editar editar editar editar
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Métodos de Pago -->
+        <section style="padding: 80px 20px; background: var(--light);">
+            <div style="max-width: 1000px; margin: 0 auto;">
+                <h2 class="section-title">💳 Métodos de Pago</h2>
+                <div class="info-card" style="margin-top: 50px;">
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px;">
+                        <div>
+                            <h4 style="color: var(--primary); margin-bottom: 10px; font-size: 1.2rem;">Transferencia /
+                                Mercado Pago</h4>
+                            <p style="color: #666; font-size: 0.95rem;">
+                                <strong>Alias / CBU</strong><br>
+                                Consultar por WhatsApp
+                            </p>
+                        </div>
+                        <div>
+                            <h4 style="color: var(--primary); margin-bottom: 10px; font-size: 1.2rem;">Tarjetas de
+                                Crédito</h4>
+                            <p style="color: #666; font-size: 0.95rem;">
+                                Se genera un link de pago con intereses
+                            </p>
+                        </div>
+                        <div>
+                            <h4 style="color: var(--primary); margin-bottom: 10px; font-size: 1.2rem;">Efectivo</h4>
+                            <p style="color: #666; font-size: 0.95rem;">
+                                Pago en el momento de tu visita
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contacto y Ubicación -->
+        <section style="padding: 80px 20px;" id="contactoestetica">
+            <div style="max-width: 1000px; margin: 0 auto;">
+                <h2 class="section-title">📍 Contacto y Ubicación</h2>
+                <div class="info-card" style="margin-top: 50px; text-align: center;">
+                    <p style="color: #666; font-size: 1.1rem; margin-bottom: 20px;">
+                        <strong style="color: var(--primary);">📍 Dirección:</strong> Godoy Cruz, Mendoza, Argentina
+                    </p>
+                    <div style="display: flex; gap: 20px; justify-content: center; flex-wrap: wrap;">
+                        <a href="https://wa.me/5492615104019" class="whatsapp-btn" target="_blank"
+                            style="font-size: 1.1rem;">
+                            <i class="fa-brands fa-whatsapp"></i> WhatsApp
+                        </a>
+                        <a href="https://instagram.com/anandi.spa" class="instagram-btn" target="_blank" style="background: linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%); 
+                                color: white; padding: 12px 24px; border-radius: 50px; text-decoration: none; 
+                                display: inline-flex; align-items: center; gap: 8px; font-weight: 600;">
+                            <i class="fa-brands fa-instagram"></i> Instagram
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <script>
+        let currentCatalog = 'spa';
+
+        function switchCatalog(catalog) {
+            currentCatalog = catalog;
+            const spaCatalog = document.getElementById('spa-catalog');
+            const esteticaCatalog = document.getElementById('estetica-catalog');
+            const spaBtn = document.querySelector('.spa-btn');
+            const esteticaBtn = document.querySelector('.estetica-btn');
+            const backToTop = document.querySelector('.back-to-top');
+
+            // elementos del navbar
+            const spaNavItems = document.querySelectorAll('.nav-item.spa-nav');
+            const esteticaNavItems = document.querySelectorAll('.nav-item.estetica-nav');
+            const hamburger = document.querySelector('.hamburger');
+            const navLinks = document.querySelector('.nav-links');
+            const overlay = document.querySelector('.overlay');
+
+            if (catalog === 'spa') {
+                spaCatalog.style.display = 'block';
+                esteticaCatalog.style.display = 'none';
+                spaBtn.classList.add('active');
+                esteticaBtn.classList.remove('active');
+                spaBtn.style.background = '#8B6F47';
+                spaBtn.style.color = 'white';
+                esteticaBtn.style.background = 'transparent';
+                esteticaBtn.style.color = '#333';
+                backToTop.style.background = '#8B6F47';
+
+                // mostrar links de spa y ocultar los de estetica
+                spaNavItems.forEach(item => item.style.display = 'block');
+                esteticaNavItems.forEach(item => item.style.display = 'none');
+            } else {
+                spaCatalog.style.display = 'none';
+                esteticaCatalog.style.display = 'block';
+                spaBtn.classList.remove('active');
+                esteticaBtn.classList.add('active');
+                esteticaBtn.style.background = '#B565A7';
+                esteticaBtn.style.color = 'white';
+                spaBtn.style.background = 'transparent';
+                spaBtn.style.color = '#333';
+                backToTop.style.background = '#B565A7';
+
+                // mostrar links de estetica y ocultar los de spa
+                spaNavItems.forEach(item => item.style.display = 'none');
+                esteticaNavItems.forEach(item => item.style.display = 'block');
+            }
+
+            //cerrar el menu hamburguesa despues de cambiar de catalogo
+            hamburger.classList.remove('active');
+            navLinks.classList.remove('active');
+            overlay.classList.remove('active');
+
+            // Scroll to top
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        function scrollToTop() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        // Show/hide back to top button
+        window.addEventListener('scroll', () => {
+            const backToTop = document.querySelector('.back-to-top');
+            if (window.scrollY > 500) {
+                backToTop.classList.add('visible');
+            } else {
+                backToTop.classList.remove('visible');
+            }
+        });
+
+        // Initialize
+        window.addEventListener('DOMContentLoaded', () => {
+            switchCatalog('spa');
+        });
+
+
+        document.addEventListener('DOMContentLoaded', function () {
+            const hamburger = document.querySelector('.hamburger');
+            const navLinks = document.querySelector('.nav-links');
+            const overlay = document.querySelector('.overlay');
+            const allLinks = document.querySelectorAll('.nav-link');
+
+            // Toggle menú
+            function toggleMenu() {
+                hamburger.classList.toggle('active');
+                navLinks.classList.toggle('active');
+                overlay.classList.toggle('active');
+            }
+
+            hamburger.addEventListener('click', toggleMenu);
+            overlay.addEventListener('click', toggleMenu);
+
+            // Cerrar menú al hacer clic en un link
+            document.querySelectorAll('.nav-links a').forEach(link => {
+                link.addEventListener('click', () => {
+                    toggleMenu();
+
+                    // Remover clase active de todos los links
+                    allLinks.forEach(l => l.classList.remove('active'));
+                    // Agregar clase active al link clickeado
+                    link.classList.add('active');
+                });
+            });
+
+            // Cerrar menú al presionar ESC
+            document.addEventListener('keydown', (e) => {
+                if (e.key === 'Escape' && navLinks.classList.contains('active')) {
+                    toggleMenu();
+                }
+            });
+
+            // Smooth scroll
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const target = document.querySelector(this.getAttribute('href'));
+                    if (target) {
+                        target.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>
