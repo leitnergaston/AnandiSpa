@@ -115,7 +115,7 @@ document.addEventListener('DOMContentLoaded', function () {
     //* ========== BANNER TERMINOS Y CONDICIONES ========== //
     const termsBanner = document.getElementById('terms-banner');
     const acceptButton = document.getElementById('accept-terms-btn');
-    const termsAcceptedKey = 'spaTermsAndConditionsAccepted_v1';
+    const termsAcceptedKey = 'spaTermsAndConditionsAccepted_v2';
 
     if (termsBanner) { // Asegurarse de que el banner existe
         // Verificar si los términos ya fueron aceptados

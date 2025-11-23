@@ -13,7 +13,7 @@
     <meta property="og:title" content="Anandi Estética | Belleza y Cuidado Personal">
     <meta property="og:description"
         content="Cuidá tu piel y tu imagen con nuestros tratamientos estéticos personalizados.">
-    <meta property="og:image" content="/img/loader//logoLoader.png">
+    <meta property="og:image" content="/imagenes/loader//logoLoader.png">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://anandispaestetica.com/paginas/estetica">
 
@@ -27,13 +27,16 @@
     <!-- ESTILOS LOADER -->
     <link rel="stylesheet" href="/css/loader.css">
 
+    <!-- FUENTE -->
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&display=swap" rel="stylesheet">
+
     <!-- FAVICON -->
-    <link rel="icon" type="image/png" href="/img/favicon/favicon-96x96.png" sizes="96x96" />
-    <link rel="icon" type="image/svg+xml" href="/img/favicon/favicon.svg" />
-    <link rel="shortcut icon" href="/img/favicon/favicon.ico" />
-    <link rel="apple-touch-icon" sizes="180x180" href="/img/favicon/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" href="/imagenes/favicon/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="/imagenes/favicon/favicon.svg" />
+    <link rel="shortcut icon" href="/imagenes/favicon/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/imagenes/favicon/apple-touch-icon.png" />
     <meta name="apple-mobile-web-app-title" content="Anandi" />
-    <link rel="manifest" href="/img/favicon/site.webmanifest" />
+    <link rel="manifest" href="/imagenes/favicon/site.webmanifest" />
 
 
 </head>
@@ -43,7 +46,7 @@
 
     <!-- Loader -->
     <div class="loader">
-        <img src="/img/loader/logoLoader.png" alt="logo anandi" class="loader-img">
+        <img src="/imagenes/loader/logoLoader.png" alt="logo anandi" class="loader-img">
         <div class="loader-spinner">
             <div></div>
             <div></div>
@@ -71,7 +74,7 @@
             </div>
             <ul class="nav-links">
                 <li class="nav-item"><a href="#inicio" class="nav-link smoothscroll">Inicio</a></li>
-                <li class="nav-item"><a href="#sservicios" class="nav-link smoothscroll">Servicios</a></li>
+                <li class="nav-item"><a href="#servicios" class="nav-link smoothscroll">Servicios</a></li>
                 <li class="nav-item"><a href="#galeria" class="nav-link smoothscroll">Galeria</a></li>
                 <li class="nav-item"><a href="#contacto" class="nav-link smoothscroll">Contacto</a></li>
                 <li class="nav-item"><span class="nav-link">&bull;</span></li>
@@ -87,10 +90,9 @@
         <section class="hero" id="inicio">
             <div class="hero-container">
                 <div class="hero-img">
-                    <img src="/img/estetica/imgHeroEstetica.png" alt="servicios estetica">
+                    <img src="imagenes/estetica/imgHeroEstetica.png" alt="servicios estetica" loading="lazy">
                 </div>
                 <div class="hero-content">
-                    <!-- <h1 class="hero-title">Bienvenidos a Anandi Spa</h1> -->
                     <h1 class="hero-title">Servicios de Estética</h1>
                     <p class="hero-description">En nuestra estética ofrecemos una amplia variedad de servicios.
                         Tratamientos corporales, tratamientos faciales, estética de manos y pies, cejas, bienestar y
@@ -105,521 +107,363 @@
         </section>
 
 
-        <!-- ===== PROMOS ===== -->
-        <section id="promos" class="promotions">
+        <!-- ===== SERVICIOS ===== -->
+        <section id="servicios" class="servicios">
             <div class="container">
-                <h2>Nuestros Servicios</h2>
-                <div class="promo-grid">
+                <div class="servicios-header">
+                    <h1>Nuestros Servicios</h1>
+                    <p>Belleza y Bienestar para Ti</p>
+                </div>
 
-
-                    <div class="promo-card">
-                        <div class="image-container">
-                            <img src="/img/estetica/promos/consulta-cosmetologica.jpg" alt="Consulta Cosmetologica">
-                            <span class="promo-tag nueva">Consulta</span>
-                            <i class="fa-solid fa-magnifying-glass-plus lupa"></i>
-                            <div class="image-overlay">
-                                <i class="fas fa-eye"></i>
+                <!-- Tratamientos Faciales -->
+                <div class="category">
+                    <h2 class="category-title">Tratamientos Faciales</h2>
+                    <div class="services-grid">
+                        <div class="service-card">
+                            <div class="service-icon">✨</div>
+                            <h3 class="service-title">Consulta Cosmetológica</h3>
+                            <p class="service-description">Análisis personalizado de tu piel para diseñar el tratamiento
+                                ideal
+                                según tus necesidades específicas.</p>
+                            <div class="service-benefits">
+                                <p class="benefits-title">Beneficios:</p>
+                                <p class="benefits-list">Diagnóstico profesional, rutina personalizada, prevención de
+                                    problemas
+                                    cutáneos</p>
                             </div>
                         </div>
-                        <div class="promo-content">
-                            <div class="feature-tags">
-                                <span class="feature-tag">Consulta</span>
-                                <span class="feature-tag">Limpieza Facial</span>
+
+                        <div class="service-card">
+                            <div class="service-icon">💎</div>
+                            <h3 class="service-title">Limpieza Facial Profunda</h3>
+                            <p class="service-description">Tratamiento completo que elimina impurezas, puntos negros y
+                                células
+                                muertas, dejando tu piel renovada.</p>
+                            <div class="service-benefits">
+                                <p class="benefits-title">Beneficios:</p>
+                                <p class="benefits-list">Poros refinados, piel luminosa, prevención de acné, oxigenación
+                                    celular
+                                </p>
                             </div>
-                            <h3>Consulta Cosmetológica</h3>
-                            <div class="precio-boton-container">
-                                <div class="span-container">
-                                    <span>1 Sesión $18.000</span>
-                                </div>
-                                <a href="https://wa.me/+5492615104019" target="_blank" class="btn">Pedir Turno</a>
+                        </div>
+
+                        <div class="service-card">
+                            <div class="service-icon">👁️</div>
+                            <h3 class="service-title">Perfilado de Cejas</h3>
+                            <p class="service-description">Diseño y perfilado de cejas que realza tu mirada y armoniza
+                                tus
+                                facciones naturales.</p>
+                            <div class="service-benefits">
+                                <p class="benefits-title">Beneficios:</p>
+                                <p class="benefits-list">Mirada expresiva, simetría facial, marco perfecto para tus ojos
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="service-card">
+                            <div class="service-icon">🌟</div>
+                            <h3 class="service-title">Dermaplaning</h3>
+                            <p class="service-description">Exfoliación física que elimina vello facial y células muertas
+                                mediante una cuchilla quirúrgica especializada.</p>
+                            <div class="service-benefits">
+                                <p class="benefits-title">Beneficios:</p>
+                                <p class="benefits-list">Piel suave como seda, mejor absorción de productos,
+                                    rejuvenecimiento
+                                    instantáneo</p>
+                            </div>
+                        </div>
+
+                        <div class="service-card">
+                            <div class="service-icon">🔊</div>
+                            <h3 class="service-title">Espátula Ultrasónica</h3>
+                            <p class="service-description">Tecnología de ultrasonido que realiza limpieza profunda sin
+                                agresión,
+                                ideal para pieles sensibles.</p>
+                            <div class="service-benefits">
+                                <p class="benefits-title">Beneficios:</p>
+                                <p class="benefits-list">Limpieza no invasiva, estimulación celular, extracción suave de
+                                    impurezas</p>
+                            </div>
+                        </div>
+
+                        <div class="service-card">
+                            <div class="service-icon">💉</div>
+                            <h3 class="service-title">Dermapen</h3>
+                            <p class="service-description">Microagujas que estimulan la producción de colágeno y
+                                elastina,
+                                reduciendo cicatrices y líneas de expresión.</p>
+                            <div class="service-benefits">
+                                <p class="benefits-title">Beneficios:</p>
+                                <p class="benefits-list">Renovación celular, reducción de cicatrices, piel firme y
+                                    rejuvenecida
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="service-card">
+                            <div class="service-icon">💡</div>
+                            <h3 class="service-title">Máscara de LED</h3>
+                            <p class="service-description">Fototerapia con diferentes colores de luz que tratan acné,
+                                rojeces y
+                                estimulan la producción de colágeno.</p>
+                            <div class="service-benefits">
+                                <p class="benefits-title">Beneficios:</p>
+                                <p class="benefits-list">Tratamiento antiedad, reducción de inflamación, mejora del tono
+                                    de piel
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="service-card">
+                            <div class="service-icon">🧵</div>
+                            <h3 class="service-title">Hilos Tensores</h3>
+                            <p class="service-description">Técnica mínimamente invasiva que levanta y tensiona la piel,
+                                generando colágeno de forma natural.</p>
+                            <div class="service-benefits">
+                                <p class="benefits-title">Beneficios:</p>
+                                <p class="benefits-list">Lifting inmediato, resultados naturales, estimulación de
+                                    colágeno
+                                    duradero</p>
+                            </div>
+                        </div>
+
+                        <div class="service-card">
+                            <div class="service-icon">⚡</div>
+                            <h3 class="service-title">Alta Frecuencia</h3>
+                            <p class="service-description">Corriente alterna que oxigena, desinfecta y estimula la piel,
+                                ideal
+                                para tratamiento de acné.</p>
+                            <div class="service-benefits">
+                                <p class="benefits-title">Beneficios:</p>
+                                <p class="benefits-list">Acción bactericida, cicatrización acelerada, mejora de
+                                    circulación</p>
+                            </div>
+                        </div>
+
+                        <div class="service-card">
+                            <div class="service-icon">🟠</div>
+                            <h3 class="service-title">Limpieza Facial con Máscara de Cobre</h3>
+                            <p class="service-description">Limpieza profunda complementada con mascarilla de cobre que
+                                regenera
+                                y protege la piel.</p>
+                            <div class="service-benefits">
+                                <p class="benefits-title">Beneficios:</p>
+                                <p class="benefits-list">Propiedades antimicrobianas, regeneración celular, piel
+                                    radiante</p>
+                            </div>
+                        </div>
+
+                        <div class="service-card">
+                            <div class="service-icon">🧘</div>
+                            <h3 class="service-title">Yoga Facial con Micro Corriente</h3>
+                            <p class="service-description">Gimnasia facial potenciada con microcorrientes que tonifican
+                                y
+                                levantan los músculos faciales.</p>
+                            <div class="service-benefits">
+                                <p class="benefits-title">Beneficios:</p>
+                                <p class="benefits-list">Tonificación muscular, reducción de arrugas, efecto lifting
+                                    natural</p>
                             </div>
                         </div>
                     </div>
+                </div>
 
-                    <div class="promo-card">
-                        <div class="image-container">
-                            <img src="/img/estetica/promos/masaje-facial.jpg" alt="masaje + facial">
-                            <span class="promo-tag flash-offer">Promo</span>
-                            <i class="fa-solid fa-magnifying-glass-plus lupa"></i>
-                            <div class="image-overlay">
-                                <i class="fas fa-eye"></i>
+                <!-- Tratamientos Corporales -->
+                <div class="category">
+                    <h2 class="category-title">Tratamientos Corporales</h2>
+                    <div class="services-grid">
+                        <div class="service-card">
+                            <div class="service-icon">💧</div>
+                            <h3 class="service-title">Drenajes Linfáticos</h3>
+                            <p class="service-description">Masaje terapéutico suave que activa el sistema linfático,
+                                eliminando
+                                toxinas y reduciendo retención de líquidos.</p>
+                            <div class="service-benefits">
+                                <p class="benefits-title">Beneficios:</p>
+                                <p class="benefits-list">Desintoxicación, reducción de hinchazón, mejora circulatoria,
+                                    alivio de
+                                    piernas cansadas</p>
                             </div>
                         </div>
-                        <div class="promo-content">
-                            <div class="feature-tags">
-                                <span class="feature-tag">Masaje 30'</span>
-                                <span class="feature-tag">Piedras Calientes</span>
-                                <span class="feature-tag">Facial con máscara</span>
+
+                        <div class="service-card">
+                            <div class="service-icon">🦶</div>
+                            <h3 class="service-title">Reflexología Podal</h3>
+                            <p class="service-description">Terapia milenaria que trabaja puntos reflejos en los pies
+                                conectados
+                                con todos los órganos del cuerpo.</p>
+                            <div class="service-benefits">
+                                <p class="benefits-title">Beneficios:</p>
+                                <p class="benefits-list">Equilibrio energético, reducción de estrés, mejora de funciones
+                                    orgánicas</p>
                             </div>
-                            <h3>Facial con masaje relajante</h3>
-                            <div class="precio-boton-container">
-                                <div class="span-container">
-                                    <span>1 Sesión $30.000</span>
-                                </div>
-                                <a href="https://wa.me/+5492615104019" target="_blank" class="btn">Pedir Turno</a>
+                        </div>
+
+                        <div class="service-card">
+                            <div class="service-icon">🙏</div>
+                            <h3 class="service-title">Masaje + Reiki</h3>
+                            <p class="service-description">Combinación de masaje terapéutico con energía Reiki para
+                                equilibrio
+                                físico, mental y espiritual.</p>
+                            <div class="service-benefits">
+                                <p class="benefits-title">Beneficios:</p>
+                                <p class="benefits-list">Relajación profunda, equilibrio energético, reducción de
+                                    ansiedad y
+                                    estrés</p>
+                            </div>
+                        </div>
+
+                        <div class="service-card">
+                            <div class="service-icon">🏃</div>
+                            <h3 class="service-title">Masajes Deportivos</h3>
+                            <p class="service-description">Masaje especializado para atletas que previene lesiones,
+                                alivia
+                                tensión muscular y acelera recuperación.</p>
+                            <div class="service-benefits">
+                                <p class="benefits-title">Beneficios:</p>
+                                <p class="benefits-list">Recuperación muscular, prevención de lesiones, mejora del
+                                    rendimiento
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="service-card">
+                            <div class="service-icon">📉</div>
+                            <h3 class="service-title">Reductor y Anticelulitico</h3>
+                            <p class="service-description">Tratamiento integral que combate la celulitis y reduce
+                                medidas
+                                mediante técnicas especializadas.</p>
+                            <div class="service-benefits">
+                                <p class="benefits-title">Beneficios:</p>
+                                <p class="benefits-list">Reducción de celulitis, piel más firme, disminución de medidas
+                                    corporales</p>
+                            </div>
+                        </div>
+
+                        <div class="service-card">
+                            <div class="service-icon">🔥</div>
+                            <h3 class="service-title">Reductor de Abdomen</h3>
+                            <p class="service-description">Tratamiento focalizado en la zona abdominal para eliminar
+                                grasa
+                                localizada y tonificar.</p>
+                            <div class="service-benefits">
+                                <p class="benefits-title">Beneficios:</p>
+                                <p class="benefits-list">Abdomen definido, reducción de grasa localizada, mejora de la
+                                    silueta
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="service-card">
+                            <div class="service-icon">🩺</div>
+                            <h3 class="service-title">Podología</h3>
+                            <p class="service-description">Cuidado profesional de los pies, tratamiento de callosidades,
+                                uñas
+                                encarnadas y problemas podológicos.</p>
+                            <div class="service-benefits">
+                                <p class="benefits-title">Beneficios:</p>
+                                <p class="benefits-list">Pies saludables, eliminación de dolor, prevención de
+                                    infecciones</p>
+                            </div>
+                        </div>
+
+                        <div class="service-card">
+                            <div class="service-icon">✨</div>
+                            <h3 class="service-title">Belleza de Pies</h3>
+                            <p class="service-description">Tratamiento estético completo que embellece tus pies con
+                                exfoliación,
+                                hidratación y esmaltado.</p>
+                            <div class="service-benefits">
+                                <p class="benefits-title">Beneficios:</p>
+                                <p class="benefits-list">Pies suaves y hermosos, hidratación profunda, uñas perfectas
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="service-card">
+                            <div class="service-icon">🌊</div>
+                            <h3 class="service-title">Pulido Corporal</h3>
+                            <p class="service-description">Exfoliación completa del cuerpo que elimina células muertas
+                                dejando
+                                la piel suave y renovada.</p>
+                            <div class="service-benefits">
+                                <p class="benefits-title">Beneficios:</p>
+                                <p class="benefits-list">Piel sedosa, renovación celular, mejor absorción de hidratantes
+                                </p>
                             </div>
                         </div>
                     </div>
+                </div>
 
-                    <div class="promo-card">
-                        <div class="image-container">
-                            <img src="/img/estetica/promos/2x1-facial-oro.jpg" alt="facial mascara de cobre">
-                            <span class="promo-tag flash-offer">Promo</span>
-                            <i class="fa-solid fa-magnifying-glass-plus lupa"></i>
-                            <div class="image-overlay">
-                                <i class="fas fa-eye"></i>
+                <!-- Tratamientos Capilares -->
+                <div class="category">
+                    <h2 class="category-title">Tratamientos Capilares</h2>
+                    <div class="services-grid">
+                        <div class="service-card">
+                            <div class="service-icon">💆</div>
+                            <h3 class="service-title">Nutrición</h3>
+                            <p class="service-description">Tratamiento profundo que restaura la fibra capilar desde el
+                                interior
+                                con nutrientes esenciales.</p>
+                            <div class="service-benefits">
+                                <p class="benefits-title">Beneficios:</p>
+                                <p class="benefits-list">Cabello hidratado, brillo natural, reparación de daños,
+                                    suavidad
+                                    extrema</p>
                             </div>
                         </div>
-                        <div class="promo-content">
-                            <div class="feature-tags">
-                                <span class="feature-tag">Facial</span>
-                                <span class="feature-tag">Máscara de cobre</span>
-                                <span class="feature-tag">2x1</span>
+
+                        <div class="service-card">
+                            <div class="service-icon">✨</div>
+                            <h3 class="service-title">Alisado + Nutrición</h3>
+                            <p class="service-description">Tratamiento combinado que alisa el cabello mientras lo nutre
+                                profundamente para un resultado saludable.</p>
+                            <div class="service-benefits">
+                                <p class="benefits-title">Beneficios:</p>
+                                <p class="benefits-list">Cabello liso y nutrido, reducción de frizz, brillo duradero,
+                                    manejabilidad</p>
                             </div>
-                            <h3>Facial con máscara de cobre 2x1</h3>
-                            <div class="precio-boton-container">
-                                <div class="span-container">
-                                    <span>2 Personas $30.000</span>
-                                </div>
-                                <a href="https://wa.me/+5492615104019" target="_blank" class="btn">Pedir Turno</a>
+                        </div>
+
+                        <div class="service-card">
+                            <div class="service-icon">🌿</div>
+                            <h3 class="service-title">Alisado Natural</h3>
+                            <p class="service-description">Alisado con productos naturales que respeta la salud del
+                                cabello sin
+                                químicos agresivos.</p>
+                            <div class="service-benefits">
+                                <p class="benefits-title">Beneficios:</p>
+                                <p class="benefits-list">Alisado suave y natural, sin daño capilar, ingredientes
+                                    orgánicos,
+                                    efecto progresivo</p>
                             </div>
                         </div>
                     </div>
-
-                    <div class="promo-card">
-                        <div class="image-container">
-                            <img src="/img/estetica/promos/podologia-reflexologia.jpg" alt="podologia y relfexologia">
-                            <span class="promo-tag flash-offer">Promo</span>
-                            <i class="fa-solid fa-magnifying-glass-plus lupa"></i>
-                            <div class="image-overlay">
-                                <i class="fas fa-eye"></i>
-                            </div>
-                        </div>
-                        <div class="promo-content">
-                            <div class="feature-tags">
-                                <span class="feature-tag">Podologia</span>
-                                <span class="feature-tag">Reflexologia</span>
-                                <span class="feature-tag">Esmaltado</span>
-                            </div>
-                            <h3>Podologia y Reflexologia</h3>
-                            <div class="precio-boton-container">
-                                <div class="span-container">
-                                    <span>1 Sesión $30.000</span>
-                                </div>
-                                <a href="https://wa.me/+5492615104019" target="_blank" class="btn">Pedir Turno</a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="promo-card">
-                        <div class="image-container">
-                            <img src="/img/estetica/promos/3en1.jpg" alt="3 en 1">
-                            <span class="promo-tag flash-offer">Promo</span>
-                            <i class="fa-solid fa-magnifying-glass-plus lupa"></i>
-                            <div class="image-overlay">
-                                <i class="fas fa-eye"></i>
-                            </div>
-                        </div>
-                        <div class="promo-content">
-                            <div class="feature-tags">
-                                <span class="feature-tag">Espátula ultrasonica</span>
-                                <span class="feature-tag">Dermapen</span>
-                                <span class="feature-tag">Máscade LED</span>
-                            </div>
-                            <h3>3 en 1</h3>
-                            <div class="precio-boton-container">
-                                <div class="span-container">
-                                    <span>1 Sesión $45.000</span>
-                                </div>
-                                <a href="https://wa.me/+5492615104019" target="_blank" class="btn">Pedir Turno</a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="promo-card">
-                        <div class="image-container">
-                            <img src="/img/estetica/promos/hilos-tensores.jpg" alt="Hilos Tensores">
-                            <i class="fa-solid fa-magnifying-glass-plus lupa"></i>
-                            <div class="image-overlay">
-                                <i class="fas fa-eye"></i>
-                            </div>
-                        </div>
-                        <div class="promo-content">
-                            <div class="feature-tags">
-                                <span class="feature-tag">Limpieza y Exfo</span>
-                                <span class="feature-tag">Espátula Ultrasónica</span>
-                                <span class="feature-tag">Dermapen</span>
-                                <span class="feature-tag">Dermaplaning</span>
-                                <span class="feature-tag">Hilos Tensores</span>
-                                <span class="feature-tag">Máscara de LED</span>
-                            </div>
-                            <h3>Hilos Tensores</h3>
-                            <div class="precio-boton-container">
-                                <div class="span-container">
-                                    <span>1 Sesión $48.000</span>
-                                </div>
-                                <a href="https://wa.me/+5492615104019" target="_blank" class="btn">Pedir Turno</a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="promo-card">
-                        <div class="image-container">
-                            <img src="/img/estetica/promos/facial-mascara-led.jpg" alt="facial mascara de led">
-                            <i class="fa-solid fa-magnifying-glass-plus lupa"></i>
-                            <div class="image-overlay">
-                                <i class="fas fa-eye"></i>
-                            </div>
-                        </div>
-                        <div class="promo-content">
-                            <div class="feature-tags">
-                                <span class="feature-tag">Facial</span>
-                                <span class="feature-tag">Máscara de LED</span>
-                            </div>
-                            <h3>Facial con Máscada de LED</h3>
-                            <div class="precio-boton-container">
-                                <div class="span-container">
-                                    <span>1 Sesión $25.000</span>
-                                    <span>3 Sesiones $55.000</span>
-                                </div>
-                                <a href="https://wa.me/+5492615104019" target="_blank" class="btn">Pedir Turno</a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="promo-card">
-                        <div class="image-container">
-                            <img src="/img/estetica/promos/facial-alta-frecuencia.jpg" alt="alta frecuencia">
-                            <i class="fa-solid fa-magnifying-glass-plus lupa"></i>
-                            <div class="image-overlay">
-                                <i class="fas fa-eye"></i>
-                            </div>
-                        </div>
-                        <div class="promo-content">
-                            <div class="feature-tags">
-                                <span class="feature-tag">Facial</span>
-                                <span class="feature-tag">Alta Frecuencia</span>
-                            </div>
-                            <h3>Limpieza Facial con Alta Frecuencia</h3>
-                            <div class="precio-boton-container">
-                                <div class="span-container">
-                                    <span>1 Sesión $25.000</span>
-                                    <span>3 Sesiones $55.000</span>
-                                </div>
-                                <a href="https://wa.me/+5492615104019" target="_blank" class="btn">Pedir Turno</a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="promo-card">
-                        <div class="image-container">
-                            <img src="/img/estetica/promos/reductor-abdomen.jpg" alt="reductor de abdomen">
-                            <i class="fa-solid fa-magnifying-glass-plus lupa"></i>
-                            <div class="image-overlay">
-                                <i class="fas fa-eye"></i>
-                            </div>
-                        </div>
-                        <div class="promo-content">
-                            <div class="feature-tags">
-                                <span class="feature-tag">Reductor abdomen</span>
-                            </div>
-                            <h3>Reductor de Abdomen</h3>
-                            <div class="precio-boton-container">
-                                <div class="span-container">
-                                    <span>3 Sesiones $60.000</span>
-                                    <span>6 Sesiones $95.000</span>
-                                </div>
-                                <a href="https://wa.me/+5492615104019" target="_blank" class="btn">Pedir Turno</a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="promo-card">
-                        <div class="image-container">
-                            <img src="/img/estetica/promos/piernas-gluteos.jpg" alt="piernas y gluteos">
-                            <i class="fa-solid fa-magnifying-glass-plus lupa"></i>
-                            <div class="image-overlay">
-                                <i class="fas fa-eye"></i>
-                            </div>
-                        </div>
-                        <div class="promo-content">
-                            <div class="feature-tags">
-                                <span class="feature-tag">Reductor</span>
-                                <span class="feature-tag">Anticelulitico</span>
-                                <span class="feature-tag">Piernas</span>
-                                <span class="feature-tag">Gluteos</span>
-                            </div>
-                            <h3>Piernas y Glúteos (Reductor y Anticelulítico)</h3>
-                            <div class="precio-boton-container">
-                                <div class="span-container">
-                                    <span>3 Sesiones $60.000</span>
-                                    <span>6 Sesiones $95.000</span>
-                                </div>
-                                <a href="https://wa.me/+5492615104019" target="_blank" class="btn">Pedir Turno</a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="promo-card">
-                        <div class="image-container">
-                            <img src="/img/estetica/promos/dermapen.jpg" alt="dermapen">
-                            <i class="fa-solid fa-magnifying-glass-plus lupa"></i>
-                            <div class="image-overlay">
-                                <i class="fas fa-eye"></i>
-                            </div>
-                        </div>
-                        <div class="promo-content">
-                            <div class="feature-tags">
-                                <span class="feature-tag">Facial</span>
-                                <span class="feature-tag">Dermapen</span>
-                            </div>
-                            <h3>Dermapen</h3>
-                            <div class="precio-boton-container">
-                                <div class="span-container">
-                                    <span>1 Sesión $25.000</span>
-                                    <span>3 Sesiones $55.000</span>
-                                </div>
-                                <a href="https://wa.me/+5492615104019" target="_blank" class="btn">Pedir Turno</a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="promo-card">
-                        <div class="image-container">
-                            <img src="/img/estetica/promos/dermaplaning.jpg" alt="dermaplaning">
-                            <i class="fa-solid fa-magnifying-glass-plus lupa"></i>
-                            <div class="image-overlay">
-                                <i class="fas fa-eye"></i>
-                            </div>
-                        </div>
-                        <div class="promo-content">
-                            <div class="feature-tags">
-                                <span class="feature-tag">Facial</span>
-                                <span class="feature-tag">Dermaplaning</span>
-                            </div>
-                            <h3>Limpieza Facial con Dermaplaning</h3>
-                            <div class="precio-boton-container">
-                                <div class="span-container">
-                                    <span>1 Sesión $30.000</span>
-                                </div>
-                                <a href="https://wa.me/+5492615104019" target="_blank" class="btn">Pedir Turno</a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="promo-card">
-                        <div class="image-container">
-                            <img src="/img/estetica/promos/masajes-deportivos.jpg" alt="masajes deportivos">
-                            <i class="fa-solid fa-magnifying-glass-plus lupa"></i>
-                            <div class="image-overlay">
-                                <i class="fas fa-eye"></i>
-                            </div>
-                        </div>
-                        <div class="promo-content">
-                            <div class="feature-tags">
-                                <span class="feature-tag">Masajes Deportivos</span>
-                                <span class="feature-tag">Presoterapia</span>
-                            </div>
-                            <h3>Masajes deportivos</h3>
-                            <div class="precio-boton-container">
-                                <div class="span-container">
-                                    <span>1 Sesión $30.000</span>
-                                    <span>3 Sesiones $75.000</span>
-                                </div>
-                                <a href="https://wa.me/+5492615104019" target="_blank" class="btn">Pedir Turno</a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="promo-card">
-                        <div class="image-container">
-                            <img src="/img/estetica/promos/reflexologia.jpg" alt="reflexologia">
-                            <span class="promo-tag">Con Regalo</span>
-                            <i class="fa-solid fa-magnifying-glass-plus lupa"></i>
-                            <div class="image-overlay">
-                                <i class="fas fa-eye"></i>
-                            </div>
-                        </div>
-                        <div class="promo-content">
-                            <div class="feature-tags">
-                                <span class="feature-tag">Reflexologia</span>
-                                <span class="feature-tag">Guante de seda</span>
-                            </div>
-                            <h3>Reflexologia</h3>
-                            <div class="precio-boton-container">
-                                <div class="span-container">
-                                    <span>1 Sesión $20.000</span>
-                                </div>
-                                <a href="https://wa.me/+5492615104019" target="_blank" class="btn">Pedir Turno</a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="promo-card">
-                        <div class="image-container">
-                            <img src="/img/estetica/promos/podologia.jpg" alt="podologia">
-                            <span class="promo-tag">Con Regalo</span>
-                            <i class="fa-solid fa-magnifying-glass-plus lupa"></i>
-                            <div class="image-overlay">
-                                <i class="fas fa-eye"></i>
-                            </div>
-                        </div>
-                        <div class="promo-content">
-                            <div class="feature-tags">
-                                <span class="feature-tag">Podologia</span>
-                                <span class="feature-tag">Esmaltado</span>
-                            </div>
-                            <h3>Podologia</h3>
-                            <div class="precio-boton-container">
-                                <div class="span-container">
-                                    <span>1 Sesión $20.000</span>
-                                </div>
-                                <a href="https://wa.me/+5492615104019" target="_blank" class="btn">Pedir Turno</a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="promo-card">
-                        <div class="image-container">
-                            <img src="/img/estetica/promos/masaje-reiki.jpg" alt="masaje y reiki">
-                            <i class="fa-solid fa-magnifying-glass-plus lupa"></i>
-                            <div class="image-overlay">
-                                <i class="fas fa-eye"></i>
-                            </div>
-                        </div>
-                        <div class="promo-content">
-                            <div class="feature-tags">
-                                <span class="feature-tag">Masaje 30'</span>
-                                <span class="feature-tag">Reiki</span>
-                            </div>
-                            <h3>Masaje + Reiki</h3>
-                            <div class="precio-boton-container">
-                                <div class="span-container">
-                                    <span>1 Sesión $35.000</span>
-                                </div>
-                                <a href="https://wa.me/+5492615104019" target="_blank" class="btn">Pedir Turno</a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="promo-card">
-                        <div class="image-container">
-                            <img src="/img/estetica/promos/pulido-corporal.jpg" alt="pulido corporal">
-                            <i class="fa-solid fa-magnifying-glass-plus lupa"></i>
-                            <div class="image-overlay">
-                                <i class="fas fa-eye"></i>
-                            </div>
-                        </div>
-                        <div class="promo-content">
-                            <div class="feature-tags">
-                                <span class="feature-tag">Pulido corporal</span>
-                                <span class="feature-tag">Sauna</span>
-                            </div>
-                            <h3>Pulido Corporal</h3>
-                            <div class="precio-boton-container">
-                                <a href="https://wa.me/+5492615104019" target="_blank" class="btn">Pedir Turno</a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="promo-card">
-                        <div class="image-container">
-                            <img src="/img/estetica/promos/2x1-reflexologia.jpg" alt="Reflexologia 2x1">
-                            <span class="promo-tag">2x1</span>
-                            <i class="fa-solid fa-magnifying-glass-plus lupa"></i>
-                            <div class="image-overlay">
-                                <i class="fas fa-eye"></i>
-                            </div>
-                        </div>
-                        <div class="promo-content">
-                            <div class="feature-tags">
-                                <span class="feature-tag">Reflexologia</span>
-                                <span class="feature-tag">2x1</span>
-                            </div>
-                            <h3>Reflexo 2x1</h3>
-                            <div class="precio-boton-container">
-                                <div class="span-container">
-                                    <span>2 Personas $30.000</span>
-                                </div>
-                                <a href="https://wa.me/+5492615104019" target="_blank" class="btn">Pedir Turno</a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="promo-card">
-                        <div class="image-container">
-                            <img src="/img/estetica/promos/drenajes-linfaticos.jpg" alt="drenajes linfaticos">
-                            <i class="fa-solid fa-magnifying-glass-plus lupa"></i>
-                            <div class="image-overlay">
-                                <i class="fas fa-eye"></i>
-                            </div>
-                        </div>
-                        <div class="promo-content">
-                            <div class="feature-tags">
-                                <span class="feature-tag">Drenaje linfático</span>
-                            </div>
-                            <h3>Drenajes Linfáticos</h3>
-                            <div class="precio-boton-container">
-                                <div class="span-container">
-                                    <span>1 Sesión $25.000</span>
-                                    <span>3 Sesiones $55.000</span>
-                                </div>
-                                <a href="https://wa.me/+5492615104019" target="_blank" class="btn">Pedir Turno</a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="promo-card">
-                        <div class="image-container">
-                            <img src="/img/estetica/promos/2x1-perfilados.jpg" alt="perfilados 2x1">
-                            <span class="promo-tag">2x1</span>
-                            <i class="fa-solid fa-magnifying-glass-plus lupa"></i>
-                            <div class="image-overlay">
-                                <i class="fas fa-eye"></i>
-                            </div>
-                        </div>
-                        <div class="promo-content">
-                            <div class="feature-tags">
-                                <span class="feature-tag">Perfilado cejas</span>
-                                <span class="feature-tag">2x1</span>
-                            </div>
-                            <h3>Perfilados de Cejas 2x1</h3>
-                            <div class="precio-boton-container">
-                                <div class="span-container">
-                                    <span>2 Personas $10.000</span>
-                                </div>
-                                <a href="https://wa.me/+5492615104019" target="_blank" class="btn">Pedir Turno</a>
-                            </div>
-                        </div>
-                    </div>
-
-
                 </div>
             </div>
 
-            <!-- Imagen ampliada de promos -->
-            <div id="imagePopup" class="image-popup">
-                <span class="close-image-popup" onclick="closeImagePopup()">&times;</span>
-                <img id="popupImageAmpliada" src="" alt="Imagen ampliada">
-            </div>
         </section>
 
         <hr>
 
         <!-- ==== CONTACTO ==== -->
         <section id="contacto" class="contact container">
-            <h2>Contáctanos</h2>
+            <div class="servicios-header">
+                <h1>Contáctanos</h1>
+            </div>
             <div class="contact-cards">
                 <div class="contact-card" onclick="window.open('https://wa.me/542615104019')">
                     <!-- <div class="contact-icon"><i class="fa-brands fa-whatsapp" style="color: #31c462;"></i></div> -->
-                    <div class="contact-icon"><img src="/img/spa/logos/icon-whatsapp-animated.gif" alt="whatsapp icon">
+                    <div class="contact-icon"><img src="/imagenes/spa/logos/icon-whatsapp-animated.gif"
+                            alt="whatsapp icon">
                     </div>
                     <h3 class="contact-title">WhatsApp</h3>
                     <p class="contact-info">+54 9 261 510 4019</p>
                 </div>
                 <div class="contact-card" onclick="window.open('https://instagram.com/anandi.spa')">
                     <!-- <div class="contact-icon"><i class="fa-regular fa-envelope" style="color: #e33b3b;"></i></div> -->
-                    <div class="contact-icon"><img src="/img/spa/logos/icon-instagram-animated.gif" alt="email icon">
+                    <div class="contact-icon"><img src="/imagenes/spa/logos/icon-instagram-animated.gif"
+                            alt="email icon">
                     </div>
                     <h3 class="contact-title">Instagram</h3>
                     <p class="contact-info">@anandi.spa</p>
@@ -638,7 +482,7 @@
     <footer>
         <div class="footer-main-content">
             <div class="footer-column footer-about">
-                <img src="/img/loader/logoLoader.png" alt="Anandi Spa & Estética Logo" class="footer-logo">
+                <img src="/imagenes/loader/logoLoader.png" alt="Anandi Spa & Estética Logo" class="footer-logo">
                 <p class="footer-slogan">Tu refugio de serenidad y belleza en Mendoza.</p>
             </div>
 
@@ -646,9 +490,9 @@
                 <h4>Enlaces Útiles</h4>
                 <ul>
                     <li><a href="#">Inicio</a></li>
-                    <li><a href="#promos" class="smoothscroll">Promociones</a></li>
+                    <li><a href="catalogo.html" target="_blank">Catalogo</a></li>
+                    <li><a href="#servicios" class="smoothscroll">Servicios</a></li>
                     <li><a href="spa.html">Spa</a></li>
-                    <li><a href="tienda.html" target="_blank">Tienda</a></li>
                 </ul>
             </div>
 
@@ -683,7 +527,7 @@
 
         <div class="footer-bottom-bar">
             <p>Anandi Spa & Estética &bull; 2018-2025</p>
-            <p>Desarrollado por <a href="#">GC CodeDevs</a></p>
+            <!-- <p>Desarrollado por <a href="#">GC CodeDevs</a></p> -->
         </div>
     </footer>
 
