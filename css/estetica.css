@@ -104,13 +104,13 @@ body::-webkit-scrollbar-thumb {
     /* max-width: 12em; */
     width: 18em;
     text-align: center;
-    height: 2.6em;
-    line-height: 2.5em;
+    height: 3.6em;
+    line-height: 3.5em;
     overflow: hidden;
     cursor: pointer;
     margin: 5px;
     padding: 0 10px;
-    font-size: 17px;
+    font-size: 18px;
     font-weight: 500;
     z-index: 1;
     background-color: #f5d5ff;
