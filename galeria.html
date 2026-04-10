@@ -380,6 +380,34 @@
             background: var(--mocha);
             border-radius: 10px;
         }
+
+        /* ── BOTON BACK TO TOP ────────────────────────────────── */
+        .back-to-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background: var(--rose-light);
+            color: var(--rose-pale);
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+            opacity: 0;
+            transition: all 0.3s;
+            z-index: 999;
+        }
+
+        .back-to-top.visible {
+            opacity: 1;
+        }
+
+        .back-to-top:hover {
+            transform: scale(1.1);
+        }
     </style>
 </head>
 
@@ -418,6 +446,13 @@
         2018 - 2026
     </footer>
 
+    <!-- Botón Back to Top -->
+    <div class="back-to-top" onclick="scrollToTop()">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M12 19V5M5 12l7-7 7 7" />
+        </svg>
+    </div>
+
     <script>
         /* ═══════════════════════════════════════════════════
         IMÁGENES — EDITÁ ESTE ARRAY PARA AGREGAR LAS TUYAS
@@ -437,64 +472,134 @@
 
             /* ── SPA ─────────────────────────────────── */
             {
-                src: BASESPA + "spa-1.jpg",
+                src: BASESPA + "spa-1.webp",
                 categoria: "spa",
                 alt: "Spa 1"
             },
             {
-                src: BASESPA + "spa-2.jpg",
+                src: BASESPA + "spa-2.webp",
                 categoria: "spa",
-                alt: "Spa 1"
+                alt: "Spa 2"
             },
             {
-                src: BASESPA + "spa-3.jpg",
+                src: BASESPA + "spa-3.webp",
                 categoria: "spa",
-                alt: "Spa 1"
+                alt: "Spa 3"
             },
             {
-                src: BASESPA + "spa-4.jpg",
+                src: BASESPA + "spa-4.webp",
                 categoria: "spa",
-                alt: "Spa 1"
+                alt: "Spa 4"
             },
             {
-                src: BASESPA + "spa-5.jpg",
+                src: BASESPA + "spa-5.webp",
                 categoria: "spa",
-                alt: "Spa 1"
+                alt: "Spa 5"
             },
             {
-                src: BASESPA + "spa-6.jpg",
+                src: BASESPA + "spa-6.webp",
                 categoria: "spa",
-                alt: "Spa 1"
+                alt: "Spa 6"
             },
             {
-                src: BASESPA + "spa-7.jpg",
+                src: BASESPA + "spa-7.webp",
                 categoria: "spa",
-                alt: "Spa 1"
+                alt: "Spa 7"
             },
             {
-                src: BASESPA + "spa-8.jpg",
+                src: BASESPA + "spa-8.webp",
                 categoria: "spa",
-                alt: "Spa 1"
+                alt: "Spa 8"
             },
             {
-                src: BASESPA + "spa-9.jpg",
+                src: BASESPA + "spa-9.webp",
                 categoria: "spa",
-                alt: "Spa 1"
+                alt: "Spa 9"
             },
             {
-                src: BASESPA + "spa-10.jpg",
+                src: BASESPA + "spa-10.webp",
                 categoria: "spa",
-                alt: "Spa 1"
+                alt: "Spa 10"
             },
             {
-                src: BASESPA + "spa-11.jpg",
+                src: BASESPA + "spa-11.webp",
                 categoria: "spa",
-                alt: "Spa 1"
+                alt: "Spa 11"
             },
             {
-                src: BASESPA + "spa-12.jpg",
+                src: BASESPA + "spa-12.webp",
                 categoria: "spa",
-                alt: "Spa 1"
+                alt: "Spa 12"
+            },
+            {
+                src: BASESPA + "spa-13.webp",
+                categoria: "spa",
+                alt: "Spa 13"
+            },
+            {
+                src: BASESPA + "spa-14.webp",
+                categoria: "spa",
+                alt: "Spa 14"
+            },
+            {
+                src: BASESPA + "spa-15.webp",
+                categoria: "spa",
+                alt: "Spa 15"
+            },
+            {
+                src: BASESPA + "spa-16.webp",
+                categoria: "spa",
+                alt: "Spa 16"
+            },
+            {
+                src: BASESPA + "spa-17.webp",
+                categoria: "spa",
+                alt: "Spa 17"
+            },
+            {
+                src: BASESPA + "spa-18.webp",
+                categoria: "spa",
+                alt: "Spa 18"
+            },
+            {
+                src: BASESPA + "spa-19.webp",
+                categoria: "spa",
+                alt: "Spa 19"
+            },
+            {
+                src: BASESPA + "spa-20.webp",
+                categoria: "spa",
+                alt: "Spa 20"
+            },
+            {
+                src: BASESPA + "spa-21.webp",
+                categoria: "spa",
+                alt: "Spa 21"
+            },
+            {
+                src: BASESPA + "spa-22.webp",
+                categoria: "spa",
+                alt: "Spa 22"
+            },
+            {
+                src: BASESPA + "spa-23.webp",
+                categoria: "spa",
+                alt: "Spa 23"
+            },
+            {
+                src: BASESPA + "spa-24.webp",
+                categoria: "spa",
+                alt: "Spa 24"
+            },
+            {
+                src: BASESPA + "spa-25.webp",
+                categoria: "spa",
+                alt: "Spa 25"
+            },
+            {
+                src: BASESPA + "spa-26.webp",
+                categoria: "spa",
+                alt: "Spa 26"
             },
             // {
             //     src: "https://lh3.googleusercontent.com/sitesv/APaQ0SQ_1bMsqOvJl-LkxOwkWtKqCbTKq6Ltg9qV_0VjM4hK4XsMS7phcAdKa6jNCznhCtHeFOAncEaGqDSAe33sMI5Jkt2cHd60QFiP6qqCmujkzR6Y6YupbRl2wmYTZVDhDq7LgtqvqarayUFlFw9Y7FU8CRcrYUZL3hSRtK-AnsQrTbvPD-a7pGKR9jjT_Y8omAYpuQ3G6Va1Uyt1dbAHH9j_35NzXlreVt9P1Vs=w1280",
@@ -681,6 +786,22 @@
 
         /* Inicio */
         buildCards();
+
+
+        /* Boton back to top */
+        function scrollToTop() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        // Show/hide back to top button
+        window.addEventListener('scroll', () => {
+            const backToTop = document.querySelector('.back-to-top');
+            if (window.scrollY > 500) {
+                backToTop.classList.add('visible');
+            } else {
+                backToTop.classList.remove('visible');
+            }
+        });
     </script>
 
 </body>
