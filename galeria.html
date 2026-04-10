@@ -420,88 +420,117 @@
 
     <script>
         /* ═══════════════════════════════════════════════════
-           IMÁGENES — EDITÁ ESTE ARRAY PARA AGREGAR LAS TUYAS
-           ═══════════════════════════════════════════════════
+        IMÁGENES — EDITÁ ESTE ARRAY PARA AGREGAR LAS TUYAS
+        ═══════════════════════════════════════════════════
     
-           Cada objeto tiene:
-             src       → ruta a la imagen (local o URL externa)
-             categoria → "spa" o "estetica"
-             alt       → descripción de la foto (accesibilidad y SEO)
+        Cada objeto tiene:
+        src       → ruta a la imagen (local o URL externa)
+        categoria → "spa" o "estetica"
+        alt       → descripción de la foto (accesibilidad y SEO)
     
-           OPCIÓN A — imagen local:
-             src: "fotos/sala-masajes-1.jpg"
-             (creá una carpeta "fotos" junto al index.html)
-    
-           OPCIÓN B — URL de internet:
-             src: "https://ejemplo.com/imagen.jpg"
-    
-           Para AGREGAR una foto: copiá uno de los bloques
-           { src, categoria, alt } y pegalo en la lista.
         ═══════════════════════════════════════════════════ */
+
+        const BASESPA = "https://raw.githubusercontent.com/leitnergaston/AnandiGaleriaWeb/main/spa/";
+        const BASEESTETICA = "https://raw.githubusercontent.com/leitnergaston/AnandiGaleriaWeb/main/estetica/";
 
         const imagenes = [
 
             /* ── SPA ─────────────────────────────────── */
             {
-                src: "https://lh3.googleusercontent.com/sitesv/APaQ0SQx4vDyz6mIWpJWXyKvDDOs80_OZHBP68F58C4bYIa8_Vn9gUV8yPCCWzno7TL2oMFnnjw9bj1Hgr1_obqdVDmaGmPwBPSIv5d8Tz-yILVh6quklcrFY-JoAsM32jIlVVzKlYyHOX-mjcDkUIPrGT7UBLFguW3BSeKE4xISdkF34a-QCxSjXUDgwB4u3tezYWYDQXsW6Vdr25rr1s-u2ZPoDUPvpd-X5sVAZck=w1280",
+                src: BASESPA + "spa-1.jpg",
                 categoria: "spa",
-                alt: "Sala de masajes"
+                alt: "Spa 1"
             },
             {
-                src: "https://lh3.googleusercontent.com/sitesv/APaQ0SQ_1bMsqOvJl-LkxOwkWtKqCbTKq6Ltg9qV_0VjM4hK4XsMS7phcAdKa6jNCznhCtHeFOAncEaGqDSAe33sMI5Jkt2cHd60QFiP6qqCmujkzR6Y6YupbRl2wmYTZVDhDq7LgtqvqarayUFlFw9Y7FU8CRcrYUZL3hSRtK-AnsQrTbvPD-a7pGKR9jjT_Y8omAYpuQ3G6Va1Uyt1dbAHH9j_35NzXlreVt9P1Vs=w1280",
+                src: BASESPA + "spa-2.jpg",
                 categoria: "spa",
-                alt: "Velas y aromaterapia"
+                alt: "Spa 1"
             },
             {
-                src: "https://lh3.googleusercontent.com/sitesv/APaQ0SS3K2P5KkEEBSpucdvjRHARD-pqp1F4B0pZcpA2o1nYEBm_VRYHMQqSombZ2gckufGxDxyvXAErMPK3eqnTmn8o0lnHGBpREWiasNiPeCxT5PFQ_T36KYz9YwSdF01fE7w_Yy2RrSkhKN7Sfu2SlctV717tumL9Xq1rB3NYAGaZXj-xPVMCq-ZeuJJ2LtsCkivL7623omdPsi_DIHVURm931cRQ86H9HwSr=w1280",
+                src: BASESPA + "spa-3.jpg",
                 categoria: "spa",
-                alt: "Piedras calientes"
+                alt: "Spa 1"
             },
             {
-                src: "https://lh3.googleusercontent.com/sitesv/APaQ0SSIc5AFzmu-0NpbyNkF3OCU-8ZfniV5y0bQdheOXDaqCEaEgGNo5TwcnfDlgInaEWu0wXnc3uTe1AwOgFkQTuZueH-mPV2lEkpsjcgy50c2Iiw5_p9JoHZbho0OftY-gnFv4MDSai4gmfrnvzVZdJQbuemvqqmYJ43gUSpyahLQUymKx4mPvndfsiSg4gYw6My4yDBADzB7EQWyb0ZCG_wznNKWfyuJLNXb=w1280",
+                src: BASESPA + "spa-4.jpg",
                 categoria: "spa",
-                alt: "Piscina termal"
+                alt: "Spa 1"
             },
             {
-                src: "https://lh3.googleusercontent.com/sitesv/APaQ0SST5J-qY6xrzkx7f4-YFMnTdoRa4tfDF89SFX4C_qVCFcMf-KYqSVGPqWmIXHEZzNi2MoB5dzlTzQetmw1YYqxP9MCkpVtmq8Kupwf_Tqdxe6OG_Jmv4uLzP8lRQY8HC2RBDbOG0013_BwitegReJSQ_XnXUVRUGMvFNxaU5TGVGz5VoKK8mFbLUR0n4RtXt0KqEuPIOdk9y_MCusZCz2M6dsNBQ-6XpOoMDUg=w1280",
+                src: BASESPA + "spa-5.jpg",
                 categoria: "spa",
-                alt: "Tratamiento facial spa"
+                alt: "Spa 1"
             },
             {
-                src: "https://lh3.googleusercontent.com/sitesv/APaQ0SQ9b7I_9FCLLMwdtzb0k89g6LhEWPvwWwol_BnJQVrVKgnZIYkwKBaIOa8Tq9PbZZ0HH-2FzqfmbM6C1kF1qsjcdOYuPoGZ26wsDoHt-dVBzS4TNowPH2j2ZmxifSGUOGNWAu6jo8rLY1pdRa3wd-gIstMxyXWOUMraplBwFvD0KTgzAdG9ONXWtR6wnFDJCIRiN1qBvTBOaSFtC-4meNXZIw-JVWyXXAcu=w1280",
+                src: BASESPA + "spa-6.jpg",
                 categoria: "spa",
-                alt: "Ambiente relajante"
+                alt: "Spa 1"
             },
             {
-                src: "https://lh3.googleusercontent.com/sitesv/APaQ0STgKhc7SSlza_Oufs8H11_xopWzC5wrUhV7go95boZFKgD_lyNWz06MSdt8-FqPaEPTsqyScTzHE-w_6r17YPm9F3jGZJXUUJ3VIKxWYPx2ghALkvam9ZTTYgBMa5-bVVKFpRocF4iVTIcyhMeXI_MMnHHDMe278lbRFWaGSLfdDIMT0RPnXrDAGqp4k_-Tpfc4Tp6PyQgdGJLEItQAHHMVg5-e9aQn5poq=w1280",
+                src: BASESPA + "spa-7.jpg",
                 categoria: "spa",
-                alt: "Aromaterapia con aceites"
+                alt: "Spa 1"
             },
             {
-                src: "https://lh3.googleusercontent.com/sitesv/APaQ0SQP4NpyAfwfhpYWQthwiNvSkbAAcj0mlloqcBhlFYoo1irSLAIUlWl9xUlNn7Rl5rAqTAbmPlzYc1XMZ3_LR7UAO7bEfn_ttSjV6aQX8RNVvvnV45ySsbYBQPMU71_AZpzRym_TK44coh3F5IzbLWohKoGi0pia5uzzEW0n4nnWQMJRJRHZzEDjCxG3G0pPHTsHAMVke7yE84QjZ9R1ic211IUSMox0NxS33IY=w1280",
+                src: BASESPA + "spa-8.jpg",
                 categoria: "spa",
-                alt: "Masaje relajante"
+                alt: "Spa 1"
             },
             {
-                src: "https://lh3.googleusercontent.com/sitesv/APaQ0STN19aqVQAEU_rn5OpoSUI6zvO6UR8LgU1nha6cP4-7eQxeloyECuw1kkRpQ4EI-WEykSwokeIHC7AyqVieTCceT9kGJFgjCk0NdPMahiTVdXTcf6xEfqM6C6jwS-WGtVrliGfjb0OWXVz1PTNW6AYL-yUgWjYIBMmqmeVyK2HOr7JScn8KtincMlHh3BOicrSXS12UwhPJ2SpZTTHoximf-POhk0tsmsTMXw0=w1280",
+                src: BASESPA + "spa-9.jpg",
                 categoria: "spa",
-                alt: "Masaje relajante"
+                alt: "Spa 1"
             },
             {
-                src: "https://lh3.googleusercontent.com/sitesv/APaQ0SRZacBrkafmpW0ZA7tSnI-x6r2WgOTZWVCMDuCXrvXuhZnTfpU_Q2iMWowJ6NpXyg001tmxKoI1H5cWBgWWpNKD_zKdLITWZXWvh_i8ddLA3asHoviT1dTtv5I3Al6xWKu_y1NjNjE5fEMNXk8rQVAfaDHXVPDI6I1CzqlyhTIWQ70_DzZWitxtJugAiYqAC2bXmKPXxSVtCf4dPnv_mscV7DtqTQ8BEaAiTz4=w1280",
+                src: BASESPA + "spa-10.jpg",
                 categoria: "spa",
-                alt: "Masaje relajante"
+                alt: "Spa 1"
             },
             {
-                src: "https://lh3.googleusercontent.com/sitesv/APaQ0ST-ctFaDvMEmSGNKUj5z3u4xTq6BWtsqq8AvVsYvCgNorw-mp2qHf4TXEI0LTYEk6C8IbZyelNn1wjSe2N4TqQY4R-0mGCZtmPaR99dqUGQQuAEnMzvrmGf7DZxtbnomAFYh-LDKzyiNxU1h9SnmoDdAveWgpZD9wxbiL3p6G3cJR4hkRtubGoSLgwCxutyJGfF7uGo0_h3-6ht89gAWhlqeNS-3Olj2gja9vE=w1280",
+                src: BASESPA + "spa-11.jpg",
                 categoria: "spa",
-                alt: "Masaje relajante"
+                alt: "Spa 1"
             },
             {
-                src: "https://lh3.googleusercontent.com/sitesv/APaQ0SR3jfORnxpCOgRgDzS3C792dxLjUF8tBqeQD07jSvPwvoBQfcV2aEAV_ViSyI6HcWSXJNrmjuG3a6LX7FSosQ8Fg-P_85_KusHBbfOon1Kwx54s2aO3QtNn19fmsxOSN_EHbC6rfz63bTYYR_gTo1JyREWbuGZ8ECRue84q3ghSMXF4IMWjbj3oRl6mDV1SEbaqcGII0L66BOLvdEtpOrvyGWianZozLdTX=w1280",
+                src: BASESPA + "spa-12.jpg",
                 categoria: "spa",
-                alt: "Masaje relajante"
+                alt: "Spa 1"
             },
+            // {
+            //     src: "https://lh3.googleusercontent.com/sitesv/APaQ0SQ_1bMsqOvJl-LkxOwkWtKqCbTKq6Ltg9qV_0VjM4hK4XsMS7phcAdKa6jNCznhCtHeFOAncEaGqDSAe33sMI5Jkt2cHd60QFiP6qqCmujkzR6Y6YupbRl2wmYTZVDhDq7LgtqvqarayUFlFw9Y7FU8CRcrYUZL3hSRtK-AnsQrTbvPD-a7pGKR9jjT_Y8omAYpuQ3G6Va1Uyt1dbAHH9j_35NzXlreVt9P1Vs=w1280",
+            //     categoria: "spa",
+            //     alt: "Velas y aromaterapia"
+            // },
+            // {
+            //     src: "https://lh3.googleusercontent.com/sitesv/APaQ0SS3K2P5KkEEBSpucdvjRHARD-pqp1F4B0pZcpA2o1nYEBm_VRYHMQqSombZ2gckufGxDxyvXAErMPK3eqnTmn8o0lnHGBpREWiasNiPeCxT5PFQ_T36KYz9YwSdF01fE7w_Yy2RrSkhKN7Sfu2SlctV717tumL9Xq1rB3NYAGaZXj-xPVMCq-ZeuJJ2LtsCkivL7623omdPsi_DIHVURm931cRQ86H9HwSr=w1280",
+            //     categoria: "spa",
+            //     alt: "Piedras calientes"
+            // },
+            // {
+            //     src: "https://lh3.googleusercontent.com/sitesv/APaQ0SSIc5AFzmu-0NpbyNkF3OCU-8ZfniV5y0bQdheOXDaqCEaEgGNo5TwcnfDlgInaEWu0wXnc3uTe1AwOgFkQTuZueH-mPV2lEkpsjcgy50c2Iiw5_p9JoHZbho0OftY-gnFv4MDSai4gmfrnvzVZdJQbuemvqqmYJ43gUSpyahLQUymKx4mPvndfsiSg4gYw6My4yDBADzB7EQWyb0ZCG_wznNKWfyuJLNXb=w1280",
+            //     categoria: "spa",
+            //     alt: "Piscina termal"
+            // },
+            // {
+            //     src: "https://lh3.googleusercontent.com/sitesv/APaQ0SST5J-qY6xrzkx7f4-YFMnTdoRa4tfDF89SFX4C_qVCFcMf-KYqSVGPqWmIXHEZzNi2MoB5dzlTzQetmw1YYqxP9MCkpVtmq8Kupwf_Tqdxe6OG_Jmv4uLzP8lRQY8HC2RBDbOG0013_BwitegReJSQ_XnXUVRUGMvFNxaU5TGVGz5VoKK8mFbLUR0n4RtXt0KqEuPIOdk9y_MCusZCz2M6dsNBQ-6XpOoMDUg=w1280",
+            //     categoria: "spa",
+            //     alt: "Tratamiento facial spa"
+            // },
+            // {
+            //     src: "https://lh3.googleusercontent.com/sitesv/APaQ0SQ9b7I_9FCLLMwdtzb0k89g6LhEWPvwWwol_BnJQVrVKgnZIYkwKBaIOa8Tq9PbZZ0HH-2FzqfmbM6C1kF1qsjcdOYuPoGZ26wsDoHt-dVBzS4TNowPH2j2ZmxifSGUOGNWAu6jo8rLY1pdRa3wd-gIstMxyXWOUMraplBwFvD0KTgzAdG9ONXWtR6wnFDJCIRiN1qBvTBOaSFtC-4meNXZIw-JVWyXXAcu=w1280",
+            //     categoria: "spa",
+            //     alt: "Ambiente relajante"
+            // },
+            // {
+            //     src: "https://lh3.googleusercontent.com/sitesv/APaQ0STgKhc7SSlza_Oufs8H11_xopWzC5wrUhV7go95boZFKgD_lyNWz06MSdt8-FqPaEPTsqyScTzHE-w_6r17YPm9F3jGZJXUUJ3VIKxWYPx2ghALkvam9ZTTYgBMa5-bVVKFpRocF4iVTIcyhMeXI_MMnHHDMe278lbRFWaGSLfdDIMT0RPnXrDAGqp4k_-Tpfc4Tp6PyQgdGJLEItQAHHMVg5-e9aQn5poq=w1280",
+            //     categoria: "spa",
+            //     alt: "Aromaterapia con aceites"
+            // },
+            // {
+            //     src: "https://lh3.googleusercontent.com/sitesv/APaQ0SQP4NpyAfwfhpYWQthwiNvSkbAAcj0mlloqcBhlFYoo1irSLAIUlWl9xUlNn7Rl5rAqTAbmPlzYc1XMZ3_LR7UAO7bEfn_ttSjV6aQX8RNVvvnV45ySsbYBQPMU71_AZpzRym_TK44coh3F5IzbLWohKoGi0pia5uzzEW0n4nnWQMJRJRHZzEDjCxG3G0pPHTsHAMVke7yE84QjZ9R1ic211IUSMox0NxS33IY=w1280",
+            //     categoria: "spa",
+            //     alt: "Masaje relajante"
+            // },
             // {
             //     src: "https://images.unsplash.com/photo-1559599101-f09722fb4948?w=600&q=80",
             //     categoria: "spa",
@@ -573,7 +602,7 @@
         ];
 
         /* ═══════════════════════════════════════════════
-           LÓGICA — no necesitás tocar nada de aquí abajo
+        LÓGICA — no necesitás tocar nada de aquí abajo
         ═══════════════════════════════════════════════ */
 
         const grid = document.getElementById('galleryGrid');
