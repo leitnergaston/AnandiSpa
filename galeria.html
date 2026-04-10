@@ -1,0 +1,659 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Anandi | Galeria</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Jost:wght@300;400;500&display=swap"
+        rel="stylesheet" />
+    <style>
+        /* ── VARIABLES ────────────────────────────────── */
+        :root {
+            --cream: #f5efe8;
+            --sand: #e8d9c8;
+            --mocha: #c4a882;
+            --bark: #8b6b4a;
+            --rose: #a05060;
+            --rose-light: #c47080;
+            --rose-pale: #f0d8dc;
+            --text: #4a3728;
+            --text-soft: #7a6050;
+            --white: #fffaf6;
+
+            --radius: 14px;
+            --transition: 0.45s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        /* ── RESET ────────────────────────────────────── */
+        *,
+        *::before,
+        *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Jost', sans-serif;
+            background-color: var(--cream);
+            color: var(--text);
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+
+        /* ── NOISE TEXTURE OVERLAY ───────────────────── */
+        body::before {
+            content: '';
+            position: fixed;
+            inset: 0;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23n)' opacity='0.035'/%3E%3C/svg%3E");
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        /* ── HEADER ───────────────────────────────────── */
+        header {
+            position: relative;
+            z-index: 10;
+            text-align: center;
+            padding: 60px 24px 40px;
+            background: linear-gradient(180deg, var(--white) 0%, transparent 100%);
+        }
+
+        .header-ornament {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 16px;
+            margin-bottom: 16px;
+        }
+
+        .ornament-line {
+            width: 60px;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, var(--mocha));
+        }
+
+        .ornament-line.right {
+            background: linear-gradient(90deg, var(--mocha), transparent);
+        }
+
+        .ornament-dot {
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            background: var(--rose);
+            opacity: 0.7;
+        }
+
+        .brand-name {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: clamp(2.4rem, 6vw, 4rem);
+            font-weight: 300;
+            letter-spacing: 0.12em;
+            color: var(--text);
+            line-height: 1.1;
+        }
+
+        .brand-name span {
+            color: var(--rose);
+        }
+
+        .brand-tagline {
+            font-family: 'Jost', sans-serif;
+            font-size: clamp(0.7rem, 2vw, 0.85rem);
+            font-weight: 300;
+            letter-spacing: 0.35em;
+            text-transform: uppercase;
+            color: var(--text-soft);
+            margin-top: 10px;
+        }
+
+        /* ── TOGGLE SWITCH ────────────────────────────── */
+        .toggle-container {
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            display: flex;
+            justify-content: center;
+            padding: 20px 24px;
+            background: linear-gradient(180deg, var(--cream) 70%, transparent 100%);
+            backdrop-filter: blur(8px);
+            -webkit-backdrop-filter: blur(8px);
+        }
+
+        .toggle-pill {
+            position: relative;
+            display: flex;
+            background: var(--sand);
+            border-radius: 100px;
+            padding: 5px;
+            gap: 0;
+            box-shadow: 0 2px 20px rgba(139, 107, 74, 0.15), inset 0 1px 3px rgba(0, 0, 0, 0.06);
+        }
+
+        .toggle-pill::before {
+            content: '';
+            position: absolute;
+            top: 5px;
+            left: 5px;
+            width: calc(50% - 5px);
+            height: calc(100% - 10px);
+            background: linear-gradient(135deg, var(--rose), var(--rose-light));
+            border-radius: 100px;
+            transition: transform var(--transition);
+            box-shadow: 0 3px 14px rgba(160, 80, 96, 0.35);
+        }
+
+        .toggle-pill.estetica::before {
+            transform: translateX(100%);
+        }
+
+        .toggle-btn {
+            position: relative;
+            z-index: 2;
+            padding: 10px 32px;
+            border: none;
+            background: transparent;
+            cursor: pointer;
+            font-family: 'Jost', sans-serif;
+            font-size: 0.82rem;
+            font-weight: 500;
+            letter-spacing: 0.18em;
+            text-transform: uppercase;
+            color: var(--text-soft);
+            border-radius: 100px;
+            transition: color 0.35s ease;
+            white-space: nowrap;
+            min-width: 120px;
+        }
+
+        @media (max-width: 400px) {
+            .toggle-btn {
+                padding: 10px 22px;
+                min-width: 100px;
+                font-size: 0.75rem;
+            }
+        }
+
+        .toggle-btn.active {
+            color: #fff;
+        }
+
+        /* ── GALLERY ──────────────────────────────────── */
+        .gallery-section {
+            position: relative;
+            z-index: 1;
+            padding: 10px 20px 60px;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        /* Masonry con CSS columns */
+        .gallery-grid {
+            column-count: 4;
+            column-gap: 14px;
+        }
+
+        @media (max-width: 1100px) {
+            .gallery-grid {
+                column-count: 3;
+            }
+        }
+
+        @media (max-width: 700px) {
+            .gallery-grid {
+                column-count: 2;
+            }
+        }
+
+        @media (max-width: 380px) {
+            .gallery-grid {
+                column-count: 1;
+            }
+        }
+
+        /* ── CARD ─────────────────────────────────────── */
+        .card {
+            break-inside: avoid;
+            margin-bottom: 14px;
+            border-radius: var(--radius);
+            overflow: hidden;
+            position: relative;
+            cursor: pointer;
+            background: var(--sand);
+
+            /* Animación entrada */
+            opacity: 0;
+            transform: translateY(18px) scale(0.97);
+            animation: cardIn 0.5s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+        }
+
+        .card.hidden {
+            display: none;
+        }
+
+        @keyframes cardIn {
+            to {
+                opacity: 1;
+                transform: translateY(0) scale(1);
+            }
+        }
+
+        /* Stagger delays */
+        .card:nth-child(1) {
+            animation-delay: 0.04s;
+        }
+
+        .card:nth-child(2) {
+            animation-delay: 0.08s;
+        }
+
+        .card:nth-child(3) {
+            animation-delay: 0.12s;
+        }
+
+        .card:nth-child(4) {
+            animation-delay: 0.16s;
+        }
+
+        .card:nth-child(5) {
+            animation-delay: 0.20s;
+        }
+
+        .card:nth-child(6) {
+            animation-delay: 0.24s;
+        }
+
+        .card:nth-child(7) {
+            animation-delay: 0.28s;
+        }
+
+        .card:nth-child(8) {
+            animation-delay: 0.32s;
+        }
+
+        .card:nth-child(9) {
+            animation-delay: 0.36s;
+        }
+
+        .card:nth-child(10) {
+            animation-delay: 0.40s;
+        }
+
+        .card:nth-child(n+11) {
+            animation-delay: 0.44s;
+        }
+
+        .card img {
+            width: 100%;
+            display: block;
+            transition: transform 0.55s cubic-bezier(0.4, 0, 0.2, 1);
+            object-fit: cover;
+        }
+
+        .card:hover img {
+            transform: scale(1.06);
+        }
+
+        /* Overlay hover */
+        .card-overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(180deg,
+                    transparent 40%,
+                    rgba(74, 55, 40, 0.55) 100%);
+            opacity: 0;
+            transition: opacity var(--transition);
+            display: flex;
+            align-items: flex-end;
+            padding: 18px;
+        }
+
+        .card:hover .card-overlay {
+            opacity: 1;
+        }
+
+        .card-label {
+            font-family: 'Jost', sans-serif;
+            font-size: 0.78rem;
+            font-weight: 300;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            color: rgba(255, 255, 255, 0.9);
+            transform: translateY(6px);
+            transition: transform var(--transition);
+        }
+
+        .card:hover .card-label {
+            transform: translateY(0);
+        }
+
+        /* ── EMPTY STATE ──────────────────────────────── */
+        .empty-state {
+            display: none;
+            text-align: center;
+            padding: 80px 24px;
+            color: var(--text-soft);
+        }
+
+        .empty-state.visible {
+            display: block;
+        }
+
+        .empty-state p {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.5rem;
+            font-weight: 300;
+            font-style: italic;
+        }
+
+        /* ── FOOTER ───────────────────────────────────── */
+        footer {
+            position: relative;
+            z-index: 1;
+            text-align: center;
+            padding: 30px 24px;
+            border-top: 1px solid var(--sand);
+            color: var(--text-soft);
+            font-size: 0.75rem;
+            letter-spacing: 0.1em;
+            font-weight: 300;
+        }
+
+        /* ── SCROLLBAR ────────────────────────────────── */
+        ::-webkit-scrollbar {
+            width: 5px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: var(--cream);
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: var(--mocha);
+            border-radius: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- ── HEADER ──────────────────────────────────── -->
+    <header>
+        <div class="header-ornament">
+            <div class="ornament-line"></div>
+            <div class="ornament-dot"></div>
+            <div class="ornament-line right"></div>
+        </div>
+        <h1 class="brand-name"><span>Anandi</span></h1>
+        <p class="brand-tagline">Spa &amp; Estética · Bienestar &amp; Belleza</p>
+    </header>
+
+    <!-- ── TOGGLE ──────────────────────────────────── -->
+    <div class="toggle-container">
+        <div class="toggle-pill" id="togglePill">
+            <button class="toggle-btn active" id="btnSpa">Spa</button>
+            <button class="toggle-btn" id="btnEstetica">Estética</button>
+        </div>
+    </div>
+
+    <!-- ── GALERÍA ─────────────────────────────────── -->
+    <section class="gallery-section">
+        <div class="gallery-grid" id="galleryGrid"></div>
+        <div class="empty-state" id="emptyState">
+            <p>Próximamente más fotos…</p>
+        </div>
+    </section>
+
+    <!-- ── FOOTER ──────────────────────────────────── -->
+    <footer>
+        <!-- &copy; 2025 · Todos los derechos reservados -->
+        2018 - 2026
+    </footer>
+
+    <script>
+        /* ═══════════════════════════════════════════════════
+           IMÁGENES — EDITÁ ESTE ARRAY PARA AGREGAR LAS TUYAS
+           ═══════════════════════════════════════════════════
+    
+           Cada objeto tiene:
+             src       → ruta a la imagen (local o URL externa)
+             categoria → "spa" o "estetica"
+             alt       → descripción de la foto (accesibilidad y SEO)
+    
+           OPCIÓN A — imagen local:
+             src: "fotos/sala-masajes-1.jpg"
+             (creá una carpeta "fotos" junto al index.html)
+    
+           OPCIÓN B — URL de internet:
+             src: "https://ejemplo.com/imagen.jpg"
+    
+           Para AGREGAR una foto: copiá uno de los bloques
+           { src, categoria, alt } y pegalo en la lista.
+        ═══════════════════════════════════════════════════ */
+
+        const imagenes = [
+
+            /* ── SPA ─────────────────────────────────── */
+            {
+                src: "https://lh3.googleusercontent.com/sitesv/APaQ0SQx4vDyz6mIWpJWXyKvDDOs80_OZHBP68F58C4bYIa8_Vn9gUV8yPCCWzno7TL2oMFnnjw9bj1Hgr1_obqdVDmaGmPwBPSIv5d8Tz-yILVh6quklcrFY-JoAsM32jIlVVzKlYyHOX-mjcDkUIPrGT7UBLFguW3BSeKE4xISdkF34a-QCxSjXUDgwB4u3tezYWYDQXsW6Vdr25rr1s-u2ZPoDUPvpd-X5sVAZck=w1280",
+                categoria: "spa",
+                alt: "Sala de masajes"
+            },
+            {
+                src: "https://lh3.googleusercontent.com/sitesv/APaQ0SQ_1bMsqOvJl-LkxOwkWtKqCbTKq6Ltg9qV_0VjM4hK4XsMS7phcAdKa6jNCznhCtHeFOAncEaGqDSAe33sMI5Jkt2cHd60QFiP6qqCmujkzR6Y6YupbRl2wmYTZVDhDq7LgtqvqarayUFlFw9Y7FU8CRcrYUZL3hSRtK-AnsQrTbvPD-a7pGKR9jjT_Y8omAYpuQ3G6Va1Uyt1dbAHH9j_35NzXlreVt9P1Vs=w1280",
+                categoria: "spa",
+                alt: "Velas y aromaterapia"
+            },
+            {
+                src: "https://lh3.googleusercontent.com/sitesv/APaQ0SS3K2P5KkEEBSpucdvjRHARD-pqp1F4B0pZcpA2o1nYEBm_VRYHMQqSombZ2gckufGxDxyvXAErMPK3eqnTmn8o0lnHGBpREWiasNiPeCxT5PFQ_T36KYz9YwSdF01fE7w_Yy2RrSkhKN7Sfu2SlctV717tumL9Xq1rB3NYAGaZXj-xPVMCq-ZeuJJ2LtsCkivL7623omdPsi_DIHVURm931cRQ86H9HwSr=w1280",
+                categoria: "spa",
+                alt: "Piedras calientes"
+            },
+            {
+                src: "https://lh3.googleusercontent.com/sitesv/APaQ0SSIc5AFzmu-0NpbyNkF3OCU-8ZfniV5y0bQdheOXDaqCEaEgGNo5TwcnfDlgInaEWu0wXnc3uTe1AwOgFkQTuZueH-mPV2lEkpsjcgy50c2Iiw5_p9JoHZbho0OftY-gnFv4MDSai4gmfrnvzVZdJQbuemvqqmYJ43gUSpyahLQUymKx4mPvndfsiSg4gYw6My4yDBADzB7EQWyb0ZCG_wznNKWfyuJLNXb=w1280",
+                categoria: "spa",
+                alt: "Piscina termal"
+            },
+            {
+                src: "https://lh3.googleusercontent.com/sitesv/APaQ0SST5J-qY6xrzkx7f4-YFMnTdoRa4tfDF89SFX4C_qVCFcMf-KYqSVGPqWmIXHEZzNi2MoB5dzlTzQetmw1YYqxP9MCkpVtmq8Kupwf_Tqdxe6OG_Jmv4uLzP8lRQY8HC2RBDbOG0013_BwitegReJSQ_XnXUVRUGMvFNxaU5TGVGz5VoKK8mFbLUR0n4RtXt0KqEuPIOdk9y_MCusZCz2M6dsNBQ-6XpOoMDUg=w1280",
+                categoria: "spa",
+                alt: "Tratamiento facial spa"
+            },
+            {
+                src: "https://lh3.googleusercontent.com/sitesv/APaQ0SQ9b7I_9FCLLMwdtzb0k89g6LhEWPvwWwol_BnJQVrVKgnZIYkwKBaIOa8Tq9PbZZ0HH-2FzqfmbM6C1kF1qsjcdOYuPoGZ26wsDoHt-dVBzS4TNowPH2j2ZmxifSGUOGNWAu6jo8rLY1pdRa3wd-gIstMxyXWOUMraplBwFvD0KTgzAdG9ONXWtR6wnFDJCIRiN1qBvTBOaSFtC-4meNXZIw-JVWyXXAcu=w1280",
+                categoria: "spa",
+                alt: "Ambiente relajante"
+            },
+            {
+                src: "https://lh3.googleusercontent.com/sitesv/APaQ0STgKhc7SSlza_Oufs8H11_xopWzC5wrUhV7go95boZFKgD_lyNWz06MSdt8-FqPaEPTsqyScTzHE-w_6r17YPm9F3jGZJXUUJ3VIKxWYPx2ghALkvam9ZTTYgBMa5-bVVKFpRocF4iVTIcyhMeXI_MMnHHDMe278lbRFWaGSLfdDIMT0RPnXrDAGqp4k_-Tpfc4Tp6PyQgdGJLEItQAHHMVg5-e9aQn5poq=w1280",
+                categoria: "spa",
+                alt: "Aromaterapia con aceites"
+            },
+            {
+                src: "https://lh3.googleusercontent.com/sitesv/APaQ0SQP4NpyAfwfhpYWQthwiNvSkbAAcj0mlloqcBhlFYoo1irSLAIUlWl9xUlNn7Rl5rAqTAbmPlzYc1XMZ3_LR7UAO7bEfn_ttSjV6aQX8RNVvvnV45ySsbYBQPMU71_AZpzRym_TK44coh3F5IzbLWohKoGi0pia5uzzEW0n4nnWQMJRJRHZzEDjCxG3G0pPHTsHAMVke7yE84QjZ9R1ic211IUSMox0NxS33IY=w1280",
+                categoria: "spa",
+                alt: "Masaje relajante"
+            },
+            {
+                src: "https://lh3.googleusercontent.com/sitesv/APaQ0STN19aqVQAEU_rn5OpoSUI6zvO6UR8LgU1nha6cP4-7eQxeloyECuw1kkRpQ4EI-WEykSwokeIHC7AyqVieTCceT9kGJFgjCk0NdPMahiTVdXTcf6xEfqM6C6jwS-WGtVrliGfjb0OWXVz1PTNW6AYL-yUgWjYIBMmqmeVyK2HOr7JScn8KtincMlHh3BOicrSXS12UwhPJ2SpZTTHoximf-POhk0tsmsTMXw0=w1280",
+                categoria: "spa",
+                alt: "Masaje relajante"
+            },
+            {
+                src: "https://lh3.googleusercontent.com/sitesv/APaQ0SRZacBrkafmpW0ZA7tSnI-x6r2WgOTZWVCMDuCXrvXuhZnTfpU_Q2iMWowJ6NpXyg001tmxKoI1H5cWBgWWpNKD_zKdLITWZXWvh_i8ddLA3asHoviT1dTtv5I3Al6xWKu_y1NjNjE5fEMNXk8rQVAfaDHXVPDI6I1CzqlyhTIWQ70_DzZWitxtJugAiYqAC2bXmKPXxSVtCf4dPnv_mscV7DtqTQ8BEaAiTz4=w1280",
+                categoria: "spa",
+                alt: "Masaje relajante"
+            },
+            {
+                src: "https://lh3.googleusercontent.com/sitesv/APaQ0ST-ctFaDvMEmSGNKUj5z3u4xTq6BWtsqq8AvVsYvCgNorw-mp2qHf4TXEI0LTYEk6C8IbZyelNn1wjSe2N4TqQY4R-0mGCZtmPaR99dqUGQQuAEnMzvrmGf7DZxtbnomAFYh-LDKzyiNxU1h9SnmoDdAveWgpZD9wxbiL3p6G3cJR4hkRtubGoSLgwCxutyJGfF7uGo0_h3-6ht89gAWhlqeNS-3Olj2gja9vE=w1280",
+                categoria: "spa",
+                alt: "Masaje relajante"
+            },
+            {
+                src: "https://lh3.googleusercontent.com/sitesv/APaQ0SR3jfORnxpCOgRgDzS3C792dxLjUF8tBqeQD07jSvPwvoBQfcV2aEAV_ViSyI6HcWSXJNrmjuG3a6LX7FSosQ8Fg-P_85_KusHBbfOon1Kwx54s2aO3QtNn19fmsxOSN_EHbC6rfz63bTYYR_gTo1JyREWbuGZ8ECRue84q3ghSMXF4IMWjbj3oRl6mDV1SEbaqcGII0L66BOLvdEtpOrvyGWianZozLdTX=w1280",
+                categoria: "spa",
+                alt: "Masaje relajante"
+            },
+            // {
+            //     src: "https://images.unsplash.com/photo-1559599101-f09722fb4948?w=600&q=80",
+            //     categoria: "spa",
+            //     alt: "Masaje relajante"
+            // },
+            // {
+            //     src: "https://images.unsplash.com/photo-1559599101-f09722fb4948?w=600&q=80",
+            //     categoria: "spa",
+            //     alt: "Masaje relajante"
+            // },
+            // {
+            //     src: "https://images.unsplash.com/photo-1559599101-f09722fb4948?w=600&q=80",
+            //     categoria: "spa",
+            //     alt: "Masaje relajante"
+            // },
+            // {
+            //     src: "https://images.unsplash.com/photo-1559599101-f09722fb4948?w=600&q=80",
+            //     categoria: "spa",
+            //     alt: "Masaje relajante"
+            // },
+            // {
+            //     src: "https://images.unsplash.com/photo-1559599101-f09722fb4948?w=600&q=80",
+            //     categoria: "spa",
+            //     alt: "Masaje relajante"
+            // },
+
+            /* ── ESTÉTICA ─────────────────────────────── */
+            {
+                src: "https://lh3.googleusercontent.com/sitesv/APaQ0STKhObuxTbPTs8izl2GHS8oMjZWof7KGVrd_NrMmJJW4iDZzeb3LmomNHBc7zQ1A9u-xZdEk26gjGNbK3iyJTWE-qz-9dbdL01dn47pNItkrlDnIpIvzPWqJebpQP-_ywS9v-mmDD1HgCnVa6hCwZvHbS4vvRYR9shFBTsboJIW_zQc2vDRrXL8FeA=w1280",
+                categoria: "estetica",
+                alt: "Maquillaje profesional"
+            },
+            {
+                src: "https://instagram.fmdz5-1.fna.fbcdn.net/v/t51.82787-15/562006707_18077003783282358_194401300876342867_n.webp?stp=dst-webp_p640x640_sh0.08&_nc_cat=101&ig_cache_key=Mzc0MDY0MDk5NzM1NDEwMjA4NA%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6InhwaWRzLjEyMDZ4MjE0NC5zZHIuQzMifQ%3D%3D&_nc_ohc=vp9r_FAkUnEQ7kNvwGzK5El&_nc_oc=Adply7gGdCph7dopzzkvCD-e5kF8gQsiC6CZz8t4M7SeJK3tPUtZIOoDw8ASWXbd0H4&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=instagram.fmdz5-1.fna&_nc_gid=WUCixYtnDGe8W4xnZ4v4nQ&_nc_ss=7a32e&oh=00_Af3dOF4jpt_J2UnQJb2TmtT9LrNW6JOqpkUB4Ik6IAtHgw&oe=69DE3BAF",
+                categoria: "estetica",
+                alt: "Tratamiento de cabello"
+            },
+            {
+                src: "https://instagram.fmdz5-1.fna.fbcdn.net/v/t51.82787-15/551445280_18074368694282358_1604269440225044759_n.webp?stp=dst-webp_p640x640_sh0.08&_nc_cat=101&ig_cache_key=MzcyNzUxODM2NDkyNDUwMjYwMw%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6InhwaWRzLjcyMHgxMjgwLnNkci5DMyJ9&_nc_ohc=CWinBOUaca0Q7kNvwGbKKSZ&_nc_oc=AdpWkKbSttJn1kjDjFHgk__k3bljTNIdFLqNYP5_hYOdYRwDdNjSvpH8yYabIROfwW8&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=instagram.fmdz5-1.fna&_nc_gid=WUCixYtnDGe8W4xnZ4v4nQ&_nc_ss=7a32e&oh=00_Af041tnTsbwq2iPjO9_FURKWatQjM91dHH3uUS9je0P-hw&oe=69DE4280",
+                categoria: "estetica",
+                alt: "Manicura y nail art"
+            },
+            {
+                src: "https://instagram.fmdz4-1.fna.fbcdn.net/v/t51.82787-15/581485784_18080528024282358_4309201498925821163_n.webp?stp=dst-webp_p640x640_sh0.08&_nc_cat=100&ig_cache_key=Mzc2NTI1MDQ1NjIwNjU2OTc1Mw%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6InhwaWRzLjEyMDZ4MjE0NC5zZHIuQzMifQ%3D%3D&_nc_ohc=lfaJxL7c2cUQ7kNvwE6eMJo&_nc_oc=AdqRytHBK0i6Xi0qBdi4BJBhEhSIpeK5pyPWcb9xA4j1D5l4o5r5LtzG9O-NEMFoaAE&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=instagram.fmdz4-1.fna&_nc_gid=WUCixYtnDGe8W4xnZ4v4nQ&_nc_ss=7a32e&oh=00_Af2r8wbOXg19L7A0r9CKhZr1sw0CXr3o7vPcqsAKpa28pw&oe=69DE1B97",
+                categoria: "estetica",
+                alt: "Facial lifting"
+            },
+            {
+                src: "https://instagram.fmdz4-1.fna.fbcdn.net/v/t51.75761-15/491464297_18059475281282358_8670316709650493081_n.webp?stp=dst-webp_p640x640_sh0.08&_nc_cat=108&ig_cache_key=MzYxODc2MzkxNDc1Nzk5MTA1NA%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6InhwaWRzLjcyMHgxMjgwLnNkci5DMyJ9&_nc_ohc=gbG9HFmCu7EQ7kNvwF4Iykf&_nc_oc=Adqh6h9SO2zxkqh6dPiuEjTc8ZCiNd-TuvIBwBVcdp1GEY0mgCvwVbApHhXfVy7OlYg&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=instagram.fmdz4-1.fna&_nc_gid=DZZuYum-VSLNmUAn3x_QZg&_nc_ss=7a32e&oh=00_Af3MqmqQcas7M95K8AZzNjpgo3F0rPmXZvC3WCKaQJ1_bg&oe=69DE22D8",
+                categoria: "estetica",
+                alt: "Depilación"
+            },
+            // {
+            //     src: "https://images.unsplash.com/photo-1596755389378-c31d21fd1273?w=600&q=80",
+            //     categoria: "estetica",
+            //     alt: "Hidratación de pestañas"
+            // },
+            // {
+            //     src: "https://images.unsplash.com/photo-1519415943484-9fa1873496d4?w=600&q=80",
+            //     categoria: "estetica",
+            //     alt: "Pedicura profesional"
+            // },
+            // {
+            //     src: "https://images.unsplash.com/photo-1457972729786-0411a3b2b626?w=600&q=80",
+            //     categoria: "estetica",
+            //     alt: "Maquillaje de novia"
+            // },
+
+        ];
+
+        /* ═══════════════════════════════════════════════
+           LÓGICA — no necesitás tocar nada de aquí abajo
+        ═══════════════════════════════════════════════ */
+
+        const grid = document.getElementById('galleryGrid');
+        const emptyState = document.getElementById('emptyState');
+        const togglePill = document.getElementById('togglePill');
+        const btnSpa = document.getElementById('btnSpa');
+        const btnEstetica = document.getElementById('btnEstetica');
+
+        let categoriaActiva = 'spa';
+
+        /* Construir tarjetas */
+        function buildCards() {
+            grid.innerHTML = '';
+
+            const filtradas = imagenes.filter(img => img.categoria === categoriaActiva);
+
+            if (filtradas.length === 0) {
+                emptyState.classList.add('visible');
+                return;
+            }
+            emptyState.classList.remove('visible');
+
+            filtradas.forEach((img, i) => {
+                const card = document.createElement('div');
+                card.className = 'card';
+                card.style.animationDelay = `${Math.min(i * 0.05, 0.5)}s`;
+
+                const imagen = document.createElement('img');
+                imagen.src = img.src;
+                imagen.alt = img.alt;
+                imagen.loading = 'lazy';
+
+                const overlay = document.createElement('div');
+                overlay.className = 'card-overlay';
+
+                const label = document.createElement('span');
+                label.className = 'card-label';
+                label.textContent = img.alt;
+
+                overlay.appendChild(label);
+                card.appendChild(imagen);
+                card.appendChild(overlay);
+                grid.appendChild(card);
+            });
+        }
+
+        /* Cambiar categoría */
+        function setCategoria(cat) {
+            if (cat === categoriaActiva) return;
+            categoriaActiva = cat;
+
+            /* Fade out → rebuild → fade in (via re-animation) */
+            grid.style.opacity = '0';
+            grid.style.transform = 'translateY(8px)';
+            grid.style.transition = 'opacity 0.25s ease, transform 0.25s ease';
+
+            setTimeout(() => {
+                buildCards();
+                grid.style.opacity = '1';
+                grid.style.transform = 'translateY(0)';
+            }, 260);
+
+            if (cat === 'spa') {
+                togglePill.classList.remove('estetica');
+                btnSpa.classList.add('active');
+                btnEstetica.classList.remove('active');
+            } else {
+                togglePill.classList.add('estetica');
+                btnEstetica.classList.add('active');
+                btnSpa.classList.remove('active');
+            }
+        }
+
+        btnSpa.addEventListener('click', () => setCategoria('spa'));
+        btnEstetica.addEventListener('click', () => setCategoria('estetica'));
+
+        /* Inicio */
+        buildCards();
+    </script>
+
+</body>
+
+</html>
