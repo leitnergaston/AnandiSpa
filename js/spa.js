@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', function () {
-    //* Funcionalidad menu hamburguesa
+    //* ========== Funcionalidad menu hamburguesa ========== //
     const hamburger = document.querySelector('.hamburger');
     const navLinks = document.querySelector('.nav-links');
 
@@ -24,92 +24,48 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     });
 
-    //* Año actualizado automaticamente en footer
-    document.getElementById('current-year').textContent = new Date().getFullYear();
-
-    //* ========== galeria de imagenes con nav ========== //
-    // Select the gallery section
+    //* ========== Año actualizado automaticamente en footer ========== //
     const gallerySection = document.getElementById('galeria');
+    if (gallerySection) {
+        const tabLinks = gallerySection.querySelectorAll('.gallery-nav-link');
+        const tabPanesContainer = gallerySection.querySelector('.tab-content');
 
-    // If the gallery section doesn't exist on the page, do nothing further
-    if (!gallerySection) {
-        return;
-    }
+        if (tabLinks.length && tabPanesContainer) {
+            const tabPanes = tabPanesContainer.querySelectorAll('.tab-pane');
 
-    // Get all tab navigation links and the container for tab content panes
-    const tabLinks = gallerySection.querySelectorAll('.gallery-nav-link');
-    const tabPanesContainer = gallerySection.querySelector('.tab-content');
+            function switchTab(clickedLink) {
+                tabLinks.forEach(link => link.classList.remove('active'));
+                tabPanes.forEach(pane => pane.classList.remove('active'));
+                clickedLink.classList.add('active');
+                const targetId = clickedLink.getAttribute('href').substring(1);
+                const targetPane = document.getElementById(targetId);
+                if (targetPane) targetPane.classList.add('active');
+            }
 
-    // If there are no tab links or no tab panes container, do nothing further
-    if (!tabLinks.length || !tabPanesContainer) {
-        return;
-    }
-
-    const tabPanes = tabPanesContainer.querySelectorAll('.tab-pane');
-
-    // Function to handle switching tabs
-    function switchTab(clickedLink) {
-        // Remove 'active' class from all tab links
-        tabLinks.forEach(link => {
-            link.classList.remove('active');
-        });
-
-        // Remove 'active' class from all tab content panes
-        tabPanes.forEach(pane => {
-            pane.classList.remove('active');
-        });
-
-        // Add 'active' class to the clicked navigation link
-        clickedLink.classList.add('active');
-
-        // Get the ID of the target content pane from the link's href attribute
-        const targetPaneId = clickedLink.getAttribute('href').substring(1); // e.g., 'tab-2'
-        const targetPane = document.getElementById(targetPaneId);
-
-        // If the target pane exists, add 'active' class to it to display it
-        if (targetPane) {
-            targetPane.classList.add('active');
+            tabLinks.forEach(link => {
+                link.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    switchTab(this);
+                });
+            });
         }
-    }
 
-    // Attach event listeners to each tab navigation link
-    tabLinks.forEach(link => {
-        link.addEventListener('click', function (event) {
-            // Prevent the default anchor link behavior (e.g., jumping to the hash)
-            event.preventDefault();
-            // Call the function to switch to the tab associated with this link
-            switchTab(this);
-        });
-    });
+        //* Lazy load imágenes de galería
+        const observerOptions = { root: null, rootMargin: '0px', threshold: 0.1 };
+        const observer = new IntersectionObserver((entries, obs) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const img = entry.target;
+                    img.src = img.dataset.src;
+                    img.onload = () => img.classList.add('loaded');
+                    obs.unobserve(img);
+                }
+            });
+        }, observerOptions);
 
-    // Initial setup: Ensure the tab marked 'active' in HTML is correctly displayed.
-    // This also cleans up any potential multiple 'active' classes in panes.
-    const initiallyActiveLink = gallerySection.querySelector('.gallery-nav-link.active');
-    if (initiallyActiveLink) {
-        // Deactivate all panes first to ensure a clean state, except the one that should be active.
-        const initialTargetPaneId = initiallyActiveLink.getAttribute('href').substring(1);
-        tabPanes.forEach(pane => {
-            if (pane.id === initialTargetPaneId) {
-                pane.classList.add('active'); // Ensure the correct one is active
-            } else {
-                pane.classList.remove('active'); // Deactivate others
-            }
+        gallerySection.querySelectorAll('.gallery-item img').forEach(img => {
+            observer.observe(img);
         });
-        // Ensure the link itself is active and others are not (already handled by HTML, but good for consistency)
-        tabLinks.forEach(link => {
-            if (link === initiallyActiveLink) {
-                link.classList.add('active');
-            } else {
-                link.classList.remove('active');
-            }
-        });
-
-    } else if (tabLinks.length > 0 && tabPanes.length > 0) {
-        // Fallback: If no link/pane is 'active' in HTML, activate the first tab by default.
-        // This ensures the gallery is not empty if HTML is misconfigured.
-        // (The provided HTML has tab-1 active, so this is a safety net)
-        tabLinks[0].classList.add('active');
-        tabPanes[0].classList.add('active');
     }
 
     //* ========== BANNER TERMINOS Y CONDICIONES ========== //
@@ -152,125 +108,54 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     }
 
-});
 
 
 
 
+    //* ========== Efecto scroll sections active link del navbar ========== //
+    const sections = document.querySelectorAll('section[id]');
 
+    window.addEventListener('scroll', function () {
+        const scrollY = window.pageYOffset;
+        sections.forEach(section => {
+            const sectionTop = section.offsetTop - 50;
+            const sectionHeight = section.offsetHeight;
+            const sectionId = section.getAttribute('id');
+            const navLink = document.querySelector('.nav-links a[href*=' + sectionId + ']');
 
-//* ========== Preloader de pagina inicio seccion galeria ========== //
-const observerOptions = {
-    root: null,
-    rootMargin: '0px',
-    threshold: 0.1
-};
+            // null-check: si no existe el link en el nav, no crashea
+            if (!navLink) return;
 
-const observerCallback = (entries, observer) => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            const img = entry.target;
-            img.src = img.dataset.src;
-            img.onload = () => {
-                img.classList.add('loaded');
-            };
-            observer.unobserve(img);
-        }
+            if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
+                navLink.classList.add('active');
+            } else {
+                navLink.classList.remove('active');
+            }
+        });
     });
-};
 
-const observer = new IntersectionObserver(observerCallback, observerOptions);
 
-document.querySelectorAll('.gallery-item img').forEach(img => {
-    observer.observe(img);
+
+
+    //* ========== Popup de terminos y condiciones ========== //
+    // window.mostrarPromoPopup = function (url) {
+    //     window._redirectUrl = url;
+    //     const popup = document.getElementById('terminos-promo-popup');
+    //     if (popup) popup.style.display = 'flex';
+    // };
+
+    // window.aceptarPromoPopup = function () {
+    //     if (window._redirectUrl) window.open(window._redirectUrl, '_blank');
+    //     window.cerrarPromoPopup();
+    // };
+
+    // window.cerrarPromoPopup = function () {
+    //     const popup = document.getElementById('terminos-promo-popup');
+    //     if (popup) popup.style.display = 'none';
+    //     window._redirectUrl = '';
+    // };
+
 });
-
-
-// ========== Scroll Reveal ========== //
-// ScrollReveal({
-//     reset: false,
-//     distance: '60px',
-//     duration: 2000,
-// });
-
-// ScrollReveal().reveal('.hero', { delay: 300 });
-// ScrollReveal().reveal('h1, h2', { delay: 500, origin: 'left' });
-// ScrollReveal().reveal('.promo-card, .services', { delay: 600, origin: 'bottom' });
-// ScrollReveal().reveal('.img-about-inicio', { delay: 300 });
-// ScrollReveal().reveal('.about-text', { delay: 350 });
-// ScrollReveal().reveal('.gallery-grid', { delay: 300 });
-
-
-//* ========== Efecto scroll sections active link del navbar ========== //
-const sections = document.querySelectorAll("section[id]");
-
-window.addEventListener("scroll", navHighlighter);
-
-function navHighlighter() {
-    let scrollY = window.pageYOffset;
-
-    sections.forEach(current => {
-        const sectionHeight = current.offsetHeight;
-        const sectionTop = current.offsetTop - 50,
-            sectionId = current.getAttribute("id");
-
-        if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
-            document.querySelector('.nav-links a[href*=' + sectionId + ']').classList.add("active")
-        }
-        else {
-            document.querySelector('.nav-links a[href*=' + sectionId + ']').classList.remove("active")
-        }
-    })
-}
-
-
-// ========== etiqueta hover tooltip para mini promo cards del hero ========== //
-// const promoCards = document.querySelectorAll('.mini-promo-card');
-
-// promoCards.forEach(card => {
-//     const tooltip = card.querySelector('.tooltip');
-
-//     card.addEventListener('mousemove', (e) => {
-//         const rect = card.getBoundingClientRect();
-//         const x = e.clientX - rect.left;
-//         const y = e.clientY - rect.top;
-
-//         tooltip.style.left = `${x}px`;
-//         tooltip.style.top = `${y}px`;
-//         tooltip.style.opacity = '1';
-//     });
-
-//     card.addEventListener('mouseleave', () => {
-//         tooltip.style.opacity = '0';
-//     });
-// });
-
-
-//* ========== Promo Popup de terminos y condiciones ========== //
-let redirectUrl = '';
-
-function mostrarPromoPopup(url) {
-    // Guardamos la URL personalizada de whatsapp que esta en el boton de cada card en la variable redirectUrl
-    redirectUrl = url;
-    // Mostramos el popup
-    document.getElementById("terminos-promo-popup").style.display = "flex";
-}
-
-function aceptarPromoPopup() {
-    // Redirigimos al link personalizado de whatsapp y lo abrimos en otra pestaña
-    window.open(redirectUrl, "_blank");
-    // Cerramos el popup despues de redirigir
-    cerrarPromoPopup();
-}
-
-function cerrarPromoPopup() {
-    // Ocultamos el popup
-    document.getElementById("terminos-promo-popup").style.display = "none";
-    // Reseteamos el link
-    redirectUrl = '';
-}
-
-
 
 
 

@@ -17,6 +17,7 @@
 
 body {
     font-family: 'Quicksand', sans-serif;
+    line-height: 1.6;
     color: var(--color-text);
     background-color: #e6c7ff;
 }
@@ -405,10 +406,6 @@ nav {
     .services-grid {
         grid-template-columns: 1fr;
     }
-
-    body {
-        padding: 20px 15px;
-    }
 }
 
 @media (max-width: 480px) {
@@ -668,9 +665,9 @@ footer {
 @media (max-width: 992px) {
 
     /* Para tablets */
-    .footer-main-content {
+    /* .footer-main-content { */
         /* Podrías ajustar el número de columnas aquí si quieres, ej. 2 columnas */
-    }
+    /* } */
 
     .footer-column {
         min-width: calc(50% - 20px);
