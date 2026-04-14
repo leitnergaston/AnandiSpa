@@ -1289,59 +1289,6 @@ nav {
 }
 
 
-
-
-
-
-
-
-
-
-/*? Gallery 2 */
-/* .gallery .tab-class .nav { */
-/* display: inline-flex; */
-/* justify-content: center; */
-/* margin-bottom: 3rem; */
-/* } */
-
-/* .gallery .tab-class .nav-item { */
-/* display: list-item; */
-/* padding: 0 0 02px; */
-/* text-align: center; */
-/* } */
-
-/* .gallery .tab-class .nav-item a { */
-/* display: flex; */
-/* text-align: center; */
-/* background-color: #ff4f9d; */
-/* border: 1px solid #ff4f9d; */
-/* border-radius: 800px; */
-/* color: #cc3f7e; */
-/* margin: 0px 16px; */
-/* padding: 8px 0px; */
-/* } */
-
-/* .gallery .tab-class .nav-item { */
-/* padding: 0 0 20px 0; */
-/* } */
-
-/* .gallery .tab-class .nav-item a.active { */
-/* background: var(--bs-primary) !important; */
-/* } */
-
-/* .gallery .tab-class .nav-item a.active span { */
-/* color: var(--bs-white) !important; */
-/* } */
-
-/* .gallery .gallery-img { */
-/* position: relative; */
-/* overflow: hidden; */
-/* border-radius: 10px; */
-/* padding-bottom: 100%; */
-/* background-color: #f0f0f0; */
-/* } */
-
-
 /** ========== Gallery section styles ========== */
 .gallery {
     padding: 4rem 0;
@@ -1772,40 +1719,6 @@ footer .container .footer-row:nth-child(2) {
         text-align: center;
     }
 
-    /* seccion de promos */
-    /* .promo-grid {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 1rem;
-    } */
-
-    /* .promo-content {
-        height: auto;
-        padding: .5rem .8rem .8rem .8rem;
-    } */
-
-    /* .promo-content h3 {
-        font-size: 1.2rem;
-        margin-bottom: .3rem;
-    } */
-
-    /* .promo-content p {
-        font-size: 0.85rem;
-        margin-bottom: 1rem;
-        display: -webkit-box;
-        -webkit-line-clamp: 3;
-        -webkit-box-orient: vertical;
-        overflow: hidden;
-        text-overflow: ellipsis;
-    } */
-
-    /* .promo-card .promo-tag {
-        font-size: 7px;
-    } */
-
-    /* .promo-content .feature-tags {
-        display: none;
-    } */
-
     .promo-content {
         height: auto;
     }
@@ -2022,36 +1935,7 @@ footer .container .footer-row:nth-child(2) {
     }
 }
 
-/* @media screen and (max-width: 390px) {
-    .promo-grid {
-        grid-template-columns: 1fr;
-        gap: 1.5rem;
-    }
-    
-    .promo-content {
-        height: auto;
-        padding: .8rem 1rem 1rem 1rem;
-    }
-    
-    .promo-content h3 {
-        font-size: 1.3rem;
-        margin-bottom: .5rem;
-    }
-    
-    .promo-content p {
-        font-size: 0.9rem;
-        -webkit-line-clamp: 4;
-    }
-    
-    .btn {
-        max-width: 100%;
-        width: 100%;
-        margin: 5px 0;
-        text-align: center;
-    }
-} */
-
-/* Animacion de scroll */
+/** Animacion de scroll en secciones */
 .promo-card,
 .service-card,
 .about,
