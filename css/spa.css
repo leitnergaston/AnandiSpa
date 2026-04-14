@@ -1373,12 +1373,12 @@ nav {
     opacity: 1;
 }
 
-/* .gallery .btn {
+.gallery .btn {
     display: block;
     width: 200px;
     margin: 2rem auto 0;
     text-align: center;
-} */
+}
 
 /** ========== Contact section styles ========== */
 .contact {

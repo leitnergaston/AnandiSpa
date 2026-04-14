@@ -25,6 +25,10 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 
     //* ========== Año actualizado automaticamente en footer ========== //
+    const yearEl = document.getElementById('current-year');
+    if (yearEl) yearEl.textContent = new Date().getFullYear();
+    
+    //* ========== Galeria con tabs ========== //
     const gallerySection = document.getElementById('galeria');
     if (gallerySection) {
         const tabLinks = gallerySection.querySelectorAll('.gallery-nav-link');
