@@ -271,269 +271,103 @@ function cerrarPromoPopup() {
 }
 
 
-// ========== Testimonial Slider ========== //
-// const testimonialContainer = document.querySelector('.testimonial-container');
-// const testimonialCards = document.querySelectorAll('.testimonial-card');
-// const prevBtn = document.getElementById('prevBtn');
-// const nextBtn = document.getElementById('nextBtn');
-// let currentTestimonial = 0;
-
-// function showTestimonial(index) {
-//     testimonialContainer.style.transform = `translateX(-${index * 100}%)`;
-// }
-
-// function nextTestimonial() {
-//     currentTestimonial = (currentTestimonial + 1) % testimonialCards.length;
-//     showTestimonial(currentTestimonial);
-// }
-
-// function prevTestimonial() {
-//     currentTestimonial = (currentTestimonial - 1 + testimonialCards.length) % testimonialCards.length;
-//     showTestimonial(currentTestimonial);
-// }
-
-//// nextBtn.addEventListener('click', nextTestimonial);
-//// prevBtn.addEventListener('click', prevTestimonial);
-
-// Auto-slide for testimonials
-// setInterval(nextTestimonial, 5000); // Cambia de testimonio cada x milisegundos
-
-
-//* ========== DESTACADAS =========== //
-new Swiper('.destacadas-card-wrapper', {
-    loop: true,
-    spaceBetween: 30,
-
-    autoplay: false,
-
-    // pagination bullets
-    pagination: {
-        el: '.swiper-pagination',
-        clickable: true,
-        dynamicBullets: true
-    },
-
-    // Navigation arrows
-    navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
-    },
-
-    // Responsive breakpoints
-    breakpoints: {
-        480: {
-            slidesPerView: 1
-        },
-        768: {
-            slidesPerView: 2
-        },
-        1020: {
-            slidesPerView: 3
-        },
-    }
-
-
-});
-
-//* ========== TESTIMONIOS 2 =========== //
-new Swiper('.card-wrapper', {
-    loop: true,
-    spaceBetween: 30,
-
-    autoplay: {
-        delay: 4000,
-    },
-
-    // pagination bullets
-    pagination: {
-        el: '.swiper-pagination',
-        clickable: true,
-        dynamicBullets: true
-    },
-
-    // Navigation arrows
-    navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
-    },
-
-    // Responsive breakpoints
-    breakpoints: {
-        480: {
-            slidesPerView: 1
-        },
-        768: {
-            slidesPerView: 2
-        },
-        1020: {
-            slidesPerView: 3
-        },
-    }
-
-
-});
 
 
 
 //* ========== Popup Servicios ========== //
-const serviceButtons = document.querySelectorAll('.service-btn');
-const popupOverlay = document.querySelector('.popup-servicios');
-const popupContent = document.querySelector('.popup-servicios-content');
-const popupImage = document.querySelector('.popup-servicios-img');
-const popupTitle = document.querySelector('.popup-servicios-title');
-const popupDescription = document.querySelector('.popup-servicios-description');
-const popupClose = document.querySelector('.popup-servicios-close');
+// const serviceButtons = document.querySelectorAll('.service-btn');
+// const popupOverlay = document.querySelector('.popup-servicios');
+// const popupContent = document.querySelector('.popup-servicios-content');
+// const popupImage = document.querySelector('.popup-servicios-img');
+// const popupTitle = document.querySelector('.popup-servicios-title');
+// const popupDescription = document.querySelector('.popup-servicios-description');
+// const popupClose = document.querySelector('.popup-servicios-close');
 
-const serviceDetails = {
-    'masajes-descontracturantes': {
-        title: 'Masajes Descontracturantes',
-        description: 'Alivia el dolor. Disuelve contracturas. Activa la circulación sanguínea y de la linfa eliminando toxinas. Relaja y ayuda a dormir bien. Alivia las migrañas y dolores de cabeza. Ayuda a evuacuar mejor. Mantiene la piel elástica eliminando células muertas y la nutre.',
-        image: '/img/spa/servicios/img/servicios-masaje-descontracturante.jpg'
-    },
-    'masajes-relajantes': {
-        title: 'Masajes Relajantes',
-        description: 'Aumenta la función inmune. Mejora la calidad del sueño. Mejora la movilidad de las articulaciones. Estimula el movimiento linfático. Reduce el dolor muscular. Mejora la actividad mental. Agiliza la curación de lesiones de tejidos blandos. Alivia el estrés. Mejora la circulación y reduce la tensión muscular.',
-        image: '/img/spa/servicios/img/servicios-masajes-relajantes.jpg'
-    },
-    'masajes-sedativos': {
-        title: 'Masajes Sedativos',
-        description: 'Induce a un estado de calma y tranquilidad, disminuyendo la ansiedad y el estrés. Alivia las tensiones musculares, especialmente en áreas como el cuello, los hombros y la espalda. Favorece un sueño mas profundo y reparador, al reducir la actividad del sistema nervioso. Ayuda a equilibrar las emociones y a promover una sensación de bienestar general.',
-        image: '/img/spa/servicios/img/servicios-masajes-sedativos.webp'
-    },
-    'masaje-sueco': {
-        title: 'Masaje Sueco',
-        description: 'Alivia las tensiones musculares y aumenta la flexibilidad. Estimula la circulación sanguínea y linfática, favoreciendo la eliminación de toxinas. Alivia dolores musculares y articulares, como los asociados a la tensión o lesiones leves. Fortalece los músculos y mejora el tono muscular. Proporciona una sensación de bienestar y vitalidad.',
-        image: '/img/spa/servicios/img/servicios-masaje-sueco.webp'
-    },
-    'hidromasaje': {
-        title: 'Hidromasaje',
-        description: 'Relajación muscular aliviando tensiones y dolores. Estimula la circulacion lo que ayuda a reducir la inflamación y a oxigenar los tejidos. Alivio del estrés. Ayuda a aliviar dolores musculares y articulares. Mejora la calidad del sueño. Ayuda a suavizar y nutrir la piel.',
-        image: '/img/spa/servicios/img/servicios-hidromasaje.webp'
-    },
-    'sauna': {
-        title: 'Sauna Finlandés',
-        description: 'Ayuda a eliminar toxinas del cuerpo. Estimula el sistema inmunológico ayudando a prevenir enfermedades. La vasodilatación producida por el calor mejora la circulación sanguínea. El calor y la humedad relajan los músculos y la mente reduciendo el estrés y la ansiedad. Tambien ayuda a abrir los poros y trae un beneficio para la piel. Mejora la calidad del sueño.',
-        image: '/img/spa/servicios/img/servicios-sauna.jpg'
-    },
-    'cutis': {
-        title: 'Limpieza de cutis',
-        description: 'Eliminación de impurezas. Reduce la aparición de acné e inflamaciones. Mejor absorción de nutrientes de cremas. Piel mas radiante y saludable.',
-        image: '/img/servicios/img/'
-    },
-    'exfoliaciones': {
-        title: 'Exfoliaciones',
-        description: 'Elimina células muertas, estimulando la regeneración de la piel. Reduce la apariencia de manchas y cicatrices. Aumenta la luminosidad. Mejora la textura reduciendo la apariencia de piel áspera y seca. Facilita la absorción de los productos aplicados posteriormente. Previene vellos encarnados.',
-        image: '/img/spa/servicios/img/servicios-exfo.jpg'
-    },
-    'piscina': {
-        title: 'Piscina refrescante',
-        description: 'Refrescante y revitalizante, el lugar perfecto para relajarte y recargar energías.',
-        image: '/img/spa/servicios/img/servicios-piscina.jpg'
-    },
-    'meriendas': {
-        title: 'Meriendas',
-        description: 'Disfrutá luego de tu circuito de spa nuestras deliciosas meriendas. ',
-        image: '/img/spa/servicios/img/servicios-meriendas.jpg'
-    },
-    'circuitos': {
-        title: 'Circuitos de Spa',
-        description: 'Experimenta una experiencia única individual o en compañia con nuestros circuitos de spa, relájate, revitaliza tu cuerpo y disfruta. ',
-        image: '/img/spa/servicios/img/servicios-circuitos.jpg'
-    },
-    'promociones': {
-        title: 'Promociones',
-        description: 'No te pierdas nuestras increibles promos, aprivecha nuestras ofertas y comparte un momento de bienestar.',
-        image: '/img/servicios/img/'
-    }
-};
-
-serviceButtons.forEach(button => {
-    button.addEventListener('click', () => {
-        const service = button.getAttribute('data-service');
-        const details = serviceDetails[service];
-
-        popupImage.src = details.image;
-        popupImage.alt = details.title;
-        popupTitle.textContent = details.title;
-        popupDescription.textContent = details.description;
-
-        popupOverlay.classList.add('active');
-    });
-});
-
-popupClose.addEventListener('click', () => {
-    popupOverlay.classList.remove('active');
-});
-
-popupOverlay.addEventListener('click', (e) => {
-    if (e.target === popupOverlay) {
-        popupOverlay.classList.remove('active');
-    }
-});
-
-
-//* ===== Imagen ampliada de promos ===== //
-function openImagePopup(imageUrl) {
-    document.getElementById('popupImageAmpliada').src = imageUrl;
-    document.getElementById('imagePopup').style.display = 'flex';
-}
-
-function closeImagePopup() {
-    document.getElementById('imagePopup').style.display = 'none';
-}
-
-// Agregar evento de clic a las imágenes de promoción
-document.querySelectorAll('.promo-card .image-container').forEach(function (container) {
-    container.addEventListener('click', function () {
-        const img = this.querySelector('img');
-        const largeImageUrl = img.src.replace('height=200&width=250', 'height=600&width=800');
-        openImagePopup(largeImageUrl);
-    });
-});
-
-// Cerrar el popup de imagen si se hace clic fuera de la imagen
-document.getElementById('imagePopup').addEventListener('click', function (event) {
-    if (event.target === this) {
-        closeImagePopup();
-    }
-});
-
-
-//* ===== SWIPER JS promos destacadas ===== //
-// var swiper = new Swiper('.swiper-container', {
-//     navigation: {
-//         nextEl: '.swiper-button-next',
-//         prevEl: '.swiper-button-prev'
+// const serviceDetails = {
+//     'masajes-descontracturantes': {
+//         title: 'Masajes Descontracturantes',
+//         description: 'Alivia el dolor. Disuelve contracturas. Activa la circulación sanguínea y de la linfa eliminando toxinas. Relaja y ayuda a dormir bien. Alivia las migrañas y dolores de cabeza. Ayuda a evuacuar mejor. Mantiene la piel elástica eliminando células muertas y la nutre.',
+//         image: '/img/spa/servicios/img/servicios-masaje-descontracturante.jpg'
 //     },
-//     slidesPerView: 1,
-//     spaceBetween: 10,
-
-//     pagination: {
-//         el: '.swiper-pagination',
-//         clickable: true,
+//     'masajes-relajantes': {
+//         title: 'Masajes Relajantes',
+//         description: 'Aumenta la función inmune. Mejora la calidad del sueño. Mejora la movilidad de las articulaciones. Estimula el movimiento linfático. Reduce el dolor muscular. Mejora la actividad mental. Agiliza la curación de lesiones de tejidos blandos. Alivia el estrés. Mejora la circulación y reduce la tensión muscular.',
+//         image: '/img/spa/servicios/img/servicios-masajes-relajantes.jpg'
 //     },
+//     'masajes-sedativos': {
+//         title: 'Masajes Sedativos',
+//         description: 'Induce a un estado de calma y tranquilidad, disminuyendo la ansiedad y el estrés. Alivia las tensiones musculares, especialmente en áreas como el cuello, los hombros y la espalda. Favorece un sueño mas profundo y reparador, al reducir la actividad del sistema nervioso. Ayuda a equilibrar las emociones y a promover una sensación de bienestar general.',
+//         image: '/img/spa/servicios/img/servicios-masajes-sedativos.webp'
+//     },
+//     'masaje-sueco': {
+//         title: 'Masaje Sueco',
+//         description: 'Alivia las tensiones musculares y aumenta la flexibilidad. Estimula la circulación sanguínea y linfática, favoreciendo la eliminación de toxinas. Alivia dolores musculares y articulares, como los asociados a la tensión o lesiones leves. Fortalece los músculos y mejora el tono muscular. Proporciona una sensación de bienestar y vitalidad.',
+//         image: '/img/spa/servicios/img/servicios-masaje-sueco.webp'
+//     },
+//     'hidromasaje': {
+//         title: 'Hidromasaje',
+//         description: 'Relajación muscular aliviando tensiones y dolores. Estimula la circulacion lo que ayuda a reducir la inflamación y a oxigenar los tejidos. Alivio del estrés. Ayuda a aliviar dolores musculares y articulares. Mejora la calidad del sueño. Ayuda a suavizar y nutrir la piel.',
+//         image: '/img/spa/servicios/img/servicios-hidromasaje.webp'
+//     },
+//     'sauna': {
+//         title: 'Sauna Finlandés',
+//         description: 'Ayuda a eliminar toxinas del cuerpo. Estimula el sistema inmunológico ayudando a prevenir enfermedades. La vasodilatación producida por el calor mejora la circulación sanguínea. El calor y la humedad relajan los músculos y la mente reduciendo el estrés y la ansiedad. Tambien ayuda a abrir los poros y trae un beneficio para la piel. Mejora la calidad del sueño.',
+//         image: '/img/spa/servicios/img/servicios-sauna.jpg'
+//     },
+//     'cutis': {
+//         title: 'Limpieza de cutis',
+//         description: 'Eliminación de impurezas. Reduce la aparición de acné e inflamaciones. Mejor absorción de nutrientes de cremas. Piel mas radiante y saludable.',
+//         image: '/img/servicios/img/'
+//     },
+//     'exfoliaciones': {
+//         title: 'Exfoliaciones',
+//         description: 'Elimina células muertas, estimulando la regeneración de la piel. Reduce la apariencia de manchas y cicatrices. Aumenta la luminosidad. Mejora la textura reduciendo la apariencia de piel áspera y seca. Facilita la absorción de los productos aplicados posteriormente. Previene vellos encarnados.',
+//         image: '/img/spa/servicios/img/servicios-exfo.jpg'
+//     },
+//     'piscina': {
+//         title: 'Piscina refrescante',
+//         description: 'Refrescante y revitalizante, el lugar perfecto para relajarte y recargar energías.',
+//         image: '/img/spa/servicios/img/servicios-piscina.jpg'
+//     },
+//     'meriendas': {
+//         title: 'Meriendas',
+//         description: 'Disfrutá luego de tu circuito de spa nuestras deliciosas meriendas. ',
+//         image: '/img/spa/servicios/img/servicios-meriendas.jpg'
+//     },
+//     'circuitos': {
+//         title: 'Circuitos de Spa',
+//         description: 'Experimenta una experiencia única individual o en compañia con nuestros circuitos de spa, relájate, revitaliza tu cuerpo y disfruta. ',
+//         image: '/img/spa/servicios/img/servicios-circuitos.jpg'
+//     },
+//     'promociones': {
+//         title: 'Promociones',
+//         description: 'No te pierdas nuestras increibles promos, aprivecha nuestras ofertas y comparte un momento de bienestar.',
+//         image: '/img/servicios/img/'
+//     }
+// };
 
+// serviceButtons.forEach(button => {
+//     button.addEventListener('click', () => {
+//         const service = button.getAttribute('data-service');
+//         const details = serviceDetails[service];
 
-//     breakpoints: {
-//         480: {
-//             slidesPerView: 1,
-//             spaceBetween: 50,
-//         },
-//         620: {
-//             slidesPerView: 1,
-//             spaceBetween: 50,
-//         },
-//         680: {
-//             slidesPerView: 2,
-//             spaceBetween: 50,
-//         },
-//         920: {
-//             slidesPerView: 3,
-//             spaceBetween: 40,
-//         },
-//         1280: {
-//             slidesPerView: 4,
-//             spaceBetween: 40,
-//         },
+//         popupImage.src = details.image;
+//         popupImage.alt = details.title;
+//         popupTitle.textContent = details.title;
+//         popupDescription.textContent = details.description;
+
+//         popupOverlay.classList.add('active');
+//     });
+// });
+
+// popupClose.addEventListener('click', () => {
+//     popupOverlay.classList.remove('active');
+// });
+
+// popupOverlay.addEventListener('click', (e) => {
+//     if (e.target === popupOverlay) {
+//         popupOverlay.classList.remove('active');
 //     }
 // });
+
+
